@@ -1,6 +1,7 @@
 package com.kosa.jdbc;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -52,7 +53,7 @@ public class SelectDetails extends HttpServlet {
 			conn.close();
 
 			response.sendRedirect(
-					"Result.jsp?id=" + id + "&name=" + name + "&price=" + price + "&category=" + category);
+					"Result.jsp?id=" + URLEncoder.encode(id,"UTF-8") + "&name=" + URLEncoder.encode(name,"UTF-8") + "&price=" + price + "&category=" + URLEncoder.encode(category,"UTF-8"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
