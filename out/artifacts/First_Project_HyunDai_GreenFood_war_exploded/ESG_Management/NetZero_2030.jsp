@@ -20,7 +20,7 @@
         </div>
     </div>
     <bnt>
-        <button onclick="location='Managerial_Objective.jsp'">경영목표</button>
+        <button onclick="location='Mangerial_Objective.jsp'">경영목표</button>
         <button onclick="location='NetZero_2030.jsp'">환경경영(E)</button>
         <button onclick="location='CSR.jsp'">사회공헌(S)</button>
         <button onclick="location='Board_Poricy.jsp'">지배구조(G)</button>
