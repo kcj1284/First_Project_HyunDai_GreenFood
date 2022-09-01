@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetZero_2030</title>
-    <link href="../ESG_Management_CSS/NZ_style.css" rel="stylesheet" type="text/css">
+    <title>Eco_Management</title>
+    <link href="../ESG_Management_CSS/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
