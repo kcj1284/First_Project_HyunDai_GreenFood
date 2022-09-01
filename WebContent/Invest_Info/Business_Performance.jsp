@@ -10,7 +10,6 @@
     <link href="../Invest_Info_CSS/BP_style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
     <div class="sub_contents">
         <!-- 타이틀 , 디스크립션 -->
         <div class="title_description">
