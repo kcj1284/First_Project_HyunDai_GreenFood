@@ -22,14 +22,14 @@
 	</div>
 
 	<div>
-		<button onclick="location='Managerial_Objective.jsp'">경영목표</button>
-		<button onclick="location='NetZero_2030.jsp'">환경경영(E)</button>
-		<button onclick="location='CSR.jsp'">사회공헌(S)</button>
-		<button onclick="location='Board_Poricy.jsp'">지배구조(G)</button>
-		<button onclick="location='Safety_Health.jsp'">안전보건</button>
-		<button onclick="location='Win_Management.jsp'">상생경영</button>
-		<button onclick="location='Group_Ethical_Management.jsp'">윤리경영</button>
-		<br>
+		<a href="Managerial_Objective.jsp">경영목표</a>
+    	<a href="NetZero_2030.jsp">환경경영(E)</a>
+    	<a href="CRS.jsp">사회공헌(S)</a>
+    	<a href="Board_Policy.jsp">지배구조(G)</a>
+    	<a href="Safety_Health.jsp">안전보건</a>
+    	<a href="Win_Management.jsp">상생경영</a>
+    	<a href="Group_Ethical_Management.jsp">윤리경영</a>
+        <br>
 	</div>
 	<div>
 		<div class="sub_contents">
@@ -38,12 +38,12 @@
 			</div>
 
 			<div>
-				<button onclick="location='Board_Poricy.jsp'">이사회정책</button>
-				<button onclick="location='External_Auditor.jsp'">외부감사인</button>
-				<button onclick="location='General_Meeting.jsp'">주주총회</button>
-				<button onclick="location='Shareholder_info.jsp'">주주정보</button>
-				<button onclick="location='Corp_Governance_Chart.jsp'">기업지배구조헌장</button>
-				<button onclick="location='Corp_Governance_Report.jsp'">기업지배구조보고서</button>
+				<a href="Board_Policy.jsp">이사회정책</a>
+				<a href="External_Auditor.jsp">외부감사인</a>
+				<a href="General_Meeting.jsp">주주총회</a>
+				<a href="Shareholder_info.jsp">주주정보</a>
+				<a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a>
+				<a href="Corp_Governance_Report.jsp">기업지배구조보고서</a>
 				<br>
 			</div>
 
