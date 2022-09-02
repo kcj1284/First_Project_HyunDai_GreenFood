@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="First_Project_HyunDai_GreenFood:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/First_Project_HyunDai_GreenFood_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="First_Project_HyunDai_GreenFood" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="First_Project_HyunDai_GreenFood/web/Web" />
+    </root>
+  </artifact>
+</component>
