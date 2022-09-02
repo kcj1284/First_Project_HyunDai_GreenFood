@@ -20,13 +20,13 @@
         </div>
     </div>
     <bnt>
-        <button onclick="location='Managerial_Objective.jsp'">경영목표</button>
-        <button onclick="location='NetZero_2030.jsp'">환경경영(E)</button>
-        <button onclick="location='CSR.jsp'">사회공헌(S)</button>
-        <button onclick="location='Board_Poricy.jsp'">지배구조(G)</button>
-        <button onclick="location='Safety_Health.jsp'">안전보건</button>
-        <button onclick="location='Win_Management.jsp'">상생경영</button>
-        <button onclick="location='Group_Ethical_Management.jsp'">윤리경영</button>
+        <a href="Managerial_Objective.jsp">경영목표</a>
+    	<a href="NetZero_2030.jsp">환경경영(E)</a>
+    	<a href="CSR.jsp">사회공헌(S)</a>
+    	<a href="Board_Policy.jsp">지배구조(G)</a>
+    	<a href="Safety_Health.jsp">안전보건</a>
+    	<a href="Win_Management.jsp">상생경영</a>
+    	<a href="Group_Ethical_Management.jsp">윤리경영</a>
         <br>
         <button onclick="location='NetZero_2030.jsp'">넷제로2030</button>
         <button onclick="location='Eco_Management.jsp'">친환경경영</button>

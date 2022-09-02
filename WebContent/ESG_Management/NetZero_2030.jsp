@@ -19,19 +19,16 @@
             ESG 경영 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
         </div>
     </div>
-    <bnt>
-        <button onclick="location='Managerial_Objective.jsp'">경영목표</button>
-        <button onclick="location='NetZero_2030.jsp'">환경경영(E)</button>
-        <button onclick="location='CSR.jsp'">사회공헌(S)</button>
-        <button onclick="location='Board_Poricy.jsp'">지배구조(G)</button>
-        <button onclick="location='Safety_Health.jsp'">안전보건</button>
-        <button onclick="location='Win_Management.jsp'">상생경영</button>
-        <button onclick="location='Group_Ethical_Management.jsp'">윤리경영</button>
+    <div>
+    <a href="Managerial_Objective.jsp">경영목표</a>
+    	<a href="NetZero_2030.jsp">환경경영(E)</a>
+    	<a href="CSR.jsp">사회공헌(S)</a>
+    	<a href="Board_Policy.jsp">지배구조(G)</a>
+    	<a href="Safety_Health.jsp">안전보건</a>
+    	<a href="Win_Management.jsp">상생경영</a>
+    	<a href="Group_Ethical_Management.jsp">윤리경영</a>
         <br>
-        <button onclick="location='NetZero_2030.jsp'">넷제로2030</button>
-        <button onclick="location='Eco_Management.jsp'">친환경경영</button>
-        <br>
-    </bnt>
+        </div>
     탄소중립2030 목표<br>
     현대그린푸드는 건강과 지속가능이라는 비전 아래 에너지 사용 뿐만 아니라 <br>
     사업을 영위하는 Value Chain 전 영역에서 탄소배출을 줄일 수 있는 부분을 측정하여 <br>
