@@ -24,7 +24,7 @@
 	<div>
 		<a href="Managerial_Objective.jsp">경영목표</a>
     	<a href="NetZero_2030.jsp">환경경영(E)</a>
-    	<a href="CSR.jsp">사회공헌(S)</a>
+    	<a href="CRS.jsp">사회공헌(S)</a>
     	<a href="Board_Policy.jsp">지배구조(G)</a>
     	<a href="Safety_Health.jsp">안전보건</a>
     	<a href="Win_Management.jsp">상생경영</a>
