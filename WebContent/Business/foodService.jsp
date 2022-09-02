@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<!-- 작성자 : 김찬중,  -->
+<!-- 작성자 : 김민찬  -->
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
@@ -62,7 +62,8 @@
 
 <body>
 
-    <%@ include file="/admin/header.jsp"%>
+<%-- 헤더파일만들고 주석해제--%>
+<%--    <%@ include file="/admin/header.jsp"%>--%>
 
 	<p class="f_layer_bg"></p>	
 	<div class="layout_total">
@@ -74,16 +75,8 @@
 
 
 
-    <!-- header : end -->
-	
-
-		<!-- container -->
 		<div class="container_area" id="contents">
-		
-		 <!-- Body
-    ################# --> 
 
-    <!-- contents : str -->
     
 <style>
 
@@ -106,6 +99,7 @@
     }
 
 </style>
+
 	<div class="container">
     
         <!-- 상단 비쥬얼 -->
@@ -124,28 +118,28 @@
 		<div class="business_info">
 			<ul class="clear cont_center business_info_list">
 				<li>
-					<img src="image/icon_meal1.png" alt="">
+					<img src="../img/business/icon_meal1.png" alt="">
 
 					<strong><span class="count_num">2</span>억끼</strong>
 
 					1년 식사 제공 수
 				</li>
 				<li>
-					<img src="image/icon_meal2.png" alt="">
+					<img src="../img/business/icon_meal2.png" alt="">
 
 					<strong><span class="count_num">8</span>천개</strong>
 
 					풍부한 레시피
 				</li>
 				<li>
-					<img src="image/icon_meal3.png" alt="">
+					<img src="../img/business/icon_meal3.png" alt="">
 
 					<strong><span class="count_num">9700</span>명</strong>
 
 					전문셰프 및 영양사
 				</li>
 				<li>
-					<img src="image/icon_meal4.png" alt="">
+					<img src="../img/business/icon_meal4.png" alt="">
 
 					<strong><span class="count_num">570</span>개</strong>
 
@@ -167,7 +161,7 @@
 				</div>
 
 				<div class="business_img">
-					<img src="image/meal_img1.jpg" alt="">
+					<img src="../img/business/meal_img1.jpg" alt="">
 				</div>
 			</div>
 
@@ -185,7 +179,7 @@
 				</div>
 
 				<div class="business_img">
-					<img src="image/meal_img2.jpg" alt="">
+					<img src="../img/business/meal_img2.jpg" alt="">
 				</div>
 			</div>
 		</div>
@@ -239,7 +233,7 @@
 				</div>
 
 				<div class="business_img">
-					<img src="image/meal_img3.jpg" alt="">
+					<img src="../img/business/meal_img3.jpg" alt="">
 				</div>
 			</div>
 
@@ -255,7 +249,7 @@
 				</div>
 
 				<div class="business_img">
-					<img src="image/meal_img4.jpg" alt="">
+					<img src="../img/business/meal_img4.jpg" alt="">
 				</div>
 			</div>
 		</div>
@@ -279,11 +273,10 @@
 		</div>
 	</div>
 	<!-- //greating -->
-	
-	
 
 
-    
-<%@ include file="/admin/footer.jsp"%>
+<%--		푸터추가 후 주석해제--%>
+<%--		<%@ include file="footer.jsp"%>--%>
+
 </body>
 </html>
