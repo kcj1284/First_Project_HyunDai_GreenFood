@@ -6,10 +6,11 @@
 .cont_center {
     width: auto;
 }
+
 .cont_center {
+    position: relative;
     width: 1226px;
     margin: 0 auto;
-    position: relative;
 }
 
 .btn-float {
@@ -27,7 +28,10 @@
 
 }
 
+
 .btn-float a {
+    font-size: 13px;
+    font-weight: bold;
     color: white;
     text-decoration: none;
 }
@@ -38,14 +42,56 @@
 
 
 .title_business {
+    position: relative;
+    color: #000;
+    text-align: center;
+    margin-top: 50px;
     padding-bottom: 54px;
     margin-bottom: 60px;
     font-size: 48px;
-    color: #000;
-    text-align: center;
-    position: relative;
 
 }
+
+.title_business:after {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 98px;
+    height: 1px;
+    content: "";
+    margin-left: -49px;
+    background-color: #030000;
+}
+
+
+.description_business_sub {
+    color: #383838;
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+.title_business_sub {
+    position: relative;
+    color: #000;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 48px;
+}
+
+.title_business_sub:after {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55px;
+    height: 1px;
+    content: "";
+    background-color: #333;
+}
+
+
 
 .description_business {
     color: #000;
@@ -114,6 +160,7 @@
 .business_text_area {
     margin-top: 106px;
 }
+
 .business_left .business_info_text {
     float: none;
     width: auto;
@@ -155,13 +202,29 @@
 }
 
 .title_business_sub_W {
+    position: relative;
     color: #fff;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 48px;
+}
+
+.title_business_sub_W:after {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 55px;
+    height: 1px;
+    content: "";
+    background-color: #fff;
 }
 
 .description_business_sub_W {
-    font-size: 14px;
-    line-height: 25px;
     color: #fff;
+    margin-top: 25px;
+    line-height: 30px;
 }
 
 .meal_list li {
@@ -181,17 +244,17 @@
     background-position: center top;
 }
 
-.meal_list{
+.meal_list {
     margin-top: 150px;
-    margin-bottom:1150px;
+    margin-bottom: 1150px;
 }
 
 
 .meal_area {
 
     height: 598px;
-    padding: 100px 40px 0;
     margin: 44px 8.16% 0;
+    padding: 100px 40px 0;
     border: 1px solid #fff;
     overflow-y: auto;
 }
@@ -205,11 +268,13 @@
 
 .business_greating {
     height: 100%;
-    margin-top: 130px;
     background: url(../img/business/greating_bg.jpg) no-repeat center top;
-    background-size: cover;
     color: #fff;
     text-align: center;
+    margin-top: 130px;
+    background-size: cover;
+    margin-bottom: 130px;
+    padding-bottom: 200px;
 }
 
 .title_greating {

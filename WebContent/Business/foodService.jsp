@@ -34,8 +34,8 @@
 					<img src="../img/business/business_meal.jpg" class="visual_business_meal">
 					</img>
 					<!-- 플로팅액션버튼 --> 
-					<div class="btn-float"> <a
-							href="https://hyundai-1st-project.notion.site/hyundai-1st-project/IT-E-1-96f9619abda64388a2d5e57069ae30bd">
+					<div class="btn-float"> <a href="../img/business/BizCounsel.jpg" target="_blank" onClick="window.open(this.href, '', 'width=400, height=430'); return false;"
+				>
 							사업 문의</a></div>
 
 					<h2 class="title_business"> 
