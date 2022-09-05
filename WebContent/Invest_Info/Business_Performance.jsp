@@ -1,3 +1,4 @@
+<!--작성자 김찬중-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,23 +12,16 @@
 </head>
 
     <div class="sub_contents">
-        <!-- 타이틀 , 디스크립션 -->
-        <div class="title_description">
+         <div class="title_description">
             <h2 class="title_sub">재무정보</h2>
             <p class="sub_description">현대그린푸드의 재무현황을 요약하여 알려드립니다. </p>
         </div>
-        <!-- //타이틀 , 디스크립션 -->
-
-
-        <ul class="tab_list tab_list_2">
-            <li class="on">
-                <button onclick="location='Business_Performance.jsp'">경영실적</button>
-            </li>
-            <li>
-                <button onclick="location='Financial_Position.jsp'">재무상태</button>
-            </li>
-        </ul>
-
+        
+        <div class="tap_list">
+            <a href="Business_Performance.jsp">경영실적</a>
+            <a href="Financial_Position.jsp">재무상태</a>
+            <br>
+        </div>
 
         <div class="director_area">
             <div>

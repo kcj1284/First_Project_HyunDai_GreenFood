@@ -5,16 +5,64 @@
 	margin: 5px auto;
 	position: relative;
 }
+
 .tree {
 	width: 100%;
 	vertical-align: middle;
 }
+
 .tree_text {
 	padding: 5px 10px;
-    color:white;
+	color: white;
 	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate( -50%, -50% );
+	transform: translate(-50%, -50%);
+	line-height: 1.8;
+	font-size: 24px;
+}
+
+.title_sub {
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.ul {
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	font-size: 25px;
+	color: #000;
+}
+
+.esg_title {
+	margin-bottom: 30px;
+	font-size: 49px;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	text-align: center;
+}
+.esg_body {
+	font-size: 1em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	text-align: center;
 }
