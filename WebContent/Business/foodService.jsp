@@ -1,9 +1,7 @@
 <!-- 작성자 : 김민찬  -->
 
-<!-- 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> -->
-
+    pageEncoding="UTF-8"%>
 
 <!DOCTYPE HTML>
 <html lang="ko">
@@ -19,7 +17,6 @@
 <body>
 
 	<!-- 헤더파일만들고 주석해제-->
-	<!--    <%@ include file="/admin/header.jsp"%>-->
 
 	<p class="f_layer_bg"></p>
 	<div class="layout_total">
@@ -219,9 +216,6 @@
 							</p>
 						</div>
 					</div>
-					<!-- //greating -->
 
-					<!--	푸터추가 후 주석해제-->
-					<!--	<%@ include file="footer.jsp"%> -->
 </body>
 </html>
