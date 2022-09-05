@@ -1,4 +1,4 @@
-<!-- 작성자 : 김민찬  -->
+<!-- 작성자 :    김민찬  -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
