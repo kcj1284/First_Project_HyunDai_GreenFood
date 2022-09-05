@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disclosure_Info</title>
-    <link href="../Invest_Info_CSS/DI_style.css" rel="stylesheet" type="text/css">
+    <link href="../css/II_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -30,12 +30,12 @@
             <!-- //iframe-->
             <div class="btn_rule_acrobat">
                 <p class="btn_rule">
-                    <a href="asd.pdf"><img src="../img/btn_rule.jpg" alt="공시정보 관리규정" /></a>
+                    <a href="asd.pdf"><img src="../img/Invest/di_01.jpg" alt="공시정보 관리규정" /></a>
                 </p>
                 <p class="acrobat_text">
-                    <img src="../img/icon_gray_ball.jpg" class="icon_gray_ball" alt="" /> PDF 내용을 보시려면
+                    <img src="../img/Invest/di_02.jpg" class="icon_gray_ball" alt="" /> PDF 내용을 보시려면
                     Acrobat Reader를 설치해야
-                    합니다. <span><img src="../img/icon_adobe_reader.jpg" alt="Get Adobe Reader" /></span>
+                    합니다. <span><img src="../img/Invest/di_03.jpg" alt="Get Adobe Reader" /></span>
                 </p>
             </div>
         </div>

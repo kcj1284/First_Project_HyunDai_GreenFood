@@ -1,3 +1,4 @@
+<!--작성자 김찬중-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangerial_Objective</title>
-    <link href="../ESG_Management_CSS/MO_style.css" rel="stylesheet" type="text/css">
+    <link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="wrap">
         <div class="tree">
-            <img src="../img/visual_esg.jpg">
+            <img src="../img/ESG/visual_esg.jpg">
         </div>
         <div class="tree_text">
             <h1>ESG 경영</h1><br>
@@ -56,7 +57,7 @@
 
             <ul>
                 <li>
-                    <div class="box_img"><img src="../img/old_man.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_01.jpg""></div>
                     <div class="box_tit">성남시 독거노인 대상 식단 제공</div>
                     <div class="box_txt">
                         2020년 3월부터 성남시 독거노인지원센터와 은행1동복지회관과 협력하여 성남시에 거주하시는
@@ -65,7 +66,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="box_img"><img src="../img/crs_02.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_02.jpg" alt=""></div>
                     <div class="box_tit">보훈대상가족 지원</div>
                     <div class="box_txt">
                         국가보훈처 보훈대상가족을 위해 매년 설맞이 명절선물을 전달하고 있으며,
@@ -74,7 +75,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="box_img"><img src="../img/crs_03.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_03.jpg" alt=""></div>
                     <div class="box_tit">사랑의 김장나눔 진행</div>
                     <div class="box_txt">
                         현대그린푸드는 매년 사랑의 김장나눔을 실시하고 있습니다. 2021년에는 저소득 노인가정에게 김치 4,000
@@ -83,7 +84,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="box_img"><img src="../img/crs_04.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_04.jpg" alt=""></div>
                     <div class="box_tit">노인복지관 대상 공기청정기 지원</div>
                     <div class="box_txt">
                         노인분들의 건강 관리를 위하여 전국의 노인복지관에 공기청정기를 보급하고 있습니다.
@@ -91,7 +92,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="box_img"><img src="../img/crs_05.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_05.jpg" alt=""></div>
                     <div class="box_tit">사회적 기업 판로지원·제품 구매 지원</div>
                     <div class="box_txt">
                         영세한 규모, 경쟁력 부족, 재정적 어려움을 겪는 사회적기업에 제품 판로 확대 및 교육 지원을
@@ -118,7 +119,7 @@
 
             <ul>
                 <li>
-                    <div class="box_img"><img src="../img/crs_06.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_06.jpg" alt=""></div>
                     <div class="box_tit">탄소중립 숲 조성</div>
                     <div class="box_txt">
                         2022년부터 5개년간 산림청 연계 그룹 CSR 차원의 탄소중립 숲 조성사업에 참여하고 있습니다.
@@ -127,7 +128,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="box_img"><img src="../img/crs_07.jpg" alt=""></div>
+                    <div class="box_img"><img src="../img/ESG/crs_07.jpg" alt=""></div>
                     <div class="box_tit">생물종 다양성 보전사업 참여</div>
                     <div class="box_txt">
                         2022년부터 낙동강유역환경청 생태계교란 생물 뉴트리아 퇴치 시 필요한 식재(미끼)를 제공하여

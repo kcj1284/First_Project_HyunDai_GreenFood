@@ -1,3 +1,4 @@
+<!--작성자 김찬중-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,7 @@
 <body>
     <div class="wrap">
         <div class="tree">
-            <img src="../img/visual_esg.jpg">
+            <img src="../img/ESG/visual_esg.jpg">
         </div>
         <div class="tree_text">
             <h1>ESG 경영</h1><br>
@@ -153,7 +154,7 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- //이사회 테이블 영역 -->
+                <!-- 이사회 테이블 영역 -->
             </section>
 
             <section class="esg_section cont4_1_2">
@@ -297,7 +298,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2021년 -->
+                    <!-- 2021년 -->
                     <!-- 2020년 -->
                     <div style="display:none;">
                         <table class="list_tb">
@@ -427,7 +428,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2020년 -->
+                    <!-- 2020년 -->
                       <!-- 2019년 -->
                     <div style="display:none;">
                         <table class="list_tb">
@@ -562,7 +563,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2019년 -->
+                    <!-- 2019년 -->
                      <!-- 2018년 -->
                     <div style="display:none">
                         <table class="list_tb">
@@ -754,7 +755,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2018년 -->
+                    <!-- 2018년 -->
                     <!-- 2017년 -->
                     <div style="display: none">                
                         <table class="list_tb">
@@ -880,7 +881,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2017년 -->
+                    <!-- 2017년 -->
                     <!-- 2016년 -->
                     <div style="display: none">
                         <table class="list_tb">
@@ -992,7 +993,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2016년 -->
+                    <!-- 2016년 -->
                     <!-- 2015년 -->
                     <div style="display: none">
                         <table class="list_tb">
@@ -1127,7 +1128,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2015년 -->
+                    <!-- 2015년 -->
                     <!-- 2014년 -->
                     <div style="display: none">
                         <table class="list_tb">
@@ -1243,7 +1244,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- //2014년 -->
+                    <!-- 2014년 -->
                     <!-- 2013년 -->
                     <div style="display: none">
                         <table class="list_tb">
@@ -1370,9 +1371,9 @@
                             </tbody>
                         </table>
                     </div>
-                <!-- //2013년 -->
+                <!-- 2013년 -->
                 </div>
-                <!-- //이사회 테이블 영역 -->
+                <!-- 이사회 테이블 영역 -->
             </section>
 
             <section class="esg_section cont4_1_3">
@@ -1438,9 +1439,8 @@
                         <p class="korean_financial" style="text-align:left">※ESG 경영위원회는 2021년 이사회 결의로 설치되었습니다.</p>
                     </div>
                 </div>
-                <!-- //이사회 테이블 영역 -->
+                <!-- 이사회 테이블 영역 -->
             </section>
-
             <section class="esg_section cont4_1_4">
                 <div class="director_area">
                     <div class="committee_area">
@@ -1455,7 +1455,6 @@
                                 <col width="20%" />
                                 <col width="" />
                                 <col width="20%" />
-                                <!-- <col width="*" /> -->
                             </colgroup>
                             <thead>
                                 <tr>
@@ -1464,7 +1463,6 @@
                                     <th scope="col">최초 선임일</th>
                                     <th scope="col">현재 임기</th>
                                     <th scope="col">재직 기간<br/>(현재 임기 포함)</th>
-                                    <!-- <th scope="col">주요경력</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -1474,21 +1472,18 @@
                                     <td>2019년 3월 29일</td>
                                     <td>2021년 3월 29일 ~ 2023년 3월 29일</td>
                                     <td>4년</td>
-                                    <!-- <td >前)대구지방식품의약품안전청장 </td> -->
                                 </tr>
                                 <tr>
                                     <td>정병두</td>
                                     <td>2020년 3월 30일</td>
                                     <td>2022년 3월 30일 ~ 2024년 3월 30일</td>
                                     <td>4년</td>
-                                    <!-- <td >前)광주지방국세청장 <br>現)세무법인 에이블 대표세무사 회장</td> -->
                                 </tr>
                                 <tr>
                                     <td>유원곤</td>
                                     <td>2021년 3월 29일</td>
                                     <td>2021년 3월 29일 ~ 2023년 3월 29일</td>
                                     <td>2년</td>
-                                     <!-- <td >前)인천지방검찰정 검사장 <br>現)김앤장 법률사무소 변호사</td> -->
                                 </tr>
                             </tbody>
                         </table>

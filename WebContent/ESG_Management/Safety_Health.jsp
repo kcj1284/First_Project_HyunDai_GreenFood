@@ -1,3 +1,4 @@
+<!--작성자 김찬중-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NetZero_2030</title>
-    <link href="../ESG_Management_CSS/NZ_style.css" rel="stylesheet" type="text/css">
+    <link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="wrap">
         <div class="tree">
-            <img src="../img/visual_esg.jpg">
+            <img src="../img/ESG/visual_esg.jpg">
         </div>
         <div class="tree_text">
             ESG 경영 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
@@ -61,7 +62,7 @@
 
     <section class="esg_section cont5_3">
         <h3 class="esg_title">안전보건 관리조직</h3>
-        <div class="esg_img"><img src="../img/S_H01.jpg" alt=""></div>
+        <div class="esg_img"><img src="../img/ESG/sh_01.jpg" alt=""></div>
     </section>
 
     <section class="esg_section cont5_4">

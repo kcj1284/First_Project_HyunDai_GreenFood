@@ -1,3 +1,4 @@
+<!--작성자 김찬중-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +8,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mangerial_Objective</title>
-	<link href="../ESG_Management_CSS/MO_style.css" rel="stylesheet" type="text/css">
+	<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 	<div class="wrap">
 		<div class="tree">
-			<img src="../img/visual_esg.jpg">
+			<img src="../img/ESG/visual_esg.jpg">
 		</div>
 		<div class="tree_text">
 			<h1>ESG 경영</h1>
@@ -42,7 +43,7 @@
 				<div class="esg_text">윤리경영의 실효성 있는 실천과 정착을 위하여, 명확한 규범을 바탕으로 <br class="pc">실천조직, 상시교육 및 모니터링 시스템을 운영하고
 					있습니다.</div>
 
-				<div class="esg_img"><img src="../img/win01.jpg" alt=""></div>
+				<div class="esg_img"><img src="../img/ESG/win01.jpg" alt=""></div>
 			</section>
 
 			<section class="esg_section cont6_2 sub_contents">
@@ -114,10 +115,10 @@
 						<div class="esg_box_txt2"><span>2021년 펀딩모집에 약 230여 개 외식 업체 지원, 10개 업체 선발 후 상품 출시</span></div>
 
 						<div class="esg_box_slider">
-							<div class="esg_box_slide"><img src="../img/win02.jpg" alt=""></div>
-							<div class="esg_box_slide"><img src="../img/win03.jpg" alt=""></div>
-							<div class="esg_box_slide"><img src="../img/win04.jpg" alt=""></div>
-							<div class="esg_box_slide"><img src="../img/win05.jpg" alt=""></div>
+							<div class="esg_box_slide"><img src="../img/ESG/win02.jpg" alt=""></div>
+							<div class="esg_box_slide"><img src="../img/ESG/win03.jpg" alt=""></div>
+							<div class="esg_box_slide"><img src="../img/ESG/win04.jpg" alt=""></div>
+							<div class="esg_box_slide"><img src="../img/ESG/win05.jpg" alt=""></div>
 						</div>
 					</div>
 					<div class="esg_box_sec sec2">
@@ -207,7 +208,7 @@
 							현장 컨설팅 프로그램은 2개월 동안 진행되며 협력회사의 위생수준이 목표 수치 도달 시 프로그램은 조기 종료될 수 있습니다.
 							<br>컨설팅 종료 후, 당사는 협력사의 상품 매입을 진행하여 단체급식의 식자재 사용 및 백화점·홈쇼핑 판매로 연계하고 있습니다.
 						</div>
-						<div class="esg_box_img"><img src="../img/win06.jpg" alt=""></div>
+						<div class="esg_box_img"><img src="../img/ESG/win06.jpg" alt=""></div>
 						<div class="esg_box_txt2"><span>현장 점검(3회), 자체 개선(2회), 온라인 미팅(매주), 질의응답(상시)</span></div>
 					</div>
 					<div class="esg_box_sec sec4 sub_contents">
@@ -218,7 +219,7 @@
 							협력사에서 공통으로 필요로 하는 식품안전자료를 플랫폼을 통해 무료 제공하여
 							<br class="pc">실무자의 실질적 어려움 해소와 업무 효율 개선을 지원합니다.
 						</div>
-						<div class="esg_box_img"><img src="../img/win07.jpg" alt=""></div>
+						<div class="esg_box_img"><img src="../img/ESG/win07.jpg" alt=""></div>
 						<div class="esg_box_txt2"><span>제공 자료 : 정기 위생교육자료, POP, 법규 제 · 개정, 식품안전이슈 등 </span></div>
 						<div class="esg_box_txt">
 							해당 서비스를 희망하는 협력사는 품질보증팀 김지현 수석연구원으로 연락 바랍니다.
@@ -260,7 +261,6 @@
 					</div>
 				</div>
 			</section>
-			<!-- //서브 컨텐츠 -->
 		</div>
 	</div>
 </body>
