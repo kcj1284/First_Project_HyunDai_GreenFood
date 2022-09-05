@@ -1,0 +1,260 @@
+/* 전체 영역 (아래 공백 영역 제외) */
+
+.sub_layout {
+    padding: 130px 0 0;
+}
+
+.container_area {
+    padding-bottom: 300px;
+}
+
+/* 하이어라키 영역 */
+.sub_contents, .hierarchy_list {
+    width: auto;
+}
+
+.hierarchy_list {
+    width: 1143px;
+    margin: 30px auto 0;
+    *zoom: 1;
+}
+
+/* 리스트 스타일 제거 */
+ol, ul, li {
+    list-style: none;
+}
+
+/* 해당 태그들 기본 설정 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, address, a, select, input, textarea, header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+}
+
+html, body {
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+/* title 영역 */
+.title_description {
+    padding: 115px 0 150px;
+}
+
+div {
+    display: block;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.title_description .sub_description {
+    margin-top: 60px;
+}
+
+/* title */
+.title_sub {
+    font-size: 50px;
+    /* color: #000; */
+    font-weight: bold;
+    text-align: center;
+    /* background: url(/Contents/images/m/icon/icon_green_line.jpg) no-repeat left top; */
+}
+
+/*부 title */
+.sub_description {
+    line-height: 1.8;
+    font-size: 24px;
+    color: #737373;
+    text-align: center;
+}
+
+/* 인프라 영역 */
+.infra_area {
+    width: auto;
+}
+
+/* 인프라 내용 영역 */
+.infra_text_area:first-child {
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0;
+}
+
+.infra_text_area {
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+}
+
+/* 인프라 내용 - 타이틀 */
+.title_infra {
+    font-size: 35px;
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/* 인프라 내용 - 내용 */
+.text_infra {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #666;
+    line-height: 25px;
+    text-align: center;
+}
+
+/* 인프라 내용 속 포인트 색 */
+.text_infra .point {
+    color: #00816d;
+}
+
+/* 물류시스템 지도 */
+/*.distribution_map_area {
+    width: 226px;
+    margin: 37px auto 0;
+    padding-bottom: 247px;
+    position: relative;
+}*/
+
+.distribution_map_area {
+    width: 417px;
+    margin: 55px auto 0;
+    padding-bottom: 334px;
+    position: relative;
+}
+
+input, select, label, img {
+    font-family: 'Noto Sans';
+    vertical-align: middle;
+}
+
+/* 물류시스템 센터들 */
+.distri_center1 {
+    left: -287px;
+    top: 56px;
+}
+
+.distri_center2 {
+    left: -287px;
+    top: 327px;
+}
+
+.distri_center3 {
+    left: -70px;
+    top: 620px;
+}
+
+.distri_center4 {
+    right: -110px;
+    top: 620px;
+}
+
+.distri_center5 {
+    right: -364px;
+    top: 340px;
+}
+
+.distri_center6 {
+    right: -364px;
+    top: 67px;
+}
+
+.distri_center {
+    text-align: left;
+    position: absolute;
+}
+
+
+.distri_center dl {
+    margin-top: 15px;
+}
+
+.distri_center > img {
+    width: 75px;
+    margin-left: 10px;
+}
+
+input, select, label, img {
+    font-family: 'Noto Sans';
+    vertical-align: middle;
+}
+
+.distri_center dt {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.distri_center li span {
+    display: block;
+    margin-left: 32px;
+}
+
+.distri_center li {
+    background: url(../../img/ESG_infrasystem/distribution_system/icon_gray_arrow.png) no-repeat left 5px;
+    padding-left: 10px;
+    font-size: 13px;
+    color: #666;
+    line-height: 18px;
+}
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+dt {
+    display: block;
+}
+
+dd {
+    display: block;
+    margin-inline-start: 40px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}

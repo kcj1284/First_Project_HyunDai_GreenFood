@@ -8,13 +8,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<link href="../css/ESG_infrasystem/infrasystem_style.css" type="text/css" rel="stylesheet" />
 
 <body>
     <div class="sub_layout sub_visual_6">
     
         <!-- 하이어라키 -->
         <ul class="hierarchy_list">
-            <li class="icon_home"><img src="../img/ESG_infrasystem/distribution_system/icon_home.jpg" alt="Home" /></li>
+            <li class="icon_home"><img src="../img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
             <li class="depth_2">
                 <a href="#" class="m_hierarchy">사업영역 </a>
 
