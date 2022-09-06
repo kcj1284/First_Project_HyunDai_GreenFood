@@ -1,7 +1,6 @@
 <!-- 작성자 : 김민찬 -->
 <!DOCTYPE html>
-<html lang="k">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <title>로그인</title>
@@ -11,11 +10,10 @@
 <body>
 
 
-
     <div class="login">
         <div>
             <h3 class="title">로그인</h3>
-            <form action="/do or jsp?" name="Login" method="post"
+            <form    action="" name="Login" method="post"
                 onsubmit="return validateme(this);">
                 <input type="hidden" id="openLogin1" name="openLogin" value="hpointLogin">
                 <fieldset>
@@ -34,7 +32,7 @@
                         </span>
                         <div class="join">
                             <ul>
-                                <li><a  href="/signUpForm.jsp">회원가입</a></li>
+                                <li><a  href="./signUpForm.jsp">회원가입</a></li>
                             </ul>
                         </div>
                         <div class="btn-login">

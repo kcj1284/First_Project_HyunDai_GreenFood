@@ -12,12 +12,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 	<link href="../css/business.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../css/Inc/Layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/Inc/Main.css">
+	<link rel="stylesheet" type="text/css" href="../css/font.css">	
 </head>
 
 <body>
 
-	<!-- 헤더파일만들고 주석해제-->
-
+	<%@ include file ="../Inc/Header.jspf" %>
 	<p class="f_layer_bg"></p>
 	<div class="layout_total">
 
@@ -217,5 +219,6 @@
 						</div>
 					</div>
 
+<%@ include file ="../Inc/Footer.jspf" %>
 </body>
 </html>
