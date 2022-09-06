@@ -1,7 +1,24 @@
 /* 전체 영역 (아래 공백 영역 제외) */
 
+element.style {
+    position: relative;
+    min-height: 100%;
+    top: 0px;
+}
+
+.wrap {
+    min-width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .sub_layout {
     padding: 130px 0 0;
+}
+
+.sub_contents {
+    width: 1144px;
+    margin: 0 auto;
 }
 
 .container_area {
@@ -257,4 +274,92 @@ ul {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+}
+
+/* 운영 차별화 */
+.title_infra {
+    font-size: 35px;
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+}
+
+.text_infra {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #666;
+    line-height: 25px;
+    text-align: center;
+}
+
+.manage_discri_list {
+    margin-top: 28px;
+    text-align: left;
+    *zoom: 1;
+}
+
+.manage_discri_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.manage_discri_list li:first-child {
+    margin-left: 0;
+}
+
+.manage_discri_list .manage_discri1 {
+    height: 246px;
+    padding-top: 130px;
+    background: url(../../img/ESG_infrasystem/distribution_system/img_manage_discri1.jpg) no-repeat left top;
+}
+
+.manage_discri_list li {
+    float: left;
+    width: 316px;
+    height: 376px;
+    margin-left: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.manage_discri_list dt {
+    margin-bottom: 17px;
+    font-size: 25px;
+    color: #fff;
+    line-height: 35px;
+}
+
+.manage_discri_list dd {
+    font-size: 13px;
+    color: #fff;
+    line-height: 25px;
+}
+
+.manage_discri_list .manage_discri2 {
+    height: 246px;
+    padding-top: 130px;
+    background: url(../../img/ESG_infrasystem/distribution_system/img_manage_discri2.jpg) no-repeat left top;
+}
+
+.manage_discri_list .manage_discri3 {
+    height: 263px;
+    padding-top: 113px;
+    background: url(../../img/ESG_infrasystem/distribution_system/img_manage_discri3.jpg) no-repeat left top;
+}
+
+/* 물류 프로세스 */
+.distribution_process {
+    margin-top: 40px;
+    padding-top: 455px;
+    background: url(../../img/ESG_infrasystem/distribution_system/distribution_process.jpg) no-repeat center top;
+}
+
+.blind {
+    position: absolute;
+    left: -999em;
+    top: -999em;
+    font-size: 0px;
+    line-height: 0px;
+    height: 0px;
 }

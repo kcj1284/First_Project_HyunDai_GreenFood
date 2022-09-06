@@ -10,7 +10,10 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 <link href="../css/ESG_infrasystem/infrasystem_style.css" type="text/css" rel="stylesheet" />
 
-<body>
+<body style="position: relative; min-height: 100%; top: 0px;">
+
+<div class="layout_total">
+	<div class="wrap">
     <div class="sub_layout sub_visual_6">
     
         <!-- 하이어라키 -->
@@ -264,6 +267,10 @@
 
             </div>
         </div>
+    </div>
+    </div>
+  
+</div>
         <!-- //서브 컨텐츠 -->
         
 </body>
