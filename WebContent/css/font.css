@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Sans Regular'), local('NotoSans-Regular');
+	src: url(font/notokr-regular.eot);
+	src: url(font/notokr-regular.eot?#iefix) format('embedded-opentype'),
+	url(font/notokr-regular.woff2) format('woff2'),
+	url(font/notokr-regular.woff) format('woff'),
+	url(font/notokr-regular.ttf) format('truetype')
+}

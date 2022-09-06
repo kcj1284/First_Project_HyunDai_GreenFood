@@ -1,0 +1,132 @@
+<!-- 작업자 : 정구현 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>현대 그린 푸드</title>
+<link rel="stylesheet" type="text/css" href="css/Inc/Layout.css">
+<link rel="stylesheet" type="text/css" href="css/Inc/Main.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrap wrap_main">
+		<header class="header no-touch-color">
+			<div class="cont_center">
+
+				<h1 class="logo">
+					<a href="Index.jsp"> </a>
+				</h1>
+
+				<div class="loginbtn">
+					<div>
+						<button class="custom-btn btn-1" type="button"
+							onclick="location.href='sub?command=MemberJoin';">회원가입</button>
+						<button class="custom-btn btn-1" type="button"
+							onclick="location.href='sub?command=Login';">로그인</button>
+					</div>
+				</div>
+
+				<nav class="gnb_area">
+					<ul class="gnb">
+						<li><a class="main_menu" href="">회사소개</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub1">
+									<li><a href="sub?command=green_food">현대그린푸드</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li><a class="main_menu" href="">사업영역</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub2">
+									<li><a href="sub?command=">푸드서비스사업</a></li>
+									<li><a href="sub?command=">외식사업</a></li>
+									<li><a href="sub?command=">리테일사업</a></li>
+									<li><a href="sub?command=">식자재유통사업</a></li>
+									<li><a href="sub?command=">해외사업</a></li>
+									<li><a href="sub?command=">건강식사업</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li><a class="main_menu" href="">ESG 경영</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub3">
+									<li><a href="sub?command=">경영목표</a></li>
+									<li><a href="sub?command=">환경경영(E)</a></li>
+									<li><a href="sub?command=">사회공헌(S)</a></li>
+									<li><a href="sub?command=">지배구조(G)</a></li>
+									<li><a href="sub?command=">안전보건</a></li>
+									<li><a href="sub?command=">상생경영</a></li>
+									<li><a href="sub?command=">환경경영(E)</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li><a class="main_menu" href="">인프라시스템</a>
+
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub4">
+									<li><a href="sub?command=">물류시스템</a></li>
+									<li><a href="sub?command=">식품안전시스템</a></li>
+									<li><a href="sub?command=">구매시스템</a></li>
+									<li><a href="sub?command=">가공&전처리시스템</a></li>
+									<li><a href="sub?command=">R&D시스템</a></li>
+									<li><a href="sub?command=">고객서비스</a></li>
+								</ul>
+							</div>
+						</li>
+							
+						<li><a class="main_menu" href="">브랜드이야기</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub5">
+									<li><a href="sub?command=Sub4_First">브랜드이야기</a></li>
+								</ul>
+							</div>
+						</li>
+
+						<li><a class="main_menu" href="">홍보센터</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub6">
+									<li><a href="sub?command=">공지소식</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="main_menu" href="">투자정보</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub7">
+									<li><a href="sub?command=">주가정보</a></li>
+									<li><a href="sub?command=">재무정보</a></li>
+									<li><a href="sub?command=">배당정보</a></li>
+									<li><a href="sub?command=">공시정보</a></li>
+									<li><a href="sub?command=">공고사항</a></li>
+									<li><a href="sub?command=">IR자료실</a></li>
+
+								</ul>
+							</div>
+						</li>
+
+						<li>
+							<a class="main_menu" href="">고객센터</a>
+							<div class="gnb_sub_area">
+								<ul class="cont_center gnb_sub gnb_sub8">
+									<li><a href="sub?command=">고객의 소리</a></li>
+									<li><a href="sub?command=">거래·상담</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+
+	
+	
+	
+	
