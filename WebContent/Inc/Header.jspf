@@ -57,13 +57,13 @@
 						<li><a class="main_menu" href="">ESG 경영</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub3">
-									<li><a href="sub?command=">경영목표</a></li>
-									<li><a href="sub?command=">환경경영(E)</a></li>
-									<li><a href="sub?command=">사회공헌(S)</a></li>
-									<li><a href="sub?command=">지배구조(G)</a></li>
-									<li><a href="sub?command=">안전보건</a></li>
-									<li><a href="sub?command=">상생경영</a></li>
-									<li><a href="sub?command=">환경경영(E)</a></li>
+									<li><a href="Managerial_Objective.jsp">경영목표</a></li>
+									<li><a href="NetZero_2030.jsp">환경경영(E)</a></li>
+									<li><a href="CRS.jsp">사회공헌(S)</a></li>
+									<li><a href="Board_Policy.jsp">지배구조(G)</a></li>
+									<li><a href="Safety_Health.jsp">안전보건</a></li>
+									<li><a href="Win_Management.jsp">상생경영</a></li>
+									<li><a href="Group_Ethical_Management.jsp">환경경영(E)</a></li>
 								</ul>
 							</div>
 						</li>
@@ -100,10 +100,10 @@
 						<li><a class="main_menu" href="">투자정보</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub7">
-									<li><a href="sub?command=">주가정보</a></li>
-									<li><a href="sub?command=">재무정보</a></li>
-									<li><a href="sub?command=">배당정보</a></li>
-									<li><a href="sub?command=">공시정보</a></li>
+									<li><a href="https://finance.naver.com/item/main.nhn?code=005440">주가정보</a></li>
+									<li><a href="Business_Performance.jsp">재무정보</a></li>
+									<li><a href="Dividend_Info.jsp">배당정보</a></li>
+									<li><a href="Disclosure_Info.jsp">공시정보</a></li>
 									<li><a href="sub?command=">공고사항</a></li>
 									<li><a href="sub?command=">IR자료실</a></li>
 
