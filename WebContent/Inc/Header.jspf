@@ -72,8 +72,8 @@
 
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub4">
-									<li><a href="sub?command=">물류시스템</a></li>
-									<li><a href="sub?command=">식품안전시스템</a></li>
+									<li><a href="distribution_system.jsp">물류시스템</a></li>
+									<li><a href="food_safety_system.jsp">식품안전시스템</a></li>
 									<li><a href="sub?command=">구매시스템</a></li>
 									<li><a href="sub?command=">가공&전처리시스템</a></li>
 									<li><a href="sub?command=">R&D시스템</a></li>
@@ -85,7 +85,7 @@
 						<li><a class="main_menu" href="">브랜드이야기</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub5">
-									<li><a href="sub?command=Sub4_First">브랜드이야기</a></li>
+									<li><a href="brandstory.jsp">브랜드이야기</a></li>
 								</ul>
 							</div>
 						</li>
