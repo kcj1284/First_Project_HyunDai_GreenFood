@@ -17,7 +17,7 @@
 			<img src="../img/ESG/visual_esg.jpg">
 		</div>
 		<div class="tree_text">
-			<h1>ESG 경영</h1>
+			<h1 class="title_sub">ESG 경영</h1>
 			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
 		</div>
 	</div>

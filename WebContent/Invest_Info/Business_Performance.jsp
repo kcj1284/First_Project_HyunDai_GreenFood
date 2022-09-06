@@ -17,7 +17,7 @@
             <p class="sub_description">현대그린푸드의 재무현황을 요약하여 알려드립니다. </p>
         </div>
         
-        <div class="tap_list">
+        <div class="ul">
             <a href="Business_Performance.jsp">경영실적</a>
             <a href="Financial_Position.jsp">재무상태</a>
             <br>
