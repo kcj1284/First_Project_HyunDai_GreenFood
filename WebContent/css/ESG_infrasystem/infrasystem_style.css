@@ -36,6 +36,60 @@ element.style {
     *zoom: 1;
 }
 
+.hierarchy_list li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+    background-image: none;
+}
+
+.hierarchy_list li {
+    float: left;
+    height: 20px;
+    padding-left: 30px;
+    margin-left: 21px;
+    line-height: normal;
+    background: url(../../img/ESG_infrasystem/distribution_system/icon_hierarchy.png) no-repeat left center;
+}
+
+.hierarchy_list li img {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.hierarchy_list .depth_2 {
+    background-color: transparent;
+}
+
+.m_hierarchy {
+    display: block;
+    height: auto;
+    padding-left: 0;
+    margin-right: 0;
+    background-image: none;
+    font-size: 15px;
+    color: #666;
+    line-height: 20px;
+}
+
+.hierarchy_list .depth_3 > a {
+    color: #0a9882;
+}
+
+.hierarchy_depth {
+    display: none;
+}
+
+.hierarchy_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
 /* 리스트 스타일 제거 */
 ol, ul, li {
     list-style: none;
@@ -91,7 +145,7 @@ p {
     /* color: #000; */
     font-weight: bold;
     text-align: center;
-    /* background: url(/Contents/images/m/icon/icon_green_line.jpg) no-repeat left top; */
+    /* background: url(../../img/ESG_infrasystem/distribution_system/icon_green_line.jpg) no-repeat left top; */
 }
 
 /*부 title */
@@ -166,6 +220,10 @@ h3 {
     margin: 55px auto 0;
     padding-bottom: 334px;
     position: relative;
+}
+
+img {
+    border: 0;
 }
 
 input, select, label, img {
