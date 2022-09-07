@@ -12,20 +12,15 @@
 </head>
 
 <body>
-	<%@ include file="../Inc/Header.jspf"%>
+	<%@ include file="/Inc/Header.jspf"%>
 	<div class="sub_contents">
-		<!-- 타이틀 , 디스크립션 -->
 		<div class="title_description">
 			<h2 class="title_sub">배당정보</h2>
 			<p class="sub_description">현대그린푸드의 배당정보를 알려드립니다.</p>
 		</div>
-		<!-- //타이틀 , 디스크립션 -->
-		<!-- 탭 -->
 		<button onclick="location='Dividend_Info.jsp'">배당현황</button>
 		<button onclick="location='Dividend_Policy.jsp'">배당정책</button>
 
-		<!-- //탭 -->
-		<!-- 배당현황 테이블 영역 -->
 		<div class="directorate_area">
 			<table class="list_tb">
 				<caption class="blind">당사 배당 현황</caption>
@@ -109,7 +104,7 @@
 		</div>
 	</div>
 
-	<%@ include file="../Inc/Footer.jspf"%>
+	<%@ include file="/Inc/Footer.jspf"%>
 </body>
 
 </html>

@@ -27,6 +27,37 @@
 	font-size: 50px;
 	font-weight: bold;
 	text-align: center;
+	color: white;
+}
+
+.category {
+	height: 95px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2)
+}
+
+.category ul {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.category ul li {
+	display: inline-block;
+	margin: 0 20px;
+	padding-top: 30px;
+}
+
+.category ul li a {
+	font-size: 25px;
+	color: #5a5757;
+}
+
+.category ul li.on a {
+	font-weight: bold;
+	color: #000;
+}
+
+.category ul li:hover a {
+	color: #000;
 }
 
 .ul {
@@ -58,6 +89,7 @@ a:focus {
 	font-weight: bold;
 	text-align: center;
 }
+
 .esg_body {
 	font-size: 1em;
 	margin-block-start: 1em;

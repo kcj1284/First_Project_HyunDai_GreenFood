@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<%@ include file="../Inc/Header.jspf"%>
+	<%@ include file="/Inc/Header.jspf"%>
 	<div class="sub_contents analyst_box">
 		<div class="title_description">
 			<h2 class="title_sub">IR자료실</h2>
@@ -55,6 +55,6 @@
 			</table>
 		</div>
 	</div>
-	<%@ include file="../Inc/Footer.jspf"%>
+	<%@ include file="/Inc/Footer.jspf"%>
 </body>
 </html>

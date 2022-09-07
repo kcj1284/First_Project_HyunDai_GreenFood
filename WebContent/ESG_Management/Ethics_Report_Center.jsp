@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<%@ include file="../Inc/Header.jspf"%>
+	<%@ include file="/Inc/Header.jspf"%>
 	<div class="wrap">
 		<div class="tree">
 			<img src="../img/ESG/visual_esg.jpg">
@@ -23,8 +23,17 @@
 		</div>
 	</div>
 
-	<div>
-		<a href="Managerial_Objective.jsp">경영목표</a> <a href="NetZero_2030.jsp">환경경영(E)</a> <a href="CRS.jsp">사회공헌(S)</a> <a href="Board_Policy.jsp">지배구조(G)</a> <a href="Safety_Health.jsp">안전보건</a> <a href="Win_Management.jsp">상생경영</a> <a href="Group_Ethical_Management.jsp">윤리경영</a> <br>
+	<div class="category">
+		<ul>
+		<li class = "on">
+		<a href="Managerial_Objective.jsp">경영목표</a> </li>
+		<li class = "on"><a href="NetZero_2030.jsp">환경경영(E)</a></li> 
+		<li class = "on"><a href="CRS.jsp">사회공헌(S)</a> </li>
+		<li class = "on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
+		<li class = "on"><a href="Safety_Health.jsp">안전보건</a> </li>
+		<li class = "on"><a href="Win_Management.jsp">상생경영</a> </li>
+		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
+		</ul>
 	</div>
 	<div>
 		<a href="Group_Ethical_Management.jsp">그룹윤리경영</a> <a href="Ethics_Report_Center.jsp">윤리신고센터</a> <br>
@@ -57,6 +66,6 @@
 			<a href="http://www.ehyundai.com/newPortal/ir/ETH/ETH000008.do?ir=3" class="btn_action comm" target="_blank">제보하기</a>
 		</div>
 	</div>
-	<%@ include file="../Inc/Footer.jspf"%>
+	<%@ include file="/Inc/Footer.jspf"%>
 </body>
 </html>

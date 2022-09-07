@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<%@ include file="../Inc/Header.jspf"%>
+	<%@ include file="/Inc/Header.jspf"%>
 	<div class="sub_contents">
 		<div class="title_description">
 			<h2 class="title_sub">배당정보</h2>
@@ -30,7 +30,7 @@
 
 		</div>
 	</div>
-	<%@ include file="../Inc/Footer.jspf"%>
+	<%@ include file="/Inc/Footer.jspf"%>
 </body>
 
 </html>

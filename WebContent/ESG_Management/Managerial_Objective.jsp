@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<%@ include file="../Inc/Header.jspf"%>
+	<%@ include file="/Inc/Header.jspf"%>
 	<div class="wrap">
 		<div class="tree">
 			<img src="../img/ESG/visual_esg.jpg">
@@ -23,18 +23,28 @@
 		</div>
 	</div>
 
-	<div class="ul">
-		<a href="Managerial_Objective.jsp">경영목표</a> <a href="NetZero_2030.jsp">환경경영(E)</a> <a href="CRS.jsp">사회공헌(S)</a> <a href="Board_Policy.jsp">지배구조(G)</a> <a href="Safety_Health.jsp">안전보건</a> <a href="Win_Management.jsp">상생경영</a> <a href="Group_Ethical_Management.jsp">윤리경영</a> <br>
+	<div class="category">
+		<ul>
+		<li class = "on">
+		<a href="Managerial_Objective.jsp">경영목표</a> </li>
+		<li class = "on"><a href="NetZero_2030.jsp">환경경영(E)</a></li> 
+		<li class = "on"><a href="CRS.jsp">사회공헌(S)</a> </li>
+		<li class = "on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
+		<li class = "on"><a href="Safety_Health.jsp">안전보건</a> </li>
+		<li class = "on"><a href="Win_Management.jsp">상생경영</a> </li>
+		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
+		</ul>
 	</div>
 	<div class="esg_body">
-		<h1 class="esg_title">ESG 경영목표</h1>
-		현대그린푸드는 미래세대에 ‘희망’을 제시하고 <br> ‘신뢰’받는 기업으로 성장하는 선순환 체계 구축을 목표로 합니다.<br>
+		<h1 class="title_sub">ESG 경영목표</h1>
+		현대그린푸드는 미래세대에 ‘희망’을 제시하고 <br> 
+		‘신뢰’받는 기업으로 성장하는 선순환 체계 구축을 목표로 합니다.<br>
 	</div>
 	<img src="../img/ESG/mo_01.jpg">
 	<br>
 	<h1 class="esg_title">ESG 추진방향</h1>
 	<img src="../img/ESG/mo_02.jpg">
 	<br>
-	<%@ include file="../Inc/Footer.jspf"%>
+	<%@ include file="/Inc/Footer.jspf"%>
 </body>
 </html>

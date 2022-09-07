@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<%@ include file="../Inc/Header.jspf"%>
+	<%@ include file="/Inc/Header.jspf"%>
 	<div class="wrap">
 		<div class="tree">
 			<img src="../img/ESG/visual_esg.jpg">
@@ -22,8 +22,17 @@
 			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
 		</div>
 	</div>
-	<div>
-		<a href="Managerial_Objective.jsp">경영목표</a> <a href="NetZero_2030.jsp">환경경영(E)</a> <a href="CRS.jsp">사회공헌(S)</a> <a href="Board_Policy.jsp">지배구조(G)</a> <a href="Safety_Health.jsp">안전보건</a> <a href="Win_Management.jsp">상생경영</a> <a href="Group_Ethical_Management.jsp">윤리경영</a> <br>
+	<div class="category">
+		<ul>
+		<li class = "on">
+		<a href="Managerial_Objective.jsp">경영목표</a> </li>
+		<li class = "on"><a href="NetZero_2030.jsp">환경경영(E)</a></li> 
+		<li class = "on"><a href="CRS.jsp">사회공헌(S)</a> </li>
+		<li class = "on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
+		<li class = "on"><a href="Safety_Health.jsp">안전보건</a> </li>
+		<li class = "on"><a href="Win_Management.jsp">상생경영</a> </li>
+		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
+		</ul>
 	</div>
 	<div>
 		<a href="NetZero_2030.jsp">넷제로2030</a> <a href="Eco_Management.jsp">친환경경영</a>
@@ -219,6 +228,6 @@
 			<a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_3.pdf&LOGIC_FILE_NM=환경경영법규및규제관리 절차서.pdf" class="btn_action comm">환경경영 법규 및 규제관리 절차서</a> <a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_4.pdf&LOGIC_FILE_NM=환경성과평가체계.pdf" class="btn_action comm">환경성과 평가체계</a>
 		</div>
 	</div>
-	<%@ include file="../Inc/Footer.jspf"%>
+	<%@ include file="/Inc/Footer.jspf"%>
 </body>
 </html>

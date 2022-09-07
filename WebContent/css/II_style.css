@@ -357,3 +357,12 @@ body {
 .list_tb tbody tr:first-child td {
     border-top: 0;
 }
+
+.iframe_area_korea {
+    width: 640px;
+    margin: 0 auto 10px;
+}
+
+.iframe_area_korea2 {
+    height: 1000px;
+}
