@@ -73,6 +73,22 @@ fieldset{
    outline: none;
 }
 
-.input_F input[type="radio"]{
+
+.radio, .select{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.signUpForm-btn{
+    text-align: center;
+    padding: 30px;
+}
+.signUpForm-btn input[type="submit"], .signUpForm-btn input[type="reset"]{
+    padding: 10px;
+    background-color:#FFF;
+    border: 1px;
+    cursor: pointer;
+}
+
+.signUpForm-btn input[type="submit"] :focus, .signUpForm-btn input[type="reset"]:focus{
     
 }

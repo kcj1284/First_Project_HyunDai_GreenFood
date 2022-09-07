@@ -18,6 +18,9 @@
                 <div class="input_F">
                     <input type="text" name="user_id" placeholder="아이디">
                 </div>
+                <div>
+                    //중복성검사결과 띄우기
+                </div>
                 <div class="input_F">
                     <input type="password" name="user_pw" placeholder="비밀번호">
                 </div>
@@ -34,14 +37,16 @@
                     <input type="text" name="email" placeholder="email">
                 </div>
                 
-                <div class="input_F">
+                
+
+                <div class="radio">
                     <input type="radio" name="gender" value="남성" checked> 남성
                     <input type="radio" name="gender" value="여성"> 여성
                 </div>
-
-                <div class="input_F">
+                
+                <div class="select">
                     분야 &nbsp  &nbsp
-                    <select name="select">
+                    <select>
                         <option value="급식">급식</option>
                         <option value="외식">외식</option>
                         <option value="식자재유통">식자재유통</option>
@@ -50,9 +55,10 @@
                         <option value="기타">기타</option>
                     </select>
                 </div>
+                
 
-                <div class="input_F">
-                    <input type="submit" value="등록">
+                <div class="signUpForm-btn">
+                    <input type="submit" value="등록">&nbsp
                     <input type="reset" value=" 초기화">
                 </div>
             </fieldset>
