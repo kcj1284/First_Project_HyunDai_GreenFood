@@ -17,7 +17,7 @@
 
 <body>
 
-	<%@ include file ="../Inc/Header.jspf" %> 
+	<%@ include file ="/Inc/Header.jspf" %> 
 	<p class="f_layer_bg"></p>
 	<div class="layout_total">
 
@@ -217,6 +217,6 @@
 						</div>
 					</div>
 
-<%@ include file ="../Inc/Footer.jspf" %>
+<%@ include file ="/Inc/Footer.jspf" %>
 </body>
 </html>

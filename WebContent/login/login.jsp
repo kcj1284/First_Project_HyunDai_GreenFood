@@ -1,4 +1,7 @@
 <!-- 작성자 : 김민찬 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file ="/Inc/Header.jspf" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +15,9 @@
 
     <div class="login">
         <div>
-            <h3 class="title">로그인</h3>
+  			<div class="login-title">
+            	<h2 class="title">로그인</h2>
+            </div>
             <form    action="" name="Login" method="post"
                 onsubmit="return validateme(this);">
                 <input type="hidden" id="openLogin1" name="openLogin" value="hpointLogin">
@@ -28,15 +33,14 @@
                                 data-enc="off" data-tk-kbdType="qwerty" placeholder="비밀번호" />
                 
                         </div>
-                        <span class="caution_txt">
-                        </span>
+
                         <div class="join">
                             <ul>
                                 <li><a  href="./signUpForm.jsp">회원가입</a></li>
                             </ul>
                         </div>
                         <div class="btn-login">
-                            <button type="submit"><span>로그인</span></button>
+                            <input type=submit value="로그인">
                         </div>
                     </div>
                 </fieldset>
@@ -44,7 +48,7 @@
         </div>
     </div>
 
-
+<%@ include file ="/Inc/Footer.jspf" %>
 
 </body>
 

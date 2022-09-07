@@ -12,6 +12,10 @@
     margin-top: 200px;
 }
 
+.login-title{
+	margin : 10px;
+	padding : 10px;
+}
 
 fieldset{
     border-color: #fff;
@@ -27,21 +31,25 @@ fieldset{
     font-size: 16px;
 }
 
-.btn-login button{
-    border: none;
+
+
+.btn-login > input[type="submit"]{
+	color : #fff;
+	border: none;
     margin: 0;
     padding: 10px;
     cursor:pointer;
-    background-color: #34483B;
-    color: #fff;
+    background-color: #46675C;
     width: 100%;
     border-radius: 3px;
-}
+} 
 
 .join{
     text-align: right;
 }
 .join li{
+	margin-top : 15px;
+	margin-bottom : 15px;
     list-style:none;
 }
 .join li a{
