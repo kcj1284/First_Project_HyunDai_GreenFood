@@ -13,7 +13,7 @@
     <div class="signUpForm">
         <h1>회원가입</h1>
         <hr>
-        <form>
+        <form method="post">
             <fieldset>
                 <div class="input_F">
                     <input type="text" name="user_id" placeholder="아이디">
@@ -45,7 +45,7 @@
                 </div>
                 
                 <div class="select">
-                    분야 &nbsp  &nbsp
+                    분야  &nbsp  &nbsp
                     <select>
                         <option value="급식">급식</option>
                         <option value="외식">외식</option>
@@ -58,7 +58,7 @@
                 
 
                 <div class="signUpForm-btn">
-                    <input type="submit" value="등록">&nbsp
+                    <input type="submit" value="등록"> &nbsp
                     <input type="reset" value=" 초기화">
                 </div>
             </fieldset>
