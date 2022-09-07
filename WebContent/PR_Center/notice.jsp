@@ -7,7 +7,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
-<link href="../css/PR_Center/notice.css" type="text/css" rel="stylesheet" />
+<link href="/First Project HyunDai GreenFood/css/PR_Center/notice.css" type="text/css" rel="stylesheet" />
+
+<%@ include file ="/Inc/Header.jspf" %>
 </head>
 
 <body>
@@ -78,5 +80,6 @@
      </div>
    </div>
 </div>
+<%@ include file ="/Inc/Footer.jspf" %>
 </body>
 </html>
