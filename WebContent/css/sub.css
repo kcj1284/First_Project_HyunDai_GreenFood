@@ -27,7 +27,7 @@
 .hierarchy_list{width:1143px;margin:30px auto 0;*zoom:1;}
 .hierarchy_list:after{content:"";display:block;clear:both;}
 .hierarchy_list li{float:left;height:20px;padding-left:30px;margin-left:21px;line-height:normal;
-  background:url("/Contents/images/icon/icon_hierarchy.png") no-repeat left center;
+  background:url("/First_Project_HyunDai_GreenFood/img/icon/icon_hierarchy.png") no-repeat left center;
 }
 .hierarchy_list li:first-child{padding-left:0;margin-left:0;background-image:none;}
 .hierarchy_list li img{display:inline-block;margin-left:10px;vertical-align:top;}
@@ -109,7 +109,7 @@
 
 .date_hits_list{float:right;*zoom:1;}
 .date_hits_list:after{content:"";display:block;clear:both;}
-.date_hits_list li{float:left;background:url("/Contents/images/icon/line_hits_date.jpg") no-repeat left center;padding-left:22px;margin-left:21px;
+.date_hits_list li{float:left;background:url("/First_Project_HyunDai_GreenFood/img/icon/line_hits_date.jpg") no-repeat left center;padding-left:22px;margin-left:21px;
   font-size:13px;color:#666;line-height:50px;
 }
 .date_hits_list li:first-child{background-image:none;padding-left:0;margin-left:0;}
@@ -147,7 +147,7 @@
 .btn_action.comm > span{display:block;margin-top:-11px;line-height:1.2;}
 
 .prev_next_tb{width:100%;margin-top:30px;border-top:1px solid #7f7f7f;border-bottom:1px solid #7f7f7f;}
-.prev_next_tb tbody tr th{width:115px;height:43px;background:url("/Contents/images/icon/prev_next_line.jpg") no-repeat right center;
+.prev_next_tb tbody tr th{width:115px;height:43px;background:url("/First_Project_HyunDai_GreenFood/img/icon/prev_next_line.jpg") no-repeat right center;
   border-top:1px solid #e5e5e5;
   font-size:13px;color:#333;text-align:center;
 }
