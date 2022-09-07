@@ -1,13 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>현대그린푸드</title>
-<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Inc/Main.css">
-</head>
-<body>
+
 	<%@include file="/Inc/Header.jspf" %>
 	
 
@@ -207,9 +200,4 @@
 	});
 
 	</script>
-	
-	
-	
 	<%@include file="/Inc/Footer.jspf" %> 
-</body>
-</html>

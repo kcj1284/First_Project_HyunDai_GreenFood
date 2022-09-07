@@ -9,22 +9,23 @@
 <meta charset="UTF-8">
 <title>현대 그린 푸드</title>
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Inc/Layout.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Inc/Main.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/sub.css">
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/font.css">
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/slick.css">
-<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/sub.css">
 
-<!-- index 페이지 slick 라이브러리 로드 -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 <!-- JQuery 로드 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- index 페이지 slick 라이브러리 로드 -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- index 페이지 slick 라이브러리 로드 -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 </head>
-<body>
-	<div class="wrap wrap_main">
+<body style="position: relative; min-height: 100%; top: 0px;">
+	<div class="wrap">
 		<header class="header no-touch-color">
 			<div class="cont_center">
 
