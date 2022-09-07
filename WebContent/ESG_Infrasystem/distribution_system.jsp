@@ -12,6 +12,8 @@
 
 <body style="position: relative; min-height: 100%; top: 0px;">
 
+<%@ include file ="../Inc/Header.jspf" %>
+
 <div class="layout_total">
 	<div class="wrap">
     <div class="sub_layout sub_visual_6">

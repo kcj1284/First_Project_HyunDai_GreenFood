@@ -1,0 +1,320 @@
+/* 전체 영역 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, address, a, select, input, textarea, header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+}
+
+aside, nav, hgroup, details, menu, figure, figcaption, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+}
+
+element.style {
+    height: 1125px;
+}
+
+element.style {
+    width: 376px;
+    display: list-item;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div {
+    display: block;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+input, select, label, img {
+    font-family: 'Noto Sans';
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+script {
+    display: none;
+}
+
+.wrap {
+    min-width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.container_area {
+    padding-bottom: 300px;
+}
+
+/* 본문 영역 */
+.sub_layout {
+    padding: 130px 0 0;
+}
+
+/* 하이어라키 */
+.hierarchy_list {
+    width: 1143px;
+    margin: 30px auto 0;
+    *zoom: 1;
+}
+
+.hierarchy_list li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+    background-image: none;
+}
+
+.hierarchy_list .icon_home {
+    display: block;
+}
+
+.hierarchy_list li {
+    float: left;
+    height: 20px;
+    padding-left: 30px;
+    margin-left: 21px;
+    line-height: normal;
+    background: url(../../img/PR_Center/icon_hierarchy.png) no-repeat left center;
+}
+
+.hierarchy_list li img {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.hierarchy_list .depth_2 {
+    background-color: transparent;
+}
+
+.m_hierarchy {
+    display: block;
+    height: auto;
+    padding-left: 0;
+    margin-right: 0;
+    background-image: none;
+    font-size: 15px;
+    color: #666;
+    line-height: 20px;
+}
+
+.hierarchy_depth {
+    display: none;
+}
+
+.hierarchy_list .depth_3 > a {
+    color: #0a9882;
+}
+
+.t_block_hierarchy {
+    display: block;
+}
+
+/* 공지 소식 */
+.sub_contents {
+    width: 1144px;
+    margin: 0 auto;
+}
+
+.title_description {
+    padding: 115px 0 150px;
+}
+
+.title_sub {
+    font-size: 50px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    /* background: url(/Contents/images/m/icon/icon_green_line.jpg) no-repeat left top; */
+}
+
+.title_description .sub_description {
+    margin-top: 60px;
+}
+
+.sub_description {
+    line-height: 1.8;
+    font-size: 24px;
+    color: #737373;
+    text-align: center;
+}
+
+.t_block_w_inline {
+    display: inline;
+}
+
+.list_search_area {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.blind {
+    position: absolute;
+    left: -999em;
+    top: -999em;
+    font-size: 0px;
+    line-height: 0px;
+    height: 0px;
+}
+
+.text_input_search {
+    width: 208px;
+    height: 26px;
+    padding-left: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #d0dcd0;
+    font-size: 13px;
+    color: #333;
+    line-height: 26px;
+}
+
+button, input[type="button"] {
+    border: 0;
+    background-color: transparent;
+    text-indent: -9999px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* 공지 소식 리스트 */
+.notice_block {
+    margin-top: 15px;
+    position: relative;
+}
+
+.block_list li {
+    width: 354px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.notice_area {
+    margin: 20px 20px 30px 20px;
+    position: relative;
+}
+
+.notice_area a {
+    display: block;
+}
+
+element.style {
+    width: 334px;
+    display: none;
+}
+
+.block_list li img {
+    display: block;
+}
+
+.notice_img {
+    width: 334px;
+}
+
+.notice_link_title {
+    display: block;
+    height: 62px;
+    overflow: hidden;
+    margin-top: 43px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #333;
+}
+
+.notice_link_title span {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: #0a9882;
+}
+
+.notice_text {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #666;
+    line-height: 18px;
+    word-break: break-all;
+}
+
+.regist_date {
+    font-size: 13px;
+    color: #888;
+}
+
+element.style {
+    width: 376px;
+    display: list-item;
+    position: absolute;
+    top: 0px;
+    left: 768px;
+}
+
+.icon_file_add {
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+}
+
+.block_list li img {
+    display: block;
+}
+
+element.style {
+    width: 376px;
+    display: list-item;
+    position: absolute;
+    top: 263px;
+    left: 0px;
+}
+
+element.style {
+    width: 334px;
+    display: none;
+}
+
+element.style {
+    width: 376px;
+    display: list-item;
+    position: absolute;
+    top: 263px;
+    left: 384px;
+}
+
+.btn_more_notice {
+    height: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn_more_notice a {
+    display: block;
+    height: 40px;
+    background-color: #666;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+
+.btn_search {
+    width: 30px;
+    height: 26px;
+    background: url(../../img/PR_Center/btn_search.jpg) no-repeat left top;
+    border: 0;
+    cursor: pointer;
+    text-indent: -9999px;
+}

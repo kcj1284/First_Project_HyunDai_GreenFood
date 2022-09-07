@@ -1,116 +1,119 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
-<title>Çö´ë±×¸°Çªµå</title>
+<title>í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+<%@ include file ="../Inc/Header.jspf" %>
+
 </head>
 
     <div class="sub_layout sub_visual_6">
     
-        <!-- ÇÏÀÌ¾î¶óÅ° -->
+        <!-- í•˜ì´ì–´ë¼í‚¤ -->
         <ul class="hierarchy_list">
             <li class="icon_home"><img src="../img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
             <li class="depth_2">
-                <a href="#" class="m_hierarchy">»ç¾÷¿µ¿ª </a>
+                <a href="#" class="m_hierarchy">ì‚¬ì—…ì˜ì—­ </a>
 
                 <ul class="hierarchy_depth" style="display:none;">
-                    <li><a href="#">»ç¾÷¿µ¿ª</a></li>
+                    <li><a href="#">ì‚¬ì—…ì˜ì—­</a></li>
                 </ul>
             </li>
             <li class="depth_3">
-                <a href="#" class="t_block_hierarchy">½ÄÇ°¾ÈÀü½Ã½ºÅÛ </a>
+                <a href="#" class="t_block_hierarchy">ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œ </a>
 
                 <ul class="hierarchy_depth">
-                    <li><a href="#">Çªµå¼­ºñ½º»ç¾÷</a></li>
-                    <li class="on"><a href="#">¿Ü½Ä»ç¾÷</a></li>
-                    <li><a href="#">¸®Å×ÀÏ»ç¾÷</a></li>
-                    <li><a href="#">½ÄÀÚÀçÀ¯Åë»ç¾÷</a></li>
-                    <li><a href="#">¼Ò¸ÅÀ¯Åë»ç¾÷</a></li>
-                    <li><a href="#">IT¼­ºñ½º»ç¾÷</a></li>
-                    <li><a href="#">ÇØ¿Ü»ç¾÷</a></li>
+                    <li><a href="#">í‘¸ë“œì„œë¹„ìŠ¤ì‚¬ì—…</a></li>
+                    <li class="on"><a href="#">ì™¸ì‹ì‚¬ì—…</a></li>
+                    <li><a href="#">ë¦¬í…Œì¼ì‚¬ì—…</a></li>
+                    <li><a href="#">ì‹ìžìž¬ìœ í†µì‚¬ì—…</a></li>
+                    <li><a href="#">ì†Œë§¤ìœ í†µì‚¬ì—…</a></li>
+                    <li><a href="#">ITì„œë¹„ìŠ¤ì‚¬ì—…</a></li>
+                    <li><a href="#">í•´ì™¸ì‚¬ì—…</a></li>
                 </ul>
             </li>
         </ul>
-        <!-- //ÇÏÀÌ¾î¶óÅ° -->
+        <!-- //í•˜ì´ì–´ë¼í‚¤ -->
         
-                <!-- ¼­ºê ÄÁÅÙÃ÷ -->
+                <!-- ì„œë¸Œ ì»¨í…ì¸  -->
         <div class="sub_contents">
-            <!-- Å¸ÀÌÆ² , µð½ºÅ©¸³¼Ç -->
+            <!-- íƒ€ì´í‹€ , ë””ìŠ¤í¬ë¦½ì…˜ -->
             <div class="title_description">
-                <h2 class="title_sub">½ÄÇ°¾ÈÀü½Ã½ºÅÛ</h2>
+                <h2 class="title_sub">ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œ</h2>
 
-                <p class="sub_description">À§»ý»ç°í Á¦·ÎÀÇ ¾ÈÀüÇÑ ½Ä»ç¸¦ À§ÇÑ ½ÄÇ°¾ÈÀü½Ã½ºÅÛÀ» ¼Ò°³ÇÕ´Ï´Ù.</p>
+                <p class="sub_description">ìœ„ìƒì‚¬ê³  ì œë¡œì˜ ì•ˆì „í•œ ì‹ì‚¬ë¥¼ ìœ„í•œ ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œì„ ì†Œê°œí•©ë‹ˆë‹¤.</p>
             </div>
-            <!-- //Å¸ÀÌÆ² , µð½ºÅ©¸³¼Ç -->
+            <!-- //íƒ€ì´í‹€ , ë””ìŠ¤í¬ë¦½ì…˜ -->
 
-            <!-- ÅÇ -->
+            <!-- íƒ­ -->
             <ul class="tab_list tab_list_2">
                 <li>
-                    <a href="./food_safety_system.jsp">°³¿ä</a>
+                    <a href="./food_safety_system.jsp">ê°œìš”</a>
                     <img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
                 </li>
                 <li class="on">
-                    <a href="#">½ÄÇ°À§»ý¿¬±¸¼Ò</a>
+                    <a href="#">ì‹í’ˆìœ„ìƒì—°êµ¬ì†Œ</a>
                     <img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
                 </li>
             </ul>
-            <!-- //ÅÇ -->
+            <!-- //íƒ­ -->
 
             <div class="infra_area">
 
-                <!-- °³¿ä -->
+                <!-- ê°œìš” -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">°³¿ä</h3>
+                    <h3 class="title_infra">ê°œìš”</h3>
 
-                    <p class="text_infra">Àü¹®ÀÎ·Â°ú ÃÖÃ·´Ü½Ã¼³À» °®Ãá Çö´ë±×¸°Çªµå <span class="point">½ÄÇ°À§»ý¿¬±¸¼Ò´Â ÃÖ°í¼öÁØÀÇ Ç°Áú°ú ¾ÈÀü°Ë»ç</span>¸¦ ¼öÇàÇÕ´Ï´Ù.</p>
+                    <p class="text_infra">ì „ë¬¸ì¸ë ¥ê³¼ ìµœì²¨ë‹¨ì‹œì„¤ì„ ê°–ì¶˜ í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ <span class="point">ì‹í’ˆìœ„ìƒì—°êµ¬ì†ŒëŠ” ìµœê³ ìˆ˜ì¤€ì˜ í’ˆì§ˆê³¼ ì•ˆì „ê²€ì‚¬</span>ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.</p>
                 </div>
-                <!-- //°³¿ä -->
+                <!-- //ê°œìš” -->
 
-                <!-- ¾ÈÀüÇÑ ¸Ô°Å¸®¸¦ À§ÇÑ Food Safe - Guard -->
+                <!-- ì•ˆì „í•œ ë¨¹ê±°ë¦¬ë¥¼ ìœ„í•œ Food Safe - Guard -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">¾ÈÀüÇÑ ¸Ô°Å¸®¸¦ À§ÇÑ Food Safe - Guard</h3>
+                    <h3 class="title_infra">ì•ˆì „í•œ ë¨¹ê±°ë¦¬ë¥¼ ìœ„í•œ Food Safe - Guard</h3>
 
-                    <p class="text_infra">Çö´ë±×¸°Çªµå ½ÄÇ°À§»ý¿¬±¸¼Ò´Â Àü¹®ÀÎ·Â°ú Ã·´Ü½Ã¼³À» °®Ãß°í °í°´ÀÇ ¾ÈÀüÇÑ ½ÄÅ¹À» À§ÇÑ<br />ÃÖ°í ¼öÁØÀÇ Ç°Áú°Ë»ç¿Í ÇöÀå À§»ý¾ÈÀü¼º °Ë»ç¸¦ ¼öÇàÇÕ´Ï´Ù.</p>
+                    <p class="text_infra">í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ ì‹í’ˆìœ„ìƒì—°êµ¬ì†ŒëŠ” ì „ë¬¸ì¸ë ¥ê³¼ ì²¨ë‹¨ì‹œì„¤ì„ ê°–ì¶”ê³  ê³ ê°ì˜ ì•ˆì „í•œ ì‹íƒì„ ìœ„í•œ<br />ìµœê³  ìˆ˜ì¤€ì˜ í’ˆì§ˆê²€ì‚¬ì™€ í˜„ìž¥ ìœ„ìƒì•ˆì „ì„± ê²€ì‚¬ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.</p>
 
                     <ul class="safe_guard_list">
-                        <li><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_green_arrow.jpg" alt="" /> ¹Î°£±â¾÷ ÃÖÃÊ ÀÚ°¡Ç°Áú°Ë»ç±â°ü ÁöÁ¤ <span>(Çö´ë¹éÈ­Á¡ ½ÄÇ°¾ÈÀü °ü¸®)</span></li>
-                        <li><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_green_arrow.jpg" alt="" /> µ¿Á¾¾÷°è ÃÖÃÊ »ê¾÷ÀÚ¿øºÎ ÀÎÁõ ±¹°¡°øÀÎ°Ë»ç±â°ü ÁöÁ¤</li>
-                        <li><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_green_arrow.jpg" alt="" /> ¹Ì»ý¹°, ½ÄÇ°¼ººÐ, Ã·°¡¹°, ÀÜ·ù³ó¾à, Áß±Ý¼Ó, ÇÑ¿ìDNA µî ´Ù¾çÇÑ °Ë»ç´É·Â º¸À¯</li>
+                        <li><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_green_arrow.jpg" alt="" /> ë¯¼ê°„ê¸°ì—… ìµœì´ˆ ìžê°€í’ˆì§ˆê²€ì‚¬ê¸°ê´€ ì§€ì • <span>(í˜„ëŒ€ë°±í™”ì  ì‹í’ˆì•ˆì „ ê´€ë¦¬)</span></li>
+                        <li><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_green_arrow.jpg" alt="" /> ë™ì¢…ì—…ê³„ ìµœì´ˆ ì‚°ì—…ìžì›ë¶€ ì¸ì¦ êµ­ê°€ê³µì¸ê²€ì‚¬ê¸°ê´€ ì§€ì •</li>
+                        <li><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_green_arrow.jpg" alt="" /> ë¯¸ìƒë¬¼, ì‹í’ˆì„±ë¶„, ì²¨ê°€ë¬¼, ìž”ë¥˜ë†ì•½, ì¤‘ê¸ˆì†, í•œìš°DNA ë“± ë‹¤ì–‘í•œ ê²€ì‚¬ëŠ¥ë ¥ ë³´ìœ </li>
                     </ul>
 
                     <div class="img_safe_system">
                         
                         <div class="blind">
                             <dl>
-                                <dt>Food Safety System : ¹Ì»ý¹°, ½ÄÇ°¼ººÐ, Ã·°¡¹°, ÀÜ·ù³ó¾à, Áß±Ý¼Ó, À¯ÀüÀÚºÐ¼®</dt>
+                                <dt>Food Safety System : ë¯¸ìƒë¬¼, ì‹í’ˆì„±ë¶„, ì²¨ê°€ë¬¼, ìž”ë¥˜ë†ì•½, ì¤‘ê¸ˆì†, ìœ ì „ìžë¶„ì„</dt>
                                 <dd>
                                     <ul>
                                         <li>
                                             <dl>
                                                 <dt>KOLAS(Korea Laboratory Accreditation Scheme)</dt>
-                                                <dd>°úÇÐÀûÀÎ ºÐ¼®½Ã½ºÅÛÀ» Àû¿ëÇÑ ½ÄÇ°À§»ý°ü¸®</dd>
+                                                <dd>ê³¼í•™ì ì¸ ë¶„ì„ì‹œìŠ¤í…œì„ ì ìš©í•œ ì‹í’ˆìœ„ìƒê´€ë¦¬</dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
-                                                <dt>F¡¤H¡¤I(Food Hygiene inspection)</dt>
-                                                <dd>ÇöÀå ¾ÈÀü¼º °ü¸®(°³ÀÎ, ½ÄÇ°, È¯°æ À§»ý°ü¸®)</dd>
+                                                <dt>FÂ·HÂ·I(Food Hygiene inspection)</dt>
+                                                <dd>í˜„ìž¥ ì•ˆì „ì„± ê´€ë¦¬(ê°œì¸, ì‹í’ˆ, í™˜ê²½ ìœ„ìƒê´€ë¦¬)</dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt>HACCP(Hazard Analysis Critical Control Point)</dt>
-                                                <dd>»çÀü À§ÇØ °ü¸®¸¦ ÅëÇÑ ÃÖ»óÀÇ ½ÄÇ°À§»ý°ü¸®</dd>
+                                                <dd>ì‚¬ì „ ìœ„í•´ ê´€ë¦¬ë¥¼ í†µí•œ ìµœìƒì˜ ì‹í’ˆìœ„ìƒê´€ë¦¬</dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
-                                                <dt>F¡¤A(Food Analysis)</dt>
-                                                <dd>À§ÇØ ¼ººÐ ½ÃÇèºÐ¼®À» ÅëÇÑ ½ÄÇ°¾ÈÀü¼º°ü¸®</dd>
+                                                <dt>FÂ·A(Food Analysis)</dt>
+                                                <dd>ìœ„í•´ ì„±ë¶„ ì‹œí—˜ë¶„ì„ì„ í†µí•œ ì‹í’ˆì•ˆì „ì„±ê´€ë¦¬</dd>
                                             </dl>
                                         </li>
                                     </ul>
@@ -122,32 +125,32 @@
                         <img src="../img/ESG_infrasystem/food_sanitation_research_institute/img_safe_system2.jpg" alt="" />
                         
                         <ul class="btn_guide_list">
-                        	<!--<li><a target="frm" href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/ISFDR02_1.pdf&LOGIC_FILE_NM=Cert1.pdf"><img src="/Contents/images/infra/btn_guide1.jpg" alt="KOLAS(Korea Laboratory Accreditation Scheme) : ±¹°¡°øÀÎ½ÃÇè ÀÎÁ¤±â°ü" /></a></li>-->
-                        	<li><a target="frm" href="../pdf/ESG_infrasystem/food_sanitation_research_institute/Cert1.pdf"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_guide2.jpg" alt="KOLAS(Korea Laboratory Accreditation Scheme) : ±¹Á¦°øÀÎ½ÃÇè ÀÎÁ¤±â°ü" /></a></li>
-                        	<li><a target="frm" href="../pdf/ESG_infrasystem/food_sanitation_research_institute/Cert2.pdf"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_guide3.jpg" alt="½Ä¾àÃ» : ½ÄÇ°µîÀÇ ½ÃÇè¡¤°Ë»ç ÁöÁ¤±â°ü" /></a></li>
-                        	<li><a target="frm" href="../pdf/ESG_infrasystem/food_sanitation_research_institute/Cert3.pdf"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_guide4.jpg" alt="½Ä¾àÃ» : Ãà»ê¹° ½ÃÇè¡¤°Ë»ç ÁöÁ¤±â°ü" /></a></li>
+                        	<!--<li><a target="frm" href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/ISFDR02_1.pdf&LOGIC_FILE_NM=Cert1.pdf"><img src="/Contents/images/infra/btn_guide1.jpg" alt="KOLAS(Korea Laboratory Accreditation Scheme) : êµ­ê°€ê³µì¸ì‹œí—˜ ì¸ì •ê¸°ê´€" /></a></li>-->
+                        	<li><a target="frm" href="../pdf/ESG_infrasystem/food_sanitation_research_institute/Cert1.pdf"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_guide2.jpg" alt="KOLAS(Korea Laboratory Accreditation Scheme) : êµ­ì œê³µì¸ì‹œí—˜ ì¸ì •ê¸°ê´€" /></a></li>
+                        	<li><a target="frm" href="../pdf/ESG_infrasystem/food_sanitation_research_institute/Cert2.pdf"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_guide3.jpg" alt="ì‹ì•½ì²­ : ì‹í’ˆë“±ì˜ ì‹œí—˜Â·ê²€ì‚¬ ì§€ì •ê¸°ê´€" /></a></li>
+                        	<li><a target="frm" href="../pdf/ESG_infrasystem/food_sanitation_research_institute/Cert3.pdf"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_guide4.jpg" alt="ì‹ì•½ì²­ : ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ ì§€ì •ê¸°ê´€" /></a></li>
                         </ul>
                     </div>
                 </div>
-                <!-- //¾ÈÀüÇÑ ¸Ô°Å¸®¸¦ À§ÇÑ Food Safe - Guard -->
+                <!-- //ì•ˆì „í•œ ë¨¹ê±°ë¦¬ë¥¼ ìœ„í•œ Food Safe - Guard -->
 
-                <!-- ¿¬±¸¼Ò ¿¬Çõ -->
+                <!-- ì—°êµ¬ì†Œ ì—°í˜ -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">¿¬±¸¼Ò ¿¬Çõ</h3>
+                    <h3 class="title_infra">ì—°êµ¬ì†Œ ì—°í˜</h3>
 
-                    <p class="text_infra">Àü¹®ÀÎ·Â°ú ÃÖÃ·´Ü½Ã¼³À» °®Ãá Çö´ë±×¸°Çªµå ½ÄÇ°À§»ý¿¬±¸¼Ò´Â ÃÖ°í¼öÁØÀÇ Ç°Áú°ú ¾ÈÀü°Ë»ç¸¦ ¼öÇàÇÕ´Ï´Ù.</p>
+                    <p class="text_infra">ì „ë¬¸ì¸ë ¥ê³¼ ìµœì²¨ë‹¨ì‹œì„¤ì„ ê°–ì¶˜ í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ ì‹í’ˆìœ„ìƒì—°êµ¬ì†ŒëŠ” ìµœê³ ìˆ˜ì¤€ì˜ í’ˆì§ˆê³¼ ì•ˆì „ê²€ì‚¬ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.</p>
 
                     <div class="img_history_lab" style="height:804px">
                         <div class="blind">
                             <dl>
-                                <dt>2010³â ~ ÇöÀç</dt>
+                                <dt>2010ë…„ ~ í˜„ìž¬</dt>
                                 <dd>
                                     <ul>
-                                    	<li>2015.05 : Ãà»ê¹° ½ÃÇè¡¤°Ë»ç±â°ü ÇÑ¿ìÈ®ÀÎ°Ë»ç±â°ü ÁöÁ¤ (½ÄÇ°ÀÇ¾àÇ°¾ÈÀüÃ³)</li>
-                                        <li>2014.12 : ½ÄÇ° ¹× Ãà»ê¹° ½ÃÇè¡¤°Ë»ç±â°ü ¼÷·Ãµµ Æò°¡ °á°ú 3³â ¿¬¼Ó ¿ì¼ö(½ÄÇ°ÀÇ¾àÇ°¾ÈÀüÃ³)</li>
-									    <li>2012.12 : À¯ÀüÀÚÀçÁ¶ÇÕ ½ÄÇ° °Ë»ç±â°ü ÁöÁ¤(½ÄÇ°ÀÇ¾àÇ°¾ÈÀüÃ³)</li>
-                                        <li>2012.01 : ³ë·Î¹ÙÀÌ·¯½º °Ë»ç±â°ü ÁöÁ¤(½ÄÇ°ÀÇ¾àÇ°¾ÈÀüÃ³)</li>
-                                        <li>2010.05 : ¢ßÇö´ë±×¸°Çªµå ÅëÇÕ, ½ÄÇ°¾ÈÀüÆÀ ½ÄÇ°À§»ý¿¬±¸¼Ò</li>
+                                    	<li>2015.05 : ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ê¸°ê´€ í•œìš°í™•ì¸ê²€ì‚¬ê¸°ê´€ ì§€ì • (ì‹í’ˆì˜ì•½í’ˆì•ˆì „ì²˜)</li>
+                                        <li>2014.12 : ì‹í’ˆ ë° ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ê¸°ê´€ ìˆ™ë ¨ë„ í‰ê°€ ê²°ê³¼ 3ë…„ ì—°ì† ìš°ìˆ˜(ì‹í’ˆì˜ì•½í’ˆì•ˆì „ì²˜)</li>
+									    <li>2012.12 : ìœ ì „ìžìž¬ì¡°í•© ì‹í’ˆ ê²€ì‚¬ê¸°ê´€ ì§€ì •(ì‹í’ˆì˜ì•½í’ˆì•ˆì „ì²˜)</li>
+                                        <li>2012.01 : ë…¸ë¡œë°”ì´ëŸ¬ìŠ¤ ê²€ì‚¬ê¸°ê´€ ì§€ì •(ì‹í’ˆì˜ì•½í’ˆì•ˆì „ì²˜)</li>
+                                        <li>2010.05 : ãˆœí˜„ëŒ€ê·¸ë¦°í‘¸ë“œ í†µí•©, ì‹í’ˆì•ˆì „íŒ€ ì‹í’ˆìœ„ìƒì—°êµ¬ì†Œ</li>
                                     </ul>
                                 </dd>
                             </dl>
@@ -156,9 +159,9 @@
                                 <dt>2000 ~2009</dt>
                                 <dd>
                                     <ul>
-                                        <li>2002.12 : ±¹Á¦°øÀÎ½ÃÇè±â°ü ÀÎÁõ(Áö½Ä°æÁ¦ºÎ)</li>
-                                        <li>2001.06 : Ãà»ê¹°À§»ý°Ë»ç±â°ü ÁöÁ¤(³ó¸²¼ö»è½ÄÇ°ºÎ ±¹¸³¼öÀÇ°úÇÐ°Ë¿ª¿ø)</li>
-                                        <li>2001.01 : ¢ßÇö´ë¹éÈ­Á¡ »ýÈ°»óÇ°º»ºÎ Ç°Áú°ü¸®½Ç Ç°Áú¿¬±¸¼Ò</li>
+                                        <li>2002.12 : êµ­ì œê³µì¸ì‹œí—˜ê¸°ê´€ ì¸ì¦(ì§€ì‹ê²½ì œë¶€)</li>
+                                        <li>2001.06 : ì¶•ì‚°ë¬¼ìœ„ìƒê²€ì‚¬ê¸°ê´€ ì§€ì •(ë†ë¦¼ìˆ˜ì‚­ì‹í’ˆë¶€ êµ­ë¦½ìˆ˜ì˜ê³¼í•™ê²€ì—­ì›)</li>
+                                        <li>2001.01 : ãˆœí˜„ëŒ€ë°±í™”ì  ìƒí™œìƒí’ˆë³¸ë¶€ í’ˆì§ˆê´€ë¦¬ì‹¤ í’ˆì§ˆì—°êµ¬ì†Œ</li>
                                     </ul>
                                 </dd>
                             </dl>
@@ -167,21 +170,21 @@
                                 <dt>1980 ~ 1999</dt>
                                 <dd>
                                     <ul>
-                                        <li>1999.03 : ÀÚ°¡Ç°Áú°Ë»çÀ§Å¹±â°ü ÁöÁ¤(½ÄÇ°ÀÇ¾àÇ°¾ÈÀüÃ»)</li>
-                                        <li>1998.10 : ±¹°¡°øÀÎ½ÃÇè±â°ü ÀÎÁõ(Áö½Ä°æÁ¦ºÎ)</li>
-                                        <li>1992.08 : ±Ý°­°³¹ß»ê¾÷ ¢ß»óÇ°º»ºÎ Ç°Áú¿¬±¸¼Ò</li>
-                                        <li>1985.12 : Çö´ë¹éÈ­Á¡ º»Á¡ °ËÇ°°ú »óÇ°½ÃÇè½Ç</li>
+                                        <li>1999.03 : ìžê°€í’ˆì§ˆê²€ì‚¬ìœ„íƒê¸°ê´€ ì§€ì •(ì‹í’ˆì˜ì•½í’ˆì•ˆì „ì²­)</li>
+                                        <li>1998.10 : êµ­ê°€ê³µì¸ì‹œí—˜ê¸°ê´€ ì¸ì¦(ì§€ì‹ê²½ì œë¶€)</li>
+                                        <li>1992.08 : ê¸ˆê°•ê°œë°œì‚°ì—… ãˆœìƒí’ˆë³¸ë¶€ í’ˆì§ˆì—°êµ¬ì†Œ</li>
+                                        <li>1985.12 : í˜„ëŒ€ë°±í™”ì  ë³¸ì  ê²€í’ˆê³¼ ìƒí’ˆì‹œí—˜ì‹¤</li>
                                     </ul>
                                 </dd>
                             </dl>
                         </div>
                     </div>
                 </div>
-                <!-- //¿¬±¸¼Ò ¿¬Çõ -->
+                <!-- //ì—°êµ¬ì†Œ ì—°í˜ -->
 
-                <!-- ÁÖ¿äºÐ¼® -->
+                <!-- ì£¼ìš”ë¶„ì„ -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">ÁÖ¿äºÐ¼®</h3>
+                    <h3 class="title_infra">ì£¼ìš”ë¶„ì„</h3>
 
                     <div class="analysis_area">
                         <ul class="analysis_list">
@@ -189,10 +192,10 @@
                                 <p class="icon_analysis"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_analysis1.jpg" alt="" /></p>
                                 
                                 <dl class="analysis_dl">
-                                    <dt>¹Ì»ý¹°ºÐ¼®<span>(VITEK2)</span></dt>
+                                    <dt>ë¯¸ìƒë¬¼ë¶„ì„<span>(VITEK2)</span></dt>
                                     <dd>
                                         <ul>
-                                            <li>´ëÀå±Õ, ÀåÃâÇ÷¼º´ëÀå±Õ, È²»öÆ÷µµ»ó±¸±Õ, »ì¸ð³Ú¶ó±Õ, <br />¸®½ºÅ×¸®¾Æ±Õ, ºñºê¸®¿À±Õ ¹Ù½Ç·¯½º±Õ ¿Ü º´¿ø¼º¹Ì»ý¹°</li>
+                                            <li>ëŒ€ìž¥ê· , ìž¥ì¶œí˜ˆì„±ëŒ€ìž¥ê· , í™©ìƒ‰í¬ë„ìƒêµ¬ê· , ì‚´ëª¨ë„¬ë¼ê· , <br />ë¦¬ìŠ¤í…Œë¦¬ì•„ê· , ë¹„ë¸Œë¦¬ì˜¤ê·  ë°”ì‹¤ëŸ¬ìŠ¤ê·  ì™¸ ë³‘ì›ì„±ë¯¸ìƒë¬¼</li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -201,10 +204,10 @@
                                 <p class="icon_analysis"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_analysis2.jpg" alt="" /></p>
                                 
                                 <dl class="analysis_dl">
-                                    <dt>À¯ÀüÀÚºÐ¼®<span>(PCR/Real-Time PCR/Sequencing)</span></dt>
+                                    <dt>ìœ ì „ìžë¶„ì„<span>(PCR/Real-Time PCR/Sequencing)</span></dt>
                                     <dd>
                                         <ul>
-                                            <li>ÇÑ¿ìÈ®ÀÎ°Ë»ç(DNA), À¯ÀüÀÚÀçÁ¶ÇÕ½ÄÇ°°Ë»ç(GMO), <br />³ë·Î¹ÙÀÌ·¯½º, ÀåÃâÇ÷¼º ´ëÀå±Õ, Äíµµ¾ÆÃæ</li>
+                                            <li>í•œìš°í™•ì¸ê²€ì‚¬(DNA), ìœ ì „ìžìž¬ì¡°í•©ì‹í’ˆê²€ì‚¬(GMO), <br />ë…¸ë¡œë°”ì´ëŸ¬ìŠ¤, ìž¥ì¶œí˜ˆì„± ëŒ€ìž¥ê· , ì¿ ë„ì•„ì¶©</li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -213,10 +216,10 @@
                                 <p class="icon_analysis"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_analysis3.jpg" alt="" /></p>
                                 
                                 <dl class="analysis_dl">
-                                    <dt>Ç×»ý¹°Áú ºÐ¼®<span>(LC/LC-MSMS)</span></dt>
+                                    <dt>í•­ìƒë¬¼ì§ˆ ë¶„ì„<span>(LC/LC-MSMS)</span></dt>
                                     <dd>
                                         <ul>
-                                            <li>Ç×»ý¹°Áú ¹× ÇÕ¼ºÇâ±ÕÁ¦</li>
+                                            <li>í•­ìƒë¬¼ì§ˆ ë° í•©ì„±í–¥ê· ì œ</li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -228,12 +231,12 @@
                                 <p class="icon_analysis"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_analysis4.jpg" alt="" /></p>
                                 
                                 <dl class="analysis_dl">
-                                    <dt>½ÄÇ°¼ººÐ, Ã·°¡¹° ºÐ¼®<span>(GC-MSD)</span></dt>
+                                    <dt>ì‹í’ˆì„±ë¶„, ì²¨ê°€ë¬¼ ë¶„ì„<span>(GC-MSD)</span></dt>
                                     <dd>
                                         <ul>
-                                            <li>¼öºÐ, È­ºÐ, Åº¼öÈ­¹°, Á¶Áö¹æ, Áö¹æ»ê, Á¶´Ü¹é</li>
-                                            <li>9´ë ¿µ¾ç¼ººÐ</li>
-                                            <li>º¸Á¸·á, ÀÎ°ø°¨¹Ì·á</li>
+                                            <li>ìˆ˜ë¶„, í™”ë¶„, íƒ„ìˆ˜í™”ë¬¼, ì¡°ì§€ë°©, ì§€ë°©ì‚°, ì¡°ë‹¨ë°±</li>
+                                            <li>9ëŒ€ ì˜ì–‘ì„±ë¶„</li>
+                                            <li>ë³´ì¡´ë£Œ, ì¸ê³µê°ë¯¸ë£Œ</li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -242,10 +245,10 @@
                                 <p class="icon_analysis"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_analysis5.jpg" alt="" /></p>
                                 
                                 <dl class="analysis_dl">
-                                    <dt>ÀÜ·ù³ó¾à ºÐ¼®<span>(GC/GC-MSD)</span></dt>
+                                    <dt>ìž”ë¥˜ë†ì•½ ë¶„ì„<span>(GC/GC-MSD)</span></dt>
                                     <dd>
                                         <ul>
-                                            <li>ÀÜ·ù³ó¾à(285Á¾)</li>
+                                            <li>ìž”ë¥˜ë†ì•½(285ì¢…)</li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -254,10 +257,10 @@
                                 <p class="icon_analysis"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_analysis6.jpg" alt="" /></p>
                                 
                                 <dl class="analysis_dl">
-                                    <dt>À¯ÇØ¹°Áú ºÐ¼®<span>(ICP-OES/LC)</span></dt>
+                                    <dt>ìœ í•´ë¬¼ì§ˆ ë¶„ì„<span>(ICP-OES/LC)</span></dt>
                                     <dd>
                                         <ul>
-                                            <li>°õÆÎÀÌ µ¶¼Ò, Áß±Ý¼Ó, º¥Á¶ÇÇ·»</li>
+                                            <li>ê³°íŒ¡ì´ ë…ì†Œ, ì¤‘ê¸ˆì†, ë²¤ì¡°í”¼ë Œ</li>
                                         </ul>
                                     </dd>
                                 </dl>
@@ -265,28 +268,28 @@
                         </ul>
                     </div>                  
                 </div>
-                <!-- //ÁÖ¿äºÐ¼® --> 
+                <!-- //ì£¼ìš”ë¶„ì„ --> 
                 
-                <!-- °Ë»ç ÁøÇà ÀýÂ÷ -->
+                <!-- ê²€ì‚¬ ì§„í–‰ ì ˆì°¨ -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">°Ë»ç ÁøÇà ÀýÂ÷</h3>
+                    <h3 class="title_infra">ê²€ì‚¬ ì§„í–‰ ì ˆì°¨</h3>
                     
                     <ul class="test_process_list">
                         <li>
-                            <strong class="test_process1">ºÐ¼®ÀÇ·Ú ¹× »ó´ã</strong>
-                            <span>ºÐ¼® ´ë»ó : ½ÄÇ°,½ÄÇ°Ã·°¡¹°,<br />Ãà»ê¹°,¼ö»ê¹°,³ó»ê¹°</span>
+                            <strong class="test_process1">ë¶„ì„ì˜ë¢° ë° ìƒë‹´</strong>
+                            <span>ë¶„ì„ ëŒ€ìƒ : ì‹í’ˆ,ì‹í’ˆì²¨ê°€ë¬¼,<br />ì¶•ì‚°ë¬¼,ìˆ˜ì‚°ë¬¼,ë†ì‚°ë¬¼</span>
                         </li>
                         <li>
-                            <strong class="test_process2">Á¢¼ö ¹× ¼ö¼ö·á³³ºÎ</strong>
-                            <span>Á¢¼ö °¡´É ½Ã°£ : <br />AM 9:00 ~ PM 4:00 (¿ù~±Ý)</span>
+                            <strong class="test_process2">ì ‘ìˆ˜ ë° ìˆ˜ìˆ˜ë£Œë‚©ë¶€</strong>
+                            <span>ì ‘ìˆ˜ ê°€ëŠ¥ ì‹œê°„ : <br />AM 9:00 ~ PM 4:00 (ì›”~ê¸ˆ)</span>
                         </li>
                         <li>
-                            <strong class="test_process3">½ÃÇèºÐ¼®</strong>
-                            <span>Ã³¸®±âÇÑ : 10ÀÏ ~ 14ÀÏ¼Ò¿ä </span>
+                            <strong class="test_process3">ì‹œí—˜ë¶„ì„</strong>
+                            <span>ì²˜ë¦¬ê¸°í•œ : 10ì¼ ~ 14ì¼ì†Œìš” </span>
                         </li>
                         <li>
-                            <strong class="test_process4">°á°ú¼­ ¹ß¼Û</strong>
-                            <span>¼ö½ÅÃ³ : ¹ÙÀÌ¾î/ÀÇ·ÚÀÚ<br />¡Ø ÀÇ·ÚÀÚ(´ã´ç¹ÙÀÌ¾î)</span>
+                            <strong class="test_process4">ê²°ê³¼ì„œ ë°œì†¡</strong>
+                            <span>ìˆ˜ì‹ ì²˜ : ë°”ì´ì–´/ì˜ë¢°ìž<br />â€» ì˜ë¢°ìž(ë‹´ë‹¹ë°”ì´ì–´)</span>
                         </li>
                     </ul>
 
@@ -295,15 +298,15 @@
                             <p class="info_icon"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_respon_orange.png" alt="" /></p>
 
                             <div class="respon_info_text">
-                                <strong>´ã´çÀÚ</strong>
-                                <span>À±°æ¹Ì</span>
+                                <strong>ë‹´ë‹¹ìž</strong>
+                                <span>ìœ¤ê²½ë¯¸</span>
                             </div>
                         </li>
                         <li>
                             <p class="info_icon"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_phone.png" alt="" /></p>
 
                             <div class="respon_info_text">
-                                <strong>ÀüÈ­</strong>
+                                <strong>ì „í™”</strong>
                                 <span>031-525-2136</span>
                             </div>
                         </li>
@@ -319,45 +322,45 @@
                             <p class="info_icon"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/icon_address.png" alt="" /></p>
 
                             <div class="respon_info_text">
-                                <strong>ÁÖ¼Ò</strong>
-                                <span class="info_address">°æ±âµµ ¿ëÀÎ½Ã µ¿Ãµµ¿ ¹®ÀÎ·Î30 Çö´ë±×¸°Çªµå 4Ãþ ½ÄÇ°À§»ý¿¬±¸¼Ò </span>
+                                <strong>ì£¼ì†Œ</strong>
+                                <span class="info_address">ê²½ê¸°ë„ ìš©ì¸ì‹œ ë™ì²œë™ ë¬¸ì¸ë¡œ30 í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ 4ì¸µ ì‹í’ˆìœ„ìƒì—°êµ¬ì†Œ </span>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <!-- //°Ë»ç ÁøÇà ÀýÂ÷ -->
+                <!-- //ê²€ì‚¬ ì§„í–‰ ì ˆì°¨ -->
 
                 <div class="infra_text_area">
-                    <a href="#" class="btn_action">ÀÚ°¡Ç°Áú°Ë»ç ¼ö¼ö·á ¾È³»º¸±â</a>
-                    <a href="#" class="btn_action2">Ãà»ê¹° ½ÃÇè¡¤°Ë»ç±â°ü°Ë»ç ¼ö¼ö·á</a>
+                    <a href="#" class="btn_action">ìžê°€í’ˆì§ˆê²€ì‚¬ ìˆ˜ìˆ˜ë£Œ ì•ˆë‚´ë³´ê¸°</a>
+                    <a href="#" class="btn_action2">ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ê¸°ê´€ê²€ì‚¬ ìˆ˜ìˆ˜ë£Œ</a>
                 </div>
             </div>
         </div>
-        <!-- //¼­ºê ÄÁÅÙÃ÷ -->
+        <!-- //ì„œë¸Œ ì»¨í…ì¸  -->
 
     </div>
     
     
     
-    <!-- ·¹ÀÌ¾îÆË¾÷ -->
+    <!-- ë ˆì´ì–´íŒì—… -->
 	<div class="layer_commission_area" style="display:none;">
 		<p class="layer_commission_bg"></p>
 
 		<div class="layer_commission">
-			<h2 class="title_commission">ÀÚ°¡Ç°Áú°Ë»ç ºÐ¼® Ç×¸ñº° ¼ö¼ö·á</h2>
+			<h2 class="title_commission">ìžê°€í’ˆì§ˆê²€ì‚¬ ë¶„ì„ í•­ëª©ë³„ ìˆ˜ìˆ˜ë£Œ</h2>
 			
 			<p class="commission_text">
-				[´ë»ó½ÄÇ°] ½ÄÇ°À§»ý¹ý Á¦ 7Á¶¿¡ µû¸¥ Çö´ë¹éÈ­Á¡(ÀÚÃ¼ºê·£µå, Áï¼®ÆÇ¸ÅÁ¦Á¶¡¤°¡°ø¾÷¼Ò) ½ÄÇ°(ÀÜ·ù³ó¾à Á¦¿Ü)ÀÇ °Ë»ç,<br />
-				»ó±â½ÄÇ°ÀÇ ½ÄÇ°¿ë¼ö µî ³ë·Î¹ÙÀÌ·¯½ºÀÇ °Ë»ç ¹× »ó±â½ÄÇ°¿¡ ´ëÇÑ À¯ÀüÀÚ ÀçÁ¶ÇÕ½ÄÇ°°Ë»ç Áß Á¤¼º°Ë»ç
+				[ëŒ€ìƒì‹í’ˆ] ì‹í’ˆìœ„ìƒë²• ì œ 7ì¡°ì— ë”°ë¥¸ í˜„ëŒ€ë°±í™”ì (ìžì²´ë¸Œëžœë“œ, ì¦‰ì„íŒë§¤ì œì¡°Â·ê°€ê³µì—…ì†Œ) ì‹í’ˆ(ìž”ë¥˜ë†ì•½ ì œì™¸)ì˜ ê²€ì‚¬,<br />
+				ìƒê¸°ì‹í’ˆì˜ ì‹í’ˆìš©ìˆ˜ ë“± ë…¸ë¡œë°”ì´ëŸ¬ìŠ¤ì˜ ê²€ì‚¬ ë° ìƒê¸°ì‹í’ˆì— ëŒ€í•œ ìœ ì „ìž ìž¬ì¡°í•©ì‹í’ˆê²€ì‚¬ ì¤‘ ì •ì„±ê²€ì‚¬
 				
 				
 			</p>
 
-			<p class="text_vat">(VAT º°µµ)</p>
+			<p class="text_vat">(VAT ë³„ë„)</p>
 
 			<div class="micro_area">
 				<table class="list_tb">
-					<caption class="blind">°Ë»çÇ×¸ñº° ¼ö¼ö·á</caption>
+					<caption class="blind">ê²€ì‚¬í•­ëª©ë³„ ìˆ˜ìˆ˜ë£Œ</caption>
 					<colgroup>
 						<col width="30%" />
 						<col width="30%" />
@@ -365,80 +368,80 @@
 					</colgroup>
 					<thead>
 						<tr>
-							<th scope="col" class="first">±¸ºÐ</th>
-							<th scope="col">°Ë»çÇ×¸ñ</th>
-							<th scope="col">¼ö¼ö·á</th>
+							<th scope="col" class="first">êµ¬ë¶„</th>
+							<th scope="col">ê²€ì‚¬í•­ëª©</th>
+							<th scope="col">ìˆ˜ìˆ˜ë£Œ</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td rowspan="7" class="first">¹Ì»ý¹°</td>
-							<td class="micro">´ëÀå±Õ±º(Á¤·®,n=5)</td>
-							<td>76,000¿ø</td>
+							<td rowspan="7" class="first">ë¯¸ìƒë¬¼</td>
+							<td class="micro">ëŒ€ìž¥ê· êµ°(ì •ëŸ‰,n=5)</td>
+							<td>76,000ì›</td>
 						</tr>
-						<tr><td class="micro">´ëÀå±Õ¼ö(Á¤·®,n=5)</td><td>82,000¿ø</td></tr>
-						<tr><td class="micro">ÀÏ¹Ý¼¼±Õ¼ö(Á¤·®,n=5)</td><td>85,000¿ø</td></tr>
-						<tr><td class="micro">»ì¸ð³Ú¶ó(Á¤·®,n=5)</td><td>68,000¿ø</td></tr>
-						<tr><td class="micro">È²»öÆ÷µµ»ó±¸±Õ(Á¤·®,n=5)</td><td>76,000¿ø</td></tr>
-						<tr><td class="micro">¸®½ºÅ×¸®¾Æ¸ð³ë»çÀÌÅäÁ¦³×½º(Á¤·®,n=5)</td><td>84,000¿ø</td></tr>
-						<tr><td class="micro">ÀåÃâÇ÷¼º´ëÀå±Õ(Á¤·®,n=5)</td><td>164,000¿ø</td></tr>
+						<tr><td class="micro">ëŒ€ìž¥ê· ìˆ˜(ì •ëŸ‰,n=5)</td><td>82,000ì›</td></tr>
+						<tr><td class="micro">ì¼ë°˜ì„¸ê· ìˆ˜(ì •ëŸ‰,n=5)</td><td>85,000ì›</td></tr>
+						<tr><td class="micro">ì‚´ëª¨ë„¬ë¼(ì •ëŸ‰,n=5)</td><td>68,000ì›</td></tr>
+						<tr><td class="micro">í™©ìƒ‰í¬ë„ìƒêµ¬ê· (ì •ëŸ‰,n=5)</td><td>76,000ì›</td></tr>
+						<tr><td class="micro">ë¦¬ìŠ¤í…Œë¦¬ì•„ëª¨ë…¸ì‚¬ì´í† ì œë„¤ìŠ¤(ì •ëŸ‰,n=5)</td><td>84,000ì›</td></tr>
+						<tr><td class="micro">ìž¥ì¶œí˜ˆì„±ëŒ€ìž¥ê· (ì •ëŸ‰,n=5)</td><td>164,000ì›</td></tr>
 						
 						<tr>
-							<td rowspan="6" class="first">ÀÌÈ­È®</td>
-							<td class="micro">ÈÖ¹ß¼º¿°±âÁú¼ö</td>
-							<td>32,000¿ø</td>
+							<td rowspan="6" class="first">ì´í™”í™•</td>
+							<td class="micro">íœ˜ë°œì„±ì—¼ê¸°ì§ˆìˆ˜</td>
+							<td>32,000ì›</td>
 						</tr>
-						<tr><td class="micro">¾ÆÁú»êÀÌ¿Â</td><td>34,000¿ø</td></tr>
-						<tr><td class="micro">º¸Á¸·á</td><td>155,000¿ø</td></tr>
-						<tr><td class="micro">»êÈ­¹æÁöÁ¦</td><td>100,000¿ø</td></tr>
-						<tr><td class="micro">Å¸¸£»ö¼Ò</td><td>40,000¿ø</td></tr>
-						<tr><td class="micro">°õÆÎÀÌµ¶¼Ò(¾ÆÇÃ¶óÅå½ÅB1,B2,G1,G2½ÃÇè)</td><td>115,000¿ø</td></tr>
+						<tr><td class="micro">ì•„ì§ˆì‚°ì´ì˜¨</td><td>34,000ì›</td></tr>
+						<tr><td class="micro">ë³´ì¡´ë£Œ</td><td>155,000ì›</td></tr>
+						<tr><td class="micro">ì‚°í™”ë°©ì§€ì œ</td><td>100,000ì›</td></tr>
+						<tr><td class="micro">íƒ€ë¥´ìƒ‰ì†Œ</td><td>40,000ì›</td></tr>
+						<tr><td class="micro">ê³°íŒ¡ì´ë…ì†Œ(ì•„í”Œë¼í†¡ì‹ B1,B2,G1,G2ì‹œí—˜)</td><td>115,000ì›</td></tr>
 
 						<tr>
-							<td class="first">³ë·Î¹ÙÀÌ·¯½º</td>
-							<td class="micro">³ë·Î¹ÙÀÌ·¯½º</td>
-							<td>804,000¿ø</td>
+							<td class="first">ë…¸ë¡œë°”ì´ëŸ¬ìŠ¤</td>
+							<td class="micro">ë…¸ë¡œë°”ì´ëŸ¬ìŠ¤</td>
+							<td>804,000ì›</td>
 						</tr>
 						
 						<tr>
-							<td rowspan="3" class="first">À¯ÀüÀÚÀçÁ¶ÇÕ</td>
-							<td class="micro">À¯ÀüÀÚÀçÁ¶ÇÕ(Äá)</td>
-							<td>271,000¿ø</td>
+							<td rowspan="3" class="first">ìœ ì „ìžìž¬ì¡°í•©</td>
+							<td class="micro">ìœ ì „ìžìž¬ì¡°í•©(ì½©)</td>
+							<td>271,000ì›</td>
 						</tr>
-						<tr><td class="micro">À¯ÀüÀÚÀçÁ¶ÇÕ(¿Á¼ö¼ö)</td><td>282,000¿ø</td></tr>
-						<tr><td class="micro">À¯ÀüÀÚÀçÁ¶ÇÕ(Äá,¿Á¼ö¼ö)</td><td>347,000¿ø</td></tr>
+						<tr><td class="micro">ìœ ì „ìžìž¬ì¡°í•©(ì˜¥ìˆ˜ìˆ˜)</td><td>282,000ì›</td></tr>
+						<tr><td class="micro">ìœ ì „ìžìž¬ì¡°í•©(ì½©,ì˜¥ìˆ˜ìˆ˜)</td><td>347,000ì›</td></tr>
 					
 					</tbody>
 				</table>
 			</div>
 
 			<p class="btn_ok_layer">
-				<a href="#" class="btn_no_action">È®ÀÎ</a>
+				<a href="#" class="btn_no_action">í™•ì¸</a>
 			</p>
 
-			<p class="btn_close_commision"><a href="#"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_size_close.jpg" alt="°Ë»çÇ×¸ñº° ¼ö¼ö·á ´Ý±â" /></a></p>
+			<p class="btn_close_commision"><a href="#"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_size_close.jpg" alt="ê²€ì‚¬í•­ëª©ë³„ ìˆ˜ìˆ˜ë£Œ ë‹«ê¸°" /></a></p>
 		</div>
 	</div>
-	<!-- //·¹ÀÌ¾îÆË¾÷ -->
+	<!-- //ë ˆì´ì–´íŒì—… -->
 	
 	
-    <!-- ·¹ÀÌ¾îÆË¾÷2 -->
+    <!-- ë ˆì´ì–´íŒì—…2 -->
 	<div class="layer_commission_area2" style="display:none;">
 		<p class="layer_commission_bg2"></p>
 
 		<div class="layer_commission">
-			<h2 class="title_commission">Ãà»ê¹° ½ÃÇè¡¤°Ë»ç±â°ü°Ë»ç ¼ö¼ö·á</h2>
+			<h2 class="title_commission">ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ê¸°ê´€ê²€ì‚¬ ìˆ˜ìˆ˜ë£Œ</h2>
 			
 			<p class="commission_text">
-				¢ßÇö´ë±×¸°Çªµå ½ÄÇ°À§»ý¿¬±¸¼Ò 
-				- Ãà»ê¹° ½ÃÇè¡¤°Ë»ç±â°ü°Ë»ç ¼ö¼ö·á
+				ãˆœí˜„ëŒ€ê·¸ë¦°í‘¸ë“œ ì‹í’ˆìœ„ìƒì—°êµ¬ì†Œ 
+				- ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ê¸°ê´€ê²€ì‚¬ ìˆ˜ìˆ˜ë£Œ
 			</p>
 
-			<p class="text_vat">[Ç°¸ñ] ½ÄÀ°°¡°øÇ° ¹× ¾Ë°¡°øÇ°, Æ÷ÀåÀ° [½ÃÇè¡¤°Ë»ç Ç×¸ñ]ÀÌÈ­ÇÐ¡¤¹Ì»ý¹° ¹× ÇÑ¿ì½ÃÇè È®ÀÎ (VAT º°µµ)</p>
+			<p class="text_vat">[í’ˆëª©] ì‹ìœ¡ê°€ê³µí’ˆ ë° ì•Œê°€ê³µí’ˆ, í¬ìž¥ìœ¡ [ì‹œí—˜Â·ê²€ì‚¬ í•­ëª©]ì´í™”í•™Â·ë¯¸ìƒë¬¼ ë° í•œìš°ì‹œí—˜ í™•ì¸ (VAT ë³„ë„)</p>
 
 			<div class="micro_area">
 				<table class="list_tb">
-					<caption class="blind">°Ë»çÇ×¸ñº° ¼ö¼ö·á</caption>
+					<caption class="blind">ê²€ì‚¬í•­ëª©ë³„ ìˆ˜ìˆ˜ë£Œ</caption>
 					<colgroup>
 						<col width="20%" />
 						<col width="7%" />
@@ -447,67 +450,67 @@
 					</colgroup>
 					<thead>
 						<tr>
-							<th colspan="2" scope="col" class="first">±¸ºÐ</th>
-							<th scope="col">°Ë»çÇ×¸ñ</th>
-							<th scope="col">¼ö¼ö·á(¿ø)</th>
+							<th colspan="2" scope="col" class="first">êµ¬ë¶„</th>
+							<th scope="col">ê²€ì‚¬í•­ëª©</th>
+							<th scope="col">ìˆ˜ìˆ˜ë£Œ(ì›)</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td rowspan="5" class="first">ÀÌÈ­È®</td>
+							<td rowspan="5" class="first">ì´í™”í™•</td>
 							<td class="micro">1</td>
-							<td>¼öºÐ½ÃÇè</td>
-							<td>13,000¿ø
+							<td>ìˆ˜ë¶„ì‹œí—˜</td>
+							<td>13,000ì›
 							</td>
 						</tr>
-						<tr><td class="micro">2</td><td>¾ÆÁú»êÀÌ¿Â</td><td>35,000 ¿ø</td></tr>
-						<tr><td class="micro">3</td><td>Å¸¸£»ö¼Ò(Á¤¼º)</td><td>57,000 ¿ø</td></tr>
-						<tr><td class="micro">4</td><td>Å¸¸£»ö¼Ò(Á¤·®)</td><td>146,000 ¿ø</td></tr>
-						<tr><td class="micro">5</td><td>º¸Á¸·á</td><td>102,000 ¿ø</td></tr>
+						<tr><td class="micro">2</td><td>ì•„ì§ˆì‚°ì´ì˜¨</td><td>35,000 ì›</td></tr>
+						<tr><td class="micro">3</td><td>íƒ€ë¥´ìƒ‰ì†Œ(ì •ì„±)</td><td>57,000 ì›</td></tr>
+						<tr><td class="micro">4</td><td>íƒ€ë¥´ìƒ‰ì†Œ(ì •ëŸ‰)</td><td>146,000 ì›</td></tr>
+						<tr><td class="micro">5</td><td>ë³´ì¡´ë£Œ</td><td>102,000 ì›</td></tr>
 						
 						<tr>
-							<td rowspan ="12" class="first">¹Ì»ý¹°</td>
+							<td rowspan ="12" class="first">ë¯¸ìƒë¬¼</td>
 							<td class="micro">6</td>
-							<td>´ëÀå±Õ±º(Á¤·®,n=5)</td>
-							<td>81,000¿ø</td>
+							<td>ëŒ€ìž¥ê· êµ°(ì •ëŸ‰,n=5)</td>
+							<td>81,000ì›</td>
 						</tr>
-						<tr><td class="micro">7</td><td>´ëÀå±Õ¼ö(Á¤·®,n=5)</td><td>75,000 ¿ø</td></tr>
-						<tr><td class="micro">8</td><td>ÀÏ¹Ý¼¼±Õ¼ö(n=5)</td><td>99,000 ¿ø</td></tr>
-						<tr><td class="micro">9</td><td>Àå¿°ºñºê¸®¿À(Á¤¼º,n=5)</td><td>52,000 ¿ø</td></tr>
-						<tr><td class="micro">10</td><td>»ì¸ð³Ú¶ó(Á¤¼º,n=5)</td><td>86,000 ¿ø</td></tr>
-						<tr><td class="micro">11</td><td>Å¬·Î½ºÆ®¸®µð¿òÆÛÇÁ¸°Á¨½º(Á¤¼º,n=5)</td><td>104,000 ¿ø</td></tr>
-						<tr><td class="micro">12</td><td>Å¬·Î½ºÆ®¸®µð¿òÆÛÇÁ¸°Á¨½º(Á¤·®,n=5)</td><td>149,000 ¿ø</td></tr>
-						<tr><td class="micro">13</td><td>È²»öÆ÷µµ»ó±¸±Õ(Á¤¼º,n=5)</td><td>114,000 ¿ø</td></tr>
-						<tr><td class="micro">14</td><td>È²»öÆ÷µµ»ó±¸±Õ(Á¤·®,n=5)</td><td>134,000 ¿ø</td></tr>
-						<tr><td class="micro">15</td><td>¸®½ºÅ×¸®¾Æ¸ð³ë»çÀÌÅäÁ¦³×½º(n=5)</td><td>87,000 ¿ø</td></tr>
-						<tr><td class="micro">16</td><td>¼¼±Õ¹ßÀ°</td><td>63,000 ¿ø</td></tr>
-						<tr><td class="micro">17</td><td>ÀåÃâÇ÷¼º´ëÀå±Õ(n=5)</td><td>104,000 ¿ø</td></tr>
+						<tr><td class="micro">7</td><td>ëŒ€ìž¥ê· ìˆ˜(ì •ëŸ‰,n=5)</td><td>75,000 ì›</td></tr>
+						<tr><td class="micro">8</td><td>ì¼ë°˜ì„¸ê· ìˆ˜(n=5)</td><td>99,000 ì›</td></tr>
+						<tr><td class="micro">9</td><td>ìž¥ì—¼ë¹„ë¸Œë¦¬ì˜¤(ì •ì„±,n=5)</td><td>52,000 ì›</td></tr>
+						<tr><td class="micro">10</td><td>ì‚´ëª¨ë„¬ë¼(ì •ì„±,n=5)</td><td>86,000 ì›</td></tr>
+						<tr><td class="micro">11</td><td>í´ë¡œìŠ¤íŠ¸ë¦¬ë””ì›€í¼í”„ë¦°ì  ìŠ¤(ì •ì„±,n=5)</td><td>104,000 ì›</td></tr>
+						<tr><td class="micro">12</td><td>í´ë¡œìŠ¤íŠ¸ë¦¬ë””ì›€í¼í”„ë¦°ì  ìŠ¤(ì •ëŸ‰,n=5)</td><td>149,000 ì›</td></tr>
+						<tr><td class="micro">13</td><td>í™©ìƒ‰í¬ë„ìƒêµ¬ê· (ì •ì„±,n=5)</td><td>114,000 ì›</td></tr>
+						<tr><td class="micro">14</td><td>í™©ìƒ‰í¬ë„ìƒêµ¬ê· (ì •ëŸ‰,n=5)</td><td>134,000 ì›</td></tr>
+						<tr><td class="micro">15</td><td>ë¦¬ìŠ¤í…Œë¦¬ì•„ëª¨ë…¸ì‚¬ì´í† ì œë„¤ìŠ¤(n=5)</td><td>87,000 ì›</td></tr>
+						<tr><td class="micro">16</td><td>ì„¸ê· ë°œìœ¡</td><td>63,000 ì›</td></tr>
+						<tr><td class="micro">17</td><td>ìž¥ì¶œí˜ˆì„±ëŒ€ìž¥ê· (n=5)</td><td>104,000 ì›</td></tr>
 						
 						<tr>
-							<td class="first">ÇÑ¿ìÈ®ÀÎ</td>
+							<td class="first">í•œìš°í™•ì¸</td>
 							<td class="micro">18</td>
-							<td>ÇÑ¿ìÈ®ÀÎ</td>
-							<td>125,000¿ø</td>
+							<td>í•œìš°í™•ì¸</td>
+							<td>125,000ì›</td>
 						</tr>
 						
 					
 						<tr>
-							<td rowspan="2" class="first">±âÅ¸</td>
+							<td rowspan="2" class="first">ê¸°íƒ€</td>
 							<td class="micro">19</td>
-							<td>ÀÌ¹°</td>
-							<td>35,000¿ø</td>
+							<td>ì´ë¬¼</td>
+							<td>35,000ì›</td>
 						</tr>
-							<tr><td class="micro">20</td><td>¼º»ó</td><td>10,000 ¿ø</td></tr>
+							<tr><td class="micro">20</td><td>ì„±ìƒ</td><td>10,000 ì›</td></tr>
 					</tbody>
 				</table>
 			</div>
 
 			<p class="btn_ok_layer2">
-				<a href="#" class="btn_no_action">È®ÀÎ</a>
+				<a href="#" class="btn_no_action">í™•ì¸</a>
 			</p>
 
-			<p class="btn_close_commision2"><a href="#"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_size_close.jpg" alt="Ãà»ê¹° ½ÃÇè¡¤°Ë»ç±â°ü°Ë»ç ¼ö¼ö·á ´Ý±â" /></a></p>
+			<p class="btn_close_commision2"><a href="#"><img src="../img/ESG_infrasystem/food_sanitation_research_institute/btn_size_close.jpg" alt="ì¶•ì‚°ë¬¼ ì‹œí—˜Â·ê²€ì‚¬ê¸°ê´€ê²€ì‚¬ ìˆ˜ìˆ˜ë£Œ ë‹«ê¸°" /></a></p>
 		</div>
 	</div>
-	<!-- //·¹ÀÌ¾îÆË¾÷ -->
+	<!-- //ë ˆì´ì–´íŒì—… -->
 </html>

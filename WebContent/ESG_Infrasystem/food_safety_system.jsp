@@ -1,70 +1,71 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
-<title>Çö´ë±×¸°Çªµå</title>
+<title>í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
+<%@ include file ="../Inc/Header.jspf" %>
 
-        <!-- ÇÏÀÌ¾î¶óÅ° -->
+        <!-- í•˜ì´ì–´ë¼í‚¤ -->
         <ul class="hierarchy_list">
             <li class="icon_home"><img src="../img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
             <li class="depth_2">
-                <a href="#" class="m_hierarchy">»ç¾÷¿µ¿ª </a>
+                <a href="#" class="m_hierarchy">ì‚¬ì—…ì˜ì—­ </a>
 
                 <ul class="hierarchy_depth" style="display:none;">
-                    <li><a href="#">»ç¾÷¿µ¿ª</a></li>
+                    <li><a href="#">ì‚¬ì—…ì˜ì—­</a></li>
                 </ul>
             </li>
             <li class="depth_3">
-                <a href="#" class="t_block_hierarchy">½ÄÇ°¾ÈÀü½Ã½ºÅÛ </a>
+                <a href="#" class="t_block_hierarchy">ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œ </a>
 
                 <ul class="hierarchy_depth">
                 </ul>
             </li>
         </ul>
-        <!-- //ÇÏÀÌ¾î¶óÅ° -->
+        <!-- //í•˜ì´ì–´ë¼í‚¤ -->
         
-                <!-- ¼­ºê ÄÁÅÙÃ÷ -->
+                <!-- ì„œë¸Œ ì»¨í…ì¸  -->
         <div class="sub_contents">
-            <!-- Å¸ÀÌÆ² , µð½ºÅ©¸³¼Ç -->
+            <!-- íƒ€ì´í‹€ , ë””ìŠ¤í¬ë¦½ì…˜ -->
             <div class="title_description">
-                <h2 class="title_sub">½ÄÇ°¾ÈÀü½Ã½ºÅÛ</h2>
+                <h2 class="title_sub">ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œ</h2>
 
-                <p class="sub_description">À§»ý»ç°í Á¦·ÎÀÇ ¾ÈÀüÇÑ ½Ä»ç¸¦ À§ÇÑ ½ÄÇ°¾ÈÀü½Ã½ºÅÛÀ» ¼Ò°³ÇÕ´Ï´Ù.</p>
+                <p class="sub_description">ìœ„ìƒì‚¬ê³  ì œë¡œì˜ ì•ˆì „í•œ ì‹ì‚¬ë¥¼ ìœ„í•œ ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œì„ ì†Œê°œí•©ë‹ˆë‹¤.</p>
             </div>
-            <!-- //Å¸ÀÌÆ² , µð½ºÅ©¸³¼Ç -->
+            <!-- //íƒ€ì´í‹€ , ë””ìŠ¤í¬ë¦½ì…˜ -->
 
-            <!-- ÅÇ -->
+            <!-- íƒ­ -->
             <ul class="tab_list tab_list_2">
                 <li class="on">
-                    <a href="#">°³¿ä</a>
+                    <a href="#">ê°œìš”</a>
                     <img src="../img/ESG_infrasystem/food_safety_system/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
                 </li>
                 <li>
-                    <a href="./food_sanitation_research_institute.jsp">½ÄÇ°À§»ý¿¬±¸¼Ò</a>
+                    <a href="./food_sanitation_research_institute.jsp">ì‹í’ˆìœ„ìƒì—°êµ¬ì†Œ</a>
                     <img src="../img/ESG_infrasystem/food_safety_system/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
                 </li>
             </ul>
-            <!-- //ÅÇ -->
+            <!-- //íƒ­ -->
 
             <div class="infra_area">
 
-                <!-- °³¿ä -->
+                <!-- ê°œìš” -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">°³¿ä</h3>
+                    <h3 class="title_infra">ê°œìš”</h3>
 
-                    <p class="text_infra">Ã³À½ ½ÄÀç·á ¼±ÅÃ¿¡¼­ ½ÄÅ¹¿¡ ¿À¸£±â±îÁö ½ÄÇ°ÀÇ ¾ÈÀüÀ» À§ÇØ¼­´Â ¾î¶² °Íµµ ¼ÒÈ¦È÷ ÇÒ ¼ö ¾ø½À´Ï´Ù.<br />À§»ý»ç°í Á¦·Î¸¦ ±â·ÏÇÑ Çö´ë±×¸°Çªµå´Â ÀÌÁß, »ïÁßÀÇ Ã¶ÀúÇÑ ½ÄÇ°¾ÈÀü½Ã½ºÅÛÀ» ÅëÇØ ¾ÈÀüÀÇ ¾à¼ÓÀ» ÁöÄÑ°¡°í ÀÖ½À´Ï´Ù.</p>
+                    <p class="text_infra">ì²˜ìŒ ì‹ìž¬ë£Œ ì„ íƒì—ì„œ ì‹íƒì— ì˜¤ë¥´ê¸°ê¹Œì§€ ì‹í’ˆì˜ ì•ˆì „ì„ ìœ„í•´ì„œëŠ” ì–´ë–¤ ê²ƒë„ ì†Œí™€ížˆ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.<br />ìœ„ìƒì‚¬ê³  ì œë¡œë¥¼ ê¸°ë¡í•œ í˜„ëŒ€ê·¸ë¦°í‘¸ë“œëŠ” ì´ì¤‘, ì‚¼ì¤‘ì˜ ì² ì €í•œ ì‹í’ˆì•ˆì „ì‹œìŠ¤í…œì„ í†µí•´ ì•ˆì „ì˜ ì•½ì†ì„ ì§€ì¼œê°€ê³  ìžˆìŠµë‹ˆë‹¤.</p>
                 </div>
-                <!-- //°³¿ä -->
+                <!-- //ê°œìš” -->
 
-                <!-- 3STEP °ü¸®Ã¼°è -->
+                <!-- 3STEP ê´€ë¦¬ì²´ê³„ -->
                 <div class="infra_text_area">
-                    <h3 class="title_infra">3STEP °ü¸®Ã¼°è</h3>
+                    <h3 class="title_infra">3STEP ê´€ë¦¬ì²´ê³„</h3>
 
                     <div class="img_3depth">
                         <img src="../img/ESG_infrasystem/food_safety_system/img_3step.jpg" alt="" />
@@ -72,107 +73,107 @@
                         <ul class="blind">
                             <li>
                                 <div>
-                                    <strong>¿µ¾÷Á¡</strong>
-                                    <span>ÀÚÃ¼°øÁ¤<br />À§»ý°ü¸® Ã¼°è</span>
+                                    <strong>ì˜ì—…ì </strong>
+                                    <span>ìžì²´ê³µì •<br />ìœ„ìƒê´€ë¦¬ ì²´ê³„</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <strong>¿î¿µÆÀ</strong>
-                                    <span>¿î¿µ°ü¸® ¹×<br />ÁßÁ¡À§»ý°ü¸® Ã¼°è</span>
+                                    <strong>ìš´ì˜íŒ€</strong>
+                                    <span>ìš´ì˜ê´€ë¦¬ ë°<br />ì¤‘ì ìœ„ìƒê´€ë¦¬ ì²´ê³„</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <strong>º»»ç ½ÄÇ°¾ÈÀüÆÀ</strong>
-                                    <span>ÃÑ°ý À§»ý°ü¸® ¹×<br />ÀÚÃ¼ Ç°ÁúÀÎÁõÁ¦</span>
+                                    <strong>ë³¸ì‚¬ ì‹í’ˆì•ˆì „íŒ€</strong>
+                                    <span>ì´ê´„ ìœ„ìƒê´€ë¦¬ ë°<br />ìžì²´ í’ˆì§ˆì¸ì¦ì œ</span>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- //3STEP °ü¸®Ã¼°è -->
+                <!-- //3STEP ê´€ë¦¬ì²´ê³„ -->
 
-                <!-- HACCP ½Ã½ºÅÛ -->
+                <!-- HACCP ì‹œìŠ¤í…œ -->
                 <div class="infra_text_area">
                     <ul class="haccp_list">
                         <li>
                             <img src="../img/ESG_infrasystem/food_safety_system/icon_haccp1.jpg" alt="" />
                             <dl>
-                                <dt>HACCP ÀÌ¶õ?</dt>
-                                <dd>½ÄÇ°ÀÇ ¿øÀç·áºÎÅÍ ÃÖÁ¾¼ÒºñÀÚ°¡ ¼·ÃëÇÏ±â±îÁö °¢ ´Ü°è¿¡¼­<br />¹ß»ýÇÒ ¿ì·Á°¡ ÀÖ´Â À§ÇØ¿ä¼Ò¸¦ ±Ô¸íÇÏ°í,<br />ÀÌ¸¦ ÁßÁ¡ÀûÀ¸·Î °ü¸®ÇÏ±â À§ÇÑ Áß¿ä°ü¸®Á¡À» °áÁ¤ÇÏ¿©<br />½ÄÇ°ÀÇ ¾ÈÀü¼ºÀ» È®º¸ÇÏ±â À§ÇÑ °úÇÐÀûÀÎ À§»ý°ü¸®Ã¼°è¶ó°í ÇÒ ¼ö ÀÖ´Ù. </dd>
+                                <dt>HACCP ì´ëž€?</dt>
+                                <dd>ì‹í’ˆì˜ ì›ìž¬ë£Œë¶€í„° ìµœì¢…ì†Œë¹„ìžê°€ ì„­ì·¨í•˜ê¸°ê¹Œì§€ ê° ë‹¨ê³„ì—ì„œ<br />ë°œìƒí•  ìš°ë ¤ê°€ ìžˆëŠ” ìœ„í•´ìš”ì†Œë¥¼ ê·œëª…í•˜ê³ ,<br />ì´ë¥¼ ì¤‘ì ì ìœ¼ë¡œ ê´€ë¦¬í•˜ê¸° ìœ„í•œ ì¤‘ìš”ê´€ë¦¬ì ì„ ê²°ì •í•˜ì—¬<br />ì‹í’ˆì˜ ì•ˆì „ì„±ì„ í™•ë³´í•˜ê¸° ìœ„í•œ ê³¼í•™ì ì¸ ìœ„ìƒê´€ë¦¬ì²´ê³„ë¼ê³  í•  ìˆ˜ ìžˆë‹¤. </dd>
                             </dl>
                         </li>
                         <li>
                             <img src="../img/ESG_infrasystem/food_safety_system/icon_haccp2.jpg" alt="" />
                             <dl>
-                                <dt>ÃÑ 23°³ HACCP ÁöÁ¤ </dt>
-                                <dd>±Þ½Ä »ç¾÷Àå 4°³¼Ò, <br />ÀÚÃ¼ ¹°·ù ¹× °¡°ø¼¾ÅÍ 6°³¼Ò, <br />½ÄÇ° ÆÇ¸ÅÀå 13°³¼Ò º¸À¯</dd>
+                                <dt>ì´ 23ê°œ HACCP ì§€ì • </dt>
+                                <dd>ê¸‰ì‹ ì‚¬ì—…ìž¥ 4ê°œì†Œ, <br />ìžì²´ ë¬¼ë¥˜ ë° ê°€ê³µì„¼í„° 6ê°œì†Œ, <br />ì‹í’ˆ íŒë§¤ìž¥ 13ê°œì†Œ ë³´ìœ </dd>
                             </dl>
                         </li>
                     </ul>
 
                     <div class="haccp_step_area">
-                        <h3 class="title_infra">HACCP ½Ã½ºÅÛ</h3>
+                        <h3 class="title_infra">HACCP ì‹œìŠ¤í…œ</h3>
 
                         <div class="haccp_step_img">
                             <img src="../img/ESG_infrasystem/food_safety_system/haccp_process.jpg" alt="" />
 
                             <ul class="blind">
-                                <li>Àç¹è(»ý»ê)</li>
-                                <li>±¸¸Å¾÷Ã¼°ü¸®</li>
-                                <li>ÀÔ°í</li>
-                                <li>°¡°ø</li>
-                                <li>¹è¼Û</li>
-                                <li>Á¶¸®</li>
-                                <li>Á¦°ø</li>
+                                <li>ìž¬ë°°(ìƒì‚°)</li>
+                                <li>êµ¬ë§¤ì—…ì²´ê´€ë¦¬</li>
+                                <li>ìž…ê³ </li>
+                                <li>ê°€ê³µ</li>
+                                <li>ë°°ì†¡</li>
+                                <li>ì¡°ë¦¬</li>
+                                <li>ì œê³µ</li>
                             </ul>
                         </div>
                     </div>
                     
                 </div>
-                <!-- //HACCP ½Ã½ºÅÛ -->
+                <!-- //HACCP ì‹œìŠ¤í…œ -->
 
-                <!-- °øÁ¤º° ¾ÈÀüÃ¼°è -->
+                <!-- ê³µì •ë³„ ì•ˆì „ì²´ê³„ -->
                 <div class="infra_text_area infra_safe_area">
-                    <h3 class="title_infra">°øÁ¤º° ¾ÈÀüÃ¼°è</h3>
+                    <h3 class="title_infra">ê³µì •ë³„ ì•ˆì „ì²´ê³„</h3>
                     
                     <ul class="safe_process">
                         <li class="process_1">
                             <dl>
-                                <dt>¹è¼ÛÀü(Çù·Â»ç)</dt>
-                                <dd>Á¤±âÁ¡°Ë(À§»ý¾ÈÀü AUDIT)<br />°³ÀÎÀ§»ý, ½Ã¼³À§»ý µî Á¡°Ë</dd>
+                                <dt>ë°°ì†¡ì „(í˜‘ë ¥ì‚¬)</dt>
+                                <dd>ì •ê¸°ì ê²€(ìœ„ìƒì•ˆì „ AUDIT)<br />ê°œì¸ìœ„ìƒ, ì‹œì„¤ìœ„ìƒ ë“± ì ê²€</dd>
                             </dl>
                         </li>
                         <li class="process_2">
                             <dl>
-                                <dt>Çù·Â»ç º¸°üÃ¢°í ÀÔ°í½Ã</dt>
-                                <dd>º¸°ü Ã¢°í Ã»°á»óÅÂ<br />¹è¼ÛÂ÷·® Ã»°á ¹× ¿Âµµ°ü¸®</dd>
+                                <dt>í˜‘ë ¥ì‚¬ ë³´ê´€ì°½ê³  ìž…ê³ ì‹œ</dt>
+                                <dd>ë³´ê´€ ì°½ê³  ì²­ê²°ìƒíƒœ<br />ë°°ì†¡ì°¨ëŸ‰ ì²­ê²° ë° ì˜¨ë„ê´€ë¦¬</dd>
                             </dl>
                         </li>
                         <li class="process_3">
                             <dl>
-                                <dt>½Ä´ç ÀÔ°í ½Ã</dt>
-                                <dd>½ÄÀÚÀç °Ë¼öÃ¶Àú<br />¼±µµ ¹× ¼ö·® °ü¸®<br />À¯Åë±âÇÑ È®ÀÎ<br />½Å¼ÓÇÑ ³ÃÀå, ³Ãµ¿°í ºÐ¸® ÀÔ°í</dd>
+                                <dt>ì‹ë‹¹ ìž…ê³  ì‹œ</dt>
+                                <dd>ì‹ìžìž¬ ê²€ìˆ˜ì² ì €<br />ì„ ë„ ë° ìˆ˜ëŸ‰ ê´€ë¦¬<br />ìœ í†µê¸°í•œ í™•ì¸<br />ì‹ ì†í•œ ëƒ‰ìž¥, ëƒ‰ë™ê³  ë¶„ë¦¬ ìž…ê³ </dd>
                             </dl>
                         </li>
                         <li class="process_4">
                             <dl>
-                                <dt>¹è½Ä ÈÄ</dt>
-                                <dd>ÀÜ½Ä Æó±â<br />½Ä´ç, È¦, ÁÖ¹æ½Ã¼³ Á¡°Ë ¹× Ã»¼Ò</dd>
+                                <dt>ë°°ì‹ í›„</dt>
+                                <dd>ìž”ì‹ íê¸°<br />ì‹ë‹¹, í™€, ì£¼ë°©ì‹œì„¤ ì ê²€ ë° ì²­ì†Œ</dd>
                             </dl>
                         </li>
                         <li class="process_5">
                             <dl>
-                                <dt>Á¶¸® ¹× ¹è½Ä</dt>
-                                <dd>ÀüÃ³¸®½Ã À§»ý°ü¸®<br />Á¶¸®½Ã ±³Â÷¿À¿°¹æÁö, °³ÀÎÀ§»ý°ü¸®Ã¶Àú<br />¹è½ÄÀü °Ë½ÄÃ¶Àú </dd>
+                                <dt>ì¡°ë¦¬ ë° ë°°ì‹</dt>
+                                <dd>ì „ì²˜ë¦¬ì‹œ ìœ„ìƒê´€ë¦¬<br />ì¡°ë¦¬ì‹œ êµì°¨ì˜¤ì—¼ë°©ì§€, ê°œì¸ìœ„ìƒê´€ë¦¬ì² ì €<br />ë°°ì‹ì „ ê²€ì‹ì² ì € </dd>
                             </dl>
                         </li>
                     </ul>
                 </div>
-                <!-- //°øÁ¤º° ¾ÈÀüÃ¼°è -->
+                <!-- //ê³µì •ë³„ ì•ˆì „ì²´ê³„ -->
 
             </div>
         </div>
-        <!-- //¼­ºê ÄÁÅÙÃ÷ -->
+        <!-- //ì„œë¸Œ ì»¨í…ì¸  -->
 </html>

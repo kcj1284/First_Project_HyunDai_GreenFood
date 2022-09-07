@@ -1,13 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
-<title>Çö´ë±×¸°Çªµå</title>
+<title>í˜„ëŒ€ê·¸ë¦°í‘¸ë“œ</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 <link href="../css/brand_story/brandstory_style.css" type="text/css" rel="stylesheet" />
+
+<%@ include file ="../Inc/Header.jspf" %>
+
 </head>
 
 <body>
@@ -21,87 +24,87 @@
     
 <div class="sub_layout sub_visual_6">
 	
-		<!-- ÇÏÀÌ¾î¶óÅ° -->
+		<!-- í•˜ì´ì–´ë¼í‚¤ -->
 		<ul class="hierarchy_list">
 			<li class="icon_home"><img src="../img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
 			<li class="depth_3">
-				<a href="#" class="t_block_hierarchy">ºê·£µå ÀÌ¾ß±â</a>
+				<a href="#" class="t_block_hierarchy">ë¸Œëžœë“œ ì´ì•¼ê¸°</a>
 
 				<ul class="hierarchy_depth">
-					<li class="on"><a href="#">ºê·£µå ÀÌ¾ß±â</a></li>
+					<li class="on"><a href="#">ë¸Œëžœë“œ ì´ì•¼ê¸°</a></li>
 				</ul>
 			</li>
 		</ul>
-		<!-- //ÇÏÀÌ¾î¶óÅ° -->
+		<!-- //í•˜ì´ì–´ë¼í‚¤ -->
 
-		<!-- ¼­ºê ÄÁÅÙÃ÷ -->
+		<!-- ì„œë¸Œ ì»¨í…ì¸  -->
 
 		<div class="sub_contents">
-			<!-- Å¸ÀÌÆ² , µð½ºÅ©¸³¼Ç -->
+			<!-- íƒ€ì´í‹€ , ë””ìŠ¤í¬ë¦½ì…˜ -->
 			<div class="title_description">
-				<h2 class="title_sub">ºê·£µå ÀÌ¾ß±â</h2>
+				<h2 class="title_sub">ë¸Œëžœë“œ ì´ì•¼ê¸°</h2>
 
-				<p class="sub_description">Çö´ë±×¸°ÇªµåÀÇ ºê·£µå ÀÌ¾ß±â¸¦ ¼Ò°³ÇÕ´Ï´Ù.</p>
+				<p class="sub_description">í˜„ëŒ€ê·¸ë¦°í‘¸ë“œì˜ ë¸Œëžœë“œ ì´ì•¼ê¸°ë¥¼ ì†Œê°œí•©ë‹ˆë‹¤.</p>
 			</div>
-			<!-- //Å¸ÀÌÆ² , µð½ºÅ©¸³¼Ç -->		
+			<!-- //íƒ€ì´í‹€ , ë””ìŠ¤í¬ë¦½ì…˜ -->		
 			
-			<!-- ÅÇ -->
+			<!-- íƒ­ -->
 			<ul class="tab_list tab_list_brand">
 				<li class="on" brandtp="">
-					<a href="#">ÀüÃ¼ (24)</a>
+					<a href="#">ì „ì²´ (24)</a>
 					<img src="../img/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
 				</li>
 				<li brandtp="health">
-					<a href="#"><i class="icon_health"></i> °Ç°­½Ä (1)</a>
+					<a href="#"><i class="icon_health"></i> ê±´ê°•ì‹ (1)</a>
 					<img src="../img/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
 				</li>
 				<li brandtp="eco">
-					<a href="#"><i class="icon_eco"></i> Ä£È¯°æ (1)</a>
+					<a href="#"><i class="icon_eco"></i> ì¹œí™˜ê²½ (1)</a>
 					<img src="../img/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
 				</li>
 				<li brandtp="out">
-					<a href="#"><i class="icon_out"></i> ¿Ü½Ä (11)</a>
+					<a href="#"><i class="icon_out"></i> ì™¸ì‹ (11)</a>
 					<img src="../img/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
 				</li>
 				<li brandtp="product">
-					<a href="#"><i class="icon_product"></i> »óÇ° (8)</a>
+					<a href="#"><i class="icon_product"></i> ìƒí’ˆ (8)</a>
 					<img src="../img/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
 				</li>
 				<li brandtp="market">
-					<a href="#"><i class="icon_market"></i> ¸¶ÄÏ (3)</a>
+					<a href="#"><i class="icon_market"></i> ë§ˆì¼“ (3)</a>
 					<img src="../img/icon_tab_bubble.jpg" class="icon_tab_bubble" alt="" />
 				</li>
 			</ul>
-			<!-- //ÅÇ -->
+			<!-- //íƒ­ -->
 			
-			<!-- ºê·£µå ÀÌ¾ß±â : »ó´Ü ÅÇ ¼±ÅÃ½Ã ±× ÅÇ¿¡ ¸Â´Â li¿¡ select Å¬·¡½º Ãß°¡, ³ª¸ÓÁö li¿¡´Â off Å¬·¡½º Ãß°¡ -->
+			<!-- ë¸Œëžœë“œ ì´ì•¼ê¸° : ìƒë‹¨ íƒ­ ì„ íƒì‹œ ê·¸ íƒ­ì— ë§žëŠ” liì— select í´ëž˜ìŠ¤ ì¶”ê°€, ë‚˜ë¨¸ì§€ liì—ëŠ” off í´ëž˜ìŠ¤ ì¶”ê°€ -->
 			<ul class="brand_story_list">
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" href="https://www.greating.co.kr/" class="health">
-						<img src="../img/brand_story/greating_logo.jpg" alt="±×¸®ÆÃ" />
-						<span class="brand_name">±×¸®ÆÃ</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" href="https://www.greating.co.kr/" class="health">
+						<img src="../img/brand_story/greating_logo.jpg" alt="ê·¸ë¦¬íŒ…" />
+						<span class="brand_name">ê·¸ë¦¬íŒ…</span>
 
 						<span class="over_text over_text_1 over_health">
-							¿ì¸®Áý ¹ä»óÁÖÄ¡ÀÇ
+							ìš°ë¦¬ì§‘ ë°¥ìƒì£¼ì¹˜ì˜
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="eco">
-						<img src="../img/brand_story/greatingfresh_logo.jpg" alt="»êµé³»À½" />
-						<span class="brand_name">»êµé³»À½</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="eco">
+						<img src="../img/brand_story/greatingfresh_logo.jpg" alt="ì‚°ë“¤ë‚´ìŒ" />
+						<span class="brand_name">ì‚°ë“¤ë‚´ìŒ</span>
 
 						<span class="over_text over_text_2 over_eco">
-							´ëÇÑ¹Î±¹ Ä£È¯°æ<br />´ëÇ¥ºê·£µå
+							ëŒ€í•œë¯¼êµ­ ì¹œí™˜ê²½<br />ëŒ€í‘œë¸Œëžœë“œ
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="https://www.instagram.com/eatalykorea" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/eataly_logo.jpg" alt="ÀÌÅ»¸®" />
-						<span class="brand_name">ÀÌÅ»¸®</span>
+					<a target="_blank" href="https://www.instagram.com/eatalykorea" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/eataly_logo.jpg" alt="ì´íƒˆë¦¬" />
+						<span class="brand_name">ì´íƒˆë¦¬</span>
 
 						<span class="over_text over_text_2 over_out">
 							Eat, Shop, Learn<br>All about Italy
@@ -110,20 +113,20 @@
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="http://www.instagram.com/joeandthejuicekorea" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/joenthejuice_logo.jpg" alt="Á¶¾Ø´õÁÖ½º" />
-						<span class="brand_name">Á¶¾Ø´õÁÖ½º</span>
+					<a target="_blank" href="http://www.instagram.com/joeandthejuicekorea" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/joenthejuice_logo.jpg" alt="ì¡°ì•¤ë”ì£¼ìŠ¤" />
+						<span class="brand_name">ì¡°ì•¤ë”ì£¼ìŠ¤</span>
 
 						<span class="over_text over_text_2 over_out">
-							µ§¸¶Å© ÇÁ¸®¹Ì¾ö<br>ÁÖ½º¹Ù
+							ë´ë§ˆí¬ í”„ë¦¬ë¯¸ì—„<br>ì£¼ìŠ¤ë°”
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="https://www.instagram.com/texasroadhouse_kr/" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/texas_logo.jpg" alt="ÅØ»ç½º·ÎµåÇÏ¿ì½º" />
-						<span class="brand_name">ÅØ»ç½º·ÎµåÇÏ¿ì½º</span>
+					<a target="_blank" href="https://www.instagram.com/texasroadhouse_kr/" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/texas_logo.jpg" alt="í…ì‚¬ìŠ¤ë¡œë“œí•˜ìš°ìŠ¤" />
+						<span class="brand_name">í…ì‚¬ìŠ¤ë¡œë“œí•˜ìš°ìŠ¤</span>
 
 						<span class="over_text over_text_2 over_out">
 							Legendary Food!<br />Lengendary Service! 
@@ -132,221 +135,221 @@
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/hseries_logo.jpg" alt="¿¡ÀÌÄ¡ 450, 541,123" />
-						<span class="brand_name">¿¡ÀÌÄ¡ 450,541,123,315,50</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/hseries_logo.jpg" alt="ì—ì´ì¹˜ 450, 541,123" />
+						<span class="brand_name">ì—ì´ì¹˜ 450,541,123,315,50</span>
 
 						<span class="over_text over_text_2 over_out">
-							¹Ì½Ä°¡µéÀÇ °Å¸®,<br>¹Ì½Ä°¡µéÀÇ Çâ¿¬
+							ë¯¸ì‹ê°€ë“¤ì˜ ê±°ë¦¬,<br>ë¯¸ì‹ê°€ë“¤ì˜ í–¥ì—°
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="https://www.instagram.com/h_garden_official/" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/hgarden_logo.jpg" alt="¿¡ÀÌÄ¡°¡µç" />
-						<span class="brand_name">¿¡ÀÌÄ¡°¡µç</span>
+					<a target="_blank" href="https://www.instagram.com/h_garden_official/" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/hgarden_logo.jpg" alt="ì—ì´ì¹˜ê°€ë“ " />
+						<span class="brand_name">ì—ì´ì¹˜ê°€ë“ </span>
 
 						<span class="over_text over_text_2 over_out">
-							È£ÅÚ ¼ÎÇÁµéÀÌ ¼±º¸ÀÌ´Â <br>All Day ´ÙÀÌ´× ºßÆä
+							í˜¸í…” ì…°í”„ë“¤ì´ ì„ ë³´ì´ëŠ” <br>All Day ë‹¤ì´ë‹ ë·”íŽ˜
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/vezzly.html" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/vezzly_logo.jpg" alt="º£Áñ¸®" />
-						<span class="brand_name">º£Áñ¸®</span>
+					<a target="_blank" href="/brand/vezzly.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/vezzly_logo.jpg" alt="ë² ì¦ë¦¬" />
+						<span class="brand_name">ë² ì¦ë¦¬</span>
 
 						<span class="over_text over_text_2 over_out">
-							Á¤Åë À¯·´Ç³<br />Å¬·¡½Ä º£ÀÌÄ¿¸®
+							ì •í†µ ìœ ëŸ½í’<br />í´ëž˜ì‹ ë² ì´ì»¤ë¦¬
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="https://www.instagram.com/h_oven_garden5" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/hoven_logo.jpg" alt="¿¡ÀÌÄ¡¿Àºì" />
-						<span class="brand_name">¿¡ÀÌÄ¡¿Àºì</span>
+					<a target="_blank" href="https://www.instagram.com/h_oven_garden5" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/hoven_logo.jpg" alt="ì—ì´ì¹˜ì˜¤ë¸" />
+						<span class="brand_name">ì—ì´ì¹˜ì˜¤ë¸</span>
 
 						<span class="over_text over_text_2 over_out">
-							°¡Àå ¸ÀÀÖ´Â Áö±Ý,<br>Fresh Now!
+							ê°€ìž¥ ë§›ìžˆëŠ” ì§€ê¸ˆ,<br>Fresh Now!
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/hkitchenfoodcourt.html" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/hkitchen_logo.jpg" alt="h¡¯_Kitchen" />
-						<span class="brand_name">¿¡ÀÌÄ¡Å°Ä£</span>
+					<a target="_blank" href="/brand/hkitchenfoodcourt.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/hkitchen_logo.jpg" alt="hâ€™_Kitchen" />
+						<span class="brand_name">ì—ì´ì¹˜í‚¤ì¹œ</span>
 
 						<span class="over_text over_text_2 over_out">
-							¶Ù¾î³­ ¸À°ú ºÐÀ§±â,<br />°íÇ°°Ý ÇªµåÄÚÆ®
+							ë›°ì–´ë‚œ ë§›ê³¼ ë¶„ìœ„ê¸°,<br />ê³ í’ˆê²© í‘¸ë“œì½”íŠ¸
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/bongasushi.html" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/bongasushi_logo.jpg" alt="º»°¡½º½Ã" />
-						<span class="brand_name">º»°¡½º½Ã</span>
+					<a target="_blank" href="/brand/bongasushi.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/bongasushi_logo.jpg" alt="ë³¸ê°€ìŠ¤ì‹œ" />
+						<span class="brand_name">ë³¸ê°€ìŠ¤ì‹œ</span>
 
 						<span class="over_text over_text_2 over_out">
-							Á¤Åë ÀÏº»½Ä<br />È¸ÀüÃÊ¹ä Àü¹®Á¡
+							ì •í†µ ì¼ë³¸ì‹<br />íšŒì „ì´ˆë°¥ ì „ë¬¸ì 
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/hansolnoodle.html" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/hansol_logo.jpg" alt="ÇÑ¼Ö³Ã¸é" />
-						<span class="brand_name">ÇÑ¼Ö³Ã¸é</span>
+					<a target="_blank" href="/brand/hansolnoodle.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/hansol_logo.jpg" alt="í•œì†”ëƒ‰ë©´" />
+						<span class="brand_name">í•œì†”ëƒ‰ë©´</span>
 
 						<span class="over_text over_text_1 over_out">
-							»Ñ¸®±íÀº ¿ì¸®ÀÇ ¸À
+							ë¿Œë¦¬ê¹Šì€ ìš°ë¦¬ì˜ ë§›
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="out">
-						<img src="../img/brand_story/dol_logo.jpg" alt="µ¹Àå°¢" />
-						<span class="brand_name">µ¹Àå°¢</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="out">
+						<img src="../img/brand_story/dol_logo.jpg" alt="ëŒìž¥ê°" />
+						<span class="brand_name">ëŒìž¥ê°</span>
 
 						<span class="over_text over_text_1 over_out">
-							¿ïÁø¿¡¼­ µû¿Â<br/>ÀÚ¿¬»ê µ¹¹Ì¿ª±¹ Àü¹®Á¡
+							ìš¸ì§„ì—ì„œ ë”°ì˜¨<br/>ìžì—°ì‚° ëŒë¯¸ì—­êµ­ ì „ë¬¸ì 
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/1table_logo.jpg" alt="¿øÅ×ÀÌºí" />
-						<span class="brand_name">¿øÅ×ÀÌºí</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/1table_logo.jpg" alt="ì›í…Œì´ë¸”" />
+						<span class="brand_name">ì›í…Œì´ë¸”</span>
 
 						<span class="over_text over_text_2 over_product">
-							Çö´ë¹éÈ­Á¡¿¡¼­<br>¸¸³ª´Â °£Æí½Ä
+							í˜„ëŒ€ë°±í™”ì ì—ì„œ<br>ë§Œë‚˜ëŠ” ê°„íŽ¸ì‹
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="https://www.thehyundai.com/front/dpa/sbSect.thd?sectId=149650&sectId=149650" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/farmstroy_logo.jpg" alt="»êÁö½ºÅä¸®°ü" />
-						<span class="brand_name">»êÁö½ºÅä¸®°ü</span>
+					<a target="_blank" href="https://www.thehyundai.com/front/dpa/sbSect.thd?sectId=149650&sectId=149650" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/farmstroy_logo.jpg" alt="ì‚°ì§€ìŠ¤í† ë¦¬ê´€" />
+						<span class="brand_name">ì‚°ì§€ìŠ¤í† ë¦¬ê´€</span>
 
 						<span class="over_text over_text_2 over_product">
-							³óºÎµéÀÌ<br>ÀüÇÏ´Â Áø½É
+							ë†ë¶€ë“¤ì´<br>ì „í•˜ëŠ” ì§„ì‹¬
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/yorien.html" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/yoli_logo.jpg" alt="¿ä¸®¾Ø ÁÁÀ»Àç" />
-						<span class="brand_name">¿ä¸®¾Ø ÁÁÀ»Àç</span>
+					<a target="_blank" href="/brand/yorien.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/yoli_logo.jpg" alt="ìš”ë¦¬ì•¤ ì¢‹ì„ìž¬" />
+						<span class="brand_name">ìš”ë¦¬ì•¤ ì¢‹ì„ìž¬</span>
 
 						<span class="over_text over_text_2 over_product">
-							ÁÁÀºÀç·á!<br />Áñ°Å¿î¿ä¸®!
+							ì¢‹ì€ìž¬ë£Œ!<br />ì¦ê±°ìš´ìš”ë¦¬!
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/hplate_logo.jpg" alt="¿¡ÀÌÄ¡ÇÃ·¹ÀÌÆ®" />
-						<span class="brand_name">¿¡ÀÌÄ¡ÇÃ·¹ÀÌÆ®</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/hplate_logo.jpg" alt="ì—ì´ì¹˜í”Œë ˆì´íŠ¸" />
+						<span class="brand_name">ì—ì´ì¹˜í”Œë ˆì´íŠ¸</span>
 
 						<span class="over_text over_text_2 over_product">
-							·¹½ºÅä¶ûÀ» <br />Áý¿¡¼­ Áñ±ä´Ù
+							ë ˆìŠ¤í† ëž‘ì„ <br />ì§‘ì—ì„œ ì¦ê¸´ë‹¤
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/hcook_logo.jpg" alt="¿¡ÀÌÄ¡Äî " />
-						<span class="brand_name">¿¡ÀÌÄ¡Äî </span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/hcook_logo.jpg" alt="ì—ì´ì¹˜ì¿¡ " />
+						<span class="brand_name">ì—ì´ì¹˜ì¿¡ </span>
 
 						<span class="over_text over_text_1 over_product">
-							°£ÆíÇÏ°í ¸ÀÀÖ°Ô!
+							ê°„íŽ¸í•˜ê³  ë§›ìžˆê²Œ!
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/vergnano_logo.jpg" alt="º£¸£³ª³ë" />
-						<span class="brand_name">º£¸£³ª³ë</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/vergnano_logo.jpg" alt="ë² ë¥´ë‚˜ë…¸" />
+						<span class="brand_name">ë² ë¥´ë‚˜ë…¸</span>
 
 						<span class="over_text over_text_2 over_product">
-							ÀÌÅ»¸®¾Æ ´ëÇ¥<br />¸íÇ°Ä¿ÇÇ
+							ì´íƒˆë¦¬ì•„ ëŒ€í‘œ<br />ëª…í’ˆì»¤í”¼
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/dallmayr_logo.jpg" alt="´Þ¸¶ÀÌ¾î" />
-						<span class="brand_name">´Þ¸¶ÀÌ¾î</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/dallmayr_logo.jpg" alt="ë‹¬ë§ˆì´ì–´" />
+						<span class="brand_name">ë‹¬ë§ˆì´ì–´</span>
 
 						<span class="over_text over_text_2 over_product">
-							µ¶ÀÏ È²½Ç¿¡¼­<br>¼±ÅÃÇÑ ¡®È²Á¦Ä¿ÇÇ¡¯
+							ë…ì¼ í™©ì‹¤ì—ì„œ<br>ì„ íƒí•œ â€˜í™©ì œì»¤í”¼â€™
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" title="»õÃ¢À¸·Î ¿­¸²" class="product">
-						<img src="../img/brand_story/chaedaum_logo.jpg" alt="Ã¤´Ù¿ò" />
-						<span class="brand_name">Ã¤´Ù¿ò</span>
+					<a target="_blank" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="product">
+						<img src="../img/brand_story/chaedaum_logo.jpg" alt="ì±„ë‹¤ì›€" />
+						<span class="brand_name">ì±„ë‹¤ì›€</span>
 
 						<span class="over_text over_text_2 over_product">
-							Çö´ë±×¸°ÇªµåÀÇ<br>ÇÁ¸®¹Ì¾ö Ã»°ú ºê·£µå
+							í˜„ëŒ€ê·¸ë¦°í‘¸ë“œì˜<br>í”„ë¦¬ë¯¸ì—„ ì²­ê³¼ ë¸Œëžœë“œ
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/hsupermarket.html" title="»õÃ¢À¸·Î ¿­¸²" class="market">
+					<a target="_blank" href="/brand/hsupermarket.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="market">
 						<img src="../img/brand_story/hmart_logo.jpg" alt="Hmart" />
-						<span class="brand_name">¿¡ÀÌÄ¡¸¶Æ®</span>
+						<span class="brand_name">ì—ì´ì¹˜ë§ˆíŠ¸</span>
 
 						<span class="over_text over_text_2 over_market">
-							Æí¸®ÇÏ°í ¹ÏÀ» ¼ö ÀÖ´Â<br />Hmart
+							íŽ¸ë¦¬í•˜ê³  ë¯¿ì„ ìˆ˜ ìžˆëŠ”<br />Hmart
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/h24plus.html" title="»õÃ¢À¸·Î ¿­¸²" class="market">
+					<a target="_blank" href="/brand/h24plus.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="market">
 						<img src="../img/brand_story/h24_logo.jpg" alt="H24+H24GREEN" />
-						<span class="brand_name">¿¡ÀÌÄ¡24, ¿¡ÀÌÄ¡24±×¸°</span>
+						<span class="brand_name">ì—ì´ì¹˜24, ì—ì´ì¹˜24ê·¸ë¦°</span>
 
 						<span class="over_text over_text_2 over_market">
-							¾ðÁ¦ ¾îµð¼­³ª Áñ±æ ¼ö ÀÖ´Â<br />ÆíÀÇÁ¡ ºê·£µå
+							ì–¸ì œ ì–´ë””ì„œë‚˜ ì¦ê¸¸ ìˆ˜ ìžˆëŠ”<br />íŽ¸ì˜ì  ë¸Œëžœë“œ
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 				<li class="select">
-					<a target="_blank" href="/brand/dailynmarket.html" title="»õÃ¢À¸·Î ¿­¸²" class="market">
+					<a target="_blank" href="/brand/dailynmarket.html" title="ìƒˆì°½ìœ¼ë¡œ ì—´ë¦¼" class="market">
 						<img src="../img/brand_story/nmarket_logo.jpg" alt="Daily N Market" />
-						<span class="brand_name">µ¥ÀÏ¸®¾Ø¸¶ÄÏ</span>
+						<span class="brand_name">ë°ì¼ë¦¬ì•¤ë§ˆì¼“</span>
 
 						<span class="over_text over_text_1 over_market">
-							Æí¸®ÇÏ°í ÄèÀûÇÑ ¼îÇÎ°ø°£
+							íŽ¸ë¦¬í•˜ê³  ì¾Œì í•œ ì‡¼í•‘ê³µê°„
 							<img src="../img/brand_story/icon_plus.png" alt="" />
 						</span>
 					</a>
 				</li>
 
 			</ul>
-			<!-- //ºê·£µå ÀÌ¾ß±â -->
+			<!-- //ë¸Œëžœë“œ ì´ì•¼ê¸° -->
 	
 		</div>
 
-		<!-- //¼­ºê ÄÁÅÙÃ÷ -->
+		<!-- //ì„œë¸Œ ì»¨í…ì¸  -->
 
 	</div>
 </body>
