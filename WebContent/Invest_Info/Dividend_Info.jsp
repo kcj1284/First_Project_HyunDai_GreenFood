@@ -7,11 +7,12 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business_Performance</title>
+<title>배당정보</title>
 <link href="../css/II_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<%@ include file="../Inc/Header.jspf"%>
 	<div class="sub_contents">
 		<!-- 타이틀 , 디스크립션 -->
 		<div class="title_description">
@@ -108,6 +109,7 @@
 		</div>
 	</div>
 
+	<%@ include file="../Inc/Footer.jspf"%>
 </body>
 
-	</html>
+</html>

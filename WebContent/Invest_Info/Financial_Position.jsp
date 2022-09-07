@@ -7,19 +7,18 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business_Performance</title>
+<title>배당정보</title>
 <link href="../css/II_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<%@ include file="../Inc/Header.jspf"%>
 	<div class="sub_contents">
-		<!-- 타이틀 , 디스크립션 -->
 		<div class="title_description">
 			<h2 class="title_sub">배당정보</h2>
 			<p class="sub_description">현대그린푸드의 배당정보를 알려드립니다.</p>
 		</div>
-		<!-- //타이틀 , 디스크립션 -->
-		<!-- 탭 -->
+
 		<ul class="tab_list tab_list_2">
 			<li class="on">
 				<button onclick="location='Dividend_Info.jsp'">배당현황</button>
@@ -28,8 +27,6 @@
 				<button onclick="location='Dividend_Policy.jsp'">배당정책</button>
 			</li>
 		</ul>
-		<!-- //탭 -->
-		<!-- 배당현황 테이블 영역 -->
 		<div class="directorate_area">
 			<table class="list_tb">
 				<caption class="blind">당사 배당 현황</caption>
@@ -112,7 +109,7 @@
 			<span>※ 당사 주식의 액면가는 500원/주 입니다.</span>
 		</div>
 	</div>
-
+	<%@ include file="../Inc/Footer.jspf"%>
 </body>
 
 </html>
