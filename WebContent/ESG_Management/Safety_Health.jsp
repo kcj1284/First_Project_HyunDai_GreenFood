@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<%@ include file ="../Inc/Header.jspf" %> 
     <div class="wrap">
         <div class="tree">
             <img src="../img/ESG/visual_esg.jpg">
@@ -131,8 +132,7 @@
             </li>
         </ul>
     </section>
-
-
+	<%@ include file="../Inc/Footer.jspf"%>
 </body>
 
 </html>

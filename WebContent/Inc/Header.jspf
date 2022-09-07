@@ -110,11 +110,10 @@
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub7">
 									<li><a href="https://finance.naver.com/item/main.nhn?code=005440">주가정보</a></li>
-									<li><a href="Business_Performance.jsp">재무정보</a></li>
-									<li><a href="Dividend_Info.jsp">배당정보</a></li>
-									<li><a href="Disclosure_Info.jsp">공시정보</a></li>
-									<li><a href="sub?command=">공고사항</a></li>
-									<li><a href="sub?command=">IR자료실</a></li>
+									<li><a href="Invest_Info/Business_Performance.jsp">재무정보</a></li>
+									<li><a href="Invest_Info/Dividend_Info.jsp">배당정보</a></li>
+									<li><a href="Invest_Info/Disclosure_Info.jsp">공시정보</a></li>
+									<li><a href="Invest_Info/IR_Contact.jsp">IR자료실</a></li>
 
 								</ul>
 							</div>

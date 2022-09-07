@@ -4,14 +4,15 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mangerial_Objective</title>
-	<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mangerial_Objective</title>
+<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<%@ include file="../Inc/Header.jspf"%>
 	<div class="wrap">
 		<div class="tree">
 			<img src="../img/ESG/visual_esg.jpg">
@@ -23,31 +24,16 @@
 	</div>
 
 	<div>
-		<a href="Managerial_Objective.jsp">경영목표</a>
-		<a href="NetZero_2030.jsp">환경경영(E)</a>
-		<a href="CRS.jsp">사회공헌(S)</a>
-		<a href="Board_Policy.jsp">지배구조(G)</a>
-		<a href="Safety_Health.jsp">안전보건</a>
-		<a href="Win_Management.jsp">상생경영</a>
-		<a href="Group_Ethical_Management.jsp">윤리경영</a>
-		<br>
+		<a href="Managerial_Objective.jsp">경영목표</a> <a href="NetZero_2030.jsp">환경경영(E)</a> <a href="CRS.jsp">사회공헌(S)</a> <a href="Board_Policy.jsp">지배구조(G)</a> <a href="Safety_Health.jsp">안전보건</a> <a href="Win_Management.jsp">상생경영</a> <a href="Group_Ethical_Management.jsp">윤리경영</a> <br>
 	</div>
 	<div>
 		<div class="sub_contents">
 			<div class="sub_text">
-				현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에, <br class="pc">공정한 경쟁과 지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다.
-				<br>앞으로도 주주 등 모든 이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써 <br class="pc">신뢰를 확보하고 성실한 경영활동을 수행하고자 최선을
-				다하겠습니다.
+				현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에, <br class="pc">공정한 경쟁과 지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다. <br>앞으로도 주주 등 모든 이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써 <br class="pc">신뢰를 확보하고 성실한 경영활동을 수행하고자 최선을 다하겠습니다.
 			</div>
 
 			<div>
-				<a href="Board_Policy.jsp">이사회정책</a>
-				<a href="External_Auditor.jsp">외부감사인</a>
-				<a href="General_Meeting.jsp">주주총회</a>
-				<a href="Shareholder_info.jsp">주주정보</a>
-				<a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a>
-				<a href="Corp_Governance_Report.jsp">기업지배구조보고서</a>
-				<br>
+				<a href="Board_Policy.jsp">이사회정책</a> <a href="External_Auditor.jsp">외부감사인</a> <a href="General_Meeting.jsp">주주총회</a> <a href="Shareholder_info.jsp">주주정보</a> <a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a> <a href="Corp_Governance_Report.jsp">기업지배구조보고서</a> <br>
 			</div>
 			<div class="committee_area">
 				<h3 class="title_director">
@@ -148,6 +134,6 @@
 			</div>
 		</div>
 	</div>
+	<%@ include file="../Inc/Footer.jspf"%>
 </body>
-
 </html>

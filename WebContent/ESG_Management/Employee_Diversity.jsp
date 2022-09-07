@@ -12,6 +12,7 @@
 </head>
 
 <body>
+	<%@ include file="../Inc/Header.jspf"%>
 	<div class="wrap">
 		<div class="tree">
 			<img src="../img/ESG/visual_esg.jpg">
@@ -23,14 +24,7 @@
 	</div>
 
 	<div>
-		<a href="Managerial_Objective.jsp">경영목표</a>
-    	<a href="NetZero_2030.jsp">환경경영(E)</a>
-    	<a href="CRS.jsp">사회공헌(S)</a>
-    	<a href="Board_Policy.jsp">지배구조(G)</a>
-    	<a href="Safety_Health.jsp">안전보건</a>
-    	<a href="Win_Management.jsp">상생경영</a>
-    	<a href="Group_Ethical_Management.jsp">윤리경영</a>
-        <br>
+		<a href="Managerial_Objective.jsp">경영목표</a> <a href="NetZero_2030.jsp">환경경영(E)</a> <a href="CRS.jsp">사회공헌(S)</a> <a href="Board_Policy.jsp">지배구조(G)</a> <a href="Safety_Health.jsp">안전보건</a> <a href="Win_Management.jsp">상생경영</a> <a href="Group_Ethical_Management.jsp">윤리경영</a> <br>
 	</div>
 	<div>
 		<h3 class="esg_title">임직원 다양성</h3>
@@ -272,7 +266,6 @@
 				</table>
 			</div>
 		</div>
-		</section>
 
 		<section class="esg_section cont3_2_2">
 			<h3 class="esg_title">임직원 교육</h3>
@@ -358,3 +351,6 @@
 			</div>
 		</section>
 	</div>
+	<%@ include file="../Inc/Footer.jspf"%>
+</body>
+</html>

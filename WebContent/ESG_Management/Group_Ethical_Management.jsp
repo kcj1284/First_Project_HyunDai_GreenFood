@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<%@ include file ="../Inc/Header.jspf" %> 
 	<div class="wrap">
 		<div class="tree">
 			<img src="../img/ESG/visual_esg.jpg">
@@ -84,7 +85,6 @@
 			</div>
 			<div class="right"></div>
 		</div>
-		</section>
 
 		<section class="esg_section cont7_1_2 sub_contents">
 			<h3 class="esg_title">윤리헌장</h3>
@@ -156,6 +156,6 @@
 			</div>
 		</section>
 	</div>
+	<%@ include file="../Inc/Footer.jspf"%>
 </body>
-
 </html>
