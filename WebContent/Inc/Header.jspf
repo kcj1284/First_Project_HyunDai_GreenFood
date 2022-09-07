@@ -10,8 +10,17 @@
 <link rel="stylesheet" type="text/css" href="css/Inc/Layout.css">
 <link rel="stylesheet" type="text/css" href="css/Inc/Main.css">
 <link rel="stylesheet" type="text/css" href="css/font.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
 
+<!-- index 페이지 slick 라이브러리 로드 -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!-- JQuery 로드 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- index 페이지 slick 라이브러리 로드 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 <body>
 	<div class="wrap wrap_main">
@@ -124,9 +133,4 @@
 				</nav>
 			</div>
 		</header>
-	</div>
-
-	
-	
-	
 	
