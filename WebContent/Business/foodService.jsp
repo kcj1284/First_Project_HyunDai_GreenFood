@@ -11,10 +11,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-	<link href="../css/business.css" type="text/css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="../css/Inc/Layout.css">
-	<link rel="stylesheet" type="text/css" href="../css/Inc/Main.css">
-	<link rel="stylesheet" type="text/css" href="../css/font.css">	
+	<link href="/First_Project_HyunDai_GreenFood/css/business.css" type="text/css" rel="stylesheet" />
+	
 </head>
 
 <body>
@@ -28,7 +26,7 @@
 
 			<div class="container_area" id="contents">
 
-				<div class="container">
+				<div class="container sub_layout">
 
 					<img src="../img/business/business_meal.jpg" class="visual_business_meal">
 					</img>
