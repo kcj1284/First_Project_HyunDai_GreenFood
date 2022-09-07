@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>현대그린푸드</title>
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Inc/Main.css">
 </head>
 <body>
 	<%@include file="/Inc/Header.jspf" %>
@@ -19,7 +20,7 @@
 					<!-- 영상 1 -->
 					<div class="video_text_area video_text_area1">
 						<video autoplay muted loop>
-							<source src="video/1_cooking_dark.mp4" type="video/mp4" />
+							<source src="/First_Project_HyunDai_GreenFood/video/1_cooking_dark.mp4" type="video/mp4" />
 						</video>
 	
 						<div class="main_text">
@@ -137,7 +138,75 @@
 			</div>
 		</div>
 		<!-- //container -->
-	
+		<script>
+
+	$(document).ready( function(){
+		/* header 스크롤 이벤트 */
+		var wrap = $('.wrap');
+		if (wrap.length > 0) {
+			var iTop = wrap.offset().top;
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > iTop) {
+					wrap.removeClass("wrap_main");
+				} else {
+					wrap.addClass("wrap_main");
+				}
+			}).scroll();
+		}
+		/* header 스크롤 이벤트 */
+
+		$(".main_video_area").on("init", function(ev, el){
+			$("video").each(function () {
+				this.play();
+			});
+		});
+
+		$(".main_video_area").slick({
+			dots: false,
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 7000,
+			fade: true,
+			cssEase: 'linear'
+		});
+
+		$(".intro_slide_area").slick({
+			dots: true,
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			responsive:[
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
+		});
+
+		$(".brand_site_slide").slick({
+			dots: true,
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			responsive:[
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				}
+			]
+		});
+	});
+
+	</script>
 	
 	
 	

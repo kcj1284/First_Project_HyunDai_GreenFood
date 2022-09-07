@@ -2,15 +2,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="url" value="<%=request.getContextPath()%>"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>현대 그린 푸드</title>
-<link rel="stylesheet" type="text/css" href="css/Inc/Layout.css">
-<link rel="stylesheet" type="text/css" href="css/Inc/Main.css">
-<link rel="stylesheet" type="text/css" href="css/font.css">
-<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Inc/Layout.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/font.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/slick.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/sub.css">
 
 <!-- index 페이지 slick 라이브러리 로드 -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -28,7 +29,7 @@
 			<div class="cont_center">
 
 				<h1 class="logo">
-					<a href="Index.jsp"> </a>
+					<a href="/First_Project_HyunDai_GreenFood/"> </a>
 				</h1>
 
 				<div class="loginbtn">
@@ -45,7 +46,7 @@
 						<li><a class="main_menu" href="">회사소개</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub1">
-									<li><a href="sub?command=green_food">현대그린푸드</a></li>
+									<li><a href="Company_PR/Green_Food.jsp">현대그린푸드</a></li>
 								</ul>
 							</div>
 						</li>
@@ -132,4 +133,3 @@
 				</nav>
 			</div>
 		</header>
-	

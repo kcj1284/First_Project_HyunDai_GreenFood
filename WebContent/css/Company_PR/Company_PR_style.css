@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+
+/* 현대그린푸드 */
+.company{margin-bottom:115px;height:700px;background:url('/First_Project_HyunDai_GreenFood/img/Company_PR/img_company.jpg') no-repeat center center;background-size:cover;overflow:hidden;}
+.company .title_description{padding-top:240px;}
+.company .title_sub{color:#fff;}
+.company .sub_description{margin-top:30px;color:#fff;}
+
+.info_company{margin-top:150px;text-align:center;}
+.info_company .cont:not(:first-child){margin-top:260px;}
+.info_company .title_company{margin-bottom:150px;font-size:50px;color:#000;}
+.info_company .title_company + .text_company{margin-top:-90px;}
+.info_company .text_company{line-height:1.9;font-size:24px;color:#737373;}
+.info_company .cont1_2 .list_company{margin-top:150px;overflow:hidden;}
+.info_company .cont1_2 .list_company .img{float:left;width:50%;}
+.info_company .cont1_2 .list_company .img .img_slide img{min-width:820px;width:100%;}
+.info_company .cont1_2 .list_company .txt{float:right;padding:75px 0 0 60px;width:50%;text-align:left;box-sizing:border-box;}
+.info_company .cont1_2 .title_company + .text_company{margin-top:-105px;}
+.info_company .cont1_2 .list_company .txt dl dt{margin:115px 0 30px;font-size:38px;font-weight:bold;color:#8d9b84;}
+.info_company .cont1_2 .list_company .txt dl dd{font-size:24px;color:#737373;}
+.info_company .cont1_3 .title_company{margin-top:45px;}
+.info_company .cont1_3 .title_company .pc{display:inline-block;}
