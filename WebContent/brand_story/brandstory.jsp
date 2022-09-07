@@ -1,19 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
-<html lang="ko">
-<head>
-<title>현대그린푸드</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<%@ include file ="/Inc/Header.jspf" %>
 <link href="../css/brand_story/brandstory_style.css" type="text/css" rel="stylesheet" />
 
-<%@ include file ="/Inc/Header.jspf" %>
-
-</head>
-
-<body>
 		<!-- container -->
 		<div class="container_area" id="contents">
 		
@@ -352,6 +341,4 @@
 		<!-- //서브 컨텐츠 -->
 
 	</div>
-	<%@ include file ="/Inc/Footer.jspf" %>
-</body>
-</html>
+<%@ include file ="/Inc/Footer.jspf" %>

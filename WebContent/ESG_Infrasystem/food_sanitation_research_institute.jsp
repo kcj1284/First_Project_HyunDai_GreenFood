@@ -1,16 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
-<html lang="ko">
-<head>
-<title>현대그린푸드</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-
-<%@ include file ="../Inc/Header.jspf" %>
-
-</head>
+<%@ include file ="/Inc/Header.jspf" %>
 
     <div class="sub_layout sub_visual_6">
     
@@ -513,4 +503,4 @@
 		</div>
 	</div>
 	<!-- //레이어팝업 -->
-</html>
+<%@include file="/Inc/Footer.jspf"%>

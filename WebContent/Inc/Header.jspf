@@ -103,7 +103,7 @@
 						<li><a class="main_menu" href="">홍보센터</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub6">
-									<li><a href="sub?command=">공지소식</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/PR_Center/notice.jsp">공지소식</a></li>
 								</ul>
 							</div>
 						</li>

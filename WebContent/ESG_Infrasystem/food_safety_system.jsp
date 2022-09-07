@@ -1,14 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<!DOCTYPE HTML>
-<html lang="ko">
-<head>
-<title>현대그린푸드</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=8,IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-
 <%@ include file ="/Inc/Header.jspf" %>
 
         <!-- 하이어라키 -->
@@ -177,4 +168,3 @@
         </div>
         <!-- //서브 컨텐츠 -->
 <%@ include file ="/Inc/Footer.jspf" %>
-</html>
