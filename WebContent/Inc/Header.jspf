@@ -53,12 +53,12 @@
 						<li><a class="main_menu" href="">사업영역</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub2">
-									<li><a href="sub?command=">푸드서비스사업</a></li>
-									<li><a href="sub?command=">외식사업</a></li>
-									<li><a href="sub?command=">리테일사업</a></li>
-									<li><a href="sub?command=">식자재유통사업</a></li>
-									<li><a href="sub?command=">해외사업</a></li>
-									<li><a href="sub?command=">건강식사업</a></li>
+									<li><a href="Business/foodService.jsp">푸드서비스사업</a></li>
+									<li><a href="Business/foodService.jsp">외식사업</a></li>
+									<li><a href="Business/foodService.jsp">리테일사업</a></li>
+									<li><a href="Business/foodService.jsp">식자재유통사업</a></li>
+									<li><a href="Business/foodService.jsp">해외사업</a></li>
+									<li><a href="Business/foodService.jsp">건강식사업</a></li>
 								</ul>
 							</div>
 						</li>
@@ -66,13 +66,13 @@
 						<li><a class="main_menu" href="">ESG 경영</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub3">
-									<li><a href="sub?command=">경영목표</a></li>
-									<li><a href="sub?command=">환경경영(E)</a></li>
-									<li><a href="sub?command=">사회공헌(S)</a></li>
-									<li><a href="sub?command=">지배구조(G)</a></li>
-									<li><a href="sub?command=">안전보건</a></li>
-									<li><a href="sub?command=">상생경영</a></li>
-									<li><a href="sub?command=">환경경영(E)</a></li>
+									<li><a href="ESG_Management/Managerial_Objective.jsp">경영목표</a></li>
+									<li><a href="ESG_Management/NetZero_2030.jsp">환경경영(E)</a></li>
+									<li><a href="ESG_Management/CRS.jsp">사회공헌(S)</a></li>
+									<li><a href="ESG_Management/Board_Policy.jsp">지배구조(G)</a></li>
+									<li><a href="ESG_Management/Safety_Health.jsp">안전보건</a></li>
+									<li><a href="ESG_Management/Win_Management.jsp">상생경영</a></li>
+									<li><a href="ESG_Management/Group_Ethical_Management.jsp">환경경영(E)</a></li>
 								</ul>
 							</div>
 						</li>
@@ -81,8 +81,8 @@
 
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub4">
-									<li><a href="sub?command=">물류시스템</a></li>
-									<li><a href="sub?command=">식품안전시스템</a></li>
+									<li><a href="ESG_Infrasystem/distribution_system.jsp">물류시스템</a></li>
+									<li><a href="ESG_Infrasystem/food_safety_system.jsp">식품안전시스템</a></li>
 									<li><a href="sub?command=">구매시스템</a></li>
 									<li><a href="sub?command=">가공&전처리시스템</a></li>
 									<li><a href="sub?command=">R&D시스템</a></li>
@@ -94,7 +94,7 @@
 						<li><a class="main_menu" href="">브랜드이야기</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub5">
-									<li><a href="sub?command=Sub4_First">브랜드이야기</a></li>
+									<li><a href="brand_story/brandstory.jsp">브랜드이야기</a></li>
 								</ul>
 							</div>
 						</li>
@@ -109,10 +109,10 @@
 						<li><a class="main_menu" href="">투자정보</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub7">
-									<li><a href="sub?command=">주가정보</a></li>
-									<li><a href="sub?command=">재무정보</a></li>
-									<li><a href="sub?command=">배당정보</a></li>
-									<li><a href="sub?command=">공시정보</a></li>
+									<li><a href="https://finance.naver.com/item/main.nhn?code=005440">주가정보</a></li>
+									<li><a href="Business_Performance.jsp">재무정보</a></li>
+									<li><a href="Dividend_Info.jsp">배당정보</a></li>
+									<li><a href="Disclosure_Info.jsp">공시정보</a></li>
 									<li><a href="sub?command=">공고사항</a></li>
 									<li><a href="sub?command=">IR자료실</a></li>
 

@@ -1,0 +1,299 @@
+/* 전체 적용 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, address, a, select, input, textarea, header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+img {
+    font-family: 'Noto Sans';
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}
+
+div {
+    display: block;
+}
+
+i {
+    font-style: italic;
+}
+
+/* 본 영역 */
+.container_area {
+    padding-bottom: 300px;
+}
+
+.sub_layout {
+    padding: 130px 0 0;
+}
+
+/* 하이어라키 */
+.hierarchy_list {
+    width: 1143px;
+    margin: 30px auto 0;
+    *zoom: 1;
+}
+
+.hierarchy_list li:first-child {
+    padding-left: 0;
+    margin-left: 0;
+    background-image: none;
+}
+
+.hierarchy_list .icon_home {
+    display: block;
+}
+
+.hierarchy_list li {
+    float: left;
+    height: 20px;
+    padding-left: 30px;
+    margin-left: 21px;
+    line-height: normal;
+    background: url(../../img/brand_story/icon_hierarchy.png) no-repeat left center;
+}
+
+.hierarchy_list li img {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.hierarchy_list li {
+    float: left;
+    height: 20px;
+    padding-left: 30px;
+    margin-left: 21px;
+    line-height: normal;
+    background: url(../../img/brand_story/icon_hierarchy.png) no-repeat left center;
+}
+
+.hierarchy_list .depth_3 > a {
+    color: #0a9882;
+}
+
+.t_block_hierarchy {
+    display: block;
+}
+
+.hierarchy_depth {
+    display: none;
+}
+
+/* 브랜드 이야기 */
+.sub_contents {
+    width: 1144px;
+    margin: 0 auto;
+}
+
+.title_description {
+    padding: 115px 0 150px;
+}
+
+.title_sub {
+    font-size: 50px;
+    /* color: #000; */
+    font-weight: bold;
+    text-align: center;
+    /* background: url(/Contents/images/m/icon/icon_green_line.jpg) no-repeat left top; */
+}
+
+.title_description .sub_description {
+    margin-top: 60px;
+}
+
+.sub_description {
+    line-height: 1.8;
+    font-size: 24px;
+    color: #737373;
+    text-align: center;
+}
+
+.title_description + .tab_list {
+    margin: -55px 0 45px;
+}
+
+.tab_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    *zoom: 1;
+}
+
+.tab_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tab_list li:first-child {
+    margin-left: -1px;
+}
+
+.tab_list li:hover, .tab_list .on {
+    background-color: #444b55;
+    border: 1px solid #444b55;
+    position: relative;
+}
+
+.tab_list li {
+    display: table;
+    margin-left: -1px;
+    padding: 0 20px;
+    min-width: 165px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.tab_list li:hover a, .tab_list .on a {
+    color: #fff;
+}
+
+.tab_list li a {
+    display: table-cell;
+    width: 100%;
+    height: 53px;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.5s;
+}
+
+.tab_list_brand li [class^="icon_"] {
+    background-image: url(../../img/brand_story/icon_brand.png);
+    transition: all 0.5s;
+}
+
+.tab_list_brand li a i {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.tab_list_brand .icon_health {
+    background-position-y: 0;
+}
+
+.icon_tab_bubble {
+    display: none;
+}
+
+.tab_list_brand .icon_eco {
+    background-position-y: -25px;
+}
+
+.tab_list_brand .icon_out {
+    background-position-y: -50px;
+}
+
+.tab_list_brand .icon_product {
+    background-position-y: -75px;
+}
+
+.tab_list_brand .icon_market {
+    background-position-y: -100px;
+}
+
+/* 브랜드 리스트 */
+.brand_story_list {
+    margin-left: -10px;
+    margin-top: 60px;
+    *zoom: 1;
+}
+
+.brand_story_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.brand_story_list li {
+    float: left;
+    margin-left: 9px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.brand_story_list li a {
+    display: block;
+    width: 218px;
+    height: 220px;
+    padding-left: 1px;
+    padding-top: 1px;
+    border: 1px solid #c1c1c1;
+    position: relative;
+}
+
+.brand_name {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
+
+.over_health {
+    background: url(../img/brand_story/bg_health.png) repeat left top;
+}
+
+.over_text_1 {
+    height: 131px;
+    padding-top: 90px;
+}
+
+.over_text {
+    display: none;
+    width: 219px;
+    height: 221px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.over_text img {
+    display: block;
+    width: 22px;
+    margin: 10px auto 0;
+}
+
+.over_eco {
+    background: url(../img/brand_story/bg_eco.png) repeat left top;
+}
+
+.over_out {
+    background: url(../img/brand_story/bg_out.png) repeat left top;
+}
+
+.over_text_2 {
+    height: 151px;
+    padding-top: 70px;
+}
+
+.over_product {
+    background: url(../img/brand_story/bg_product.png) repeat left top;
+}
+
+.over_market {
+    background: url(/Contents/images/brand/bg_market.png) repeat left top;
+}
+
