@@ -61,7 +61,8 @@
     <div class="signUpForm">
         <h1>회원가입</h1>
         <hr>
-        <form method="post">
+        <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUp" method="post">
+        <!--  <form action="/First_Project_HyunDai_GreenFood/signUpAction" method="post"> -->
             <fieldset>
                 <div class="input_F">
                     <input type="text" id="user_id" name="user_id" placeholder="아이디">
@@ -88,19 +89,19 @@
                 
 
                 <div class="radio">
-                    <input type="radio" name="gender" value="남성" checked> 남성
-                    <input type="radio" name="gender" value="여성"> 여성
+                    <input type="radio" name="gender" value="0" checked> 남성
+                    <input type="radio" name="gender" value="1"> 여성
                 </div>
                 
                 <div class="select">
                     분야  &nbsp  &nbsp
-                    <select>
-                        <option value="급식">급식</option>
-                        <option value="외식">외식</option>
-                        <option value="식자재유통">식자재유통</option>
-                        <option value="소매유통">소매유통</option>
-                        <option value="바이어">바이어</option>
-                        <option value="기타">기타</option>
+                    <select name="com_pany">
+                        <option value="0">급식</option>
+                        <option value="1">외식</option>
+                        <option value="2">식자재유통</option>
+                        <option value="3">소매유통</option>
+                        <option value="4">바이어</option>
+                        <option value="5">기타</option>
                     </select>
                 </div>
                 
