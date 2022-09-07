@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0" />
 <link href="../css/brand_story/brandstory_style.css" type="text/css" rel="stylesheet" />
 
-<%@ include file ="../Inc/Header.jspf" %>
+<%@ include file ="/Inc/Header.jspf" %>
 
 </head>
 
@@ -352,5 +352,6 @@
 		<!-- //서브 컨텐츠 -->
 
 	</div>
+	<%@ include file ="/Inc/Footer.jspf" %>
 </body>
 </html>

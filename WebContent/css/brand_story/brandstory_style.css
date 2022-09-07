@@ -62,7 +62,7 @@ i {
     padding-left: 30px;
     margin-left: 21px;
     line-height: normal;
-    background: url(../../img/brand_story/icon_hierarchy.png) no-repeat left center;
+    background: url(/First_Project_HyunDai_GreenFood/img/brand_story/icon_hierarchy.png) no-repeat left center;
 }
 
 .hierarchy_list li img {
@@ -77,7 +77,7 @@ i {
     padding-left: 30px;
     margin-left: 21px;
     line-height: normal;
-    background: url(../../img/brand_story/icon_hierarchy.png) no-repeat left center;
+    background: url(/First_Project_HyunDai_GreenFood/img/brand_story/icon_hierarchy.png) no-repeat left center;
 }
 
 .hierarchy_list .depth_3 > a {
@@ -176,7 +176,7 @@ i {
 }
 
 .tab_list_brand li [class^="icon_"] {
-    background-image: url(../../img/brand_story/icon_brand.png);
+    background-image: url(/First_Project_HyunDai_GreenFood/img/brand_story/icon_brand.png);
     transition: all 0.5s;
 }
 
@@ -249,7 +249,7 @@ i {
 }
 
 .over_health {
-    background: url(../img/brand_story/bg_health.png) repeat left top;
+    background: url(/First_Project_HyunDai_GreenFood/img/brand_story/bg_health.png) repeat left top;
 }
 
 .over_text_1 {
@@ -277,11 +277,11 @@ i {
 }
 
 .over_eco {
-    background: url(../img/brand_story/bg_eco.png) repeat left top;
+    background: url(/First_Project_HyunDai_GreenFood/img/brand_story/bg_eco.png) repeat left top;
 }
 
 .over_out {
-    background: url(../img/brand_story/bg_out.png) repeat left top;
+    background: url(/First_Project_HyunDai_GreenFood/img/brand_story/bg_out.png) repeat left top;
 }
 
 .over_text_2 {
@@ -290,7 +290,7 @@ i {
 }
 
 .over_product {
-    background: url(../img/brand_story/bg_product.png) repeat left top;
+    background: url(/First_Project_HyunDai_GreenFood/img/brand_story/bg_product.png) repeat left top;
 }
 
 .over_market {

@@ -132,7 +132,7 @@
 
 				<div class="cont cont1_3">
 					<a
-						href="/cm/download.hg?LOGIC_FILE_NM=HYUNDAI_GREENFOOD_BROCHURE.pdf&PHYSC_FILE_NM=/static/pdf/BROCHURE.pdf"
+						href="https://hyundaigreenfood.com/cm/download.hg?LOGIC_FILE_NM=HYUNDAI_GREENFOOD_BROCHURE.pdf&PHYSC_FILE_NM=/static/pdf/BROCHURE.pdf"
 						class="btn_action comm" target="frm">회사브로셔 다운로드</a>
 				</div>
 			</div>
