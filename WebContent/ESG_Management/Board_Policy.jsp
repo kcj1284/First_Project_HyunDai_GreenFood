@@ -18,7 +18,7 @@
 			<img src="../img/ESG/visual_esg.jpg">
 		</div>
 		<div class="tree_text">
-			<h1 class="title_sub">ESG 경영</h1>
+			<h1>ESG 경영</h1>
 			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
 		</div>
 	</div>
@@ -41,8 +41,14 @@
 				현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에, <br class="pc">공정한 경쟁과 지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다. <br>앞으로도 주주 등 모든 이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써 <br class="pc">신뢰를 확보하고 성실한 경영활동을 수행하고자 최선을 다하겠습니다.
 			</div>
 
-			<div>
-				<a href="Board_Policy.jsp">이사회정책</a> <a href="External_Auditor.jsp">외부감사인</a> <a href="General_Meeting.jsp">주주총회</a> <a href="Shareholder_info.jsp">주주정보</a> <a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a> <a href="Corp_Governance_Report.jsp">기업지배구조보고서</a> <br>
+			<div class="tab_list">
+				<li class="on"><a href="Board_Policy.jsp">이사회정책</a></li>
+				<li><a href="External_Auditor.jsp">외부감사인</a></li>
+				<li><a href="General_Meeting.jsp">주주총회</a></li>
+				<li><a href="Shareholder_info.jsp">주주정보</a></li>
+				<li><a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a></li>
+				<li><a href="Corp_Governance_Report.jsp">기업지배구조보고서</a></li>
+				<br>
 			</div>
 
 			<section class="esg_section cont4_1_1">

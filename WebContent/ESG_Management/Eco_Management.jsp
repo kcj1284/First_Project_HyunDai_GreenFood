@@ -4,11 +4,11 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eco_Management</title>
-<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eco_Management</title>
+	<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -18,30 +18,36 @@
 			<img src="../img/ESG/visual_esg.jpg">
 		</div>
 		<div class="tree_text">
-			<h1 class="title_sub">ESG 경영</h1>
+			<h1>ESG 경영</h1>
 			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
 		</div>
 	</div>
 	<div class="category">
 		<ul>
-		<li class = "on">
-		<a href="Managerial_Objective.jsp">경영목표</a> </li>
-		<li class = "on"><a href="NetZero_2030.jsp">환경경영(E)</a></li> 
-		<li class = "on"><a href="CRS.jsp">사회공헌(S)</a> </li>
-		<li class = "on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
-		<li class = "on"><a href="Safety_Health.jsp">안전보건</a> </li>
-		<li class = "on"><a href="Win_Management.jsp">상생경영</a> </li>
-		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
+			<li class="on">
+				<a href="Managerial_Objective.jsp">경영목표</a> </li>
+			<li class="on"><a href="NetZero_2030.jsp">환경경영(E)</a></li>
+			<li class="on"><a href="CRS.jsp">사회공헌(S)</a> </li>
+			<li class="on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
+			<li class="on"><a href="Safety_Health.jsp">안전보건</a> </li>
+			<li class="on"><a href="Win_Management.jsp">상생경영</a> </li>
+			<li class="on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
 		</ul>
 	</div>
-	<div>
-		<a href="NetZero_2030.jsp">넷제로2030</a> <a href="Eco_Management.jsp">친환경경영</a>
+	<div class="tab_list">
+		<li>
+		<a href="NetZero_2030.jsp">넷제로2030</a>
+		</li>
+		<li class="on">
+			<a href="Eco_Management.jsp">친환경경영</a>
+		</li>
 	</div>
 	<br>
 
 	<h3 class="esg_title">추진조직</h3>
 	<div class="esg_text">
-		현대그린푸드는 사업활동 전 과정에서 환경을 먼저 생각합니다. <br>EHS담당을 중심으로 각 사업부가 참여한 친환경 경영 협의체를 구축하고, 친환경 부문 현안과 이슈사항을 발굴·파악하여 <br class="pc">부문별 중점 개선과제를 수립·이행하고 있습니다.
+		현대그린푸드는 사업활동 전 과정에서 환경을 먼저 생각합니다. <br>EHS담당을 중심으로 각 사업부가 참여한 친환경 경영 협의체를 구축하고, 친환경 부문 현안과 이슈사항을 발굴·파악하여 <br
+			class="pc">부문별 중점 개선과제를 수립·이행하고 있습니다.
 	</div>
 
 	<div class="esg_text2">
@@ -54,7 +60,8 @@
 	<section class="esg_section cont2_2_2">
 		<h3 class="esg_title">환경경영목표</h3>
 		<div class="esg_text">
-			현대그린푸드는 매년 환경성과 측정을 위한 목표를 수립하고, 개별 환경목표에 대한 성과를 CEO에 보고하며 <br class="pc">다양한 탄소중립활동을 통한 환경지표 개선 노력을 지속하고 있습니다.
+			현대그린푸드는 매년 환경성과 측정을 위한 목표를 수립하고, 개별 환경목표에 대한 성과를 CEO에 보고하며 <br class="pc">다양한 탄소중립활동을 통한 환경지표 개선 노력을 지속하고
+			있습니다.
 		</div>
 
 		<div class="directorate_area">
@@ -121,7 +128,9 @@
 			<img src="../img/ESG/em_02.jpg" alt="">
 		</div>
 		<div class="esg_btn">
-			<a target="frm" href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/ESG_EVALUATION_2021.pdf&amp;LOGIC_FILE_NM=esg.pdf" class="esg_btn_down">한국기업지배구조원 보도자료(2021년)</a>
+			<a target="frm"
+				href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/ESG_EVALUATION_2021.pdf&amp;LOGIC_FILE_NM=esg.pdf"
+				class="esg_btn_down">한국기업지배구조원 보도자료(2021년)</a>
 		</div>
 
 		<section class="cont2_2_2">
@@ -217,17 +226,25 @@
 	<ul class="esg_guide">
 		<li>※ LED 설치사업은 ‘14년부터 진행중인 에너지 효율개선 사업으로, <br class="pc">7개년간 173백만원을 투자하여 총 4,128개의 조명을 고효율 장비로 교체하였습니다.
 		</li>
-		<li>※ 현대그린푸드는 2022년에 전년 대비 15% 증가한 10억원의 환경경영 투자를 계획하고 있습니다. <br>특히, ‘21년 설치한 태양광 패널을 전국의 센터에 확대하여 신재생에너지 생산 투자를 늘릴 계획입니다.
+		<li>※ 현대그린푸드는 2022년에 전년 대비 15% 증가한 10억원의 환경경영 투자를 계획하고 있습니다. <br>특히, ‘21년 설치한 태양광 패널을 전국의 센터에 확대하여 신재생에너지 생산 투자를
+			늘릴 계획입니다.
 		</li>
 	</ul>
 
 	<div class="esg_btn">
-		<a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_1.pdf&LOGIC_FILE_NM=환경경영방침.pdf" class="btn_action comm">환경경영방침</a> <a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_2.pdf&LOGIC_FILE_NM=녹색구매방침.pdf" class="btn_action comm">녹색구매방침</a>
+		<a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_1.pdf&LOGIC_FILE_NM=환경경영방침.pdf"
+			class="btn_action comm">환경경영방침</a> <a
+			href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_2.pdf&LOGIC_FILE_NM=녹색구매방침.pdf"
+			class="btn_action comm">녹색구매방침</a>
 
 		<div class="box">
-			<a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_3.pdf&LOGIC_FILE_NM=환경경영법규및규제관리 절차서.pdf" class="btn_action comm">환경경영 법규 및 규제관리 절차서</a> <a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_4.pdf&LOGIC_FILE_NM=환경성과평가체계.pdf" class="btn_action comm">환경성과 평가체계</a>
+			<a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_3.pdf&LOGIC_FILE_NM=환경경영법규및규제관리 절차서.pdf"
+				class="btn_action comm">환경경영 법규 및 규제관리 절차서</a> <a
+				href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM01C_4.pdf&LOGIC_FILE_NM=환경성과평가체계.pdf"
+				class="btn_action comm">환경성과 평가체계</a>
 		</div>
 	</div>
 	<%@ include file="/Inc/Footer.jspf"%>
 </body>
+
 </html>

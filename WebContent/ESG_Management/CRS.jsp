@@ -18,7 +18,7 @@
 			<img src="../img/ESG/visual_esg.jpg">
 		</div>
 		<div class="tree_text">
-			<h1 class="title_sub">ESG 경영</h1>
+			<h1>ESG 경영</h1>
 			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
 		</div>
 	</div>
@@ -35,6 +35,16 @@
 		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
 		</ul>
 	</div>
+
+	<div class="tab_list">
+		<li class="on">
+			<a href="CRS.jsp">CRS</a> </li>
+		</li>
+		<li >
+			<a href="Employee_Diversity.jsp">임직원 다양성</a>
+		</li>
+	</div>
+
 	<div>
 		<h3 class="esg_title">사회공헌활동</h3>
 		<div class="esg_text">

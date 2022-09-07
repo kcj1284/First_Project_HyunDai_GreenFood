@@ -34,8 +34,13 @@
 		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
 		</ul>
 	</div>
-	<div>
-		<a href="NetZero_2030.jsp">넷제로2030</a> <a href="Eco_Management.jsp">친환경경영</a>
+	<div class="tab_list">
+		<li class="on">
+		<a href="NetZero_2030.jsp">넷제로2030</a>
+		</li>
+		<li >
+			<a href="Eco_Management.jsp">친환경경영</a>
+		</li>
 	</div>
 	탄소중립2030 목표
 	<br> 현대그린푸드는 건강과 지속가능이라는 비전 아래 에너지 사용 뿐만 아니라

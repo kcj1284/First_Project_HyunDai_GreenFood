@@ -4,11 +4,11 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mangerial_Objective</title>
-<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mangerial_Objective</title>
+	<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -25,15 +25,23 @@
 
 	<div class="category">
 		<ul>
-		<li class = "on">
-		<a href="Managerial_Objective.jsp">경영목표</a> </li>
-		<li class = "on"><a href="NetZero_2030.jsp">환경경영(E)</a></li> 
-		<li class = "on"><a href="CRS.jsp">사회공헌(S)</a> </li>
-		<li class = "on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
-		<li class = "on"><a href="Safety_Health.jsp">안전보건</a> </li>
-		<li class = "on"><a href="Win_Management.jsp">상생경영</a> </li>
-		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
+			<li class="on">
+				<a href="Managerial_Objective.jsp">경영목표</a> </li>
+			<li class="on"><a href="NetZero_2030.jsp">환경경영(E)</a></li>
+			<li class="on"><a href="CRS.jsp">사회공헌(S)</a> </li>
+			<li class="on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
+			<li class="on"><a href="Safety_Health.jsp">안전보건</a> </li>
+			<li class="on"><a href="Win_Management.jsp">상생경영</a> </li>
+			<li class="on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
 		</ul>
+	</div>
+	<div class="tab_list">
+		<li>
+			<a href="CRS.jsp">CRS</a> </li>
+		</li>
+		<li class="on">
+			<a href="Employee_Diversity.jsp">임직원 다양성</a>
+		</li>
 	</div>
 	<div>
 		<h3 class="esg_title">임직원 다양성</h3>
@@ -71,7 +79,8 @@
 							<td rowspan="32">
 								<ol class="director_division_list">
 									<li>※ <strong>관리자</strong></li>
-									<li>기업의 공식 조직도 상 <br>직급과는 무관하며 <br>각급 부서/영업점 단위 <br>책임자를 말함. <br>(업무지휘 감독권, <br>인사고과권, 결재권 보유자)
+									<li>기업의 공식 조직도 상 <br>직급과는 무관하며 <br>각급 부서/영업점 단위 <br>책임자를 말함. <br>(업무지휘 감독권,
+										<br>인사고과권, 결재권 보유자)
 									</li>
 								</ol>
 							</td>
@@ -334,7 +343,8 @@
 							</tr>
 							<tr>
 								<td class="first">사이버 대학 지원</td>
-								<td>·임직원 대상 입학료/전형료 면제, 수업료 40~50% 감면 혜택 <br>&nbsp;&nbsp;(고려대, 한양대, 경희대, 세종대, 숭실대, 한국외대, 서울사이버대)
+								<td>·임직원 대상 입학료/전형료 면제, 수업료 40~50% 감면 혜택 <br>&nbsp;&nbsp;(고려대, 한양대, 경희대, 세종대, 숭실대, 한국외대,
+									서울사이버대)
 								</td>
 							</tr>
 							<tr>
@@ -362,4 +372,5 @@
 	</div>
 	<%@ include file="/Inc/Footer.jspf"%>
 </body>
+
 </html>

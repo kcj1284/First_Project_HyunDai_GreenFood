@@ -35,9 +35,16 @@
 		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
 		</ul>
 	</div>
-	<div>
-		<a href="Group_Ethical_Management.jsp">그룹윤리경영</a> <a href="Ethics_Report_Center.jsp">윤리신고센터</a> <br>
+	
+	<div class="tab_list">
+		<li>
+			<a href="Group_Ethical_Management.jsp">그룹윤리경영</a>
+		</li>
+		<li class="on">
+			<a href="Ethics_Report_Center.jsp">윤리신고센터</a>
+		</li>
 	</div>
+
 	<div>
 		<h3 class="esg_title">윤리신고센터</h3>
 		<div class="esg_text">
