@@ -102,7 +102,7 @@
 
 .img_safe_system{margin-top:110px;padding-bottom:96px;text-align:center;}
 
-.img_history_lab{height:556px;margin-top:70px;padding-bottom:67px;background:url("/Contents/images/infra/img_history_lab.jpg") no-repeat center top;}
+.img_history_lab{height:556px;margin-top:70px;padding-bottom:67px;background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/img_history_lab.jpg") no-repeat center top;}
 
 .analysis_area{margin-top:67px;padding-left:86px;padding-bottom:35px;*zoom:1;}
 .analysis_area:after{content:"";display:block;clear:both;}
@@ -121,22 +121,22 @@
 }
 .analysis_dl dt span{font-size:16px;}
 .analysis_dl dd{padding-left:25px;font-size:14px;color:#555;line-height:23px;}
-.analysis_dl dd li{background:url("/Contents/images/infra/arrow_analysis.jpg") no-repeat left 7px;padding-left:9px;letter-spacing:-1px;}
+.analysis_dl dd li{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/arrow_analysis.jpg") no-repeat left 7px;padding-left:9px;letter-spacing:-1px;}
 
 
 .test_process_list{margin-top:70px;padding-left:90px;*zoom:1;}
 .test_process_list:after{content:"";display:block;clear:both;}
 .test_process_list li{float:left;padding-left:39px;margin-left:21px;
-  background:url("/Contents/images/infra/arrow_test.jpg") no-repeat left 82px;
+  background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/arrow_test.jpg") no-repeat left 82px;
 }
 .test_process_list li:first-child{background-image:none;padding-left:0;}
 .test_process_list strong{display:block;width:196px;height:196px;
   font-size:18px;color:#444;font-weight:bold;text-align:center;line-height:260px;
 }
-.test_process_list .test_process1{background:url("/Contents/images/infra/icon_test1.jpg") no-repeat left top;}
-.test_process_list .test_process2{background:url("/Contents/images/infra/icon_test2.jpg") no-repeat left top;}
-.test_process_list .test_process3{background:url("/Contents/images/infra/icon_test3.jpg") no-repeat left top;}
-.test_process_list .test_process4{background:url("/Contents/images/infra/icon_test4.jpg") no-repeat left top;}
+.test_process_list .test_process1{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/icon_test1.jpg") no-repeat left top;}
+.test_process_list .test_process2{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/icon_test2.jpg") no-repeat left top;}
+.test_process_list .test_process3{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/icon_test3.jpg") no-repeat left top;}
+.test_process_list .test_process4{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_sanitation_research_institute/icon_test4.jpg") no-repeat left top;}
 
 .test_process_list span{display:block;margin-top:25px;font-size:14px;color:#666;line-height:21px;}
 

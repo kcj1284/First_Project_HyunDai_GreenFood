@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file ="/Inc/Header.jspf" %>
+<link href="../css/ESG_infrasystem/infrasystem_style.css" type="text/css" rel="stylesheet" />
 
     <div class="sub_layout sub_visual_6">
     

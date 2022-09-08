@@ -11,11 +11,7 @@
 <div class="container_area" id="contents">
 
 	<!-- Body ################# -->
-
 	<!-- contents : str -->
-
-
-
 	<div class="sub_layout sub_visual_6">
 
 		<!-- 하이어라키 -->
