@@ -1,0 +1,521 @@
+@charset "UTF-8";
+
+/* * * 
+사회공헌활동 
+* * */
+.social_area {
+	line-height: 1.7;
+	letter-spacing: -0.5px;
+}
+
+.social_area .social_title {
+	position: relative;
+	margin-bottom: 80px;
+	line-height: 1;
+	font-size: 42px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 1;
+}
+
+.social_area .social_text {
+	font-size: 26px;
+	color: #464646;
+	line-height: 1.9;
+	text-align: center;
+}
+
+.social_area .social_banner {
+	position: relative;
+	overflow: hidden;
+}
+
+.social_area .social_banner .social_bg {
+	position: absolute;
+	left: 0;
+	top: 122px;
+	width: 100%;
+	height: 420px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	z-index: 0;
+}
+
+.social_area .social_banner .social_text {
+	position: relative;
+	padding: 50px 0;
+	color: #666;
+	z-index: 1;
+}
+
+.social_area .social_banner .social_text span {
+	font-weight: 600;
+	color: #727f6a;
+}
+
+.social_image {
+	padding-bottom: 75px;
+	text-align: center;
+}
+
+.social_children {
+	margin-top: -60px;
+	text-align: center;
+}
+
+.social_cont {
+	margin-bottom: 100px;
+}
+
+/* 거래 상담 */
+.check_catagory_area {
+	padding: 16px 0;
+	*zoom: 1;
+}
+
+.check_catagory_area:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.counsel_text {
+	float: left;
+	height: 22px;
+	margin-left: 10px;
+	padding-left: 33px;
+	background: url("/First_Project_HyunDai_GreenFood/img/icon/icon_counsel.jpg") no-repeat left
+		center;
+	font-size: 14px;
+	color: #777;
+	line-height: 22px;
+}
+
+.counsel_check {
+	float: left;
+	margin: 4px 0 4px 9px;
+	*zoom: 1;
+}
+
+.counsel_check:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.counsel_check li {
+	float: left;
+	margin-left: 30px;
+	font-size: 15px;
+	color: #333;
+}
+
+.counsel_check li:first-child {
+	margin-left: 0;
+}
+
+.counsel_check li label {
+	margin-left: 8px;
+}
+
+.counsel_check .buyer {
+	color: #0a9882;
+}
+
+.counsel_check .request {
+	color: #da9529;
+}
+
+.counsel_area {
+	border-top: 3px solid #231f20;
+	padding-top: 15px;
+	*zoom: 1;
+}
+
+.counsel_area:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.input_info_area {
+	float: left;
+	width: 523px;
+	margin-left: 20px;
+}
+
+.counsel_input_list {
+	
+}
+
+.counsel_input_list li {
+	padding: 9px 0;
+	border-top: 1px solid #e5e5e5;
+	font-size: 13px;
+	color: #888;
+}
+
+.counsel_input_list li:first-child {
+	border-top: 0;
+}
+
+.counsel_input_list li label {
+	display: inline-block;
+	width: 73px;
+	padding-left: 9px;
+	font-size: 15px;
+	color: #333;
+}
+
+.counsel_input_list li strong {
+	margin-left: -9px;
+	margin-right: 5px;
+	font-size: 11px;
+	color: #ff5050;
+}
+
+.counsel_name {
+	width: 211px;
+}
+
+.counsel_phone1, .counsel_phone2, .counsel_phone3 {
+	width: 98px;
+}
+
+.counsel_email1, .counsel_email2 {
+	width: 206px;
+}
+
+.counsel_company {
+	width: 435px;
+}
+
+.counsel_address {
+	width: 216px;
+}
+
+.file_add_text {
+	float: left;
+	margin-right: 2px;
+	line-height: 22px;
+}
+
+.counsel_input_list .file_input_textbox {
+	width: 335px;
+}
+
+.counsel_input_list .file_input_div {
+	width: 90px;
+}
+
+.title_contents_area {
+	float: right;
+	width: 550px;
+	margin-right: 30px;
+}
+
+.title_contents_area .counsel_input_list li label {
+	width: 43px;
+	vertical-align: top;
+	margin-top: 4px;
+}
+
+.counsel_content {
+	width: 463px;
+	height: 130px;
+	padding: 15px;
+	border: 1px solid #adadaf;
+	resize: none;
+}
+
+.counsel_title {
+	width: 493px;
+}
+
+.consel_check_area {
+	margin-top: 25px;
+}
+
+.consel_check_area .write_tb tbody tr th {
+	width: 185px;
+}
+
+.consel_check_area .write_tb textarea {
+	width: 880px;
+}
+
+.answer_receive {
+	margin-right: 28px;
+	font-size: 15px;
+	color: #333;
+}
+
+.answer_receive label {
+	font-size: 13px;
+	color: #777;
+}
+
+.answer_receive input {
+	margin-left: 10px;
+}
+
+.answer_receive input:first-child {
+	margin-left: 20px;
+}
+
+/* 거래 상담 */
+.check_catagory_area {
+	padding: 22px 0;
+}
+
+.counsel_text {
+	float: none;
+	height: 22px;
+	margin-left: 9px;
+}
+
+.counsel_check {
+	float: none;
+	margin: 8px 0 0px 9px;
+}
+
+.counsel_area {
+	border-top: 3px solid #231f20;
+	padding-top: 15px;
+	*zoom: 1;
+}
+
+.counsel_area:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.input_info_area {
+	float: none;
+	width: 100%;
+	margin-left: 0px;
+}
+
+.counsel_input_list li label {
+	display: inline-block;
+	width: 71px;
+	padding-left: 30px;
+}
+
+.counsel_input_list li strong {
+	margin-left: -12px;
+}
+
+.title_contents_area {
+	float: none;
+	width: 100%;
+	margin-right: 0px;
+}
+
+.title_contents_area .counsel_input_list li:first-child {
+	border-top: 1px solid #e5e5e5;
+}
+
+.title_contents_area .counsel_input_list li label {
+	width: 71px;
+	vertical-align: top;
+	margin-top: 4px;
+}
+
+.counsel_content {
+	width: 80.45197740112994%;
+	height: 160px;
+	padding: 15px 2%;
+	border: 1px solid #adadaf;
+	resize: none;
+}
+
+.counsel_title {
+	width: 84.45197740112994%;
+}
+
+.consel_check_area {
+	margin-top: 25px;
+}
+
+.consel_check_area .write_tb tbody tr:first-child th {
+	width: 163px;
+	padding-left: 0;
+	text-align: center;
+}
+
+.consel_check_area .write_tb textarea {
+	width: 90%;
+}
+
+/* 거래 상담 */
+.check_catagory_area {
+	border-top: 1px solid #d7d7d7;
+	margin-top: 20px;
+	padding: 18px 0;
+	*zoom: 1;
+}
+
+.counsel_text {
+	float: none;
+	height: auto;
+	margin-left: 0;
+	font-size: 14px;
+	color: #777;
+	line-height: 18px;
+}
+
+.counsel_check {
+	float: none;
+	margin: 6px 0 0px 0;
+}
+
+.counsel_check li {
+	float: left;
+	width: 50%;
+	margin-left: 0px;
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+.question_area {
+	padding: 9px 10px;
+}
+
+.answer_area {
+	padding: 25px 10px;
+}
+
+.counsel_area {
+	padding-top: 0px;
+	border-top: 0;
+	*zoom: 1;
+}
+
+.counsel_input_list {
+	border-top: 3px solid #231f20;
+}
+
+.counsel_input_list li {
+	padding: 0px;
+	border-top: 0;
+	font-size: 13px;
+	color: #888;
+}
+
+.counsel_input_list li label {
+	display: block;
+	width: 91%;
+	height: 33px;
+	background-color: #f5f5f5;
+	padding-left: 9%;
+	border-top: 1px solid #7f7f7f;
+	font-size: 14px;
+	line-height: 33px;
+}
+
+.counsel_input_list li:first-child label {
+	border-top: 0;
+}
+
+.counsel_input_list li span {
+	display: block;
+	padding: 10px 5px;
+	border-top: 1px solid #ececec;
+}
+
+.counsel_name {
+	width: 100%;
+}
+
+.counsel_phone1, .counsel_phone2, .counsel_phone3 {
+	width: 28.66666666666667%;
+}
+
+.counsel_email1, .counsel_email2 {
+	width: 45%;
+}
+
+.counsel_company {
+	width: 100%;
+}
+
+.counsel_address {
+	width: 46%;
+}
+
+.counsel_input_list .file_field_area {
+	padding: 10px 5px;
+	border-top: 1px solid #ececec;
+	overflow: hidden;
+}
+
+.file_add_text {
+	float: left;
+	margin-right: 2px;
+	line-height: 22px;
+}
+
+.counsel_input_list .file_input_textbox {
+	width: 61.66666666666667%;
+}
+
+.counsel_input_list .file_input_div {
+	width: 32%;
+}
+
+.title_contents_area .counsel_input_list {
+	border-top: 1px solid #909090;
+}
+
+.title_contents_area .counsel_input_list li label {
+	display: block;
+	width: 91%;
+	height: 33px;
+	margin-top: 0;
+	padding-left: 9%;
+	font-size: 14px;
+	line-height: 33px;
+}
+
+.counsel_content {
+	width: 94%;
+	height: 190px;
+	border: 1px solid #adadaf;
+	resize: none;
+}
+
+.counsel_title {
+	width: 100%;
+}
+
+.consel_check_area {
+	width: 100%;
+	margin-top: 0px;
+}
+
+.consel_check_area .write_tb textarea {
+	width: 90%;
+}
+
+.answer_receive {
+	margin-right: 28px;
+	font-size: 15px;
+	color: #333;
+}
+
+.answer_receive label {
+	font-size: 13px;
+	color: #777;
+}
+
+.answer_receive input {
+	margin-left: 10px;
+}
+
+.answer_receive input:first-child {
+	margin-left: 20px;
+}
