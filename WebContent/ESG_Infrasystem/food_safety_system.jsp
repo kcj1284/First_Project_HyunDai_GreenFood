@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file ="/Inc/Header.jspf" %>
 
+<link href="../css/ESG_infrasystem/infrasystem_style.css" type="text/css" rel="stylesheet" />
+
         <!-- 하이어라키 -->
         <ul class="hierarchy_list">
             <li class="icon_home"><img src="../img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>

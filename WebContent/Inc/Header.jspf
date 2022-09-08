@@ -125,7 +125,7 @@
 							<a class="main_menu" href="">고객센터</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub8">
-									<li><a href="sub?command=">고객의 소리</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/Customer/Suggestions.jsp">고객의 소리</a></li>
 									<li><a href="/First_Project_HyunDai_GreenFood/Customer/Business_Consulting.jsp">거래·상담</a></li>
 								</ul>
 							</div>

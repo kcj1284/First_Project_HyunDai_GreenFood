@@ -1,426 +1,166 @@
-
-
 @charset "utf-8";
-/* 전체 영역 (아래 공백 영역 제외) */
-
-element.style {
-    position: relative;
-    min-height: 100%;
-    top: 0px;
-}
-
-.wrap {
-    min-width: 1226px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.sub_layout {
-    padding: 130px 0 0;
-}
-
-.sub_contents {
-    width: 1144px;
-    margin: 0 auto;
-}
-
-.container_area {
-    padding-bottom: 300px;
-}
-
-/* 하이어라키 영역 */
-.sub_contents, .hierarchy_list {
-    width: auto;
-}
-
-.hierarchy_list {
-    width: 1143px;
-    margin: 30px auto 0;
-    *zoom: 1;
-}
-
-.hierarchy_list li:first-child {
-    padding-left: 0;
-    margin-left: 0;
-    background-image: none;
-}
-
-.hierarchy_list li {
-    float: left;
-    height: 20px;
-    padding-left: 30px;
-    margin-left: 21px;
-    line-height: normal;
-    background: url(/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/distribution_system/icon_hierarchy.png) no-repeat left center;
-}
-
-.hierarchy_list li img {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: top;
-}
-
-.hierarchy_list .depth_2 {
-    background-color: transparent;
-}
-
-.m_hierarchy {
-    display: block;
-    height: auto;
-    padding-left: 0;
-    margin-right: 0;
-    background-image: none;
-    font-size: 15px;
-    color: #666;
-    line-height: 20px;
-}
-
-.hierarchy_list .depth_3 > a {
-    color: #0a9882;
-}
-
-.hierarchy_depth {
-    display: none;
-}
-
-.hierarchy_list:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-a, a:hover, a:focus {
-    text-decoration: none;
-}
-
-/* 리스트 스타일 제거 */
-ol, ul, li {
-    list-style: none;
-}
-
-/* 해당 태그들 기본 설정 */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, address, a, select, input, textarea, header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, button {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans';
-}
-
-html, body {
-    height: 100%;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-/* title 영역 */
-.title_description {
-    padding: 115px 0 150px;
-}
 
-div {
-    display: block;
-}
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-.title_description .sub_description {
-    margin-top: 60px;
-}
-
-/* title */
-.title_sub {
-    font-size: 50px;
-    /* color: #000; */
-    font-weight: bold;
-    text-align: center;
-    /* background: url(../../img/ESG_infrasystem/distribution_system/icon_green_line.jpg) no-repeat left top; */
-}
-
-/*부 title */
-.sub_description {
-    line-height: 1.8;
-    font-size: 24px;
-    color: #737373;
-    text-align: center;
-}
-
-/* 인프라 영역 */
-.infra_area {
-    width: auto;
-}
+/* 물류시스템 */
+.distribution_map_area{width:417px;margin:55px auto 0;padding-bottom:334px;position:relative;}
 
-/* 인프라 내용 영역 */
-.infra_text_area:first-child {
-    padding-top: 0;
-    margin-top: 0;
-    border-top: 0;
+.distri_center{text-align:left;position:absolute;}
+.distri_center dl{margin-top:15px;}
+.distri_center dt{margin-bottom:8px;font-size:20px;color:#333;font-weight:bold;}
+.distri_center li{background:url("/First_Project_HyunDai_GreenFood/img/icon/icon_gray_arrow.png") no-repeat left 5px;padding-left:10px;
+  font-size:13px;color:#666;line-height:18px;
 }
+.distri_center li span{display:block;margin-left:32px;}
 
-.infra_text_area {
-    padding-top: 50px;
-    margin-top: 50px;
-    border-top: 1px dashed #ccc;
-    text-align: center;
-}
+.distri_center1{left:-287px;top:56px;}
+.distri_center2{left:-287px;top:327px;}
+.distri_center3{left:-70px;top:620px;}
+.distri_center4{right:-110px;top:620px;}
+.distri_center5{right:-364px;top:340px;}
+.distri_center6{right:-364px;top:67px;}
 
-/* 인프라 내용 - 타이틀 */
-.title_infra {
-    font-size: 35px;
-    color: #333;
-    font-weight: normal;
-    text-align: center;
-}
 
-h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
+.manage_discri_list{margin-top:28px;text-align:left;*zoom:1;}
+.manage_discri_list:after{content:"";display:block;clear:both;}
+.manage_discri_list li{float:left;width:316px;height:376px;margin-left:7px;padding-left:30px;padding-right:30px;}
+.manage_discri_list li:first-child{margin-left:0;}
 
-/* 인프라 내용 - 내용 */
-.text_infra {
-    margin-top: 20px;
-    font-size: 17px;
-    color: #666;
-    line-height: 25px;
-    text-align: center;
+.manage_discri_list .manage_discri1{height:246px;padding-top:130px;
+  background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/distribution_system/img_manage_discri1.jpg") no-repeat left top;
 }
-
-/* 인프라 내용 속 포인트 색 */
-.text_infra .point {
-    color: #00816d;
+.manage_discri_list .manage_discri2{height:246px;padding-top:130px;
+  background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/distribution_system/img_manage_discri2.jpg") no-repeat left top;
 }
-
-/* 물류시스템 지도 */
-/*.distribution_map_area {
-    width: 226px;
-    margin: 37px auto 0;
-    padding-bottom: 247px;
-    position: relative;
-}*/
-
-.distribution_map_area {
-    width: 417px;
-    margin: 55px auto 0;
-    padding-bottom: 334px;
-    position: relative;
+.manage_discri_list .manage_discri3{height:263px;padding-top:113px;
+  background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/distribution_system/img_manage_discri3.jpg") no-repeat left top;
 }
 
-img {
-    border: 0;
-}
+.manage_discri_list dt{margin-bottom:17px;font-size:25px;color:#fff;line-height:35px;}
+.manage_discri_list dd{font-size:13px;color:#fff;line-height:25px;}
 
-input, select, label, img {
-    font-family: 'Noto Sans';
-    vertical-align: middle;
-}
+.distribution_process{margin-top:40px;padding-top:455px;background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/distribution_system/distribution_process.jpg") no-repeat center top;}
 
-/* 물류시스템 센터들 */
-.distri_center1 {
-    left: -287px;
-    top: 56px;
-}
 
-.distri_center2 {
-    left: -287px;
-    top: 327px;
-}
+/* 식품안전시스템 - 개요 */
+.infra_text_area{padding-top:50px;margin-top:50px;border-top:1px dashed #ccc;text-align:center;}
+.infra_text_area:first-child{padding-top:0;margin-top:0;border-top:0;}
 
-.distri_center3 {
-    left: -70px;
-    top: 620px;
-}
+.title_infra{font-size:35px;color:#333;font-weight:normal;text-align:center;}
+.text_infra{margin-top:20px;font-size:17px;color:#666;line-height:25px;text-align:center;}
+.text_infra .point{color:#00816d;}
 
-.distri_center4 {
-    right: -110px;
-    top: 620px;
-}
+.img_3depth{margin:50px auto 0;text-align:center;}
 
-.distri_center5 {
-    right: -364px;
-    top: 340px;
+.list_3step{width:1074px;padding-left:70px;padding-bottom:42px;margin:50px auto 0;*zoom:1;}
+.list_3step:after{content:"";display:block;clear:both;}
+.list_3step li{float:left;background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/distribution_system/arrow_3step.jpg") no-repeat left 97px;
+  padding-left:77px;margin-left:55px;
 }
+.list_3step li:first-child{background-image:none;padding-left:0;margin-left:0;}
 
-.distri_center6 {
-    right: -364px;
-    top: 67px;
-}
+.step_1{width:247px;height:137px;padding-top:110px;background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_safety_system/icon_3step_1.jpg") no-repeat left top;}
+.step_2{width:247px;height:137px;padding-top:110px;background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_safety_system/icon_3step_2.jpg") no-repeat left top;}
+.step_3{width:247px;height:137px;padding-top:110px;background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_safety_system/icon_3step_3.jpg") no-repeat left top;}
 
-.distri_center {
-    text-align: left;
-    position: absolute;
-}
+.list_3step strong{display:block;font-size:23px;color:#333;font-weight:bold;text-align:center;}
+.list_3step span{display:block;margin-top:6px;font-size:16px;color:#666;line-height:21px;text-align:center;}
 
 
-.distri_center dl {
-    margin-top: 15px;
+.haccp_list{width:1007px;padding-left:137px;padding-top:14px;margin:0 auto 60px;*zoom:1;}
+.haccp_list:after{content:"";display:block;clear:both;}
+.haccp_list li{float:left;margin-left:163px;text-align:center;}
+.haccp_list li:first-child{margin-left:0;}
+.haccp_list dl{margin-top:15px;}
+.haccp_list dt{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_safety_system/line_haccp.jpg") no-repeat center bottom;padding-bottom:15px;
+  font-size:26px;color:#ffa800;
 }
+.haccp_list dd{margin-top:12px;font-size:14px;color:#70696b;line-height:21px;}
 
-.distri_center > img {
-    width: 75px;
-    margin-left: 10px;
-}
+.haccp_step_img{margin-top:40px;padding-bottom:42px;text-align:center;}
 
-input, select, label, img {
-    font-family: 'Noto Sans';
-    vertical-align: middle;
+.infra_safe_area{margin-top:48px;}
+.safe_process{width:1019px;height:408px;margin:32px auto 0;
+  background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_safety_system/safe_process_bg.jpg") no-repeat left top;position:relative;
 }
+.safe_process li{width:290px;height:140px;padding-top:55px;text-align:center;}
 
-.distri_center dt {
-    margin-bottom: 8px;
-    font-size: 20px;
-    color: #333;
-    font-weight: bold;
-}
+.safe_process .process_1{position:absolute;left:0;top:0;}
+.safe_process .process_2{position:absolute;left:365px;top:0;}
+.safe_process .process_3{height:159px;padding-top:35px;position:absolute;right:0;top:0;}
+.safe_process .process_4{position:absolute;left:182px;bottom:0;}
+.safe_process .process_5{height:155px;padding-top:40px;position:absolute;left:546px;bottom:0;}
 
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+.safe_process dt{background:url("/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/food_safety_system/line_safe_dt.jpg") no-repeat center bottom;padding-bottom:12px;margin-bottom:7px;
+  font-size:23px;color:#333;font-weight:bold;
 }
+.safe_process dd{font-size:15px;color:#666;line-height:21px;}
 
-.distri_center li span {
-    display: block;
-    margin-left: 32px;
-}
 
-.distri_center li {
-    background: url(../../img/ESG_infrasystem/distribution_system/icon_gray_arrow.png) no-repeat left 5px;
-    padding-left: 10px;
-    font-size: 13px;
-    color: #666;
-    line-height: 18px;
-}
+/* 식품안전시스템 - 식품위생연구소 */
+.safe_guard_list{margin-top:30px;}
+.safe_guard_list li{font-size:17px;color:#666;line-height:27px;text-align:center;}
+.safe_guard_list li span{font-size:12px;}
 
-dl {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
+.img_safe_system{margin-top:110px;padding-bottom:96px;text-align:center;}
 
-dt {
-    display: block;
-}
+.img_history_lab{height:556px;margin-top:70px;padding-bottom:67px;background:url("/Contents/images/infra/img_history_lab.jpg") no-repeat center top;}
 
-dd {
-    display: block;
-    margin-inline-start: 40px;
-}
+.analysis_area{margin-top:67px;padding-left:86px;padding-bottom:35px;*zoom:1;}
+.analysis_area:after{content:"";display:block;clear:both;}
 
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
+.analysis_list{float:left;width:449px;margin-left:75px;}
+.analysis_list:first-child{margin-left:0;}
+.analysis_list > li{margin-top:67px;text-align:left;*zoom:1;}
+.analysis_list > li:first-child{margin-top:0;}
+.analysis_list > li:after{content:"";display:block;clear:both;}
 
-/* 운영 차별화 */
-.title_infra {
-    font-size: 35px;
-    color: #333;
-    font-weight: normal;
-    text-align: center;
-}
+.icon_analysis{float:left;}
 
-.text_infra {
-    margin-top: 20px;
-    font-size: 17px;
-    color: #666;
-    line-height: 25px;
-    text-align: center;
+.analysis_dl{float:left;}
+.analysis_dl dt{width:348px;border-bottom:3px solid #70696b;padding-left:24px;padding-bottom:10px;margin-bottom:15px;
+  font-size:22px;color:#444;letter-spacing:-1px;
 }
+.analysis_dl dt span{font-size:16px;}
+.analysis_dl dd{padding-left:25px;font-size:14px;color:#555;line-height:23px;}
+.analysis_dl dd li{background:url("/Contents/images/infra/arrow_analysis.jpg") no-repeat left 7px;padding-left:9px;letter-spacing:-1px;}
 
-.manage_discri_list {
-    margin-top: 28px;
-    text-align: left;
-    *zoom: 1;
-}
 
-.manage_discri_list:after {
-    content: "";
-    display: block;
-    clear: both;
+.test_process_list{margin-top:70px;padding-left:90px;*zoom:1;}
+.test_process_list:after{content:"";display:block;clear:both;}
+.test_process_list li{float:left;padding-left:39px;margin-left:21px;
+  background:url("/Contents/images/infra/arrow_test.jpg") no-repeat left 82px;
 }
-
-.manage_discri_list li:first-child {
-    margin-left: 0;
+.test_process_list li:first-child{background-image:none;padding-left:0;}
+.test_process_list strong{display:block;width:196px;height:196px;
+  font-size:18px;color:#444;font-weight:bold;text-align:center;line-height:260px;
 }
+.test_process_list .test_process1{background:url("/Contents/images/infra/icon_test1.jpg") no-repeat left top;}
+.test_process_list .test_process2{background:url("/Contents/images/infra/icon_test2.jpg") no-repeat left top;}
+.test_process_list .test_process3{background:url("/Contents/images/infra/icon_test3.jpg") no-repeat left top;}
+.test_process_list .test_process4{background:url("/Contents/images/infra/icon_test4.jpg") no-repeat left top;}
 
-.manage_discri_list .manage_discri1 {
-    height: 246px;
-    padding-top: 130px;
-    background: url(../../img/ESG_infrasystem/distribution_system/img_manage_discri1.jpg) no-repeat left top;
-}
+.test_process_list span{display:block;margin-top:25px;font-size:14px;color:#666;line-height:21px;}
 
-.manage_discri_list li {
-    float: left;
-    width: 316px;
-    height: 376px;
-    margin-left: 7px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
 
-.manage_discri_list dt {
-    margin-bottom: 17px;
-    font-size: 25px;
-    color: #fff;
-    line-height: 35px;
+.respon_info_list{margin-top:65px;background-color:#f7f8f9;*zoom:1;}
+.respon_info_list:after{content:"";display:block;clear:both;}
+.respon_info_list li{float:left;height:72px;padding:16px 20px 0 20px;border-left:1px solid #fff;border-right:1px solid #e7e7e7;
+  text-align:left;*zoom:1;
 }
+.respon_info_list li:after{content:"";display:block;clear:both;}
+.respon_info_list li:first-child{width:179px;border-left:0;}
+.respon_info_list .last{border-right:0;}
+.respon_info_list strong{display:block;font-size:18px;color:#111;}
+.respon_info_list span{display:block;margin-top:3px;font-size:15px;color:#555;}
+.respon_info_list .info_address{font-size:13px;}
 
-.manage_discri_list dd {
-    font-size: 13px;
-    color: #fff;
-    line-height: 25px;
-}
+.info_icon{float:left;}
+.respon_info_text{float:left;margin-left:18px;margin-top:9px;}
 
-.manage_discri_list .manage_discri2 {
-    height: 246px;
-    padding-top: 130px;
-    background: url(../../img/ESG_infrasystem/distribution_system/img_manage_discri2.jpg) no-repeat left top;
-}
+.btn_guide_list{width:100%;padding-left:auto;margin:18px auto 0;*zoom:1;}
+.btn_guide_list:after{content:"";display:block;clear:both;}
+.btn_guide_list li{float:left;width:190px;margin-right:10%;margin-left:41px;text-align:center;}
+.btn_guide_list li:first-child{margin-left:11%;}
 
-.manage_discri_list .manage_discri3 {
-    height: 263px;
-    padding-top: 113px;
-    background: url(../../img/ESG_infrasystem/distribution_system/img_manage_discri3.jpg) no-repeat left top;
-}
 
-/* 물류 프로세스 */
-.distribution_process {
-    margin-top: 40px;
-    padding-top: 455px;
-    background: url(../../img/ESG_infrasystem/distribution_system/distribution_process.jpg) no-repeat center top;
-}
+.commission_text{margin-top:20px;font-size:16px;color:#333;line-height:22px;text-align:center;}
 
-.blind {
-    position: absolute;
-    left: -999em;
-    top: -999em;
-    font-size: 0px;
-    line-height: 0px;
-    height: 0px;
-}

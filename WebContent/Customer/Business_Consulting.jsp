@@ -10,8 +10,7 @@
 <!-- container -->
 <div class="container_area" id="contents">
 
-	<!-- Body
-    ################# -->
+	<!-- Body ################# -->
 
 	<!-- contents : str -->
 
@@ -43,22 +42,15 @@
 			<!-- 타이틀 , 디스크립션 -->
 			<div class="title_description">
 				<h2 class="title_sub">거래·상담</h2>
-
-				<!-- <p class="sub_description">현대그린푸드는 사업주님의 거래 문의를 환영합니다.</p> -->
 			</div>
 			<!-- //타이틀 , 디스크립션 -->
 
 			<div class="social_children">
 				<img src="/First_Project_HyunDai_GreenFood/img/Customer/BizCounsel.jpg">
 			</div>
-
 		</div>
-
 	</div>
-
-
 	<!-- contents : end -->
-
 </div>
 <!-- //container -->
 
