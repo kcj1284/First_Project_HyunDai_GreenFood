@@ -18,8 +18,7 @@
   			<div class="login-title">
             	<h2 class="title">로그인</h2>
             </div>
-            <form    action="" name="Login" method="post"
-                onsubmit="return validateme(this);">
+            <form action="HdgfServlet?command=login" name="Login" method="post" >
                 <input type="hidden" id="openLogin1" name="openLogin" value="hpointLogin">
                 <fieldset>
 
