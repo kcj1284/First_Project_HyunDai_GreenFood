@@ -3,7 +3,7 @@
 
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css"
-	href="/First_Project_HyunDai_GreenFood/css/Customer/Business_Consulting_style.css">
+	href="/First_Project_HyunDai_GreenFood/css/Customer/Customer_style.css">
 
 
 
