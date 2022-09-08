@@ -50,7 +50,7 @@
 			<ul class="tab_list">
 				<li class="on"><a href="#">회사소개</a></li>
 				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/history.jsp">연혁</a></li>
-				<li><a href="/po/ci/drt/CIDRT01V.hgc">오시는 길</a></li>
+				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/map.jsp">오시는 길</a></li>
 			</ul>
 			<!-- //탭 -->
 

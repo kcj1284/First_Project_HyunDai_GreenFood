@@ -22,3 +22,27 @@
 .info_company .cont1_2 .list_company .txt dl dd{font-size:24px;color:#737373;}
 .info_company .cont1_3 .title_company{margin-top:45px;}
 .info_company .cont1_3 .title_company .pc{display:inline-block;}
+
+
+/* 오시는길 */
+.map_area{width:90%;height:583px;}
+.map_area div{height:583px;}
+ 	.map_btn_area{width:90%;}
+
+.location_way_list{margin-top:44px;margin-left:8.333333333333333%;*zoom:1;}
+.location_way_list:after{content:"";display:block;clear:both;}
+.location_way_list > li{float:left;height:130px;padding-left:45px;margin-left:35px;}
+.location_way_list > li:first-child{padding-left:0;margin-left:0;background-image:none;}
+.location_way_list > .car{padding-left:0;margin-left:0;margin-top:35px;background-image:none;}
+
+/* 오시는길 */
+.list_location{margin-bottom:-180px;}
+.list_location li{display:inline-block;margin:0 2%;width:45%;min-height:310px;vertical-align:top;text-align:left;}
+.list_location li{margin-bottom:125px;}
+.list_location li .tit{padding-bottom:15px;font-size:35px;font-weight:bold;color:#2f2725;border-bottom:2px solid #2f2725;}
+.list_location li dl{margin-top:50px;line-height:1.9;font-size:24px;color:#737373;letter-spacing:-0.5px;}
+.list_location li dl dt{font-weight:bold;}
+.list_location li dl dd{height:100px;}
+
+/* 141006 - 오시는길 수정 */
+.map_btn_area{max-width:984px;width:100%;margin:15px auto 0;}

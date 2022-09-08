@@ -12,8 +12,7 @@
 		<div class="company">
 			<!-- 하이어라키 -->
 			<ul class="hierarchy_list">
-				<li class="icon_home"><img
-					src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png" alt="Home" /></li>
+				<li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png" alt="Home" /></li>
 				<li class="depth_2"><a href="#" class="m_hierarchy">현대그린푸드
 				</a>
 
@@ -47,7 +46,7 @@
 			<ul class="tab_list">
 				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/Green_Food.jsp">회사소개</a></li>
 				<li class="on"><a href="#">연혁</a></li>
-				<li><a href="#">오시는 길</a></li>
+				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/map.jsp">오시는 길</a></li>
 			</ul>
 			<!-- //탭 -->
 
