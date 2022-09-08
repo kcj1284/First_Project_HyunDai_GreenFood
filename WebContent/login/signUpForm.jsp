@@ -74,7 +74,7 @@
                     <input type="password" name="user_pw" placeholder="비밀번호">
                 </div>
                 <div class="input_F">
-                    <input type="password" name="user_pw" placeholder="비밀번호확인">
+                    <input type="password" name="pwcheck" placeholder="비밀번호확인">
                 </div>
                 <div class="input_F">
                     <input type="text" name="user_name" placeholder="이름">

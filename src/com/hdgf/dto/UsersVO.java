@@ -1,5 +1,12 @@
 package com.hdgf.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class UsersVO {
 	
 	private String user_id;

@@ -62,7 +62,7 @@ public class UsersDAO {
 		return usersVO;
 	}
 
-	public void insertUsers(UsersVO usersVO) throws SQLException {
+	public void insertUsers(UsersVO usersVO) {
 
 //		    int result = 0;
 //		    String sql = "insert into users(user_id, user_pw, user_name, tel,";

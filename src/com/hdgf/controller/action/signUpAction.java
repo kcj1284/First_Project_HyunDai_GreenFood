@@ -19,7 +19,7 @@ public class signUpAction implements Action {
 	@Override
 	  public void execute(HttpServletRequest request, HttpServletResponse response)
 	      throws ServletException, IOException, SQLException {
-	    String url = "login.jsp"; 
+	    String url = "login/login.jsp"; 
 	    
 	    HttpSession session = request.getSession();
 	    
@@ -38,9 +38,8 @@ public class signUpAction implements Action {
 	      
 	    session.setAttribute("user_id", request.getParameter("user_id"));    
 	    
-	    UsersDAO memberDAO = UsersDAO.getInstance();
-	    memberDAO.insertUsers(usersVO);
-
+	    UsersDAO userDAO = UsersDAO.getInstance();
+	    userDAO.insertUsers(usersVO);
 	    
 	    RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 	    dispatcher.forward(request, response);
