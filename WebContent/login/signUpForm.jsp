@@ -61,7 +61,7 @@
     <div class="signUpForm">
         <h1>회원가입</h1>
         <hr>
-        <form action="HdgfServlet?command=signUp" method="post">
+        <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUp" method="post">
         <!--  <form action="/First_Project_HyunDai_GreenFood/signUpAction" method="post"> -->
             <fieldset>
                 <div class="input_F">
@@ -89,8 +89,8 @@
                 
 
                 <div class="radio">
-                    <input type="radio" name="gender" value="0" checked> 남성
-                    <input type="radio" name="gender" value="1"> 여성
+                    <input type="radio" name="gender" value="1" checked> 남성
+                    <input type="radio" name="gender" value="2"> 여성
                 </div>
                 
                 <div class="select">
