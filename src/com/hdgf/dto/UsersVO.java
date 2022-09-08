@@ -1,6 +1,6 @@
 package com.hdgf.dto;
 
-public class MemberVO {
+public class UsersVO {
 	
 	private String user_id;
 	private String user_pw;

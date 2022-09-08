@@ -108,7 +108,7 @@
 
                 <div class="signUpForm-btn">
                     <input type="submit" value="등록"> &nbsp
-                    <input type="reset" value=" 초기화">
+                    <input type="reset" value =" 초기화">
                 </div>
             </fieldset>
         </form>
