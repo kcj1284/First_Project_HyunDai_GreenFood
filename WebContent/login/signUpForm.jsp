@@ -95,7 +95,7 @@
                 
                 <div class="select">
                     분야  &nbsp  &nbsp
-                    <select name="com_pany">
+                    <select name="com_type">
                         <option value="0">급식</option>
                         <option value="1">외식</option>
                         <option value="2">식자재유통</option>

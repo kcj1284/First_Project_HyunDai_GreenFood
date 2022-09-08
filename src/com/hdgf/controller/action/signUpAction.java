@@ -32,8 +32,8 @@ public class signUpAction implements Action {
 	    usersVO.setEmail(request.getParameter("email"));
 	    usersVO.setGender(Integer.parseInt(request.getParameter("gender")));
 	    usersVO.setAdministrator(0);
-//	    usersVO.setCom_type(Integer.parseInt(request.getParameter("com_type")));
-	    usersVO.setCom_type(1);
+	    usersVO.setCom_type(Integer.parseInt(request.getParameter("com_type")));
+//	    usersVO.setCom_type(1);
 	      
 	    session.setAttribute("user_id", request.getParameter("user_id"));    
 	    
