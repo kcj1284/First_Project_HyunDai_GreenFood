@@ -19,16 +19,16 @@ public class LoginAction implements Action {
     String url="login.jsp"; // 로그인 실패 화면 띄워야한다
     HttpSession session=request.getSession();
   
-    String id=request.getParameter("id");
-    String pwd=request.getParameter("pwd");
+    String user_id=request.getParameter("user_id");
+    String user_pw=request.getParameter("user_pw");
     
     UsersDAO usersDAO=UsersDAO.getInstance();
       
-    UsersVO usersVO=usersDAO.getUsers(id);
+    UsersVO usersVO=usersDAO.getUsers(user_id);
     
     if(usersVO!=null){
-      if(usersVO.getUser_pw().equals(pwd)){    
-        session.removeAttribute("id");
+      if(usersVO.getUser_pw().equals(user_pw)){    
+        session.removeAttribute("user_id");
         session.setAttribute("loginUser", usersVO);
         url="HdgfServlet?command=index";
       }
