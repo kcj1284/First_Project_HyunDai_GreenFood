@@ -24,18 +24,17 @@ public class IR_Center_DAO {
 	PreparedStatement pstmt = null;
 	ResultSet rset = null;
 
-	String runSP = "{ call sp_insert_IR_Center(?, ?, ?, ?, ?, ?, ?) }";
+	String runSP = "{ call sp_insert_IR_Center(?, ?, ?, ?, ?, ?) }";
 
 	try {
 		conn = DBConnection.getConnection();
 		CallableStatement callableStatement = conn.prepareCall(runSP);
-		//callableStatement.setInt(1, IR_Center_VO.getIR_id());
-		callableStatement.setString(2, IR_Center_VO.getTitle());
-		callableStatement.setString(3, IR_Center_VO.getUser_id());
-		callableStatement.setDate(4, IR_Center_VO.getWrdate());
-		callableStatement.setString(5, IR_Center_VO.getMain_text());
-		callableStatement.setString(6, IR_Center_VO.getFile_link());
-		callableStatement.setInt(7, IR_Center_VO.getVisiter());
+		callableStatement.setString(1, IR_Center_VO.getTitle());
+		callableStatement.setString(2, IR_Center_VO.getUser_id());
+		callableStatement.setDate(3, IR_Center_VO.getWrdate());
+		callableStatement.setString(4, IR_Center_VO.getMain_text());
+		callableStatement.setString(5, IR_Center_VO.getFile_link());
+		callableStatement.setInt(6, IR_Center_VO.getVisiter());
 		callableStatement.executeUpdate();
 		System.out.println("¼º°ø");
 	} catch (SQLException e) {
