@@ -24,6 +24,8 @@ public class ActionFactory {
 	    	  action = new LoginFormAction();
 	      } else if (command.equals("login")) {
 	    	  action = new LoginAction();
+	      } else if (command.equals("idCheck")) {
+	    	  action = new idCheckAction();
 	      }
 	    
 	    

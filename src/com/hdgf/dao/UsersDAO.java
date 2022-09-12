@@ -1,6 +1,5 @@
 package com.hdgf.dao;
 
-import java.math.BigDecimal;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,11 +11,12 @@ import java.time.LocalDateTime;
 import com.hdgf.dto.UsersVO;
 import com.hdgf.util.DBConnection;
 
+
 public class UsersDAO {
 
-	private UsersDAO() {
+	public UsersDAO() {
 	}
-
+	
 	private static UsersDAO instance = new UsersDAO();
 
 	public static UsersDAO getInstance() {
@@ -64,40 +64,6 @@ public class UsersDAO {
 
 	public void insertUsers(UsersVO usersVO) {
 
-//		    int result = 0;
-//		    String sql = "insert into users(user_id, user_pw, user_name, tel,";
-//		    sql += " email, gender, administrator, com_type) values(?, ?, ?, ?, ?, ?, ?, ?)";
-//
-//		    Connection conn = null;
-//			PreparedStatement pstmt = null;
-//			ResultSet rset = null;
-//
-//		    
-//		    try {
-//		      conn = DBConnection.getConnection();
-//		      pstmt = conn.prepareStatement(sql);
-//		      pstmt.setString(1, usersVO.getUser_id());      
-//		      pstmt.setString(2, usersVO.getUser_pw());
-//		      pstmt.setString(3, usersVO.getUser_name());
-//		      pstmt.setString(4, usersVO.getTel());
-//		      pstmt.setString(5, usersVO.getEmail());
-//		      pstmt.setInt(6, usersVO.getGender());
-//		      pstmt.setInt(7, usersVO.getAdministrator());	// 회원가입기능 사용자는 관리자가 아닌 고객
-//		      pstmt.setInt(8, usersVO.getCom_type());
-//		      result = pstmt.executeUpdate();
-//		      
-//		      
-//		    } catch (Exception e) {
-//		      e.printStackTrace();
-//		    } finally {
-//		    	if (rset != null)
-//					rset.close();
-//				if (pstmt != null)
-//					pstmt.close();
-//				if (conn != null)
-//					conn.close();
-//		    }
-//		    return result;
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -127,5 +93,54 @@ public class UsersDAO {
 		}
 
 	}
+	
+	
+	
+	
+	
+	// ajax 실시간 아이디 중복검사를 위한 메소드
+	public int checkId(String user_id) throws SQLException {  // 유저가 입력한 값을 매개변수로 한다
+		
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		UsersVO usersVO = null;
+		String sql = "select * from users where user_id=?";
+		int idCheck = 0;
+	    try {
+	    	
+	    	conn = DBConnection.getConnection();
+//	    	select 해서 null이 발생하면?
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user_id);
+	
+			
+			rs = pstmt.executeQuery();
+					
+			if(rs.next() || user_id.equals("")) {
+				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
+			} else {
+				idCheck = 1;  // 존재하지 않는 경우, 생성 가능
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (rs != null)
+				rs.close();
+			if (pstmt != null)
+				pstmt.close();
+			if (conn != null)
+				conn.close();
+		}
+		return idCheck;
+	}
+	
+	
+	
+	
+	
+	
 
 }
