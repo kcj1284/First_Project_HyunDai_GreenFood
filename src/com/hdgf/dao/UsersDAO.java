@@ -1,3 +1,4 @@
+// 작성자 : 김민찬
 package com.hdgf.dao;
 
 import java.sql.CallableStatement;
@@ -111,7 +112,6 @@ public class UsersDAO {
 	    try {
 	    	
 	    	conn = DBConnection.getConnection();
-//	    	select 해서 null이 발생하면?
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user_id);
 	

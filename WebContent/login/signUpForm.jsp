@@ -19,15 +19,9 @@
 		$("#user_id").on("keyup", function(){
 			var $checkID = $("#user_id").val();
 			var params = "?user_id="+$checkID;
-			
 			var $msg = $("#msg");
 
-			console.log($checkID);
 
-			if($checkID == ""){
-				console.log("아이디 없음")
-				return;
-			}
 			
 			$.ajax({
 				type : "POST",
@@ -62,10 +56,10 @@
         <!--  <form action="/First_Project_HyunDai_GreenFood/signUpAction" method="post"> -->
             <fieldset>
                 <div class="input_F">
-                    <input type="text" class="user_id" id="user_id" name="user_id" value="as" placeholder="아이디">
+                    <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디">
                 </div>
                 <font id="checkId">
-                    //중복성검사결과 띄우기
+
                 </font>
                 <input type="button" id="idcheck" value="중복확인"><span id="msg"></span>
                 
