@@ -9,6 +9,7 @@ public class AnnouncementVO {
 	private String file_link;
 	private int visiter;
 	private int announ_type;
+	
 	public int getId() {
 		return id;
 	}
