@@ -16,7 +16,7 @@ public class LoginAction implements Action {
   @Override
   public void execute(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException, SQLException {
-    String url="login/login.jsp"; // 로그인 실패 화면 띄워야한다 
+    String url="login/login_fail.jsp"; // 로그인 실패 화면 띄워야한다 
     HttpSession session=request.getSession();
   
     String user_id=request.getParameter("j_username");
