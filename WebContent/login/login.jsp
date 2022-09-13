@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>로그인</title>
-    <link href="../css/login.css" type="text/css" rel="stylesheet" />
+    <link href="/First_Project_HyunDai_GreenFood/css/login.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@
   			<div class="login-title">
             	<h2 class="title">로그인</h2>
             </div>
-            <form action="../HdgfServlet?command=login" name="Login" method="post" >
+            <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=login" name="Login" method="post" >
                 <input type="hidden" id="openLogin1" name="openLogin" value="hpointLogin">
                 <fieldset>
 
@@ -35,7 +35,7 @@
 
                         <div class="join">
                             <ul>
-                                <li><a  href="./signUpForm.jsp">회원가입</a></li>
+                                <li><a  href="/First_Project_HyunDai_GreenFood/login/signUpForm.jsp">회원가입</a></li>
                             </ul>
                         </div>
                         <div class="btn-login">
