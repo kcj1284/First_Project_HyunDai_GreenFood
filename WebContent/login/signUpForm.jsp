@@ -24,7 +24,7 @@
 			$.ajax({
 				type : "POST",
 				url: "/First_Project_HyunDai_GreenFood/HdgfServlet?command=idCheck",
-				data : { "id" : $checkID },
+				data : { "user_id" : $checkID },
 				dataType : "html",
 				async : true,		//비동기 유무
 				success : function(data){

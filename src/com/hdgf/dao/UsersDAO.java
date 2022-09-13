@@ -115,6 +115,7 @@ public class UsersDAO {
 	    try {
 	    	conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(sql);
+			System.out.println(user_id);
 			pstmt.setString(1, user_id);
 			rs = pstmt.executeQuery();
 
