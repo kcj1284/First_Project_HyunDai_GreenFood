@@ -95,8 +95,7 @@ public class UsersDAO {
 
 
 		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rset = null;
+
 
 		String runSP = "{ call sp_insert_users(?, ?, ?, ?, ?, ?, ?) }";
 
@@ -132,7 +131,7 @@ public class UsersDAO {
 		
 
 		Connection conn = null;
-		PreparedStatement pstmt = null;
+		CallableStatement cstmt = null;
 		ResultSet rs = null;
 		
 		String sql = "select * from users where user_id = ?";
@@ -141,10 +140,9 @@ public class UsersDAO {
 		
 	    try {
 	    	conn = DBConnection.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			System.out.println(user_id);
-			pstmt.setString(1, user_id);
-			rs = pstmt.executeQuery();
+	    	cstmt = conn.prepareCall(sql);
+			cstmt.setString(1, user_id);
+			rs = cstmt.executeQuery();
 
 			if(rs.next()) {
 				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
