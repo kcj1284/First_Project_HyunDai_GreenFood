@@ -88,9 +88,9 @@ public class IR_Center_DAO {
 
 	// selectAll : dto가 담길 리스트가 필요하다.
 	// 쿼리에 해당하는 레코드가 dto에 담기고 이 dto들을 리스트에 담아서 반환값을 리스트로 설정
-	public List<IR_Center_VO> getList() {
+	public ArrayList<IR_Center_VO> getList() {
 		String runSP = "{ call sp_search_ALL_IR_Center(?) }";
-		List<IR_Center_VO> lists = new ArrayList<IR_Center_VO>();
+		ArrayList<IR_Center_VO> lists = new ArrayList<>();
 
 		try {
 			conn = DBConnection.getConnection();
@@ -111,9 +111,7 @@ public class IR_Center_DAO {
 				vo.setIR_id(rs.getInt("IR_id"));
 				vo.setTitle(rs.getString("Title"));
 				vo.setUser_id(rs.getString("User_id"));
-				vo.setWrdate(rs.getDate("Wrdate"));
 				vo.setMain_text(rs.getString("Main_text"));
-				vo.setFile_link(rs.getString("file_link"));
 				vo.setVisiter(rs.getInt("Visiter"));
 				// vo를 리스트에 추가
 				lists.add(vo);
@@ -180,7 +178,6 @@ public class IR_Center_DAO {
 			callableStatement = conn.prepareCall(runSP);
 			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
 			// 파일 재추가 진행
 			callableStatement.setString(2, "%" + search_Main_text + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행

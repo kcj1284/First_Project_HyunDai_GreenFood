@@ -48,35 +48,22 @@ public class AnnouncementDAO {
 	}
 	
 	// 게시글 리스트 메소드
-	public ArrayList<AnnouncementVO> getList() {
-		ArrayList<AnnouncementVO> annList = new ArrayList<AnnouncementVO>();
-		String sql = "select * from announcement";
-		
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		
-		try {
-			conn = DBConnection.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			rs = pstmt.executeQuery();
-			while (rs.next()) {
-				AnnouncementVO ann = new AnnouncementVO();
-				ann.setId(rs.getInt(1));
-				ann.setTitle(rs.getString(2));
-				ann.setU_id(rs.getString(3));
-				ann.setWrdate(rs.getDate(4));
-				ann.setMain_text(rs.getString(5));
-				ann.setFile_link(rs.getString(6));
-				ann.setVisiter(rs.getInt(7));
-				ann.setAnnoun_type(rs.getInt(8));
-				annList.add(ann);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return annList;
-	}
+	/*
+	 * public ArrayList<AnnouncementVO> getList() { ArrayList<AnnouncementVO>
+	 * annList = new ArrayList<AnnouncementVO>(); String sql =
+	 * "select * from announcement";
+	 * 
+	 * Connection conn = null; PreparedStatement pstmt = null; ResultSet rs = null;
+	 * 
+	 * try { conn = DBConnection.getConnection(); pstmt =
+	 * conn.prepareStatement(sql); rs = pstmt.executeQuery(); while (rs.next()) {
+	 * AnnouncementVO ann = new AnnouncementVO(); ann.setId(rs.getInt(1));
+	 * ann.setTitle(rs.getString(2)); ann.setU_id(rs.getString(3));
+	 * ann.setWrdate(rs.getDate(4)); ann.setMain_text(rs.getString(5));
+	 * ann.setFile_link(rs.getString(6)); ann.setVisiter(rs.getInt(7));
+	 * ann.setAnnoun_type(rs.getInt(8)); annList.add(ann); } } catch (Exception e) {
+	 * e.printStackTrace(); } return annList; }
+	 */
 	
 	// 하나의 게시글을 보는 메소드
 	public AnnouncementVO getAnn(int annId) {
@@ -148,7 +135,41 @@ public class AnnouncementDAO {
 	}
 	
 	// 게시글 전체 검색 메소드
-	
+	public ArrayList<AnnouncementVO> getList() {
+		String runSP = "{ call sp_search_ALL_Announcement(?) }";
+		ArrayList<AnnouncementVO> lists = new ArrayList<>();
+		Connection conn = null;
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(runSP);
+			ResultSet rs = null;
+			callableStatement = conn.prepareCall(runSP);
+			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
+			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
+			// 파일 재추가 진행
+			// 프로시저 실행
+			callableStatement.executeUpdate();
+			// out파라미터의 값을 돌려받는다
+			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
+			while (rs.next()) {
+				// 레코드에 있는 내용을 dto에 입력
+				AnnouncementVO vo = new AnnouncementVO();
+				vo.setId(rs.getInt("board_id"));
+				vo.setTitle(rs.getString("Title"));
+				vo.setU_id(rs.getString("User_id"));
+				vo.setMain_text(rs.getString("Main_text"));
+				vo.setVisiter(rs.getInt("Visiter"));
+				// vo를 리스트에 추가
+				lists.add(vo);
+			}
+			rs.close();
+			callableStatement.close();
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return lists;
+	}
 	// 게시글 본문 검색 메소드
 	public ArrayList<AnnouncementVO> searchByMaintext(String keyword) {
 		String sql = "{ call sp_search_main_text_Announcement(?,?) }";
