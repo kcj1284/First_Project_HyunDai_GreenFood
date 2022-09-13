@@ -1,12 +1,5 @@
 package com.hdgf.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
 public class UsersVO {
 	
 	private String user_id;
@@ -57,7 +50,6 @@ public class UsersVO {
 	public int getAdministrator() {
 		return administrator;
 	}
-	// 관리자 변경은 못하게함
 	public void setAdministrator(int administrator) {
 		this.administrator = administrator;
 	}

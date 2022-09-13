@@ -20,19 +20,18 @@
 			var $checkID = $("#user_id").val();
 			var params = "?user_id="+$checkID;
 			var $msg = $("#msg");
-
-
 			
 			$.ajax({
 				type : "POST",
 				url: "/First_Project_HyunDai_GreenFood/HdgfServlet?command=idCheck",
 				data : { "id" : $checkID },
 				dataType : "html",
-				async : true,		//동기화유무
+				async : true,		//비동기 유무
 				success : function(data){
 					console.log($checkID);
+					// 이 데이터 넘어오는 부분을 수정해야된다
 					console.log("data : "+data)
-					if(data.trim() == "true"){
+					if(data == 0){
 						$msg.html("<h4>아이디가 이미 존재합니다</h4>");
 					}else{
 						$msg.html("<h4>사용가능한 아이디입니다</h4>")

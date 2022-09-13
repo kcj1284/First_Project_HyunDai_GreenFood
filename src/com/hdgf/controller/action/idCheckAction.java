@@ -32,20 +32,25 @@ public class idCheckAction implements Action  {
 	
 		UsersDAO user = new UsersDAO();
 	
-		int idChcek = user.checkId(userId);
-	
+		int idCheck = user.checkId(userId);
+		System.out.println(idCheck);
 		// 성공여부 확인 : 개발자용
-		if(idChcek==0)
+		if(idCheck==0)
 		{
 			System.out.println("이미 존재하는 아이디입니다.");
-		}else if(idChcek==1)
+		}else if(idCheck==1)
 		{
 			System.out.println("사용 가능한 아이디입니다.");
 		}
 	
-		out.write(idChcek+""); // --> ajax 결과값인 result가 됨
+		out.write(idCheck+""); // --> ajax 결과값인 result가 됨
 		// --> String으로 값을 내보낼 수 있도록 + "" 를 해준다
+		
+		
+		
+		// 이 방식이아닌 컨트롤러에서 모델로 데이터 넘기는것을 적용하자
 
+		
 	  }
 		
 }

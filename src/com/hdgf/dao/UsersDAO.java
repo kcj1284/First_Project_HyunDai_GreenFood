@@ -70,7 +70,7 @@ public class UsersDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 
-		String runSP = "{ call sp_insert_users(?, ?, ?, ?, ?, ?, ?, ?) }";
+		String runSP = "{ call sp_insert_users(?, ?, ?, ?, ?, ?, ?) }";
 
 		try {
 			conn = DBConnection.getConnection();
@@ -81,8 +81,8 @@ public class UsersDAO {
 			callableStatement.setString(4, usersVO.getTel());
 			callableStatement.setString(5, usersVO.getEmail());
 			callableStatement.setInt(6, usersVO.getGender());
-			callableStatement.setInt(7, usersVO.getAdministrator());
-			callableStatement.setInt(8, usersVO.getCom_type());
+//			callableStatement.setInt(7, usersVO.getAdministrator());
+			callableStatement.setInt(7, usersVO.getCom_type());
 //				callableStatement.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
 			callableStatement.executeUpdate();
 			System.out.println("성공");
@@ -106,7 +106,6 @@ public class UsersDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		UsersVO usersVO = null;
 		String sql = "select * from users where user_id=?";
 		int idCheck = 0;
 	    try {
@@ -121,7 +120,7 @@ public class UsersDAO {
 			if(rs.next() || user_id.equals("")) {
 				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
 			} else {
-				idCheck = 1;  // 존재하지 않는 경우, 생성 가능
+				idCheck = 1;  // 존재하지 않는 경우, 생성 가능 null을 받겠죠?
 			}
 			
 		} catch (SQLException e) {
