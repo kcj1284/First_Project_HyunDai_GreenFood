@@ -30,17 +30,19 @@
 					console.log($checkID);
 					console.log("data : "+data)
 					if(data == 0){
-						$msg.html("<h4 style="color:red">!아이디가 이미 존재합니다</h4>");
+						$msg.html("<h4 style=""color:red"">!아이디가 이미 존재합니다</h4>");
 					}else{
-						$msg.html("<h4 style="color:green">사용가능한 아이디입니다</h4>")
-						// $("#pwDoubleChk").val("true"); true 여야지 회원가입가능
+						$msg.html("<h4 style=""color:green"">사용가능한 아이디입니다</h4>")
 					}
 				}
 			})
 		})
 	})
-	
-	$(".user_pw2").on("keyup", function(){
+</script>
+
+<script>
+	$(function(){
+		$(".user_pw2").on("keyup", function(){
 			if($(".user_pw2").val() == ""){
 				$(".pwcheck").text(" ");
 			}
@@ -54,8 +56,8 @@
 				$("#pwDoubleChk").val("false");
 			}
 		})
+	})
 </script>
-
 
 </head>
 
@@ -72,8 +74,6 @@
                 <div class="input_F">
                     <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디">
                 </div>
-
-                <input type="button" id="idcheck" value="중복확인"><span id="msg"></span>
                 
                 
                 <div class="input_F">
