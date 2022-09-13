@@ -24,20 +24,18 @@ public class UsersDAO {
 		return instance;
 	}
 	
+	// CallableStatement
 	public UsersVO getUsers(String user_id){
 		UsersVO usersVO = null;
 		String sql = "select * from table(getuser_pipe_table_func(?))";
 
 		Connection conn = null;
-		//PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		CallableStatement cstmt = null;
 
 		try {
 			conn = DBConnection.getConnection();
-			CallableStatement cstmt;
-			
 			cstmt = conn.prepareCall(sql);
-			//pstmt = conn.prepareStatement(sql);
 			cstmt.setString(1, user_id);
 			rs = cstmt.executeQuery();
 			if (rs.next()) {
@@ -59,6 +57,8 @@ public class UsersDAO {
 		return usersVO;
 	}
 
+	// Preparedstatement
+	
 //	public UsersVO getUsers(String user_id){
 //		UsersVO usersVO = null;
 //		String sql = "select * from users where user_id=?";
