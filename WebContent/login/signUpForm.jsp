@@ -74,7 +74,7 @@
                 <div class="input_F">
                     <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디">
                 </div>
-                
+                <input type="button" id="idcheck" value="중복확인"><span id="msg"></span>
                 
                 <div class="input_F">
                     <input type="password" class="user_pw" name="user_pw" placeholder="비밀번호">
