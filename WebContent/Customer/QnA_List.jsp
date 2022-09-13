@@ -56,7 +56,7 @@
 							<li><input type="checkbox" name="noList" value=''
 								class="chk" /></li>
 							<li>13</li>
-							<li><a href="">제목입니다</a></li>
+							<li><a href="/First_Project_HyunDai_GreenFood/Customer/QnA_View.jsp">제목입니다</a></li>
 							<li>아이디입니다</li>
 							<li>10</li>
 							<li>2022.09.13</li>

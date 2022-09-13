@@ -640,8 +640,6 @@ button {
 	margin: 0;
 }
 
-.sub_contents{height:1000px}
-
 /* 고객의 소리 게시글 작성 */
 #boardFrm{
 	font-family: "nanum_gothic";
@@ -654,3 +652,126 @@ button {
     color: #ffffff;
     height: 30px;
 }
+
+/* 고객의 소리 게시글 보기 */
+.content-body {
+	font-family: "nanum_gothic";
+}
+
+.content-body h4 {
+    text-align: left;
+    font-weight: bold;
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.content-body ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.board-content {
+	text-align: left;
+	min-height: 400px;
+}
+
+.reply-box{
+	font-family: "nanum_gothic";
+}
+
+.reply-box h5 {
+	text-align: left;
+	font-weight: bold;
+}
+
+.reply-box li {
+	text-align: left;
+	position: relative;
+	width: 100%;
+	display: flex;
+}
+
+.reply-box li #reply-userid {
+	width: 15%;
+	font-weight:bold;
+}
+
+.reply-box li #reply-coment {
+	width: 70%;
+}
+
+.reply-box li #reply-writedate {
+	width: 15%;
+	font-size: 0.8em;
+	text-align: right;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.reply-box #replyWrite {
+	border-top: 3px solid #46675c;
+    border-bottom: 3px solid #46675c;
+    background-color: #f5f5f5;
+    width: 94.7%;
+    min-height: 100px;
+    padding: 30px;
+}
+
+.reply-box #btn-replyEdit{
+	background-color: #7EA1C9;
+	border-color: #7EA1C9;
+	color: #ffffff;
+	height:30px;
+	line-height:0px;
+	margin-left:5px;
+	margin-right:5px;
+	font-family: "hanna";
+	font-weight: bold;
+}
+.reply-box #btn-replyDel{
+	background-color: #f8cf95;
+	border-color: #f8cf95;
+	color: #ffffff;
+	height:30px;
+	line-height:0px;
+	margin-left:5px;
+	margin-right:5px;
+	font-family: "hanna";
+	font-weight: bold;
+}
+
+
+#replyFrm {
+	float: left;
+	position: relative;
+	width: 100%;
+	display: flex;
+}
+
+#replyFrm #replyWrite-userid {
+	width: 8%;
+	height:auto;
+	font-weight:bold;
+	line-height: 90px;
+}
+
+#replyFrm #coment {
+	width: 80%;
+	height: 100px;
+}
+
+#replyFrm #coment-submit{
+	color: #ffffff;
+	margin-left:10px;
+	width: 10%;
+}
+
+
+
+
+
+#edit-box{
+	text-align:right;
+}
+
