@@ -134,7 +134,7 @@ public class UsersDAO {
 		CallableStatement cstmt = null;
 		ResultSet rs = null;
 		
-		String sql = "select * from users where user_id = ?";
+		String sql = " select sf_check_user_id('?') from dual";
 		
 		int idCheck = 0;
 		
@@ -143,7 +143,9 @@ public class UsersDAO {
 	    	cstmt = conn.prepareCall(sql);
 			cstmt.setString(1, user_id);
 			rs = cstmt.executeQuery();
-
+			//rs 말고 그냥 int 형으로 받아서 return하기
+			//int result = cstmt.executeQuery();
+			//return result;
 			if(rs.next()) {
 				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
 			} else {
