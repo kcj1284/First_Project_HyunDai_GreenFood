@@ -34,13 +34,33 @@
 					if(data == 0){
 						$msg.html("<h4 style="color:red">!아이디가 이미 존재합니다</h4>");
 					}else{
-						$msg.html("<h4>사용가능한 아이디입니다</h4>")
+						$msg.html("<h4 style="color:green">사용가능한 아이디입니다</h4>")
 					}
 				}
 			})
 		})
 	})
 </script>
+
+<script>
+	$(function(){
+		$(".user_pw2").on("keyup", function(){
+			if($(".user_pw2").val() == ""){
+				$(".pwcheck").text(" ");
+			}
+			else if($(".user_pw2").val() == $(".user_pw").val()){
+				$(".pwcheck").text("비밀번호가 일치합니다.");
+				$(".pwcheck").css("color", "green");
+				// $("#pwDoubleChk").val("true"); true 여야지 회원가입가능
+			} else{
+				$(".pwcheck").text("비밀번호가 일치하지 않습니다.");
+				$(".pwcheck").css("color", "red");
+				$("#pwDoubleChk").val("false");
+			}
+		})
+	})
+</script>
+
 </head>
 
 <body>
@@ -61,10 +81,12 @@
                 
                 
                 <div class="input_F">
-                    <input type="password" name="user_pw" placeholder="비밀번호">
+                    <input type="password" class="user_pw" name="user_pw" placeholder="비밀번호">
                 </div>
                 <div class="input_F">
-                    <input type="password" name="pwcheck" placeholder="비밀번호확인">
+                    <input type="password" class="user_pw2" name="user_pw2" placeholder="비밀번호확인">
+                </div>
+                <div class="pwcheck">
                 </div>
                 <div class="input_F">
                     <input type="text" name="user_name" placeholder="이름">
