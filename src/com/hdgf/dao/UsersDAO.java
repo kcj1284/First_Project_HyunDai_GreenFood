@@ -24,7 +24,7 @@ public class UsersDAO {
 		return instance;
 	}
 
-	public UsersVO getUsers(String user_id) throws SQLException {
+	public UsersVO getUsers(String user_id){
 		UsersVO usersVO = null;
 		String sql = "select * from users where user_id=?";
 
@@ -51,14 +51,7 @@ public class UsersDAO {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (rs != null)
-				rs.close();
-			if (pstmt != null)
-				pstmt.close();
-			if (conn != null)
-				conn.close();
-		}
+		} 
 
 		return usersVO;
 	}
