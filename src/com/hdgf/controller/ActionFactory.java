@@ -26,6 +26,8 @@ public class ActionFactory {
 	    	  action = new LoginAction();
 	      } else if (command.equals("idCheck")) {
 	    	  action = new idCheckAction();
+	      } else if (command.equals("logout")) {
+	          action = new LogoutAction();
 	      }
 	    
 	    
