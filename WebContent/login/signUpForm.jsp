@@ -1,4 +1,4 @@
-<!-- 작성자 : 김민찬 -->
+<!-- 작성자 : 김민찬, 장주연 -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -32,7 +32,7 @@
 					// 이 데이터 넘어오는 부분을 수정해야된다
 					console.log("data : "+data)
 					if(data == 0){
-						$msg.html("<h4>아이디가 이미 존재합니다</h4>");
+						$msg.html("<h4 style="color:red">!아이디가 이미 존재합니다</h4>");
 					}else{
 						$msg.html("<h4>사용가능한 아이디입니다</h4>")
 					}
@@ -46,27 +46,17 @@
 <body>
 <!-- js 경로 가져오기 -->
 
-<c:if test="${idCheck == 1}">
-        <script type="text/javascript">
-          opener.document.formm.id.value="";
-        </script>
-        ${id}는 이미 사용중인 아이디입니다.
-      </c:if>
-	
-
 
     <div class="signUpForm">
         <h1>회원가입</h1>
         <hr>
-        <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUp" method="post">
-        <!--  <form action="/First_Project_HyunDai_GreenFood/signUpAction" method="post"> -->
+        <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=loginForm" method="post">
+			
             <fieldset>
                 <div class="input_F">
                     <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디">
                 </div>
-                <font id="checkId">
 
-                </font>
                 <input type="button" id="idcheck" value="중복확인"><span id="msg"></span>
                 
                 

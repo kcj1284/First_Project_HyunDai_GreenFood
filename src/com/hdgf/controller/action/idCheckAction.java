@@ -13,20 +13,13 @@ import com.hdgf.dao.UsersDAO;
 
 public class idCheckAction implements Action  {
 	
-
-//	 @RequestMapping(value="idCheckServlet")
-//	스프링 어노테이션
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
 		
 		System.out.println("실행확인");
-		
-//		request.setCharacterEncoding("UTF-8");
-		// ajax로 값을 받기 때문에 UTF-8로 인코딩해준다
-//		response.setCharacterEncoding("EUC-KR");
-	
 		String userId = request.getParameter("user_id");
+		System.out.println(userId);
 		// join.jsp에서 받아온 key값이 userId이고
 		// value값은 유저가 실제로 적은 값, String userId에는 value값이 들어간다.
 		PrintWriter out = response.getWriter();

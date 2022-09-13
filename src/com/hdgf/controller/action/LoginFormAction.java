@@ -12,7 +12,7 @@ public class LoginFormAction implements Action {
   @Override
   public void execute(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {    
-    String url = "login/login.jsp";
+    String url = "/login/login.jsp";
      
     RequestDispatcher dispatcher=request.getRequestDispatcher(url);
     dispatcher.forward(request, response);    

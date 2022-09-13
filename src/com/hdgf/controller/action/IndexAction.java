@@ -16,7 +16,7 @@ public class IndexAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
 		// TODO Auto-generated method stub
-		String url = "/index.jsp";
+		String url = "/Index.jsp";
 
 	    
 	    RequestDispatcher dispatcher = request.getRequestDispatcher(url);

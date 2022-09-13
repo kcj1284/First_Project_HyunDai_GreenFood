@@ -15,7 +15,7 @@ public class ActionFactory {
 	    System.out.println("ActionFactory  :" + command);
 	    
 //	    command를 추가해주세요
-	    if (command.equals("index")) {
+	    if (command.equals("Index")) {
 	        action = new IndexAction();
 	    	System.out.println("index 확인");
 	      } else if (command.equals("signUp")) {

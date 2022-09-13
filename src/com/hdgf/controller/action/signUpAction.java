@@ -19,7 +19,7 @@ public class signUpAction implements Action {
 	@Override
 	  public void execute(HttpServletRequest request, HttpServletResponse response)
 	      throws ServletException, IOException, SQLException {
-	    String url = "login/login.jsp"; 
+	    String url = "/login/login.jsp"; 
 	    
 	    HttpSession session = request.getSession();
 	    

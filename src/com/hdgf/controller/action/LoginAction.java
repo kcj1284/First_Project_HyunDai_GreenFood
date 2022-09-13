@@ -16,7 +16,7 @@ public class LoginAction implements Action {
   @Override
   public void execute(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException, SQLException {
-    String url="login.jsp"; // 로그인 실패 화면 띄워야한다
+    String url="login/login.jsp"; // 로그인 실패 화면 띄워야한다 
     HttpSession session=request.getSession();
   
     String user_id=request.getParameter("user_id");
@@ -30,7 +30,7 @@ public class LoginAction implements Action {
       if(usersVO.getUser_pw().equals(user_pw)){    
         session.removeAttribute("user_id");
         session.setAttribute("loginUser", usersVO);
-        url="HdgfServlet?command=index";
+        url="HdgfServlet?command=Index";
       }
     }
     

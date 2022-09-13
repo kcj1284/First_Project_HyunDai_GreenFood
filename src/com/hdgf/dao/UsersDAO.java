@@ -111,7 +111,6 @@ public class UsersDAO {
 		
 		int idCheck = 0;
 		
-		System.out.println("--------------try 전--------------");
 	    try {
 	    	conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -120,11 +119,8 @@ public class UsersDAO {
 			rs = pstmt.executeQuery();
 
 			if(rs.next()) {
-				
 				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
-				System.out.println("--------------rs.next()가 True--------------");
 			} else {
-				System.out.println("--------------rs.next()가 False--------------");
 				idCheck = 1;  // 존재하지 않는 경우, 생성 가능 null을 받겠죠?
 			}
 			
