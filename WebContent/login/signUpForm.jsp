@@ -15,7 +15,6 @@
 	<script>
 	$(function(){
 		
-		// 버튼 누를 필요 없이 실시간 이벤트
 		$("#user_id").on("keyup", function(){
 			var $checkID = $("#user_id").val();
 			var params = "?user_id="+$checkID;
@@ -29,22 +28,19 @@
 				async : true,		//비동기 유무
 				success : function(data){
 					console.log($checkID);
-					// 이 데이터 넘어오는 부분을 수정해야된다
 					console.log("data : "+data)
 					if(data == 0){
 						$msg.html("<h4 style="color:red">!아이디가 이미 존재합니다</h4>");
 					}else{
 						$msg.html("<h4 style="color:green">사용가능한 아이디입니다</h4>")
+						// $("#pwDoubleChk").val("true"); true 여야지 회원가입가능
 					}
 				}
 			})
 		})
 	})
-</script>
-
-<script>
-	$(function(){
-		$(".user_pw2").on("keyup", function(){
+	
+	$(".user_pw2").on("keyup", function(){
 			if($(".user_pw2").val() == ""){
 				$(".pwcheck").text(" ");
 			}
@@ -58,8 +54,8 @@
 				$("#pwDoubleChk").val("false");
 			}
 		})
-	})
 </script>
+
 
 </head>
 
