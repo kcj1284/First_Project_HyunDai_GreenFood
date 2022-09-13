@@ -79,6 +79,21 @@ public class test {
 		System.out.println("공지사항_삭제 success");
 	}
 	
+	public static void 공지사항_전체검색() {
+		
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		ArrayList<AnnouncementVO> annList = annDAO.getList();
+		
+		for (int i = 0; i < annList.size(); i++) {
+			AnnouncementVO ann = annList.get(i);
+			System.out.println(ann.getId());
+			System.out.println(ann.getTitle());
+			System.out.println(ann.getU_id());
+			System.out.println(ann.getMain_text());
+			System.out.println(ann.getVisiter());
+		}
+	}
+	
 	public static void 공지사항_본문검색() {
 		
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
@@ -100,6 +115,7 @@ public class test {
 		//공지사항_게시글확인();
 		//공지사항_수정();
 		//공지사항_삭제();
-		공지사항_본문검색();
+		//공지사항_본문검색();
+		공지사항_전체검색();
 	}
 }
