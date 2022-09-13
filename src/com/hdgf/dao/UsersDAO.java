@@ -100,36 +100,36 @@ public class UsersDAO {
 	
 	
 	// ajax 실시간 아이디 중복검사를 위한 메소드
-	public int checkId(String user_id) throws SQLException {  // 유저가 입력한 값을 매개변수로 한다
+	public int checkId(String user_id) {  // 유저가 입력한 값을 매개변수로 한다
 		
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from users where user_id=?";
-		int idCheck = 1;
+		
+		String sql = "select * from users where user_id = ?";
+		
+		int idCheck = 0;
+		
+		System.out.println("--------------try 전--------------");
 	    try {
 	    	conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user_id);
 			rs = pstmt.executeQuery();
-			
+
 			if(rs.next()) {
+				
 				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
+				System.out.println("--------------rs.next()가 True--------------");
 			} else {
+				System.out.println("--------------rs.next()가 False--------------");
 				idCheck = 1;  // 존재하지 않는 경우, 생성 가능 null을 받겠죠?
 			}
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (rs != null)
-				rs.close();
-			if (pstmt != null)
-				pstmt.close();
-			if (conn != null)
-				conn.close();
-		}
+		} 
 		return idCheck;
 	}
 	

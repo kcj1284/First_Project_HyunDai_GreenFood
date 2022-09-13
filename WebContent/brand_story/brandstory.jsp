@@ -339,6 +339,7 @@
 		</div>
 
 		<!-- //서브 컨텐츠 -->
+		</div>
 
 	</div>
 <%@ include file ="/Inc/Footer.jspf" %>

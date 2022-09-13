@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file ="/Inc/Header.jspf" %>
+<%@ page import="com.hdgf.dao.AnnouncementDAO" %>
+<%@ page import="com.hdgf.dto.AnnouncementVO" %>
+<%@ page import="java.util.ArrayList" %>
 <link href="../css/PR_Center/notice.css" type="text/css" rel="stylesheet" />
 
 		<!-- container -->
@@ -53,9 +56,42 @@
     	
     	<div class="notice_block" role="notice">
         <!-- 공지사항 -->
+        <div class="row">
         <ul class="block_list" id="tiles">
+        
+        	<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+				<thead>
+					<tr>
+						<th style="background-color: #eeeeee; text-align: center;">번호</th>
+						<th style="background-color: #eeeeee; text-align: center;">제목</th>
+						<th style="background-color: #eeeeee; text-align: center;">작성자</th>
+						<th style="background-color: #eeeeee; text-align: center;">작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+						AnnouncementDAO annDAO = AnnouncementDAO.getInstance(); // 인스턴스 생성
+						ArrayList<AnnouncementVO> list = annDAO.getList();
+						for(int i = 0; i < list.size(); i++){
+					%>
+					<tr>
+						<td><%= list.get(i).getId() %></td>
+						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
+						<td><a href="view.jsp?annID=<%= list.get(i).getId() %>">
+							<%= list.get(i).getTitle() %></a></td>
+						<td><%= list.get(i).getU_id() %></td>
+						<td><%= list.get(i).getWrdate() %></td>
+					</tr>
+					<%
+						}
+					%>
+				</tbody>
+			</table>
+			
+			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
                 
         </ul>
+        </div>
           
         <!-- //공지사항 -->
         <p class="btn_more_notice" id="btnJsonList">

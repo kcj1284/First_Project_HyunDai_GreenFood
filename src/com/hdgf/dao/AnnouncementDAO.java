@@ -40,7 +40,7 @@ public class AnnouncementDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1;
+		return -1; //에러 발생 시
 	}
 	
 	// 게시글 리스트 메소드
