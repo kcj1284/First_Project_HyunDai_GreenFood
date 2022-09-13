@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.util.DBConnection;
 
@@ -87,32 +88,36 @@ public class IR_Center_DAO {
 	}
 
 	// selectAll : dto가 담길 리스트가 필요하다.
-	// 쿼리에 해당하는 레코드가 dto에 담기고 이 dto들을 리스트에 담아서 반환값을 리스트로 설정
-	public ArrayList<IR_Center_VO> getList() {
-		String runSP = "{ call sp_search_ALL_IR_Center(?) }";
+	public ArrayList<IR_Center_VO> get_ALL_List(String search_ALL) {
+		String runSP = "{ call sp_search_ALL_IR_Center(?,?,?) }";
+		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
 		ArrayList<IR_Center_VO> lists = new ArrayList<>();
-
+		Connection conn = null;
 		try {
 			conn = DBConnection.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
-			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
+			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
 			// 파일 재추가 진행
-			// 프로시저 실행
+			callableStatement.setString(2, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(3, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
 			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
 				IR_Center_VO vo = new IR_Center_VO();
-				vo.setIR_id(rs.getInt("IR_id"));
-				vo.setTitle(rs.getString("Title"));
-				vo.setUser_id(rs.getString("User_id"));
-				vo.setMain_text(rs.getString("Main_text"));
-				vo.setVisiter(rs.getInt("Visiter"));
+				vo.setIR_id(rs.getInt("board_id"));
+				/*
+				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
+				 * vo.setWrdate(rs.getDate("Wrdate"));
+				 * vo.setMain_text(rs.getString("Main_text"));
+				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setVisiter(rs.getInt("Visiter"));
+				 */
 				// vo를 리스트에 추가
 				lists.add(vo);
 			}
@@ -148,12 +153,13 @@ public class IR_Center_DAO {
 				// 레코드에 있는 내용을 dto에 입력
 				IR_Center_VO vo = new IR_Center_VO();
 				vo.setIR_id(rs.getInt("IR_id"));
-				vo.setTitle(rs.getString("Title"));
-				vo.setUser_id(rs.getString("User_id"));
-				vo.setWrdate(rs.getDate("Wrdate"));
-				vo.setMain_text(rs.getString("Main_text"));
-				vo.setFile_link(rs.getString("file_link"));
-				vo.setVisiter(rs.getInt("Visiter"));
+				/*
+				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
+				 * vo.setWrdate(rs.getDate("Wrdate"));
+				 * vo.setMain_text(rs.getString("Main_text"));
+				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setVisiter(rs.getInt("Visiter"));
+				 */
 				// vo를 리스트에 추가
 				lists.add(vo);
 			}
@@ -188,12 +194,13 @@ public class IR_Center_DAO {
 				// 레코드에 있는 내용을 dto에 입력
 				IR_Center_VO vo = new IR_Center_VO();
 				vo.setIR_id(rs.getInt("IR_id"));
-				vo.setTitle(rs.getString("Title"));
-				vo.setUser_id(rs.getString("User_id"));
-				vo.setWrdate(rs.getDate("Wrdate"));
-				vo.setMain_text(rs.getString("Main_text"));
-				vo.setFile_link(rs.getString("file_link"));
-				vo.setVisiter(rs.getInt("Visiter"));
+				/*
+				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
+				 * vo.setWrdate(rs.getDate("Wrdate"));
+				 * vo.setMain_text(rs.getString("Main_text"));
+				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setVisiter(rs.getInt("Visiter"));
+				 */
 				// vo를 리스트에 추가
 				lists.add(vo);
 			}

@@ -135,8 +135,9 @@ public class AnnouncementDAO {
 	}
 	
 	// 게시글 전체 검색 메소드
-	public ArrayList<AnnouncementVO> getList() {
-		String runSP = "{ call sp_search_ALL_Announcement(?) }";
+	public ArrayList<AnnouncementVO> get_ALL_List(String search_ALL) {
+		String runSP = "{ call sp_search_ALL_Announcement(?,?,?) }";
+		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
 		ArrayList<AnnouncementVO> lists = new ArrayList<>();
 		Connection conn = null;
 		try {
@@ -144,11 +145,12 @@ public class AnnouncementDAO {
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
-			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
+			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
 			// 파일 재추가 진행
-			// 프로시저 실행
+			callableStatement.setString(2, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(3, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
 			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
@@ -156,10 +158,13 @@ public class AnnouncementDAO {
 				// 레코드에 있는 내용을 dto에 입력
 				AnnouncementVO vo = new AnnouncementVO();
 				vo.setId(rs.getInt("board_id"));
-				vo.setTitle(rs.getString("Title"));
-				vo.setU_id(rs.getString("User_id"));
-				vo.setMain_text(rs.getString("Main_text"));
-				vo.setVisiter(rs.getInt("Visiter"));
+				/*
+				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
+				 * vo.setWrdate(rs.getDate("Wrdate"));
+				 * vo.setMain_text(rs.getString("Main_text"));
+				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setVisiter(rs.getInt("Visiter"));
+				 */
 				// vo를 리스트에 추가
 				lists.add(vo);
 			}
@@ -171,44 +176,84 @@ public class AnnouncementDAO {
 		return lists;
 	}
 	// 게시글 본문 검색 메소드
-	public ArrayList<AnnouncementVO> searchByMaintext(String keyword) {
-		String sql = "{ call sp_search_main_text_Announcement(?,?) }";
-		//물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다	
-		ArrayList<AnnouncementVO> annList = new ArrayList<AnnouncementVO>();
-		
+	public ArrayList<AnnouncementVO> get_Main_text_List(String search_Main_text) {
+		String runSP = "{ call sp_search_Main_text_Announcement(?,?) }";
+		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
+		ArrayList<AnnouncementVO> lists = new ArrayList<>();
 		Connection conn = null;
-
 		try {
 			conn = DBConnection.getConnection();
-			CallableStatement callableStatement = conn.prepareCall(sql);
-			ResultSet rs=null;
-			
+			CallableStatement callableStatement = conn.prepareCall(runSP);
+			ResultSet rs = null;
+			callableStatement = conn.prepareCall(runSP);
 			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
 			// 파일 재추가 진행
-			callableStatement.setString(2, "%" + keyword + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, "%" + search_Main_text + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
 			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
-				AnnouncementVO ann = new AnnouncementVO();
-				ann.setId(rs.getInt(1));
-				ann.setTitle(rs.getString(2));
-				ann.setU_id(rs.getString(3));
-				ann.setWrdate(rs.getDate(4));
-				ann.setMain_text(rs.getString(5));
-				ann.setFile_link(rs.getString(6));
-				ann.setVisiter(rs.getInt(7));
-				ann.setAnnoun_type(rs.getInt(8));
+				AnnouncementVO vo = new AnnouncementVO();
+				vo.setId(rs.getInt("board_id"));
+				/*
+				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
+				 * vo.setWrdate(rs.getDate("Wrdate"));
+				 * vo.setMain_text(rs.getString("Main_text"));
+				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setVisiter(rs.getInt("Visiter"));
+				 */
 				// vo를 리스트에 추가
-				annList.add(ann);
+				lists.add(vo);
 			}
+			rs.close();
+			callableStatement.close();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.toString());
 		}
-		return annList;
+		return lists;
 	}
+	
+	// 게시글 제목 검색 메소드
+		public ArrayList<AnnouncementVO> get_title_List(String search_title) {
+			String runSP = "{ call sp_search_title_Announcement(?,?) }";
+			// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
+			ArrayList<AnnouncementVO> lists = new ArrayList<>();
+			Connection conn = null;
+			try {
+				conn = DBConnection.getConnection();
+				CallableStatement callableStatement = conn.prepareCall(runSP);
+				ResultSet rs = null;
+				callableStatement = conn.prepareCall(runSP);
+				// out 파라미터 자료형 설정
+				callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+				// 파일 재추가 진행
+				callableStatement.setString(2, "%" + search_title + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+				// 프로시져 실행
+				callableStatement.executeUpdate();
+				// out파라미터의 값을 돌려받는다
+				rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
+				while (rs.next()) {
+					// 레코드에 있는 내용을 dto에 입력
+					AnnouncementVO vo = new AnnouncementVO();
+					vo.setId(rs.getInt("board_id"));
+					/*
+					 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
+					 * vo.setWrdate(rs.getDate("Wrdate"));
+					 * vo.setMain_text(rs.getString("Main_text"));
+					 * vo.setFile_link(rs.getString("file_link"));
+					 * vo.setVisiter(rs.getInt("Visiter"));
+					 */
+					// vo를 리스트에 추가
+					lists.add(vo);
+				}
+				rs.close();
+				callableStatement.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			return lists;
+		}
 }
