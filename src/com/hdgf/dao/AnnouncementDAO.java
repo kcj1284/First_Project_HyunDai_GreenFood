@@ -1,5 +1,6 @@
 package com.hdgf.dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,22 +22,21 @@ public class AnnouncementDAO {
 	
 	// 글쓰기 메소드
 	public int write(AnnouncementVO annVO) {
-		String sql = "insert into announcement (board_id, title, user_id, wrdate, main_text, file_link, visiter, announ_type)"
-				+ " values (announ_seq.nextval, ?, ?, ?, ?, ?, ?, ?)";
+
+		String sql = "{ call sp_insert_Announcement(?, ?, ?, ?, ?) }";
 		
 		Connection conn = null;
-		PreparedStatement pstmt = null;
+
 		try {
 			conn = DBConnection.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, annVO.getTitle());
-			pstmt.setString(2, annVO.getU_id());
-			pstmt.setDate(3, annVO.getWrdate());
-			pstmt.setString(4, annVO.getMain_text());
-			pstmt.setString(5, annVO.getFile_link());
-			pstmt.setInt(6, annVO.getVisiter());
-			pstmt.setInt(7,  annVO.getAnnoun_type());
-			pstmt.executeUpdate();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement.setString(1, annVO.getTitle());
+			callableStatement.setString(2, annVO.getU_id());
+			callableStatement.setString(3, annVO.getMain_text());
+			callableStatement.setString(4, annVO.getFile_link());
+			callableStatement.setInt(5, annVO.getAnnoun_type());	
+			callableStatement.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -106,8 +106,42 @@ public class AnnouncementDAO {
 	}
 	
 	// 게시글 수정 메소드
-//	public int update(AnnouncementVO annVO) {
-//	}
+	public int update(AnnouncementVO annVO) {
+		String sql = " { call sp_update_Announcement(?, ?, ?, ?, ?) }";
+		
+		Connection conn = null;
+		
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement.setInt(1, annVO.getId());
+			callableStatement.setString(2, annVO.getTitle());
+			callableStatement.setString(3, annVO.getMain_text());
+			callableStatement.setString(4, annVO.getFile_link());
+			callableStatement.setInt(5, annVO.getAnnoun_type());
+			callableStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+	}
 	
+	// 게시글 삭제 메소드
+	public int delete(int annID) {
+		String sql = " { call sp_delete_Announcement(?) }";
+		
+		Connection conn = null;
+		
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement.setInt(1, annID);
+			callableStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+	}
 	
+	// 게시글 전체 검색 메소드
 }

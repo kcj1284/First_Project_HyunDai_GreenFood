@@ -4,7 +4,7 @@
 <%@ page import="com.hdgf.dao.AnnouncementDAO" %>
 <%@ page import="com.hdgf.dto.AnnouncementVO" %>
 <%@ page import="java.util.ArrayList" %>
-<link href="../css/PR_Center/notice.css" type="text/css" rel="stylesheet" />
+<link href="/First_Project_HyunDai_GreenFood/css/PR_Center/notice.css" type="text/css" rel="stylesheet" />
 
 		<!-- container -->
 		<div class="container_area" id="contents">
@@ -24,7 +24,7 @@
 <div class="sub_layout sub_visual_6">
     <!-- 하이어라키 -->
     <ul class="hierarchy_list">
-        <li class="icon_home"><img src="../img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
+        <li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
         <li class="depth_2"><a href="#" class="m_hierarchy">홍보센터 </a>
             <ul class="hierarchy_depth" style="display: none;">
                 <li><a href="#">홍보센터</a></li>
@@ -77,7 +77,7 @@
 					<tr>
 						<td><%= list.get(i).getId() %></td>
 						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
-						<td><a href="view.jsp?annID=<%= list.get(i).getId() %>">
+						<td><a href="/First_Project_HyunDai_GreenFood/PR_Center/view.jsp?annID=<%= list.get(i).getId() %>">
 							<%= list.get(i).getTitle() %></a></td>
 						<td><%= list.get(i).getU_id() %></td>
 						<td><%= list.get(i).getWrdate() %></td>
@@ -95,7 +95,7 @@
           
         <!-- //공지사항 -->
         <p class="btn_more_notice" id="btnJsonList">
-            <a href="#"><img src="../img/PR_Center/icon_more_plus.jpg" alt="더보기" /> 더보기</a>
+            <a href="#"><img src="/First_Project_HyunDai_GreenFood/img/PR_Center/icon_more_plus.jpg" alt="더보기" /> 더보기</a>
         </p>
         <br />
      </div>

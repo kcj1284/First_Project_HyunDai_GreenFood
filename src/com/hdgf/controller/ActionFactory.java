@@ -28,6 +28,8 @@ public class ActionFactory {
 	    	  action = new idCheckAction();
 	      } else if (command.equals("logout")) {
 	          action = new LogoutAction();
+	      } else if (command.equals("notice")) {
+	    	  action = new noticeAction();
 	      }
 	    
 	    
