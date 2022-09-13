@@ -21,9 +21,10 @@ public class idCheckAction implements Action  {
 			throws ServletException, IOException, SQLException {
 		
 		System.out.println("실행확인");
-		request.setCharacterEncoding("UTF-8");
+		
+//		request.setCharacterEncoding("UTF-8");
 		// ajax로 값을 받기 때문에 UTF-8로 인코딩해준다
-		response.setCharacterEncoding("EUC-KR");
+//		response.setCharacterEncoding("EUC-KR");
 	
 		String userId = request.getParameter("user_id");
 		// join.jsp에서 받아온 key값이 userId이고
@@ -47,7 +48,7 @@ public class idCheckAction implements Action  {
 		// --> String으로 값을 내보낼 수 있도록 + "" 를 해준다
 		
 		
-		
+		request.setAttribute("idCheck", idCheck);
 		// 이 방식이아닌 컨트롤러에서 모델로 데이터 넘기는것을 적용하자
 
 		

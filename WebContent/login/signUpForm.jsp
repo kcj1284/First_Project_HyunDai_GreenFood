@@ -45,6 +45,13 @@
 
 <body>
 <!-- js 경로 가져오기 -->
+
+<c:if test="${idCheck == 1}">
+        <script type="text/javascript">
+          opener.document.formm.id.value="";
+        </script>
+        ${id}는 이미 사용중인 아이디입니다.
+      </c:if>
 	
 
 

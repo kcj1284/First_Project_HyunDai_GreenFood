@@ -6,11 +6,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 import com.hdgf.dto.UsersVO;
 import com.hdgf.util.DBConnection;
+
+
 
 
 public class UsersDAO {
@@ -107,16 +107,13 @@ public class UsersDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String sql = "select * from users where user_id=?";
-		int idCheck = 0;
+		int idCheck = 1;
 	    try {
-	    	
 	    	conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user_id);
-	
-			
 			rs = pstmt.executeQuery();
-					
+			
 			if(rs.next()) {
 				idCheck = 0;  // 이미 존재하는 경우, 생성 불가능
 			} else {
