@@ -78,7 +78,7 @@ $(function(){
     <div class="signUpForm">
         <h1>회원가입</h1>
         <hr>
-        <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=loginForm" method="post">
+        <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUp" method="post">
 			
             <fieldset>
                 <div class="input_F">
