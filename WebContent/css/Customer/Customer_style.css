@@ -86,8 +86,9 @@
 	height: 22px;
 	margin-left: 10px;
 	padding-left: 33px;
-	background: url("/First_Project_HyunDai_GreenFood/img/icon/icon_counsel.jpg") no-repeat left
-		center;
+	background:
+		url("/First_Project_HyunDai_GreenFood/img/icon/icon_counsel.jpg")
+		no-repeat left center;
 	font-size: 14px;
 	color: #777;
 	line-height: 22px;
@@ -518,4 +519,138 @@
 
 .answer_receive input:first-child {
 	margin-left: 20px;
+}
+
+
+
+/* 고객의소리 리스트 */
+.board-body {
+	font-family: san-serif;
+}
+
+.flex-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+}
+
+#record-no {
+	float: left;
+	text-align: left;
+	position: relative;
+}
+
+#listFrm {
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.boardList {
+	overflow: auto;
+}
+
+.boardList>li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ddd;
+	width: 10%;
+	color: #4b4b4b;
+}
+
+.boardList>li:nth-child(-n+6) {
+	font-weight: bold;
+}
+
+.boardList li a {
+	color: #4b4b4b;
+}
+
+.boardList>li:nth-child(6n+3) {
+	width: 50%;
+	white-space: nowrap; /*줄 안바꿈*/
+	overflow: hidden; /*넘친내용 숨기기*/
+	text-overflow: ellipsis; /*넘침시 ...표시*/
+}
+
+#btn-boardwrite {
+	color: #ffffff;
+	height: 30px;
+	line-height: 0px;
+}
+
+#multiDel {
+	color: #4b4b4b;
+	height: 30px;
+	line-height: 0px;
+}
+
+#search-btn {
+	color: #ffffff;
+	height: 30px;
+	line-height: 0px;
+}
+
+.board-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.list-div {
+	position: relative;
+}
+
+/*paging*/
+.paging-div {
+	position: relative;
+	width: 500px;
+	margin: 0 auto;
+	bottom: 20px;
+}
+
+.paging {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.paging>li {
+	float: left;
+	width: 30px;
+	text-align: center;
+}
+
+/*search*/
+#searchFrm {
+	text-align: center;
+    margin: 10px;
+}
+
+.btn-default {
+	background-color: #46675c;
+	border: none;
+	border-radius: 3px;
+	width: 60px;
+}
+
+button {
+	margin: 0;
+}
+
+.sub_contents{height:1000px}
+
+/* 고객의 소리 게시글 작성 */
+#boardFrm{
+	font-family: "nanum_gothic";
+}
+
+#boardwrite-submit{
+    float: right;
+    background-color: #46675c;
+    border-color: #46675c;
+    color: #ffffff;
+    height: 30px;
 }
