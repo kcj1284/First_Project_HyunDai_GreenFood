@@ -23,7 +23,7 @@ public class UsersDAO {
 	public static UsersDAO getInstance() {
 		return instance;
 	}
-
+	
 	public UsersVO getUsers(String user_id){
 		UsersVO usersVO = null;
 		String sql = "select * from users where user_id=?";
@@ -32,6 +32,8 @@ public class UsersDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
+		String runSP = "{ call select * from table(getuser_pipe_table_func('min')) }";
+		
 		try {
 			conn = DBConnection.getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -55,6 +57,38 @@ public class UsersDAO {
 
 		return usersVO;
 	}
+
+//	public UsersVO getUsers(String user_id){
+//		UsersVO usersVO = null;
+//		String sql = "select * from users where user_id=?";
+//
+//		Connection conn = null;
+//		PreparedStatement pstmt = null;
+//		ResultSet rs = null;
+//
+//		try {
+//			conn = DBConnection.getConnection();
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setString(1, user_id);
+//			rs = pstmt.executeQuery();
+//			if (rs.next()) {
+//				usersVO = new UsersVO();
+//				usersVO.setUser_id(rs.getString("user_id"));
+//				usersVO.setUser_pw(rs.getString("user_pw"));
+//				usersVO.setUser_name(rs.getString("user_name"));
+//				usersVO.setTel(rs.getString("tel"));
+//				usersVO.setEmail(rs.getString("email"));
+//				usersVO.setGender(Integer.parseInt(rs.getString("gender")));
+//				usersVO.setAdministrator(Integer.parseInt(rs.getString("administrator")));
+//				usersVO.setCom_type(Integer.parseInt(rs.getString("com_type")));
+//
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		} 
+//
+//		return usersVO;
+//	}
 
 	public void insertUsers(UsersVO usersVO) {
 

@@ -5,9 +5,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.hdgf.dto.AnnouncementVO;
+import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.util.DBConnection;
+
+import oracle.jdbc.OracleTypes;
 
 public class AnnouncementDAO {
 
@@ -144,4 +148,46 @@ public class AnnouncementDAO {
 	}
 	
 	// 게시글 전체 검색 메소드
+	
+	// 게시글 본문 검색 메소드
+	public ArrayList<AnnouncementVO> searchByMaintext(String keyword) {
+		String sql = "{ call sp_search_main_text_Announcement(?,?) }";
+		//물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다	
+		ArrayList<AnnouncementVO> annList = new ArrayList<AnnouncementVO>();
+		
+		Connection conn = null;
+
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			ResultSet rs=null;
+			
+			// out 파라미터 자료형 설정
+			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
+			// 파일 재추가 진행
+			callableStatement.setString(2, "%" + keyword + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			// 프로시져 실행
+			callableStatement.executeUpdate();
+			// out파라미터의 값을 돌려받는다
+			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
+			while (rs.next()) {
+				// 레코드에 있는 내용을 dto에 입력
+				AnnouncementVO ann = new AnnouncementVO();
+				ann.setId(rs.getInt(1));
+				ann.setTitle(rs.getString(2));
+				ann.setU_id(rs.getString(3));
+				ann.setWrdate(rs.getDate(4));
+				ann.setMain_text(rs.getString(5));
+				ann.setFile_link(rs.getString(6));
+				ann.setVisiter(rs.getInt(7));
+				ann.setAnnoun_type(rs.getInt(8));
+				// vo를 리스트에 추가
+				annList.add(ann);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return annList;
+	}
 }
