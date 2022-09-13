@@ -19,9 +19,9 @@ public class LoginAction implements Action {
     String url="login/login.jsp"; // 로그인 실패 화면 띄워야한다 
     HttpSession session=request.getSession();
   
-    String user_id=request.getParameter("user_id");
-    String user_pw=request.getParameter("user_pw");
-    
+    String user_id=request.getParameter("j_username");
+    String user_pw=request.getParameter("j_password");
+    System.out.println(user_id + "\n" + user_pw + "\n" );
     UsersDAO usersDAO=UsersDAO.getInstance();
       
     UsersVO usersVO=usersDAO.getUsers(user_id);
