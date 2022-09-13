@@ -29,7 +29,7 @@
 				success : function(data){
 					console.log($checkID);
 					console.log("data : "+data)
-					if(data == 0){
+					if(data == 1){
 						$msg.html("<h4 style=\"color:red\">!아이디가 이미 존재합니다</h4>");
 					}else{
 						$msg.html("<h4 style=\"color:green\">사용가능한 아이디입니다</h4>");
