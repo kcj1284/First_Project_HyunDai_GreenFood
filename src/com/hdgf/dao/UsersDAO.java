@@ -24,7 +24,7 @@ public class UsersDAO {
 	// CallableStatement
 	public UsersVO getUsers(String user_id) {
 		UsersVO usersVO = null;
-		String sql = "select * from table(getuser_pipe_table_func(?))";
+		String sql = "select * from getuser_pipe_table_func(?)";
 
 		Connection conn = null;
 		ResultSet rs = null;
