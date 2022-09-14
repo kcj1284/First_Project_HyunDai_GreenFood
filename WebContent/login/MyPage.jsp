@@ -14,10 +14,11 @@
 	<div class="signUpForm">
 		<h1>MyPage</h1>
 		<hr>
+		<br>
 		<form
 			action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUp"
 			method="post">
-
+		
 			<fieldset>
 				<div class="input_F">
 					<input type="text" class="user_id" id="user_id" name="user_id"
@@ -39,11 +40,11 @@
 				</div>
 				<div class="input_F">
 					<input type="text" name="tel" placeholder="전화번호">
-					${sessionScope.loginUser.user_tel}
+					${sessionScope.loginUser.tel}
 				</div>
 				<div class="input_F">
 					<input type="text" name="email" placeholder="email">
-					${sessionScope.loginUser.user_email}
+					${sessionScope.loginUser.email}
 				</div>
 
 
@@ -51,9 +52,12 @@
 				<div class="radio">
 					<input type="radio" name="gender" value="1" checked> 남성 <input
 						type="radio" name="gender" value="2"> 여성
-					${sessionScope.loginUser.user_gender}
+					${sessionScope.loginUser.gender}
 				</div>
-
+	
+										${sessionScope.loginUser.administrator}
+					
+					
 				<div class="select">
 					분야 &nbsp &nbsp <select name="com_type">
 						<option value="0">급식</option>
