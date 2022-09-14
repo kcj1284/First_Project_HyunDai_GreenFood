@@ -132,7 +132,7 @@ public class UsersDAO {
 			conn = DBConnection.getConnection();
 
 			cstmt = conn.prepareCall(runFP);
-			cstmt.registerOutParameter(1, Types.NUMERIC); // function 반환값 OutParameter에 받기
+			cstmt.registerOutParameter(1, Types.NUMERIC); // function 반환값 OutParameter에 받기 resultset으로 안받음
 			cstmt.setString(2, user_id);
 			cstmt.executeUpdate(); // 실행
 			idCheck = cstmt.getInt(1); // 결과값
