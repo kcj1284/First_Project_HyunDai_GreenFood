@@ -30,6 +30,8 @@ public class ActionFactory {
 	          action = new LogoutAction();
 	      } else if (command.equals("notice")) {
 	    	  action = new noticeAction();
+	      } else if (command.equals("mypage")) {
+	    	  action = new MyPageAction();
 	      }
 	    
 	    
