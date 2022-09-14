@@ -37,7 +37,7 @@ public class AnnouncementDAO {
 			callableStatement.setString(1, annVO.getTitle());
 			callableStatement.setString(2, annVO.getU_id());
 			callableStatement.setString(3, annVO.getMain_text());
-			callableStatement.setString(4, annVO.getFile_link());
+			callableStatement.setInt(4, annVO.getfile_id());
 			callableStatement.setInt(5, annVO.getAnnoun_type());	
 			callableStatement.executeUpdate();
 			
@@ -60,7 +60,7 @@ public class AnnouncementDAO {
 	 * AnnouncementVO ann = new AnnouncementVO(); ann.setId(rs.getInt(1));
 	 * ann.setTitle(rs.getString(2)); ann.setU_id(rs.getString(3));
 	 * ann.setWrdate(rs.getDate(4)); ann.setMain_text(rs.getString(5));
-	 * ann.setFile_link(rs.getString(6)); ann.setVisiter(rs.getInt(7));
+	 * ann.setfile_id(rs.getString(6)); ann.setVisiter(rs.getInt(7));
 	 * ann.setAnnoun_type(rs.getInt(8)); annList.add(ann); } } catch (Exception e) {
 	 * e.printStackTrace(); } return annList; }
 	 */
@@ -85,7 +85,7 @@ public class AnnouncementDAO {
 				ann.setU_id(rs.getString(3));
 				ann.setWrdate(rs.getDate(4));
 				ann.setMain_text(rs.getString(5));
-				ann.setFile_link(rs.getString(6));
+				ann.setfile_id(rs.getInt(6));
 				ann.setVisiter(rs.getInt(7));
 				ann.setAnnoun_type(rs.getInt(8));
 				return ann;
@@ -108,7 +108,7 @@ public class AnnouncementDAO {
 			callableStatement.setInt(1, annVO.getId());
 			callableStatement.setString(2, annVO.getTitle());
 			callableStatement.setString(3, annVO.getMain_text());
-			callableStatement.setString(4, annVO.getFile_link());
+			callableStatement.setInt(4, annVO.getfile_id());
 			callableStatement.setInt(5, annVO.getAnnoun_type());
 			callableStatement.executeUpdate();
 		} catch (Exception e) {
@@ -162,7 +162,7 @@ public class AnnouncementDAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setfile_id(rs.getString("file_id"));
 				 * vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가
@@ -202,7 +202,7 @@ public class AnnouncementDAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setfile_id(rs.getString("file_id"));
 				 * vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가
@@ -243,7 +243,7 @@ public class AnnouncementDAO {
 					 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 					 * vo.setWrdate(rs.getDate("Wrdate"));
 					 * vo.setMain_text(rs.getString("Main_text"));
-					 * vo.setFile_link(rs.getString("file_link"));
+					 * vo.setfile_id(rs.getString("file_id"));
 					 * vo.setVisiter(rs.getInt("Visiter"));
 					 */
 					// vo를 리스트에 추가

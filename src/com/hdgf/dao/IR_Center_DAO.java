@@ -37,7 +37,7 @@ public class IR_Center_DAO {
 			callableStatement.setString(1, IR_Center_VO.getTitle());
 			callableStatement.setString(2, IR_Center_VO.getUser_id());
 			callableStatement.setString(3, IR_Center_VO.getMain_text());
-			callableStatement.setString(4, IR_Center_VO.getFile_link());
+			callableStatement.setInt(4, IR_Center_VO.getfile_id());
 			callableStatement.executeUpdate();
 			System.out.println("success");
 		} catch (SQLException e) {
@@ -58,7 +58,7 @@ public class IR_Center_DAO {
 			callableStatement.setInt(1, IR_Center_VO.getIR_id());
 			callableStatement.setString(2, IR_Center_VO.getTitle());
 			callableStatement.setString(3, IR_Center_VO.getMain_text());
-			callableStatement.setString(4, IR_Center_VO.getFile_link());
+			callableStatement.setInt(4, IR_Center_VO.getfile_id());
 			callableStatement.executeUpdate();
 			System.out.println("success");
 		} catch (SQLException e) {
@@ -101,8 +101,8 @@ public class IR_Center_DAO {
 			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			// 파일 재추가 진행
-			callableStatement.setString(2, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
-			callableStatement.setString(3, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, search_ALL);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(3, search_ALL);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
@@ -115,7 +115,7 @@ public class IR_Center_DAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setfile_id(rs.getString("file_id"));
 				 * vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가
@@ -144,7 +144,7 @@ public class IR_Center_DAO {
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
 			// 파일 재추가 진행
-			callableStatement.setString(2, "%" + search_Title + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, search_Title);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
@@ -157,7 +157,7 @@ public class IR_Center_DAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setfile_id(rs.getString("file_id"));
 				 * vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가
@@ -185,7 +185,7 @@ public class IR_Center_DAO {
 			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			// 파일 재추가 진행
-			callableStatement.setString(2, "%" + search_Main_text + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, search_Main_text);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
@@ -198,7 +198,7 @@ public class IR_Center_DAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setFile_link(rs.getString("file_link"));
+				 * vo.setfile_id(rs.getString("file_id"));
 				 * vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가

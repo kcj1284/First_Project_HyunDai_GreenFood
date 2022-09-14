@@ -6,7 +6,7 @@ public class AnnouncementVO {
 	private String u_id;
 	private java.sql.Date wrdate;
 	private String main_text;
-	private String file_link;
+	private int file_id;
 	private int visiter;
 	private int announ_type;
 	
@@ -40,11 +40,11 @@ public class AnnouncementVO {
 	public void setMain_text(String main_text) {
 		this.main_text = main_text;
 	}
-	public String getFile_link() {
-		return file_link;
+	public int getfile_id() {
+		return file_id;
 	}
-	public void setFile_link(String file_link) {
-		this.file_link = file_link;
+	public void setfile_id(int file_id) {
+		this.file_id = file_id;
 	}
 	public int getVisiter() {
 		return visiter;
