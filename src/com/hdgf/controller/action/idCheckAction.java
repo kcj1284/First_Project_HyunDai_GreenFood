@@ -36,7 +36,8 @@ public class idCheckAction implements Action  {
 		{
 			System.out.println("사용 가능한 아이디입니다.");
 		}
-		request.setAttribute("idCheck", idCheck); //ajax에 결과값으로 보냄
+		//ajax에 결과값으로 보냄 
+		out.write(idCheck+"");
 		
 	  }
 }
