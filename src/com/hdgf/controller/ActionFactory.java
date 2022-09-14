@@ -42,7 +42,9 @@ public class ActionFactory {
 	    	  action = new QnaViewAction();
 	      } else if (command.equals("qnaUpdate")) {
 	    	  action = new QnaUpdateAction();
-	      } 
+	      } else if (command.equals("withdrawal")) {
+	    	  action = new WithdrawalAction();
+	      }
 	    
 	    return action;
   }
