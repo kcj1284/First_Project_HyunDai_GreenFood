@@ -114,7 +114,28 @@ public class UsersDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+	}
+	
+	public void deleteUsers(String user_id) {
 
+		Connection conn = null;
+
+		String runSP = "{ call sp_delete_users(?) }";
+
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(runSP);
+			callableStatement.setString(1, user_id);
+			callableStatement.executeUpdate();
+			System.out.println("성공");
+		} catch (SQLException e) {
+			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	// ajax 실시간 아이디 중복검사를 위한 메소드
