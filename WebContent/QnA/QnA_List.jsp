@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 
 <link rel="stylesheet" type="text/css"
 	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 <%@ include file="/Inc/Header.jspf"%>
@@ -50,13 +52,16 @@
 							<li>글쓴이</li>
 							<li>조회수</li>
 							<li>등록일</li>
-							<li><input type="checkbox" name="noList" value=''
-								class="chk" /></li>
-							<li>13</li>
-							<li><a href="/First_Project_HyunDai_GreenFood/QnA/QnA_View.jsp">제목입니다</a></li>
-							<li>아이디입니다</li>
-							<li>10</li>
-							<li>2022.09.13</li>
+							<c:forEach var="qnaVO" items="${qnaList}">
+								<li>
+								${qnaVO.QNA_type}
+								</li>
+								<li>${qnaVO.QNA_id}</li>
+								<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
+								<li>${qnaVO.user_id}</li>
+								<li>10</li>
+								<li>${qnaVO.wrdate}</li>
+							</c:forEach>
 						</ul>
 					</form>
 				</div>
@@ -81,8 +86,7 @@
 
 					<div class="item">
 						<!-- 글쓰기 버튼 -->
-						<button class="btn btn-default" id="btn-boardwrite"
-							onclick="location.href='/First_Project_HyunDai_GreenFood/QnA/QnA_Write.jsp'">글쓰기</button>
+						<button class="btn btn-default" id="btn-boardwrite"	onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'">글쓰기</button>
 					</div>
 				</div>
 			</div>

@@ -2,7 +2,7 @@ package com.hdgf.dto;
 
 public class QnaVO {
 	private int QNA_id;
-	private String Title;
+	private String title;
 	private String user_id;
 	private int secret;
 	private java.sql.Date wrdate;
@@ -17,10 +17,10 @@ public class QnaVO {
 		QNA_id = qNA_id;
 	}
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 	public void setTitle(String title) {
-		Title = title;
+		this.title = title;
 	}
 	public String getUser_id() {
 		return user_id;

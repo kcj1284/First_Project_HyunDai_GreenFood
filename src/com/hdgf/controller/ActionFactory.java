@@ -32,8 +32,17 @@ public class ActionFactory {
 	    	  action = new noticeAction();
 	      } else if (command.equals("mypage")) {
 	    	  action = new MyPageAction();
-	      }
-	    
+	      } else if (command.equals("qnaList")) {
+	    	  action = new QnaListAction();
+	      } else if (command.equals("qnaWriteForm")) {
+	    	  action = new QnaWriteFormAction();
+	      } else if (command.equals("qnaWrite")) {
+	    	  action = new QnaWriteAction();
+	      } else if (command.equals("qnaView")) {
+	    	  action = new QnaViewAction();
+	      } else if (command.equals("qnaUpdate")) {
+	    	  action = new QnaUpdateAction();
+	      } 
 	    
 	    return action;
   }

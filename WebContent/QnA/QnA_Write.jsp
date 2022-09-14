@@ -63,13 +63,12 @@
 			<!-- 타이틀 , 디스크립션 -->
 			<div class="title_description">
 				<h2 class="title_sub">고객의 소리</h2>
-
 				<p class="sub_description">고객의 작은 목소리에도 귀 기울이겠습니다.</p>
 			</div>
-			<form method="post" action="#" id="boardFrm">
+			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWrite" id="boardFrm">
 				<ul>
-					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요."/></li>
-					<li><textarea name="content" id="content"></textarea></li>
+					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
+					<li><textarea name="main_text" id="content"></textarea></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
 				</ul>
 			</form>

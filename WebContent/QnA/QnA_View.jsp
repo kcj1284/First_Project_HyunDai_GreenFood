@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css"
 	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
@@ -41,14 +42,15 @@
 			</div>
 			
 			<div class="content-body">
-				<h4>제목입니다.</h4>
+			
+				<h4>${qnaVO.title}</h4>
 				<ul>
-					<li> 아이디 | 2022.09.13</li>
+					<li> ${qnaVO.user_id} | ${qnaVO.wrdate}</li>
 					<li>조회 10</li>
 				</ul>
 				<hr>
 				<div class="board-content">
-					<span>본문 내용입니다.</span>
+					<span>${qnaVO.main_text}</span>
 				</div>
 			</div>
 
@@ -70,7 +72,7 @@
 			<div id="edit-box">
 				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
 				<c:if test="${logId == vo.userid }">
-					<a href="/First_Project_HyunDai_GreenFood/QnA/QnA_Edit.jsp">수정</a>
+					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdate">수정</a>
 					<a href="javascript:delCheck()">삭제</a>
 				</c:if>
 			</div>
