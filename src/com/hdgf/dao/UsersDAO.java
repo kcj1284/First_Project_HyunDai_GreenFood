@@ -42,9 +42,9 @@ public class UsersDAO {
 				usersVO.setUser_name(rs.getString("user_name"));
 				usersVO.setTel(rs.getString("tel"));
 				usersVO.setEmail(rs.getString("email"));
-				usersVO.setGender(Integer.parseInt(rs.getString("gender")));
-				usersVO.setAdministrator(Integer.parseInt(rs.getString("administrator")));
-				usersVO.setCom_type(Integer.parseInt(rs.getString("com_type")));
+				usersVO.setGender(rs.getInt("gender"));
+				usersVO.setAdministrator(rs.getInt("administrator"));
+				usersVO.setCom_type(rs.getInt("com_type"));
 
 			}
 		} catch (Exception e) {
