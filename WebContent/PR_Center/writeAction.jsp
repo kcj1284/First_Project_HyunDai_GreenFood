@@ -1,5 +1,6 @@
 <%@page import="java.io.PrintWriter"%>
 <%@page import="com.hdgf.dao.AnnouncementDAO"%>
+<%@page import="com.hdgf.dto.UsersVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
@@ -15,18 +16,18 @@
 <body>
 	<%
 		// 현재 세션 상태를 체크한다
-		String userID = null;
-		if(session.getAttribute("user_id") != null){
-			userID = (String)session.getAttribute("user_id");
-		}
+/* 		String userID = null;
+		if(session.getAttribute("loginUser") != null){
+			userID = (String)session.getAttribute("loginUser");
+		} */
 		// 로그인을 한 사람만 글을 쓸 수 있도록 코드를 수정한다
-		if(userID == null){
-			PrintWriter script = response.getWriter();
-			script.println("<script>");
+/* 		if(userID == null){ */
+			// PrintWriter script = response.getWriter();
+			/* script.println("<script>");
 			script.println("alert('로그인을 하세요')");
-			script.println("location.href='login.jsp'");
+			script.println("location.href='/First_Project_HyunDai_GreenFood/login/login.jsp'");
 			script.println("</script>");
-		}else{
+		}else{ */
 			// 입력이 안 된 부분이 있는지 체크한다
 			if(ann.getTitle() == null || ann.getMain_text() == null){
 				PrintWriter script = response.getWriter();
@@ -51,11 +52,11 @@
 					PrintWriter script = response.getWriter();
 					script.println("<script>");
 					script.println("alert('글쓰기 성공')");
-					script.println("location.href='bbs.jsp'");
+					script.println("location.href='/First_Project_HyunDai_GreenFood/PR_Center/notice.jsp'");
 					script.println("</script>");
 				}
 			}
-		}
+		/* } */
 	
 	%>
 </body>
