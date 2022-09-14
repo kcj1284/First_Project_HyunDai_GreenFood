@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="../css/mypage.css" type="text/css" rel="stylesheet" />
-<link href="/First_Project_HyunDai_GreenFood/css/login.css" type="text/css" rel="stylesheet" />
+<link href="/First_Project_HyunDai_GreenFood/css/mypage.css" type="text/css" rel="stylesheet" />
 <title>MyPage</title>
 
 </head>
