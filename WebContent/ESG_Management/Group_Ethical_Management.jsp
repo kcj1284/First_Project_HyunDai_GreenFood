@@ -166,13 +166,13 @@
 						<ul>
 							<li>
 								<a target="frm"
-									href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/GROUP_ETHICS.pdf&amp;LOGIC_FILE_NM=group_ethics.pdf">
+									href="../pdf/ESG_Management/employee_ethics.pdf">
 									<span>그룹윤리강령<i></i></span>
 								</a>
 							</li>
 							<li>
 								<a target="frm"
-									href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/EMPLOYEE_ETHICS.pdf&amp;LOGIC_FILE_NM=employee_ethics.pdf">
+									href="../pdf/ESG_Management/group_ethics.pdf">
 									<span>
 										그룹 임직원
 										<br>윤리실천경영<i></i>

@@ -282,7 +282,7 @@
 						</ul>
 
 						<div style="text-align:center;">
-							<a href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/CISSM07C.pdf&amp;LOGIC_FILE_NM=공정거래자율준수편람.pdf"
+							<a href="../pdf/ESG_Management/공정거래자율준수편람.pdf"
 								class="btn_action comm" target="frm">공정거래 자율준수편람</a>
 						</div>
 					</div>

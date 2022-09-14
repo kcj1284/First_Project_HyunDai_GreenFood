@@ -70,7 +70,7 @@
 					<li><a href="General_Meeting.jsp">주주총회</a></li>
 					<li><a href="Shareholder_info.jsp">주주정보</a></li>
 					<li><a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a></li>
-					<li><a href="Corp_Governance_Report.jsp">기업지배구조보고서</a></li> <br>
+					<li><a href="Corp_Governance_Report.jsp">기업지배구조보고서</a></li>
 				</ul>
 
 				<section class="esg_section cont4_1_1">

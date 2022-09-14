@@ -1,6 +1,5 @@
 @CHARSET "UTF-8";
 
-
 .hierarchy_list {
 	width: 1143px;
 	margin: 30px auto 0;
@@ -19,7 +18,8 @@
 	padding-left: 30px;
 	margin-left: 21px;
 	line-height: normal;
-	background: url("/Contents/images/icon/icon_hierarchy.png") no-repeat left center;
+	background: url("/Contents/images/icon/icon_hierarchy.png") no-repeat
+		left center;
 }
 
 .hierarchy_list li:first-child {
@@ -116,9 +116,7 @@
 	padding-inline-start: 40px;
 }
 
-a,
-a:hover,
-a:focus {
+a, a:hover, a:focus {
 	text-decoration: none;
 	font-size: 25px;
 	color: #000;
@@ -302,9 +300,7 @@ table {
 	border-spacing: 0;
 }
 
-ol,
-ul,
-li {
+ol, ul, li {
 	list-style: none;
 }
 
@@ -348,15 +344,13 @@ li {
 	margin-left: -1px;
 }
 
-.tab_list li:hover,
-.tab_list .on {
+.tab_list li:hover, .tab_list .on {
 	background-color: #444b55;
 	border: 1px solid #444b55;
 	position: relative;
 }
 
-.tab_list li:hover a,
-.tab_list .on a {
+.tab_list li:hover a, .tab_list .on a {
 	color: #fff;
 }
 
@@ -377,7 +371,8 @@ li {
 	font-weight: bold;
 	color: #000;
 	border: 1px solid #131312;
-	background: url('/Contents/images/esg/ico_down.png') no-repeat right 15px top 50%;
+	background: url('/Contents/images/esg/ico_down.png') no-repeat right
+		15px top 50%;
 	text-align: left;
 	box-sizing: border-box;
 }
@@ -609,7 +604,7 @@ li {
 }
 
 .esg_area .cont3_1_1 .esg_box.num1 .visual {
-	background: url('/Contents/images/esg/c/visual01.jpg') no-repeat;
+	background: url('../img/ESG/crs_08.jpg') no-repeat;
 }
 
 .esg_area .cont3_1_1 .esg_box.num2 {
@@ -617,7 +612,7 @@ li {
 }
 
 .esg_area .cont3_1_1 .esg_box.num2 .visual {
-	background: url('/Contents/images/esg/c/visual02.jpg') no-repeat;
+	background: url('../img/ESG/crs_09.jpg') no-repeat;
 }
 
 .esg_area .cont3_1_1 .esg_box.scroll .visual {
@@ -635,14 +630,14 @@ li {
 	margin-top: 25px;
 }
 
-.esg_area .cont3_1_2 .boss_director,
-.esg_area .cont3_1_3 .boss_director {
+.esg_area .cont3_1_2 .boss_director, .esg_area .cont3_1_3 .boss_director
+	{
 	margin-bottom: 10px;
 	font-size: 15px;
 }
 
-.esg_area .cont3_2_1 .director_area,
-.esg_area .cont3_2_2 .director_area {
+.esg_area .cont3_2_1 .director_area, .esg_area .cont3_2_2 .director_area
+	{
 	margin-top: 80px;
 }
 
@@ -752,8 +747,7 @@ li {
 	margin-bottom: 120px;
 }
 
-.esg_area .cont4_6_1 .esg_btn_down,
-.esg_area .cont4_6_2 .esg_btn_down {
+.esg_area .cont4_6_1 .esg_btn_down, .esg_area .cont4_6_2 .esg_btn_down {
 	margin-bottom: 15px;
 	width: 471px;
 }
@@ -1006,7 +1000,8 @@ li {
 	text-align: center;
 }
 
-.esg_area .cont6_3 .esg_box .sec2 .esg_box_list2 .list ul li:not(:first-child) {
+.esg_area .cont6_3 .esg_box .sec2 .esg_box_list2 .list ul li:not(:first-child)
+	{
 	border-left: 1px solid #d0d1d3;
 }
 
@@ -1022,7 +1017,8 @@ li {
 	text-align: right;
 }
 
-.esg_area .cont6_3 .esg_box .sec2 .esg_box_list2 .esg_box_list_txt span {
+.esg_area .cont6_3 .esg_box .sec2 .esg_box_list2 .esg_box_list_txt span
+	{
 	display: inline-block;
 	text-align: center;
 }
@@ -1156,8 +1152,7 @@ li {
 }
 
 .esg_area .cont7_1_2 .esg_btn ul li:first-child {
-	margin-right: 30px;
-	;
+	margin-right: 30px;;
 	background: url("../img/ESG/gem_03.jpg") no-repeat right top;
 	background-size: 100% auto;
 }
@@ -1203,10 +1198,7 @@ img {
 	border: 0;
 }
 
-input,
-select,
-label,
-img {
+input, select, label, img {
 	font-family: 'Noto Sans';
 	vertical-align: middle;
 }
@@ -1239,8 +1231,7 @@ img {
 	word-break: break-word;
 }
 
-.list_tb thead tr .first,
-.list_tb tbody tr .first {
+.list_tb thead tr .first, .list_tb tbody tr .first {
 	border-left: 0;
 }
 
@@ -1260,8 +1251,7 @@ img {
 	color: #777;
 }
 
-.normal_table table th,
-.normal_table table td {
+.normal_table table th, .normal_table table td {
 	border: 5px solid #fff;
 	text-align: center;
 }
@@ -1340,4 +1330,63 @@ img {
 	width: 42px;
 	background: #b6bfb1;
 }
-.sub_text{margin: 60px 0 0;font-size: 20px;line-height: 1.8;}
+
+.sub_text {
+	margin: 60px 0 0;
+	font-size: 20px;
+	line-height: 1.8;
+}
+
+.tab_list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	*zoom: 1;
+}
+
+.tab_list:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.tab_list li {
+	display: table;
+	margin-left: -1px;
+	padding: 0 20px;
+	min-width: 165px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	transition: all 0.5s;
+}
+
+.tab_list li a {
+	display: table-cell;
+	width: 100%;
+	height: 53px;
+	font-size: 22px;
+	color: #555;
+	text-align: center;
+	vertical-align: middle;
+	transition: all 0.5s;
+}
+
+.tab_list li:first-child {
+	margin-left: -1px;
+}
+
+.tab_list li:hover, .tab_list .on {
+	background-color: #444b55;
+	border: 1px solid #444b55;
+	position: relative;
+}
+
+.tab_list li:hover a, .tab_list .on a {
+	color: #fff;
+}
+
+.icon_tab_bubble {
+	display: none;
+}
