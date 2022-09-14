@@ -3,7 +3,7 @@
 
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css"
-	href="/First_Project_HyunDai_GreenFood/css/Customer/Customer_style.css">
+	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 
 
 
@@ -42,7 +42,7 @@
 			<!-- //타이틀 , 디스크립션 -->
 
 			<div class="social_children">
-				<img src="/First_Project_HyunDai_GreenFood/img/Customer/BizCounsel.jpg">
+				<img src="/First_Project_HyunDai_GreenFood/img/QnA/BizCounsel.jpg">
 			</div>
 		</div>
 	</div>

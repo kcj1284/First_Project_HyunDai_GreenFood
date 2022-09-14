@@ -600,7 +600,12 @@
 }
 
 .list-div {
-	position: relative;
+    position: relative;
+    min-height: 400px;
+    border-color: #46675c;
+    border-style: solid;
+    border-width: 4px 0 4px 0;
+    margin: 10px 0 10px 0;
 }
 
 /*paging*/
@@ -634,9 +639,6 @@
 	border: none;
 	border-radius: 3px;
 	width: 60px;
-}
-
-button {
 	margin: 0;
 }
 
@@ -659,7 +661,7 @@ button {
 }
 
 .content-body h4 {
-    text-align: left;
+	    text-align: left;
     font-weight: bold;
     color: #333333;
     font-size: 20px;
@@ -697,7 +699,7 @@ button {
 	font-weight:bold;
 }
 
-.reply-box li #reply-coment {
+.reply-box li #reply-comment {
 	width: 70%;
 }
 
@@ -756,20 +758,24 @@ button {
 	line-height: 90px;
 }
 
-#replyFrm #coment {
+#replyFrm #comment {
 	width: 80%;
 	height: 100px;
 }
 
-#replyFrm #coment-submit{
+#replyFrm #comment-submit{
 	color: #ffffff;
 	margin-left:10px;
 	width: 10%;
 }
 
-
-
-
+#replyList{
+	min-height: 50px;
+	border-color: #46675c;
+    border-style: solid;
+    border-width: 4px 0 0 0;
+    margin: 10px 0 10px 0;
+}
 
 #edit-box{
 	text-align:right;

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link rel="stylesheet" type="text/css"
-	href="/First_Project_HyunDai_GreenFood/css/Customer/Customer_style.css">
+	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 <%@ include file="/Inc/Header.jspf"%>
 <!-- container -->
 <div class="container_area" id="contents">
@@ -20,9 +20,7 @@
 				<ul class="hierarchy_depth" style="display: none;">
 					<li><a href="#">고객센터</a></li>
 				</ul></li>
-			<li class="depth_3"><a href="#" class="t_block_hierarchy">고객의
-					소리 </a>
-
+			<li class="depth_3"><a href="#" class="t_block_hierarchy">고객의 소리 </a>
 				<ul class="hierarchy_depth">
 					<li><a href="#">자주 묻는 질문</a></li>
 					<li><a href="#">거래·상담</a></li>
@@ -45,7 +43,6 @@
 				<div class="list-div">
 
 					<form method="post" action="" id="listFrm">
-						<hr style="border-color: #46675c; border-width: 2px; border-style: solid;">
 						<ul class="boardList">
 							<li><input type="checkbox" id="allCheck" /></li>
 							<li>번호</li>
@@ -56,12 +53,11 @@
 							<li><input type="checkbox" name="noList" value=''
 								class="chk" /></li>
 							<li>13</li>
-							<li><a href="/First_Project_HyunDai_GreenFood/Customer/QnA_View.jsp">제목입니다</a></li>
+							<li><a href="/First_Project_HyunDai_GreenFood/QnA/QnA_View.jsp">제목입니다</a></li>
 							<li>아이디입니다</li>
 							<li>10</li>
 							<li>2022.09.13</li>
 						</ul>
-						<hr style="border-color: #46675c; border-width: 2px; border-style: solid;">
 					</form>
 				</div>
 
@@ -86,7 +82,7 @@
 					<div class="item">
 						<!-- 글쓰기 버튼 -->
 						<button class="btn btn-default" id="btn-boardwrite"
-							onclick="location.href='/First_Project_HyunDai_GreenFood/Customer/QnA_Write.jsp'">글쓰기</button>
+							onclick="location.href='/First_Project_HyunDai_GreenFood/QnA/QnA_Write.jsp'">글쓰기</button>
 					</div>
 				</div>
 			</div>

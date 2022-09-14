@@ -2,35 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css"
-	href="/First_Project_HyunDai_GreenFood/css/Customer/Customer_style.css">
-<style>
-#subject {
-	width: 99.6%;
-	padding: 10px 5p;
-}
+	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 
-#boardFrm li {
-	padding: 10px 5px;
-}
-</style>
-<script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
-<link href="${url}/css/boardwrite.css" rel="stylesheet" type="text/css">
-<script>
-	$(function() {
-		CKEDITOR.replace("content");
-
-		$("#boardFrm").submit(function() {
-			if ($("#subject").val() == '') {
-				alert("글 제목을 입력하세요");
-				return false;
-			}
-			if (CKEDITOR.instances.content.getData() == '') {
-				alert("글내용을 입력하세요");
-				return false;
-			}
-		});
-	});
-</script>
 <!-- container -->
 <div class="container_area" id="contents">
 	<!-- Body
@@ -66,15 +39,42 @@
 
 				<p class="sub_description">고객의 작은 목소리에도 귀 기울이겠습니다.</p>
 			</div>
-			<form method="post" action="#" id="boardFrm">
+			
+			<div class="content-body">
+				<h4>제목입니다.</h4>
 				<ul>
-					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요."/></li>
-					<li><textarea name="content" id="content"></textarea></li>
-					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
+					<li> 아이디 | 2022.09.13</li>
+					<li>조회 10</li>
 				</ul>
-			</form>
-			<!-- contents : end -->
+				<hr>
+				<div class="board-content">
+					<span>본문 내용입니다.</span>
+				</div>
+			</div>
 
+			<div class="reply-box">
+				<h5>전체 댓글</h5>
+				<!-- 댓글목록이 나올 자리 -->
+				<div id="replyList"></div>
+
+				<!-- 댓글쓰기 -->
+				<div id="replyWrite">
+						<form method="post" id="replyFrm">
+							<input type="hidden" name="no" value="" />
+							<div id="replyWrite-userid">댓글 작성</div>
+							<textarea class="form-control" name="comment" id="comment"></textarea>
+							<input type="submit" class="btn btn-default" id="comment-submit" value="댓글등록">
+						</form>
+				</div>
+			</div>
+			<div id="edit-box">
+				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
+				<c:if test="${logId == vo.userid }">
+					<a href="/First_Project_HyunDai_GreenFood/QnA/QnA_Edit.jsp">수정</a>
+					<a href="javascript:delCheck()">삭제</a>
+				</c:if>
+			</div>
+			<!-- contents : end -->
 		</div>
 		<!-- //container -->
 		<%@ include file="/Inc/Footer.jspf"%>
