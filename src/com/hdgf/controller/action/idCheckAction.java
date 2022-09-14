@@ -36,15 +36,7 @@ public class idCheckAction implements Action  {
 		{
 			System.out.println("사용 가능한 아이디입니다.");
 		}
-	
-		out.write(idCheck+""); // --> ajax 결과값인 result가 됨
-		// --> String으로 값을 내보낼 수 있도록 + "" 를 해준다
-		
-		
-		request.setAttribute("idCheck", idCheck);
-		// 이 방식이아닌 컨트롤러에서 모델로 데이터 넘기는것을 적용하자
-
+		request.setAttribute("idCheck", idCheck); //ajax에 결과값으로 보냄
 		
 	  }
-		
 }
