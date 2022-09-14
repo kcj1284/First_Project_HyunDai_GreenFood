@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.hdgf.dao.FileDAO" %>
+<%@ page import="java.io.File" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,6 +101,9 @@
 				</table>
 				<!-- 글쓰기 버튼 생성 -->
 				<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+				
+				<input type="file" name="file"><br>
+				
 			</form>
 		</div>
 	</div>

@@ -48,22 +48,36 @@ public class AnnouncementDAO {
 	}
 	
 	// 게시글 리스트 메소드
-	/*
-	 * public ArrayList<AnnouncementVO> getList() { ArrayList<AnnouncementVO>
-	 * annList = new ArrayList<AnnouncementVO>(); String sql =
-	 * "select * from announcement";
-	 * 
-	 * Connection conn = null; PreparedStatement pstmt = null; ResultSet rs = null;
-	 * 
-	 * try { conn = DBConnection.getConnection(); pstmt =
-	 * conn.prepareStatement(sql); rs = pstmt.executeQuery(); while (rs.next()) {
-	 * AnnouncementVO ann = new AnnouncementVO(); ann.setId(rs.getInt(1));
-	 * ann.setTitle(rs.getString(2)); ann.setU_id(rs.getString(3));
-	 * ann.setWrdate(rs.getDate(4)); ann.setMain_text(rs.getString(5));
-	 * ann.setfile_id(rs.getString(6)); ann.setVisiter(rs.getInt(7));
-	 * ann.setAnnoun_type(rs.getInt(8)); annList.add(ann); } } catch (Exception e) {
-	 * e.printStackTrace(); } return annList; }
-	 */
+	public ArrayList<AnnouncementVO> getList() { 
+		ArrayList<AnnouncementVO> annList = new ArrayList<AnnouncementVO>(); 
+		String sql = "select * from announcement";
+	 
+		Connection conn = null; 
+		PreparedStatement pstmt = null; 
+		ResultSet rs = null;
+	 
+		try { 
+			conn = DBConnection.getConnection(); 
+			pstmt =	conn.prepareStatement(sql); 
+			rs = pstmt.executeQuery(); 
+			while (rs.next()) {
+				AnnouncementVO ann = new AnnouncementVO(); 
+				ann.setId(rs.getInt(1));
+				ann.setTitle(rs.getString(2)); 
+				ann.setU_id(rs.getString(3));
+				ann.setWrdate(rs.getDate(4)); 
+				ann.setMain_text(rs.getString(5));
+				ann.setfile_id(rs.getInt(6)); 
+				ann.setVisiter(rs.getInt(7));
+				ann.setAnnoun_type(rs.getInt(8)); 
+				annList.add(ann); 
+			} 
+		} catch (Exception e) {
+				e.printStackTrace(); 
+		} 
+		return annList; 
+	}
+	
 	
 	// 하나의 게시글을 보는 메소드
 	public AnnouncementVO getAnn(int annId) {
@@ -148,8 +162,8 @@ public class AnnouncementDAO {
 			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			// 파일 재추가 진행
-			callableStatement.setString(2, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
-			callableStatement.setString(3, "%" + search_ALL + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, search_ALL);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(3, search_ALL);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
@@ -189,7 +203,7 @@ public class AnnouncementDAO {
 			// out 파라미터 자료형 설정
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			// 파일 재추가 진행
-			callableStatement.setString(2, "%" + search_Main_text + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, search_Main_text);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
@@ -230,7 +244,7 @@ public class AnnouncementDAO {
 				// out 파라미터 자료형 설정
 				callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 				// 파일 재추가 진행
-				callableStatement.setString(2, "%" + search_title + "%");// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+				callableStatement.setString(2, search_title);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 				// 프로시져 실행
 				callableStatement.executeUpdate();
 				// out파라미터의 값을 돌려받는다

@@ -88,7 +88,7 @@
 				</tbody>
 			</table>
 			
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<a href="/First_Project_HyunDai_GreenFood/PR_Center/write.jsp" class="btn btn-primary pull-right">글쓰기</a>
                 
         </ul>
         </div>
