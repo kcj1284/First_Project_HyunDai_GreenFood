@@ -45,17 +45,6 @@ public class test {
 		System.out.println("공지사항_리스트 success");
 	}
 
-	public static void 공지사항_게시글확인() {
-
-		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-		AnnouncementVO ann = annDAO.getAnn(25);
-		System.out.println(ann.getId());
-		System.out.println(ann.getU_id());
-		System.out.println(ann.getTitle());
-		System.out.println(ann.getMain_text());
-		System.out.println(ann.getWrdate());
-	}
-
 	public static void 공지사항_수정() {
 
 		AnnouncementVO ann = new AnnouncementVO();
