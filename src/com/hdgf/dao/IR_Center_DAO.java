@@ -5,9 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
-import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.util.DBConnection;
 
@@ -115,8 +113,7 @@ public class IR_Center_DAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setfile_id(rs.getString("file_id"));
-				 * vo.setVisiter(rs.getInt("Visiter"));
+				 * vo.setfile_id(rs.getString("file_id")); vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가
 				lists.add(vo);
@@ -130,10 +127,10 @@ public class IR_Center_DAO {
 	}
 
 	// searchTitle
-	public List<IR_Center_VO> get_Title_List(String search_Title) {
+	public ArrayList<IR_Center_VO> get_Title_List(String search_Title) {
 		String runSP = "{ call sp_search_title_IR_Center(?,?) }";
 		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
-		List<IR_Center_VO> lists = new ArrayList<IR_Center_VO>();
+		ArrayList<IR_Center_VO> lists = new ArrayList<>();
 
 		try {
 			conn = DBConnection.getConnection();
@@ -157,8 +154,7 @@ public class IR_Center_DAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setfile_id(rs.getString("file_id"));
-				 * vo.setVisiter(rs.getInt("Visiter"));
+				 * vo.setfile_id(rs.getString("file_id")); vo.setVisiter(rs.getInt("Visiter"));
 				 */
 				// vo를 리스트에 추가
 				lists.add(vo);
@@ -172,10 +168,10 @@ public class IR_Center_DAO {
 	}
 
 	// searchMain_text
-	public List<IR_Center_VO> get_Main_text_List(String search_Main_text) {
+	public ArrayList<IR_Center_VO> get_Main_text_List(String search_Main_text) {
 		String runSP = "{ call sp_search_Main_text_IR_Center(?,?) }";
 		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
-		List<IR_Center_VO> lists = new ArrayList<IR_Center_VO>();
+		ArrayList<IR_Center_VO> lists = new ArrayList<>();
 
 		try {
 			conn = DBConnection.getConnection();
@@ -198,9 +194,44 @@ public class IR_Center_DAO {
 				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
 				 * vo.setWrdate(rs.getDate("Wrdate"));
 				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setfile_id(rs.getString("file_id"));
-				 * vo.setVisiter(rs.getInt("Visiter"));
+				 * vo.setfile_id(rs.getString("file_id")); vo.setVisiter(rs.getInt("Visiter"));
 				 */
+				// vo를 리스트에 추가
+				lists.add(vo);
+			}
+			rs.close();
+			callableStatement.close();
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return lists;
+	}
+
+	// 전체 list 검색
+	public ArrayList<IR_Center_VO> getList() {
+		String runSP = "{ call sp_search_List_ALL_IR_Center(?) }";
+		// 전체데이터를 select한 결과 presult가 들어가므로 ?가 1개. presult는 오라클에서 커서에 해당.
+		ArrayList<IR_Center_VO> lists = new ArrayList<>();
+
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(runSP);
+			ResultSet rs = null;
+			callableStatement = conn.prepareCall(runSP);
+			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
+			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+			// 프로시저 실행
+			callableStatement.executeUpdate();
+			// out파라미터의 값을 돌려받는다
+			rs = (ResultSet) callableStatement.getObject(1); // cstmt실행결과를 object로 받아 downcast
+			while (rs.next()) {
+				// 레코드에 있는 내용을 vo에 입력
+				IR_Center_VO vo = new IR_Center_VO();
+				vo.setIR_id(rs.getInt("ir_id"));
+				vo.setTitle(rs.getString("title"));
+				vo.setUser_id(rs.getString("user_id"));
+				vo.setVisiter(rs.getInt("visiter"));
+				vo.setWrdate(rs.getDate("wrdate"));
 				// vo를 리스트에 추가
 				lists.add(vo);
 			}

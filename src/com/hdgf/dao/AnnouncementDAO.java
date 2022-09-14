@@ -270,4 +270,41 @@ public class AnnouncementDAO {
 			}
 			return lists;
 		}
+		
+		// 전체 list 검색
+		public ArrayList<AnnouncementVO> getList() {
+			String runSP = "{ call sp_search_List_ALL_Announcement(?) }";
+			// 전체데이터를 select한 결과 presult가 들어가므로 ?가 1개. presult는 오라클에서 커서에 해당.
+			ArrayList<AnnouncementVO> lists = new ArrayList<>();
+			Connection conn = null;
+			try {
+				conn = DBConnection.getConnection();
+				CallableStatement callableStatement = conn.prepareCall(runSP);
+				ResultSet rs = null;
+				callableStatement = conn.prepareCall(runSP);
+				// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
+				callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+				// 프로시저 실행
+				callableStatement.executeUpdate();
+				// out파라미터의 값을 돌려받는다
+				rs = (ResultSet) callableStatement.getObject(1); // cstmt실행결과를 object로 받아 downcast
+				while (rs.next()) {
+					// 레코드에 있는 내용을 vo에 입력
+					AnnouncementVO vo = new AnnouncementVO();
+					vo.setId(rs.getInt("board_id"));
+					vo.setTitle(rs.getString("title"));
+					vo.setU_id(rs.getString("user_id"));
+					vo.setVisiter(rs.getInt("visiter"));
+					vo.setWrdate(rs.getDate("wrdate"));
+					vo.setAnnoun_type(rs.getInt("announ_type"));
+					// vo를 리스트에 추가
+					lists.add(vo);
+				}
+				rs.close();
+				callableStatement.close();
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+			return lists;
+		}
 }
