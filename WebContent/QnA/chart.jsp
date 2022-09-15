@@ -2,7 +2,8 @@
 
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
-
+<!-- chart.js 라이브러리 로드 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <!-- container -->
 <div class="container_area" id="contents">
 
@@ -33,7 +34,9 @@
 			<div class="title_description">
 				<h2 class="title_sub">통계 자료</h2>
 			</div>
-			<!-- //타이틀 , 디스크립션 -->
+		</div>
+		<div class="chart_for_chanjung">
+		<!-- //타이틀 , 디스크립션 -->
 			<div style="width: 900px; height: 900px;">
 				<!--차트가 그려질 부분-->
 				<canvas id="myChart"></canvas>
@@ -87,6 +90,5 @@
 				}
 			});
 </script>
-</body>
 </html>
 <%@ include file="/Inc/Footer.jspf"%>
