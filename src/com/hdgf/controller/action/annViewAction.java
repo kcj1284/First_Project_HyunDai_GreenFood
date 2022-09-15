@@ -21,12 +21,16 @@ public class annViewAction implements Action {
 
 		HttpSession session = request.getSession();
 		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
-
+		
+		AnnouncementVO edit_annVO = (AnnouncementVO) request.getAttribute("annVO");
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		
 		if (loginUser == null) {
-			url = "HdgfServlet?command=loginForm";
+			url = "HdgfServlet?command=loginForm";	
+		} else if (edit_annVO != null) {
+			request.setAttribute("annVO", edit_annVO);
 		} else {
 			int annId = Integer.parseInt(request.getParameter("id"));
-			AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 			AnnouncementVO annVO = annDAO.getAnn(annId);
 			request.setAttribute("annVO", annVO);
 		}

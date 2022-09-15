@@ -36,6 +36,8 @@ public class ActionFactory {
 	    	  action = new annUpdateFormAction();
 	      } else if (command.equals("annDelete")) {
 	    	  action = new annDeleteAction();
+	      } else if (command.equals("annUpdate")) {
+	    	  action = new annUpdateAction();
 	      } else if (command.equals("mypage")) {
 	    	  action = new MyPageAction();
 	      } else if (command.equals("qnaList")) {

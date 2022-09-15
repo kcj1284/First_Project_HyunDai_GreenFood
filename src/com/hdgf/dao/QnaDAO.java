@@ -113,7 +113,7 @@ public class QnaDAO {
 	}
 	
 	// 게시글 수정 메소드
-	public void updateQna(QnaVO qnaVO, String session_id) {
+	public void update(QnaVO qnaVO) {
 		String sql = " { call sp_update_QnA(?, ?, ?, ?, ?) }";
 		
 		Connection conn = null;
