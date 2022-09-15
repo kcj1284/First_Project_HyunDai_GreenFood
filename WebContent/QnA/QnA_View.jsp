@@ -42,28 +42,27 @@
 			</div>
 			
 			<div class="content-body">
-				<h4>${qnaVO.title}</h4>
-				<p>
-					
-				</p>
 				<ul>
 					<li>
-						분류 : 
-						<c:if test="${qnaVO.QNA_type == 0}">
-							<c:out value="칭찬" />
-						</c:if>
-						<c:if test="${qnaVO.QNA_type == 1}">
-							<c:out value="불만" />
-						</c:if>
-						<c:if test="${qnaVO.QNA_type == 2}">
-							<c:out value="제안" />
-						</c:if>
-						<c:if test="${qnaVO.QNA_type == 3}">
-							<c:out value="기타" />
-						</c:if>
-						 | 작성자: ${qnaVO.user_id}
+						<span style="color:#0a9882;">
+							[ 
+							<c:if test="${qnaVO.QNA_type == 0}">
+								<c:out value="칭찬" />
+							</c:if>
+							<c:if test="${qnaVO.QNA_type == 1}">
+								<c:out value="불만" />
+							</c:if>
+							<c:if test="${qnaVO.QNA_type == 2}">
+								<c:out value="제안" />
+							</c:if>
+							<c:if test="${qnaVO.QNA_type == 3}">
+								<c:out value="기타" />
+							</c:if>
+							]
+						</span> <span>${qnaVO.title}</span>
+
 					</li>
-					<li>조회 10 | ${qnaVO.wrdate}</li>
+					<li>작성자: ${qnaVO.user_id} | 조회 10 | ${qnaVO.wrdate}</li>
 				</ul>
 				<hr>
 				<div class="board-content">

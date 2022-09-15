@@ -70,7 +70,6 @@
 									<c:out value="기타" />
 								</c:if>
 								
-								
 								</li>
 								<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
 								<li>${qnaVO.user_id}</li>
@@ -84,8 +83,7 @@
 				<div class="flex-container">
 					<!-- 선택 삭제 -->
 					<div class="item">
-						<button class="btn btn-default" id="multiDel">선택 삭제</button>
-
+						
 					</div>
 					<div class="item">
 						<!-- 검색 -->
@@ -101,7 +99,8 @@
 
 					<div class="item">
 						<!-- 글쓰기 버튼 -->
-						<button class="btn btn-default" id="btn-boardwrite"	onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'">글쓰기</button>
+						<button class="btn btn-default btn-write" id="btn-boardwrite"	onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'">글쓰기</button>
+						<input type="button" class="btn btn-default btn-write" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'" value="글쓰기"/>
 					</div>
 				</div>
 			</div>

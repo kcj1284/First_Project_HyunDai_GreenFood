@@ -582,6 +582,7 @@
 	color: #ffffff;
 	height: 30px;
 	line-height: 0px;
+	background: #444b55;
 }
 
 #multiDel {
@@ -639,7 +640,7 @@
 .btn-default {
 	background-color: #46675c;
 	border: none;
-	border-radius: 3px;
+	border-radius: 2px;
 	width: 60px;
 	margin: 0;
 }
@@ -782,4 +783,3 @@
 #edit-box{
 	text-align:right;
 }
-
