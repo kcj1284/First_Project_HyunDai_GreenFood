@@ -65,17 +65,17 @@
 			</div>
 
 			<div class="reply-box">
-				<h5>전체 댓글</h5>
+				<h5>전체 답변</h5>
 				<!-- 댓글목록이 나올 자리 -->
-				<div id="replyList"></div>
+				<div id="replyList">${qnaVO.answer}</div>
 
 				<!-- 댓글쓰기 -->
 				<div id="replyWrite">
-					<form method="post" id="replyFrm">
+					<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswer" id="replyFrm">
 						<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
-						<div id="replyWrite-userid">댓글 작성</div>
-						<textarea class="form-control" name="comment" id="comment"></textarea>
-						<input type="submit" class="btn btn-default" id="comment-submit" value="댓글등록">
+						<div id="replyWrite-userid">답변 작성</div>
+						<textarea class="form-control" name="answer" id="comment"></textarea>
+						<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
 					</form>
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}">수정</a>
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaDelete&QNA_id=${qnaVO.QNA_id}">삭제</a>
 				</c:if>
-				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">목록</a>
+				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList">목록</a>
 			</div>                                         
 			<!-- contents : end -->
 		</div>

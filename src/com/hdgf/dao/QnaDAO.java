@@ -103,7 +103,7 @@ public class QnaDAO {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, qnaVO.getTitle());
 			pstmt.setString(2, session_id);
-			pstmt.setInt(3, 0);
+			pstmt.setInt(3, 0); //비밀글 여부
 			pstmt.setString(4, qnaVO.getMain_text());
 			pstmt.setInt(5, qnaVO.getQNA_type());
 			pstmt.executeUpdate();
@@ -286,6 +286,21 @@ public class QnaDAO {
 	} 
 	return lists;
 	}
-	
+
+	public int updateAnswer(QnaVO qnaVO) {
+		String sql = "{ call sp_update_answer(?,?)}";
+ 
+		Connection conn = null;
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement.setInt(1, qnaVO.getQNA_id());
+			callableStatement.setString(2, qnaVO.getAnswer());
+			callableStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+	}
 }
 
