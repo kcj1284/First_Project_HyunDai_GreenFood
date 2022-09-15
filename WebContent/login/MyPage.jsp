@@ -17,12 +17,12 @@
 	<div class="myPage">
 		<h1>MyPage</h1>
 		<hr>
-
+		<form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=withdrawal" method="post">
 		<table>
 			<tbody>
 				<tr>
 					<td>아이디</td>
-					<td> ${sessionScope.loginUser.user_id}</td>
+					<td> <input type="text" name="user_id">${sessionScope.loginUser.user_id}</td>
 				</tr>
 				<tr>
 					<td>이름</td>
@@ -75,10 +75,10 @@
 		<div class="myPage-btn">
 			<div class="myclick">수정</div>
 
-			<div class="myclick"
-				onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=withdrawal';">탈퇴</div>
+			<input class="myclick" type="submit">탈퇴
 
 		</div>
+		</form>
 	</div>
 
 </body>
