@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
+import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.dto.UsersVO;
 import com.hdgf.util.DBConnection;
 
@@ -87,6 +88,32 @@ public class UsersDAO {
 //
 //		return usersVO;
 //	}
+	
+	public void updateUsers(UsersVO usersVO) {
+
+		String runSP = "{ call sp_update_users(?, ?, ?, ?, ?, ?, ?) }";
+		
+		Connection conn = null;
+		
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(runSP);
+			callableStatement.setString(1, usersVO.getUser_id());
+			callableStatement.setString(2, usersVO.getUser_pw());
+			callableStatement.setString(3, usersVO.getUser_name());
+			callableStatement.setString(4, usersVO.getTel());
+			callableStatement.setString(5, usersVO.getEmail());
+			callableStatement.setInt(6, usersVO.getGender());
+			callableStatement.setInt(7, usersVO.getCom_type());
+			callableStatement.executeUpdate();
+			System.out.println("업데이트 성공");
+		} catch (SQLException e) {
+			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public void insertUsers(UsersVO usersVO) {
 
@@ -103,9 +130,7 @@ public class UsersDAO {
 			callableStatement.setString(4, usersVO.getTel());
 			callableStatement.setString(5, usersVO.getEmail());
 			callableStatement.setInt(6, usersVO.getGender());
-//			callableStatement.setInt(7, usersVO.getAdministrator());
 			callableStatement.setInt(7, usersVO.getCom_type());
-//				callableStatement.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
 			callableStatement.executeUpdate();
 			System.out.println("성공");
 		} catch (SQLException e) {
