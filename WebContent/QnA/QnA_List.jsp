@@ -48,22 +48,30 @@
 							<li>글쓴이</li>
 							<li>조회수</li>
 							<li>등록일</li>
-							<c:forEach var="qnaVO" items="${qnaList}">
-								<li>${qnaVO.QNA_id}</li>
-								<li><c:if test="${qnaVO.QNA_type == 0}">
-										<c:out value="칭찬" />
-									</c:if> <c:if test="${qnaVO.QNA_type == 1}">
-										<c:out value="불만" />
-									</c:if> <c:if test="${qnaVO.QNA_type == 2}">
-										<c:out value="제안" />
-									</c:if> <c:if test="${qnaVO.QNA_type == 3}">
-										<c:out value="기타" />
-									</c:if></li>
-								<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
-								<li>${qnaVO.user_id}</li>
-								<li>10</li>
-								<li>${qnaVO.wrdate}</li>
-							</c:forEach>
+							<c:choose>
+								<c:when test="${qnaListSize<=0}">
+							        <span">등록된 게시글이 없습니다.</span>
+							    </c:when>
+								<c:otherwise>
+								<c:forEach var="qnaVO" items="${qnaList}">
+									<li>${qnaVO.QNA_id}</li>
+									<li><c:if test="${qnaVO.QNA_type == 0}">
+											<c:out value="칭찬" />
+										</c:if> <c:if test="${qnaVO.QNA_type == 1}">
+											<c:out value="불만" />
+										</c:if> <c:if test="${qnaVO.QNA_type == 2}">
+											<c:out value="제안" />
+										</c:if> <c:if test="${qnaVO.QNA_type == 3}">
+											<c:out value="기타" />
+										</c:if></li>
+									<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
+									<li>${qnaVO.user_id}</li>
+									<li>10</li>
+									<li>${qnaVO.wrdate}</li>
+								</c:forEach>
+								<li> ${paging}</li>
+							</c:otherwise>
+						</c:choose>
 						</ul>
 					</form>
 				</div>
@@ -81,7 +89,7 @@
 								<option value="subject">제목</option>
 								<option value="content">글내용</option>
 								<option value="userid">글쓴이</option>
-							</select> <input type="text" name="searchWord" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
+							</select> <input type="text" name="key" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
 						</form>
 					</div>
 
