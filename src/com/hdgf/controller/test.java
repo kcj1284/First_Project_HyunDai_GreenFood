@@ -121,14 +121,15 @@ public class test {
 	public static void 공지사항_하나_게시글_조회() {
 		
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-		AnnouncementVO ann = annDAO.getAnn(55);
+		AnnouncementVO ann = annDAO.getAnn(56);
 		
 		System.out.println(ann.getId());
-		System.out.println(ann.getU_id());
 		System.out.println(ann.getTitle());
-		System.out.println(ann.getMain_text());
+		System.out.println(ann.getU_id());
+		System.out.println(ann.getWrdate()); //null
+		System.out.println(ann.getMain_text()); //null
+		System.out.println(ann.getfile_id());
 		System.out.println(ann.getVisiter());
-		System.out.println(ann.getWrdate());
 		System.out.println(ann.getAnnoun_type());
 	}
 	
