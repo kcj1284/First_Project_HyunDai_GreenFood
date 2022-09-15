@@ -102,7 +102,7 @@ public class test {
 		}
 	}
 	
-	public static void 공지사항_전체_list_검검색() {
+	public static void 공지사항_전체_list_검색() {
 		
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 		ArrayList<AnnouncementVO> annList = annDAO.getList();
@@ -118,6 +118,20 @@ public class test {
 		}
 	}
 	
+	public static void 공지사항_하나_게시글_조회() {
+		
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		AnnouncementVO ann = annDAO.getAnn(55);
+		
+		System.out.println(ann.getId());
+		System.out.println(ann.getU_id());
+		System.out.println(ann.getTitle());
+		System.out.println(ann.getMain_text());
+		System.out.println(ann.getVisiter());
+		System.out.println(ann.getWrdate());
+		System.out.println(ann.getAnnoun_type());
+	}
+	
 	public static void main(String[] args) {
 		//공지사항_글쓰기();
 		//공지사항_리스트();
@@ -127,6 +141,7 @@ public class test {
 		//공지사항_본문검색();
 		//공지사항_전체검색();
 		//공지사항_제목검색();
-		공지사항_전체_list_검검색();
+		//공지사항_전체_list_검색();
+		공지사항_하나_게시글_조회();
 	}
 }

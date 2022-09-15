@@ -38,6 +38,10 @@ public class ActionFactory {
 	    	  action = new annDeleteAction();
 	      } else if (command.equals("annUpdate")) {
 	    	  action = new annUpdateAction();
+	      } else if (command.equals("annWriteForm")) {
+	    	  action = new annWriteFormAction();
+	      } else if (command.equals("annWrite")) {
+	    	  action= new annWriteAction();
 	      } else if (command.equals("mypage")) {
 	    	  action = new MyPageAction();
 	      } else if (command.equals("qnaList")) {

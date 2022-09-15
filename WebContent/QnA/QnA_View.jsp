@@ -79,6 +79,7 @@
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}">수정</a>
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaDelete&QNA_id=${qnaVO.QNA_id}">삭제</a>
 				</c:if>
+				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">목록</a>
 			</div>                                         
 			<!-- contents : end -->
 		</div>

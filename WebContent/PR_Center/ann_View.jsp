@@ -84,7 +84,7 @@
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annUpdateForm&id=${annVO.id}">수정</a>
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annDelete&id=${annVO.id}">삭제</a>
 				</c:if>
-				
+				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">목록</a>
 <%-- 				<c:out value="${loginUser.user_id }" />
 				<c:out value="${sessionScope.loginUser.user_id }" /> --%>
 			</div>
