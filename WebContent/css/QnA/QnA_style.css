@@ -625,11 +625,28 @@
 	margin-right: auto;
 }
 
+.paging a:link  {
+	 color:  red;
+	 text-decoration:  none;
+}
+
+ 
+.paging a:visited  {
+	 color:  black;
+	 text-decoration:  none;
+}
+
+.paging a:hover  {
+	 color:  blue;
+	 text-decoration:  underline;
+}
+
 .paging>li {
 	float: left;
 	width: 30px;
 	text-align: center;
 }
+
 
 /*search*/
 #searchFrm {

@@ -218,7 +218,7 @@ public class QnaDAO {
 	    
 	    for (int i = start_page; i <= end_page; i++) {
 	      if (i == tpage) {
-	        str += "<font color=red>[" + i + "]&nbsp;&nbsp;</font>";
+	        str += "<font color=#0a9882>[" + i + "]&nbsp;&nbsp;</font>";
 	      } else {
 	        str += "<a href='HdgfServlet?command=qnaList&tpage=" 
 	           + i + "'>[" + i + "]</a>&nbsp;&nbsp;";

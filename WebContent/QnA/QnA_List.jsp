@@ -36,8 +36,6 @@
 			</div>
 			<div class="board-body">
 				<!-- 리스트 -->
-				<div id="record-no">게시글 수 :</div>
-
 				<div class="list-div">
 
 					<form method="post" action="" id="listFrm">
@@ -69,7 +67,6 @@
 									<li>10</li>
 									<li>${qnaVO.wrdate}</li>
 								</c:forEach>
-								<li> ${paging}</li>
 							</c:otherwise>
 						</c:choose>
 						</ul>
@@ -98,6 +95,8 @@
 						<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'">글쓰기</button>
 					</div>
 				</div>
+				<div class="paging">${paging}</div>
+				
 			</div>
 			<!-- contents : end -->
 
