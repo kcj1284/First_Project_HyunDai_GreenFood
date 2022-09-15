@@ -60,7 +60,7 @@ public class ActionFactory {
 	    	  action = new QnaDeleteAction();
 	      } else if (command.equals("withdrawal")) {
 	    	  action = new WithdrawalAction();
-	      } else if (command.equals("mypageupdate")) {
+	      } else if (command.equals("myPageUpdate")) {
 	    	  action = new myPageUpdate();
 	      }
 	    

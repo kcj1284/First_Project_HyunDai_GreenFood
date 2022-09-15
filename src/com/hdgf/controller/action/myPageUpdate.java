@@ -16,8 +16,9 @@ public class myPageUpdate implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "HdgfServlet?command=mypage";
-
-		UsersVO usersVO = new UsersVO();
+		
+		HttpSession session = request.getSession();
+	    UsersVO usersVO = (UsersVO) session.getAttribute("loginUser"); 
 
 		usersVO.setUser_id(request.getParameter("user_id"));
 		usersVO.setUser_pw(request.getParameter("user_pw"));
