@@ -8,6 +8,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.hdgf.dao.UsersDAO;
 
@@ -28,6 +29,10 @@ public class WithdrawalAction implements Action {
 		userDAO.deleteUsers(userid);
 		//유저아이디 deleteUser(유저아이디)
 		//세션끊기
+		 HttpSession session=request.getSession(false);
+		    if(session!=null){
+		      session.invalidate();
+		    }    
 		
 		
 	    
