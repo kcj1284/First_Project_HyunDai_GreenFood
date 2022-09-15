@@ -37,33 +37,31 @@
 			</div>
 
 			<div class="content-body">
-				<h4>${qnaVO.title}</h4>
-				<p></p>
-				<ul>
-					<li><span style="color:#0a9882;">
-							[ 
-							<c:if test="${qnaVO.QNA_type == 0}">
+				<div class="view_top_area">
+					<h3 class="view_title">
+						<span class="catagory"> [ <c:if
+								test="${qnaVO.QNA_type == 0}">
 								<c:out value="칭찬" />
-							</c:if>
-							<c:if test="${qnaVO.QNA_type == 1}">
+							</c:if> <c:if test="${qnaVO.QNA_type == 1}">
 								<c:out value="불만" />
-							</c:if>
-							<c:if test="${qnaVO.QNA_type == 2}">
+							</c:if> <c:if test="${qnaVO.QNA_type == 2}">
 								<c:out value="제안" />
-							</c:if>
-							<c:if test="${qnaVO.QNA_type == 3}">
+							</c:if> <c:if test="${qnaVO.QNA_type == 3}">
 								<c:out value="기타" />
-							</c:if>
-							]
-						</span> <span>${qnaVO.title}</span>
+							</c:if> ]
+						</span> ${qnaVO.title}
+					</h3>
 
-					</li>
-					<li>작성자: ${qnaVO.user_id} | 조회 10 | ${qnaVO.wrdate}</li>
-				</ul>
-				<hr>
-				<div class="board-content">
-					<span>${qnaVO.main_text}</span>
+					<ul class="date_hits_list">
+						<li>${qnaVO.wrdate}</li>
+						<li>44</li>
+					</ul>
 				</div>
+
+				<div class="view_text_area">
+					${qnaVO.main_text}
+				</div>
+
 			</div>
 
 			<div class="reply-box">

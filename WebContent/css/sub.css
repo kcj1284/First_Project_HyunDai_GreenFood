@@ -131,7 +131,12 @@
 .sns_list li{float:left;margin-left:1px;}
 .sns_list li:first-child{margin-left:0;}
 
-.view_text_area{padding:40px 30px;border-bottom:1px solid #7f7f7f;font-size:13px;color:#666;line-height:20px;}
+.view_text_area{padding: 40px 30px;
+    border-bottom: 1px solid #7f7f7f;
+    font-size: 13px;
+    color: #666;
+    line-height: 20px;
+    min-height: 240px;}
 
 .view_btn_area{margin-top:20px;text-align:right;}
 .btn_action{display:inline-block;height:36px;margin-bottom:10px;padding:0 20px;background-color:#444b55;

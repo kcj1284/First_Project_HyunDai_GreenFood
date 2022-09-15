@@ -700,6 +700,7 @@
 
 .reply-box{
 	font-family: "nanum_gothic";
+	padding-top: 30px;
 }
 
 .reply-box h5 {
@@ -800,3 +801,26 @@
 #edit-box{
 	text-align:right;
 }
+
+
+.view_top_area{height:50px;padding-left:30px;padding-right:28px;
+  border-top:3px solid #3e3e3e;border-bottom:1px solid #e5e5e5;background-color:#f5f5f5;*zoom:1;
+}
+.view_top_area:after{content:"";display:block;clear:both;}
+
+.view_title{float:left;font-size:18px;color:#333;line-height:50px;font-weight:normal;}
+.view_title span{margin-right:14px;font-size:15px;}
+.catagory{color:#0a9882;}
+.open{color:#d99528;}
+.activity{color:#4f4246;}
+.society{color:#0a9882;}
+
+.date_hits_list{float:right;*zoom:1;}
+.date_hits_list:after{content:"";display:block;clear:both;}
+.date_hits_list li{float:left;background:url("/Contents/images/icon/line_hits_date.jpg") no-repeat left center;padding-left:22px;margin-left:21px;
+  font-size:13px;color:#666;line-height:50px;
+}
+.date_hits_list li:first-child{background-image:none;padding-left:0;margin-left:0;}
+
+
+.view_btn_area{margin-top:20px;text-align:right;}
