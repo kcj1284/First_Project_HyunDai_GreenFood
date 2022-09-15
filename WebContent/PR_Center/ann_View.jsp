@@ -55,7 +55,7 @@
 						</c:if>
 						 | 작성자: ${annVO.u_id}
 					</li>
-					<li>조회 10 | ${annVO.wrdate}</li>
+					<li>조회 ${annVO.visiter}| ${annVO.wrdate}</li>
 				</ul>
 				<hr>
 				<div class="board-content">

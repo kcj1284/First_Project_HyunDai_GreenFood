@@ -59,7 +59,7 @@
 									</c:if></li>
 								<li><a href="HdgfServlet?command=annView&id=${annVO.id}">${annVO.title}</a></li>
 								<li>${annVO.u_id}</li>
-								<li>10</li>
+								<li>${annVO.visiter}</li>
 								<li>${annVO.wrdate}</li>
 							</c:forEach>
 						</ul>
