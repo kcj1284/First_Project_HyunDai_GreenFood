@@ -28,6 +28,10 @@ td{
 	display :inline-block;
     cursor: pointer;
     width : 50px;
-    margin-bottom: 30px;
+    border:0px;
 }
-
+.myclick input[type="submit"]{
+	display:inline-block;
+	cursor:pointer;
+	background-color: white;
+}

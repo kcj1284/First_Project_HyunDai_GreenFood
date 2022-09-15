@@ -73,7 +73,7 @@
 
       <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=withdrawal" method="post">
       <div class="myPage-btn">
-         <div class="myclick">수정</div>
+         <div class="myclick" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=Index';">수정</div>
          <input class="myclick" type="submit" value="탈퇴">
       </div>
          <div style="display: none">
