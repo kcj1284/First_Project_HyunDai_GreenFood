@@ -11,9 +11,8 @@ import com.hdgf.dao.QnaDAO;
 import com.hdgf.dto.QnaVO;
 import com.hdgf.dto.UsersVO;
 
-public class QnaWriteAction implements Action{
-
-	  @Override
+public class QnaDeleteAction implements Action{
+	 @Override
 	  public void execute(HttpServletRequest request, HttpServletResponse response)
 	      throws ServletException, IOException {
 	    String url = "HdgfServlet?command=qnaList";
@@ -27,7 +26,7 @@ public class QnaWriteAction implements Action{
 	      QnaVO qnaVO = new QnaVO();
 	      qnaVO.setTitle(request.getParameter("title"));
 	      qnaVO.setMain_text(request.getParameter("main_text"));      
-	      qnaVO.setQNA_type(Integer.parseInt(request.getParameter("QNA_type")));
+	      qnaVO.setQNA_type(1);
 	      QnaDAO qnaDAO = QnaDAO.getInstance();
 	      qnaDAO.insertQna(qnaVO, loginUser.getUser_id());      
 	    }    

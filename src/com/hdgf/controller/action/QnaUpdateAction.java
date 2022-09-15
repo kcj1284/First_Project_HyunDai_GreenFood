@@ -17,14 +17,15 @@ public class QnaUpdateAction implements Action{
 	  @Override
 	  public void execute(HttpServletRequest request, HttpServletResponse response)
 	      throws ServletException, IOException {
-	    String url = "HdgfServlet?command=qnaList";
+	    String url = "HdgfServlet?command=qnaView";
 	    
 	    HttpSession session = request.getSession();
 	    UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");    
 	    
 	    if (loginUser == null) {
 	      url = "HdgfServlet?command=loginForm";
-	    }else{      
+	    }else{
+    	  int QNA_id = Integer.parseInt(request.getParameter("QNA_id"));
 	      QnaVO qnaVO = new QnaVO();
 	      qnaVO.setTitle(request.getParameter("title"));
 	      qnaVO.setMain_text(request.getParameter("main_text"));      

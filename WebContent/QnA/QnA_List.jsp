@@ -46,17 +46,32 @@
 
 					<form method="post" action="" id="listFrm">
 						<ul class="boardList">
-							<li><input type="checkbox" id="allCheck" /></li>
 							<li>번호</li>
+							<li>분류</li>
 							<li>제목</li>
 							<li>글쓴이</li>
 							<li>조회수</li>
 							<li>등록일</li>
 							<c:forEach var="qnaVO" items="${qnaList}">
 								<li>
-								${qnaVO.QNA_type}
+									${qnaVO.QNA_id}
 								</li>
-								<li>${qnaVO.QNA_id}</li>
+								<li>
+								<c:if test="${qnaVO.QNA_type == 0}">
+									<c:out value="칭찬" />
+								</c:if>
+								<c:if test="${qnaVO.QNA_type == 1}">
+									<c:out value="불만" />
+								</c:if>
+								<c:if test="${qnaVO.QNA_type == 2}">
+									<c:out value="제안" />
+								</c:if>
+								<c:if test="${qnaVO.QNA_type == 3}">
+									<c:out value="기타" />
+								</c:if>
+								
+								
+								</li>
 								<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
 								<li>${qnaVO.user_id}</li>
 								<li>10</li>

@@ -42,11 +42,28 @@
 			</div>
 			
 			<div class="content-body">
-			
 				<h4>${qnaVO.title}</h4>
+				<p>
+					
+				</p>
 				<ul>
-					<li> ${qnaVO.user_id} | ${qnaVO.wrdate}</li>
-					<li>조회 10</li>
+					<li>
+						분류 : 
+						<c:if test="${qnaVO.QNA_type == 0}">
+							<c:out value="칭찬" />
+						</c:if>
+						<c:if test="${qnaVO.QNA_type == 1}">
+							<c:out value="불만" />
+						</c:if>
+						<c:if test="${qnaVO.QNA_type == 2}">
+							<c:out value="제안" />
+						</c:if>
+						<c:if test="${qnaVO.QNA_type == 3}">
+							<c:out value="기타" />
+						</c:if>
+						 | 작성자: ${qnaVO.user_id}
+					</li>
+					<li>조회 10 | ${qnaVO.wrdate}</li>
 				</ul>
 				<hr>
 				<div class="board-content">
@@ -62,7 +79,7 @@
 				<!-- 댓글쓰기 -->
 				<div id="replyWrite">
 						<form method="post" id="replyFrm">
-							<input type="hidden" name="no" value="" />
+							<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
 							<div id="replyWrite-userid">댓글 작성</div>
 							<textarea class="form-control" name="comment" id="comment"></textarea>
 							<input type="submit" class="btn btn-default" id="comment-submit" value="댓글등록">
@@ -72,7 +89,7 @@
 			<div id="edit-box">
 				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
 				<c:if test="${logId == vo.userid }">
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdate">수정</a>
+					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}">수정</a>
 					<a href="javascript:delCheck()">삭제</a>
 				</c:if>
 			</div>

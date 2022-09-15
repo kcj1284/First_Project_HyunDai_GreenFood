@@ -66,10 +66,11 @@
 
 				<p class="sub_description">고객의 작은 목소리에도 귀 기울이겠습니다.</p>
 			</div>
-			<form method="post" action="#" id="boardFrm">
+			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdate&QNA_id=${qnaVO.QNA_id}" id="boardFrm">
+				<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
 				<ul>
-					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요."/></li>
-					<li><textarea name="content" id="content"></textarea></li>
+					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요."/>${qnaVO.title}</li>
+					<li><textarea name="content" id="content">${qnaVO.main_text}</textarea></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
 				</ul>
 			</form>

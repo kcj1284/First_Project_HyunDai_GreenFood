@@ -5,12 +5,21 @@
 	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 <style>
 #subject {
-	width: 99.6%;
-	padding: 10px 5p;
+	width: 99%;
+	padding-left: 10px;
+	padding: 10px 5px;
+	height: 10px;
+	border: 1px solid #bcbcbc;
 }
 
 #boardFrm li {
-	padding: 10px 5px;
+	padding: 8px 5px;
+}
+
+#category{
+	width: 90px;
+    text-align: center;
+    border: 1px solid #bcbcbc;
 }
 </style>
 <script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
@@ -67,6 +76,15 @@
 			</div>
 			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWrite" id="boardFrm">
 				<ul>
+					<li>
+	                    분류:  &nbsp  &nbsp
+	                    <select id="category" name="QNA_type">
+	                        <option value="0">칭찬</option>
+	                        <option value="1">불만</option>
+	                        <option value="2">제안</option>
+	                        <option value="3">기타</option>
+	                    </select>
+	                </li>
 					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
 					<li><textarea name="main_text" id="content"></textarea></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>

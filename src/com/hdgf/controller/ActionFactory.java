@@ -40,8 +40,12 @@ public class ActionFactory {
 	    	  action = new QnaWriteAction();
 	      } else if (command.equals("qnaView")) {
 	    	  action = new QnaViewAction();
+	      } else if (command.equals("qnaUpdateForm")) {
+	    	  action = new QnaUpdateFormAction();
 	      } else if (command.equals("qnaUpdate")) {
 	    	  action = new QnaUpdateAction();
+	      } else if (command.equals("qnaDelete")) {
+	    	  action = new QnaDeleteAction();
 	      } else if (command.equals("withdrawal")) {
 	    	  action = new WithdrawalAction();
 	      }
