@@ -2,7 +2,6 @@ package com.hdgf.controller.action;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -11,20 +10,28 @@ import javax.servlet.http.HttpSession;
 
 import com.hdgf.dao.AnnouncementDAO;
 import com.hdgf.dto.AnnouncementVO;
+import com.hdgf.dto.UsersVO;
 
-public class noticeAction implements Action {
+public class annViewAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "PR_Center/ann_List.jsp";
-		
+		String url = "PR_Center/ann_View.jsp";
+
 		HttpSession session = request.getSession();
-		
-		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-		ArrayList<AnnouncementVO> annList = annDAO.getList();
-		request.setAttribute("annList", annList);
-		
+		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
+
+		if (loginUser == null) {
+			url = "HdgfServlet?command=loginForm";
+		} else {
+			int annId = Integer.parseInt(request.getParameter("id"));
+			AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+			AnnouncementVO annVO = annDAO.getAnn(annId);
+			request.setAttribute("annVO", annVO);
+		}
+
 		request.getRequestDispatcher(url).forward(request, response);
 	}
+
 }

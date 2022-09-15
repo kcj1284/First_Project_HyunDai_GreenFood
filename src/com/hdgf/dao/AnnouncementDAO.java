@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hdgf.dto.AnnouncementVO;
-import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.util.DBConnection;
 
 import oracle.jdbc.OracleTypes;
@@ -243,5 +242,36 @@ public class AnnouncementDAO {
 				System.out.println(e.toString());
 			}
 			return lists;
+		}
+		
+		// 하나의 게시글을 보는 메소드
+		public AnnouncementVO getAnn(int annId) {
+			String sql = "select * from announcement where board_id = ?";
+			
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			try {
+				conn = DBConnection.getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, annId);
+				rs = pstmt.executeQuery();
+				if (rs.next()) {
+					AnnouncementVO ann = new AnnouncementVO();
+					ann.setId(rs.getInt(1));
+					ann.setTitle(rs.getString(2));
+					ann.setU_id(rs.getString(3));
+					ann.setWrdate(rs.getDate(4));
+					ann.setMain_text(rs.getString(5));
+					ann.setfile_id(rs.getInt(6));
+					ann.setVisiter(rs.getInt(7));
+					ann.setAnnoun_type(rs.getInt(8));
+					return ann;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
 		}
 }

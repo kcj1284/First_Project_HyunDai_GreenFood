@@ -30,6 +30,12 @@ public class ActionFactory {
 	          action = new LogoutAction();
 	      } else if (command.equals("notice")) {
 	    	  action = new noticeAction();
+	      } else if (command.equals("annView")) {
+	    	  action = new annViewAction();
+	      } else if (command.equals("annUpdateForm")) {
+	    	  action = new annUpdateFormAction();
+	      } else if (command.equals("annDelete")) {
+	    	  action = new annDeleteAction();
 	      } else if (command.equals("mypage")) {
 	    	  action = new MyPageAction();
 	      } else if (command.equals("qnaList")) {

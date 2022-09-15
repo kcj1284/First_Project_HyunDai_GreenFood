@@ -132,5 +132,22 @@ public class QnaDAO {
 		}
 	}
 	
+	// 게시글 삭제 메소드
+	public int delete(int annID) {
+		String sql = " { call sp_delete_QnA(?) }";
+		
+		Connection conn = null;
+		
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement.setInt(1, annID);
+			callableStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; // 데이터베이스 오류
+	}
+	
 	
 }

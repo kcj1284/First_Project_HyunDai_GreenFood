@@ -17,19 +17,10 @@ public class QnaDeleteAction implements Action{
 	      throws ServletException, IOException {
 	    String url = "HdgfServlet?command=qnaList";
 	    
-	    HttpSession session = request.getSession();
-	    UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");    
+	    int qnaId = Integer.parseInt(request.getParameter("QNA_id"));
+	    QnaDAO qnaDAO = QnaDAO.getInstance();
+	    qnaDAO.delete(qnaId);
 	    
-	    if (loginUser == null) {
-	      url = "HdgfServlet?command=loginForm";
-	    }else{      
-	      QnaVO qnaVO = new QnaVO();
-	      qnaVO.setTitle(request.getParameter("title"));
-	      qnaVO.setMain_text(request.getParameter("main_text"));      
-	      qnaVO.setQNA_type(1);
-	      QnaDAO qnaDAO = QnaDAO.getInstance();
-	      qnaDAO.insertQna(qnaVO, loginUser.getUser_id());      
-	    }    
-	    response.sendRedirect(url);
+	    request.getRequestDispatcher(url).forward(request, response);
 	  }
 }
