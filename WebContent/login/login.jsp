@@ -24,7 +24,7 @@
 
                     <div class="input_area">
                         <div class="input">
-                            <input type="text" id="wrtUserId" name="j_username" placeholder="아이디">
+                            <input type="text" id="wrtUserId" name="j_username" placeholder="아이디" autocomplete="off">
     
                         </div>
                         <div class="input">

@@ -110,7 +110,7 @@ $(function(){
        
            <fieldset>
                <div class="input_F">
-                   <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디">
+                   <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디" autocomplete="off">
                </div>
                <input type="button" id="idcheck" value="중복확인"><span id="msg"></span>
               
@@ -123,13 +123,13 @@ $(function(){
                <div class="pwcheck">
                </div>
                <div class="input_F">
-                   <input type="text" name="user_name" placeholder="이름">
+                   <input type="text" name="user_name" placeholder="이름" autocomplete="off">
                </div>
                <div class="input_F">
-                   <input type="text" name="tel" placeholder="전화번호">
+                   <input type="text" name="tel" placeholder="전화번호" autocomplete="off">
                </div>
                <div class="input_F">
-                   <input type="text" name="email" placeholder="email">
+                   <input type="text" name="email" placeholder="email" autocomplete="off">
                </div>
               
               
