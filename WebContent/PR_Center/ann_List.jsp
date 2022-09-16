@@ -4,6 +4,53 @@
 
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 <%@ include file="/Inc/Header.jspf"%>
+
+<script>
+	var recentlist = function(url) {
+		$.ajax({
+			type : "post",
+			url : "HdgfServlet?command=notice",
+			data : "latest",
+			success : function(data) {
+				$('.container_area').html(data);
+				$("#latest").css("color","#000000");
+				$("#latest").css("font-weight","bold");
+			}
+		})
+	}
+
+	var oldlist = function(url) {
+		$.ajax({
+			type : "post",
+			url : "HdgfServlet?command=notice",
+			data : "oldest",
+			success : function(data) {
+				$('.container_area').html(data);
+				$("#oldest").css("color","#000000");
+				$("#oldest").css("font-weight","bold");
+			}
+		})
+	}
+
+	var viewlist = function(url) {
+		$.ajax({
+			type : "post",
+			url : "HdgfServlet?command=notice",
+			data : "views",
+			success : function(data) {
+				$('.container_area').html(data);
+				$("#views").css("color","#000000");
+				$("#views").css("font-weight","bold");
+			}
+		})
+	}
+</script>
+
+<style>
+	a:link {
+		color : #4b4b4b
+	}
+</style>
 <!-- container -->
 <div class="container_area" id="contents">
 	<!-- Body
@@ -39,15 +86,23 @@
 			<!-- //타이틀 , 디스크립션 -->
 			<div class="board-body">
 				<!-- 리스트 -->
-				<div id="record-no">게시글 수 :</div>
-				<div class="item">
-					<!-- 검색 -->
-					<form method="get" action="HdgfServlet?command=annSort" id="searchFrm">
-						<select name="searchKey">
-							<option value="subject">최신순</option>
-							<option value="content">조회순</option>
+				<!-- <div id="record-no">게시글 수 :</div> -->
+				<!-- <div class="item"> -->
+				<!-- 정렬 -->
+				<div id="sort_list">
+					<p>
+						<a href="javascript:recentlist();" id="latest" color="#4b4b4b">최신순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp 
+						<a href="javascript:oldlist();" id="oldest" color="#4b4b4b">오래된 순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp 
+						<a href="javascript:viewlist();" id="views" color="#4b4b4b">조회순</a>
+					</p>
+					<!-- </div> -->
+					<!-- <form method="post" action="HdgfServlet?command=notice" id="searchFrm">
+						<select name="selected">
+							<option value="latest">최신순</option>
+							<option value="oldest">오래된 순</option>
+							<option value="views">조회순</option>
 						</select> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
-					</form>
+					</form> -->
 				</div>
 				<div class="list-div">
 
@@ -104,10 +159,11 @@
 						<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWriteForm'">글쓰기</button>
 					</div>
 				</div>
-				<div class="paging">${paging}</div>
 			</div>
 			<!-- contents : end -->
-
 		</div>
-		<!-- //container -->
-		<%@ include file="/Inc/Footer.jspf"%>
+	</div>
+	<%@ include file="/Inc/Footer.jspf"%>
+</div>
+<!-- //container -->
+<%-- <%@ include file="/Inc/Footer.jspf"%> --%>

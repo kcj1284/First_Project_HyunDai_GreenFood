@@ -19,35 +19,23 @@ public class noticeAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
 		String url = "PR_Center/ann_List.jsp";
-		
-		String key = request.getParameter("key");
-		String tpage = request.getParameter("tpage");
-		
-		if (key == null) {
-			key = "";
-		} 
-		if (tpage == null) {
-			tpage = "1";
-		} else if (tpage.equals("")) {
-			tpage = "1";
-		}
-		request.setAttribute("key", key);
-		request.setAttribute("tpage", tpage);
-		HttpSession session = request.getSession();
-		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
-		if (loginUser == null) {
-			url = "HdgfServlet?command=loginForm";
-		} else {
-			AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-			ArrayList<AnnouncementVO> annList = annDAO.getListByPaging(Integer.parseInt(tpage), key);
-			String paging = annDAO.pageNumber(Integer.parseInt(tpage), key);
-			
+
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+
+//		String latest = request.getParameter("latest");
+		String oldest = request.getParameter("oldest");
+		String views = request.getParameter("views");
+
+		if (oldest != null) {
+			ArrayList<AnnouncementVO> annList = annDAO.getListByWrdate();
 			request.setAttribute("annList", annList);
-			int n = annList.size();
-			request.setAttribute("annListSize", n);
-			request.setAttribute("paging", paging);
+		} else if (views != null) {
+			ArrayList<AnnouncementVO> annList = annDAO.getListByViews();
+			request.setAttribute("annList", annList);
+		} else {
+			ArrayList<AnnouncementVO> annList = annDAO.getList();
+			request.setAttribute("annList", annList);
 		}
-		
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 }

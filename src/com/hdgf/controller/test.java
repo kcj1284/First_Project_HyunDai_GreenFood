@@ -41,7 +41,7 @@ public class test {
 			System.out.println(ann.getMain_text());
 			System.out.println(ann.getWrdate());
 		}
-		
+
 		System.out.println("공지사항_리스트 success");
 	}
 
@@ -101,12 +101,12 @@ public class test {
 			System.out.println(ann.getId());
 		}
 	}
-	
+
 	public static void 공지사항_전체_list_검색() {
-		
+
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 		ArrayList<AnnouncementVO> annList = annDAO.getList();
-		
+
 		for (int i = 0; i < annList.size(); i++) {
 			AnnouncementVO ann = annList.get(i);
 			System.out.println(ann.getId());
@@ -117,32 +117,66 @@ public class test {
 			System.out.println(ann.getAnnoun_type());
 		}
 	}
-	
+
 	public static void 공지사항_하나_게시글_조회() {
-		
+
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 		AnnouncementVO ann = annDAO.getAnn(56);
-		
+
 		System.out.println(ann.getId());
 		System.out.println(ann.getTitle());
 		System.out.println(ann.getU_id());
-		System.out.println(ann.getWrdate()); //null
-		System.out.println(ann.getMain_text()); //null
+		System.out.println(ann.getWrdate()); // null
+		System.out.println(ann.getMain_text()); // null
 		System.out.println(ann.getfile_id());
 		System.out.println(ann.getVisiter());
 		System.out.println(ann.getAnnoun_type());
 	}
-	
+
+	public static void 공지사항_오래된순_조회() {
+
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		ArrayList<AnnouncementVO> annList = annDAO.getListByWrdate();
+
+		for (int i = 0; i < annList.size(); i++) {
+			AnnouncementVO ann = annList.get(i);
+//			System.out.println(ann.getId());
+//			System.out.println(ann.getU_id());
+			System.out.println(ann.getTitle());
+//			System.out.println(ann.getVisiter());
+//			System.out.println(ann.getWrdate());
+//			System.out.println(ann.getAnnoun_type());
+		}
+	}
+
+	public static void 공지사항_조회순_조회() {
+
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		ArrayList<AnnouncementVO> annList = annDAO.getListByViews();
+
+		for (int i = 0; i < annList.size(); i++) {
+			AnnouncementVO ann = annList.get(i);
+//			System.out.println(ann.getId());
+//			System.out.println(ann.getU_id());
+			System.out.println(ann.getTitle());
+			System.out.println(ann.getVisiter());
+//			System.out.println(ann.getWrdate());
+//			System.out.println(ann.getAnnoun_type());
+		}
+	}
+
 	public static void main(String[] args) {
-		//공지사항_글쓰기();
-		//공지사항_리스트();
-		//공지사항_게시글확인();
-		//공지사항_수정();
-		//공지사항_삭제();
-		//공지사항_본문검색();
-		//공지사항_전체검색();
-		//공지사항_제목검색();
-		//공지사항_전체_list_검색();
-		공지사항_하나_게시글_조회();
+		// 공지사항_글쓰기();
+		// 공지사항_리스트();
+		// 공지사항_게시글확인();
+		// 공지사항_수정();
+		// 공지사항_삭제();
+		// 공지사항_본문검색();
+		// 공지사항_전체검색();
+		// 공지사항_제목검색();
+		// 공지사항_전체_list_검색();
+		// 공지사항_하나_게시글_조회();
+		//공지사항_오래된순_조회();
+		공지사항_조회순_조회();
 	}
 }
