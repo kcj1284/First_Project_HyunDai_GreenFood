@@ -25,8 +25,10 @@ public class ChartAction implements Action {
          url = "HdgfServlet?command=loginForm";
       } else {
          ChartDAO chartDAO = ChartDAO.getInstance();
-         ArrayList<ChartVO> chartList = chartDAO.countQnaType();
-         request.setAttribute("chartList", chartList);
+         ArrayList<ChartVO> qnaChartList = chartDAO.countQnaType();
+         ArrayList<ChartVO> comChartList = chartDAO.countComType();
+         request.setAttribute("qnaChartList", qnaChartList);
+         request.setAttribute("comChartList", comChartList);
       }
       request.getRequestDispatcher(url).forward(request, response);
    }
