@@ -22,7 +22,7 @@
 <body>
 
 	<div class="myPage">
-		<h1>MyPage</h1>
+		<h1>MyPage 수정</h1>
 		<hr>
 
 		<form
@@ -32,34 +32,33 @@
 				<tbody>
 					<tr>
 						<td>ID</td>
-						<td><input type="text" name="user_id"
-							value="${sessionScope.loginUser.user_id}"></td>
+						<td>${sessionScope.loginUser.user_id}</td>
 					</tr>
 					<tr>
 						<td>이름</td>
-						<td><input type="text" name="user_name"
+						<td><input type="text" name="user_name" autocomplete="off"
 							value="${sessionScope.loginUser.user_name}"></td>
 					</tr>
 					<tr>
 						<td>비밀번호</td>
-						<td><input type="password" name="user_pw"
+						<td><input type="password" name="user_pw" 
 							value="${sessionScope.loginUser.user_pw}"></td>
 					</tr>
 					<tr>
 						<td>전화번호</td>
-						<td><input type="text" name="tel"
+						<td><input type="text" name="tel" autocomplete="off"
 							value="${sessionScope.loginUser.tel}"></td>
 					</tr>
 					<tr>
 						<td>email</td>
-						<td><input type="text" name="email"
+						<td><input type="text" name="email" autocomplete="off"
 							value="${sessionScope.loginUser.email}"></td>
 					</tr>
 					<tr>
 						<td>성별</td>
 						<td>
 						<div class="radio">
-	                   		<input type="radio" name="gender" value="1"> 남성
+	                   		<input type="radio" name="gender" value="1" checked> 남성
 	                   		<input type="radio" name="gender" value="2"> 여성
 	                   		<br>
                			</div>
@@ -108,13 +107,11 @@
 			</table>
 
 			<div class="myPage-btn">
-				<input class="myclick" type="submit" value="수정"> <input
-					class="myclick" type="text"
-					onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=mypage';">되돌아가기
+				<input class="myclick" type="submit" value="수정"> 
+				<input class="myclick" type="text" value="되돌아가기"
+					   onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=mypage';">
 			</div>
 	</div>
-
-
 	</form>
 	</div>
 
