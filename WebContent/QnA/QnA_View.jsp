@@ -39,7 +39,8 @@
 			<div class="content-body">
 				<div class="view_top_area">
 					<h3 class="view_title">
-						<span class="catagory"> [ <c:if
+					<!-- 카테고리 출력 -->
+					<span class="catagory"> [ <c:if
 								test="${qnaVO.QNA_type == 0}">
 								<c:out value="칭찬" />
 							</c:if> <c:if test="${qnaVO.QNA_type == 1}">
@@ -49,51 +50,58 @@
 							</c:if> <c:if test="${qnaVO.QNA_type == 3}">
 								<c:out value="기타" />
 							</c:if> ]
-						</span> ${qnaVO.title}
+						</span> 
+						<!-- 제목 -->
+						${qnaVO.title}
 					</h3>
 
 					<ul class="date_hits_list">
+						<!-- 작성일-->
 						<li>${qnaVO.wrdate}</li>
-						<li>44</li>
+						<!-- 조회수 부분 -->
+						<li></li> 
 					</ul>
 				</div>
-
+				<!-- 글 내용 -->
 				<div class="view_text_area">
 					${qnaVO.main_text}
 				</div>
 
 			</div>
 
+
+			<!-- 답변 영역 -->
 			<div class="reply-box">
 				<input type="hidden" id="answerContent" name="answerContent" value="${qnaVO.answer}"/>
 	
 				<h5>전체 답변</h5>
-				<!-- 댓글목록이 나올 자리 -->
+				<!-- 답변목록이 나올 자리 -->
 				<div id="replyList">
-					<div class="replyMain">
+					<div id="replyMain">
+						<!-- 작성자 -->
 						<div id="replyUser">
-							답변
+							관리자
 						</div>
-	
+						<!-- 내용 -->
 						<div id="replyContent">
 						</div>
 						
-					</div>
-					<div id="replyBottom">
+						<!-- 작성, 수정 부분 -->
+						<div id="replyBottom">
 					
+						</div>		
 					</div>
-
 				</div>
 
 
-				<!-- 답변 -->
+				<!-- 답변 작성 -->
 				<!-- 로그인 아이디가 관리자일때 답변 작성 활성화 -->
 				<c:if test="${sessionScope.loginUser.administrator == 1}">
 					<div id="replyWrite">
 						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswer" id="replyFrm">
 							<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
 							<div id="replyWrite-userid">답변 작성</div>
-							<textarea class="form-control" name="answer" id="comment"></textarea>
+							<textarea class="form-control" name="answer" id="comment" placeholder="내용을 입력해 주세요." ></textarea>
 							<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
 						</form>
 					</div>
@@ -101,11 +109,13 @@
 			</div>
 			<div id="edit-box">
 				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
-				<c:if test="${qnaVO.user_id == sessionScope.loginUser.user_id }">
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}">수정</a>
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaDelete&QNA_id=${qnaVO.QNA_id}">삭제</a>
-				</c:if>
-				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList">목록</a>
+				<div class="tool">
+					<c:if test="${qnaVO.user_id == sessionScope.loginUser.user_id }">
+						<input type='button' class='btn-view btn-edit' id='updateBtn' onclick='updatePost()' value='수정'/>
+						<input type='button' class='btn-view btn-delete' id='deleteBtn' onclick='deletePost()' value='삭제'/>
+					</c:if>
+				</div>
+				<input type='button' class='btn-view btn-menu' id='menuBtn' onclick='menu()' value='목록'/>
 			</div>                                         
 			<!-- contents : end -->
 		</div>
@@ -120,8 +130,9 @@
 		replyContent.innerHTML = "<span>답변을 기다리고 있습니다.</span>";
 	} else{
 		replyBottom.innerHTML = "<c:if test='${sessionScope.loginUser.administrator == 1}'>";
-		replyBottom.innerHTML += "<a href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerUpdateForm&QNA_id=${qnaVO.QNA_id}'>수정</a>";
-		replyBottom.innerHTML += "<a href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerDelete&QNA_id=${qnaVO.QNA_id}'>삭제</a>";
+		replyBottom.innerHTML += "<input type='button' class='btn-view btn-edit' id='updateAnswer' onclick='updateAnswer()' value='수정'/>";
+		replyBottom.innerHTML += "<input type='button' class='btn-view btn-delete' id='deleteAnswer' onclick='deleteAnswer()' value='삭제'/>";
+		
 		replyBottom.innerHTML += "</c:if>";
 		replyContent.innerHTML = "<span>"+answer+"</span>";
 		
@@ -130,8 +141,24 @@
 	}
 	
 	
+	function updateAnswer(){
+		location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerUpdateForm&QNA_id=${qnaVO.QNA_id}"
+	}
 	
+	function deleteAnswer(){
+		location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerDelete&QNA_id=${qnaVO.QNA_id}"
+	}
 	
+	function updatePost(){
+		location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}"
+	}
 	
+	function deletePost(){
+		location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaDelete&QNA_id=${qnaVO.QNA_id}"
+	}
+	
+	function menu(){
+		location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList"
+	}
 </script>
 		<%@ include file="/Inc/Footer.jspf"%>

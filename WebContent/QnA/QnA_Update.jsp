@@ -69,6 +69,15 @@
 			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdate&QNA_id=${qnaVO.QNA_id}" id="boardFrm">
 				<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
 				<ul>
+					<li>
+	                    분류:  &nbsp  &nbsp
+	                    <select id="category" name="QNA_type">
+	                        <option value="0">칭찬</option>
+	                        <option value="1">불만</option>
+	                        <option value="2">제안</option>
+	                        <option value="3">기타</option>
+	                    </select>
+	                </li>
 					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요." value="${qnaVO.title}"/></li>
 					<li><textarea name="content" id="content">${qnaVO.main_text}</textarea></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>

@@ -583,6 +583,7 @@
 	height: 30px;
 	line-height: 0px;
 	background: #444b55;
+	text-indent: 0 !important;
 }
 
 #multiDel {
@@ -593,7 +594,7 @@
 
 #search-btn {
 	color: #ffffff;
-	height: 30px;
+	height: 25px;
 	line-height: 0px;
 }
 
@@ -650,8 +651,7 @@
 
 /*search*/
 #searchFrm {
-	text-align: center;
-    margin: 10px;
+	text-align: right;
 }
 
 .btn-default {
@@ -697,6 +697,46 @@
 	text-align: left;
 	min-height: 400px;
 }
+.view_text_area{
+	border-bottom : 0px
+}
+/* QnA 답변 css */
+
+#replyList{
+    min-height: 70px;
+    padding: 30px;
+    border-color: #46675c;
+    border-style: solid;
+    border-width: 3px 0 0 0;
+    border-bottom: 3px solid #46675c;
+}
+
+#replyMain{
+	display: flex;
+    width: 100%;
+    position: relative;
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    
+}
+
+#replyUser{
+    width: 8%;
+    display: block;
+    font-weight: bold;
+    color: #0a9882;
+}
+
+#replyContent{
+	width: 80%;
+    text-align: left;
+}
+
+#replyBottom{
+    margin-left: 10px;
+    width: 10%;
+}
 
 .reply-box{
 	font-family: "nanum_gothic";
@@ -704,8 +744,10 @@
 }
 
 .reply-box h5 {
-	text-align: left;
-	font-weight: bold;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 8px 2px;
 }
 
 .reply-box li {
@@ -733,7 +775,6 @@
 }
 
 .reply-box #replyWrite {
-	border-top: 3px solid #46675c;
     border-bottom: 3px solid #46675c;
     background-color: #f5f5f5;
     width: 94.7%;
@@ -777,30 +818,32 @@
 	height:auto;
 	font-weight:bold;
 	line-height: 90px;
+    color: #46675c;
 }
 
 #replyFrm #comment {
-	width: 80%;
-	height: 100px;
+	width: 78%;
+    height: 100px;
+    line-height: 100px;
+    resize: none;
+    padding-left: 2%;
 }
 
 #replyFrm #comment-submit{
 	color: #ffffff;
 	margin-left:10px;
 	width: 10%;
-}
-
-#replyList{
-	min-height: 50px;
-	border-color: #46675c;
-    border-style: solid;
-    border-width: 4px 0 0 0;
-    margin: 10px 0 10px 0;
+    cursor: pointer;
 }
 
 #edit-box{
 	text-align:right;
 }
+
+.tool{
+	float: left;
+}
+
 
 
 .view_top_area{height:50px;padding-left:30px;padding-right:28px;
@@ -824,3 +867,21 @@
 
 
 .view_btn_area{margin-top:20px;text-align:right;}
+
+/* 수정, 삭제 버튼 */
+.btn-view{
+	width: 45px;
+    background: #46675c !important;
+    color: #ffffff;
+    text-indent: 0 !important;
+    height: 30px;
+    border-radius: 2px;
+    margin: 4px;
+}
+
+.btn-edit{
+	background: #0a9882 !important; 
+}
+.btn-delete{
+	background: #444b55 !important; 
+}
