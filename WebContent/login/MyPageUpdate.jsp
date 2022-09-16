@@ -32,28 +32,28 @@
 				<tbody>
 					<tr>
 						<td>ID</td>
-						<td><input type=text name="user_id"
-							value="${sessionScope.loginUser.user_id}">${sessionScope.loginUser.user_id}</td>
+						<td><input type="text" name="user_id"
+							value="${sessionScope.loginUser.user_id}"></td>
 					</tr>
 					<tr>
 						<td>이름</td>
-						<td><input type=text name="user_name"
-							value="${sessionScope.loginUser.user_name}">${sessionScope.loginUser.user_name}</td>
+						<td><input type="text" name="user_name"
+							value="${sessionScope.loginUser.user_name}"></td>
 					</tr>
 					<tr>
 						<td>비밀번호</td>
-						<td><input type=text name="user_pw"
-							value="${sessionScope.loginUser.user_pw}">${sessionScope.loginUser.user_pw}</td>
+						<td><input type="password" name="user_pw"
+							value="${sessionScope.loginUser.user_pw}"></td>
 					</tr>
 					<tr>
 						<td>전화번호</td>
-						<td><input type=text name="tel"
-							value="${sessionScope.loginUser.tel}">${sessionScope.loginUser.tel}</td>
+						<td><input type="text" name="tel"
+							value="${sessionScope.loginUser.tel}"></td>
 					</tr>
 					<tr>
 						<td>email</td>
-						<td><input type=text name="user_name"
-							value="${sessionScope.loginUser.email}">${sessionScope.loginUser.email}</td>
+						<td><input type="text" name="email"
+							value="${sessionScope.loginUser.email}"></td>
 					</tr>
 					<tr>
 						<td>성별</td>
