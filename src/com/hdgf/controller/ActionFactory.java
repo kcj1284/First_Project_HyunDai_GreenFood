@@ -62,8 +62,10 @@ public class ActionFactory {
 	    	  action = new QnaAnswerAction();
 	      } else if (command.equals("withdrawal")) {
 	    	  action = new WithdrawalAction();
+	      } else if (command.equals("myPageUpdateForm")) {
+	    	  action = new myPageUpdateFormAction();
 	      } else if (command.equals("myPageUpdate")) {
-	    	  action = new myPageUpdate();
+	    	  action = new myPageUpdateAction();
 	      }
 	    
 	    return action;
