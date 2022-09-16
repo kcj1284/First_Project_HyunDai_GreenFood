@@ -85,6 +85,8 @@ public class ActionFactory {
 			action = new myPageUpdateAction();
 		} else if (command.equals("qnaAnswerUpdate")) {
 			action = new QnaAnswerUpdateAction();
+		} else if (command.equals("qnaAnswerUpdateForm")) {
+			action = new QnaAnswerUpdateAction();
 		} else if (command.equals("qnaAnswerDelete")) {
 			action = new QnaAnswerDeleteAction();
 		}

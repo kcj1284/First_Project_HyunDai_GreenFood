@@ -65,25 +65,9 @@
 			</div>
 
 			<div class="reply-box">
-				<input type="hidden" id="answerContent" name="answerContent" value="${qnaVO.answer}"/>
-	
 				<h5>전체 답변</h5>
 				<!-- 댓글목록이 나올 자리 -->
-				<div id="replyList">
-					<div class="replyMain">
-						<div id="replyUser">
-							답변
-						</div>
-	
-						<div id="replyContent">
-						</div>
-						
-					</div>
-					<div id="replybottom">
-					
-					</div>
-
-				</div>
+				<div id="replyList">${qnaVO.answer}</div>
 
 				<!-- 댓글쓰기 -->
 				<div id="replyWrite">
@@ -92,7 +76,6 @@
 						<div id="replyWrite-userid">답변 작성</div>
 						<textarea class="form-control" name="answer" id="comment"></textarea>
 						<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
-						
 					</form>
 				</div>
 			</div>
@@ -107,21 +90,4 @@
 			<!-- contents : end -->
 		</div>
 		<!-- //container -->
-<script>
-
-	var answer = $('#answerContent').val();
-	var replyContent = document.getElementById("replyContent");
-
-	if(answer == 'waiting for answer' || answer == ""){
-		replyContent.innerHTML = "<span>답변을 기다리고 있습니다.</span>";
-	} else{
-		replyContent.innerHTML = "<span>"+answer+"</span>";
-		
-	}
-	
-	
-	
-	
-	
-</script>
 		<%@ include file="/Inc/Footer.jspf"%>
