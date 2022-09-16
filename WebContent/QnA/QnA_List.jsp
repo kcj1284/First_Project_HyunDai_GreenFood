@@ -81,12 +81,8 @@
 					</div>
 					<div class="item">
 						<!-- 검색 -->
-						<form method="get" action="/myapp/board/boardList" id="searchFrm">
-							<select name="searchKey">
-								<option value="subject">제목</option>
-								<option value="content">글내용</option>
-								<option value="userid">글쓴이</option>
-							</select> <input type="text" name="key" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
+						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList" id="searchFrm">
+							<input type="text" name="key" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
 						</form>
 					</div>
 
@@ -102,4 +98,5 @@
 
 		</div>
 		<!-- //container -->
+		
 		<%@ include file="/Inc/Footer.jspf"%>

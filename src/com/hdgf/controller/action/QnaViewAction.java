@@ -7,9 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.hdgf.dao.AnnouncementDAO;
 import com.hdgf.dao.QnaDAO;
-import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.QnaVO;
 import com.hdgf.dto.UsersVO;
 

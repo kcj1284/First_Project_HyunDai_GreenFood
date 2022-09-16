@@ -79,25 +79,28 @@
 						</div>
 						
 					</div>
-					<div id="replybottom">
+					<div id="replyBottom">
 					
 					</div>
 
 				</div>
 
-				<!-- 댓글쓰기 -->
-				<div id="replyWrite">
-					<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswer" id="replyFrm">
-						<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
-						<div id="replyWrite-userid">답변 작성</div>
-						<textarea class="form-control" name="answer" id="comment"></textarea>
-						<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
-						
-					</form>
-				</div>
+
+				<!-- 답변 -->
+				<!-- 로그인 아이디가 관리자일때 답변 작성 활성화 -->
+				<c:if test="${sessionScope.loginUser.administrator == 1}">
+					<div id="replyWrite">
+						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswer" id="replyFrm">
+							<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
+							<div id="replyWrite-userid">답변 작성</div>
+							<textarea class="form-control" name="answer" id="comment"></textarea>
+							<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
+						</form>
+					</div>
+				</c:if>
 			</div>
 			<div id="edit-box">
-				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
+				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
 				<c:if test="${qnaVO.user_id == sessionScope.loginUser.user_id }">
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}">수정</a>
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaDelete&QNA_id=${qnaVO.QNA_id}">삭제</a>
@@ -111,11 +114,18 @@
 
 	var answer = $('#answerContent').val();
 	var replyContent = document.getElementById("replyContent");
-
+	var replyBottom = document.getElementById("replyBottom");
+	
 	if(answer == 'waiting for answer' || answer == ""){
 		replyContent.innerHTML = "<span>답변을 기다리고 있습니다.</span>";
 	} else{
+		replyBottom.innerHTML = "<c:if test='${sessionScope.loginUser.administrator == 1}'>";
+		replyBottom.innerHTML += "<a href='#'>수정</a>";
+		replyBottom.innerHTML += "<a href='#'>삭제</a>";
+		replyBottom.innerHTML += "</c:if>";
 		replyContent.innerHTML = "<span>"+answer+"</span>";
+		
+		
 		
 	}
 	
