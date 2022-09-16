@@ -15,11 +15,11 @@ public class QnaUpdateFormAction implements Action {
 	@Override
 	  public void execute(HttpServletRequest request, HttpServletResponse response)
 	      throws ServletException, IOException {
-	    String url = "QnA/QnA_Update.jsp";
+	    String url = "QnA/QnA_AnswerUpdate.jsp";
 	    
 	    HttpSession session = request.getSession();
 	    UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");    
-	    
+
 	    if (loginUser == null) {
 	      url = "HdgfServlet?command=loginForm";
 	    } else {
