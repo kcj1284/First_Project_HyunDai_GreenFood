@@ -34,7 +34,6 @@
 			<!-- 타이틀 , 디스크립션 -->
 			<div class="title_description">
 				<h2 class="title_sub">통계 자료</h2>
-
 				<p class="sub_description">고객 통계 자료</p>
 			</div>
 
@@ -44,13 +43,34 @@
 		<div style="width: 900px; height: 900px;">
 			<!--차트가 그려질 부분-->
 			<canvas id="qna_chart"></canvas>
+
+			<c:forEach var="ChartVO" items="${chartList}">
+				<c:if test="${ChartVO.type == 0}">
+					<input type="text" name="good" id="good" value="${ChartVO.cnt}" />
+				</c:if>
+				<c:if test="${ChartVO.type == 1}">
+					<input type="hidden" name="bad" id="bad" value="${ChartVO.cnt}" />
+				</c:if>
+				<c:if test="${ChartVO.type == 2}">
+					<input type="hidden" name="proposal" id="proposal" value="${ChartVO.cnt}" />
+				</c:if>
+				<c:if test="${ChartVO.type == 3}">
+					<input type="hidden" name="etc" id="etc" value="${ChartVO.cnt}" />
+				</c:if>
+			</c:forEach>
+
 		</div>
+
 		<div style="width: 900px; height: 900px;">
 			<!--차트가 그려질 부분-->
 			<canvas id="company_chart"></canvas>
 		</div>
 
 		<script type="text/javascript">
+			var good = $('#good').val();
+			var bad = $('#bad').val();
+			var proposal = $('#proposal').val();
+			var etc = $('#etc').val();
 			var context = document.getElementById('qna_chart').getContext('2d');
 			var myChart = new Chart(context, {
 				type : 'pie', // 차트의 형태
@@ -61,12 +81,12 @@
 					datasets : [ { //데이터
 						label : 'QNA 종류 별 통계', //차트 제목
 						fill : false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-						data : [ 21, 19, 25, 20 //x축 label에 대응되는 데이터 값
+						data : [ good, bad, proposal, etc //x축 label에 대응되는 데이터 값
 						],
 						backgroundColor : [
 						//색상
-						'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)',
-								'rgba(255, 206, 86, 0.2)' ],
+						'rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 0.8)',
+								'rgba(255, 206, 86, 0.8)' ],
 						borderColor : [
 						//경계선 색상
 						'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)',
@@ -102,10 +122,10 @@
 						],
 						backgroundColor : [
 						//색상
-						'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)',
-								'rgba(255, 206, 86, 0.2)',
-								'rgba(75, 192, 192, 0.2)',
-								'rgba(153, 102, 255, 0.2)' ],
+						'rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 0.8)',
+								'rgba(255, 206, 86, 0.8)',
+								'rgba(75, 192, 192,0.8)',
+								'rgba(153, 102, 255,0.8)' ],
 						borderColor : [
 						//경계선 색상
 						'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)',
