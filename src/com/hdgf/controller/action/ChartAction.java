@@ -27,7 +27,7 @@ public class ChartAction implements Action {
 	    } else {
 	    	ChartDAO chartDAO = ChartDAO.getInstance();
 	    	ArrayList<ChartVO> chartList = chartDAO.countQnaType();
-	      request.setAttribute("List", chartList);
+	      request.setAttribute("chartList", chartList);
 	    }
 	    request.getRequestDispatcher(url).forward(request, response);
 	  }

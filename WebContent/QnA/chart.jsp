@@ -44,21 +44,6 @@
 			<!--차트가 그려질 부분-->
 			<canvas id="qna_chart"></canvas>
 
-			<c:forEach var="ChartVO" items="${chartList}">
-				<c:if test="${ChartVO.type == 0}">
-					<input type="text" name="good" id="good" value="${ChartVO.cnt}" />
-				</c:if>
-				<c:if test="${ChartVO.type == 1}">
-					<input type="hidden" name="bad" id="bad" value="${ChartVO.cnt}" />
-				</c:if>
-				<c:if test="${ChartVO.type == 2}">
-					<input type="hidden" name="proposal" id="proposal" value="${ChartVO.cnt}" />
-				</c:if>
-				<c:if test="${ChartVO.type == 3}">
-					<input type="hidden" name="etc" id="etc" value="${ChartVO.cnt}" />
-				</c:if>
-			</c:forEach>
-
 		</div>
 
 		<div style="width: 900px; height: 900px;">
@@ -66,8 +51,24 @@
 			<canvas id="company_chart"></canvas>
 		</div>
 
+		<c:forEach var="ChartVO" items="${chartList}">
+			<c:if test="${ChartVO.type == 0}">
+				<input type="hidden" name="good" id="good" value="${ChartVO.cnt}" />
+			</c:if>
+			<c:if test="${ChartVO.type == 1}">
+				<input type="hidden" name="bad" id="bad" value="${ChartVO.cnt}" />
+			</c:if>
+			<c:if test="${ChartVO.type == 2}">
+				<input type="hidden" name="proposal" id="proposal" value="${ChartVO.cnt}" />
+			</c:if>
+			<c:if test="${ChartVO.type == 3}">
+				<input type="hidden" name="etc" id="etc" value="${ChartVO.cnt}" />
+			</c:if>
+		</c:forEach>
+
 		<script type="text/javascript">
 			var good = $('#good').val();
+			console.log(good);
 			var bad = $('#bad').val();
 			var proposal = $('#proposal').val();
 			var etc = $('#etc').val();

@@ -27,7 +27,7 @@ public class ChartDAO {
 	public ArrayList<ChartVO> countQnaType() {
 		String runSP = "{ call sp_qna_type(?) }";
 		// 전체데이터를 select한 결과 presult가 들어가므로 ?가 1개. presult는 오라클에서 커서에 해당.
-		ArrayList<ChartVO> lists = new ArrayList<>();
+		ArrayList<ChartVO> chartList = new ArrayList<>();
 		Connection conn = null;
 		try {
 			conn = DBConnection.getConnection();
@@ -46,13 +46,13 @@ public class ChartDAO {
 				vo.setQNA_type(rs.getInt("qna_type"));
 				vo.setCnt(rs.getInt("cnt"));
 				// vo를 리스트에 추가
-				lists.add(vo);
+				chartList.add(vo);
 			}
 			rs.close();
 			callableStatement.close();
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
-		return lists;
+		return chartList;
 	}
 }
