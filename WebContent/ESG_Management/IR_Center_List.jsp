@@ -1,105 +1,106 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file ="/Inc/Header.jspf" %>
+<%@ page import="com.hdgf.dao.AnnouncementDAO" %>
+<%@ page import="com.hdgf.dto.AnnouncementVO" %>
+<%@ page import="java.util.ArrayList" %>
+<link href="/First_Project_HyunDai_GreenFood/css/PR_Center/notice.css" type="text/css" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
-<%@ include file="/Inc/Header.jspf"%>
-<!-- container -->
-<div class="container_area" id="contents">
-	<!-- Body
-    ################# -->
-	<!-- contents : str -->
-	<div class="sub_layout sub_visual_6">
+		<!-- container -->
+		<div class="container_area" id="contents">
+		
+		 <!-- Body
+    ################# --> 
 
-		<!-- 하이어라키 -->
-		<ul class="hierarchy_list">
-			<li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png" alt="Home" /></li>
-			<li class="depth_2"><a href="#" class="m_hierarchy">고객센터 </a>
+    <!-- contents : str -->
+    
+<!-- include jQuery -->
 
-				<ul class="hierarchy_depth" style="display: none;">
-					<li><a href="#">고객센터</a></li>
-				</ul></li>
-			<li class="depth_3"><a href="#" class="t_block_hierarchy">고객의 소리 </a>
-				<ul class="hierarchy_depth">
-					<li><a href="#">자주 묻는 질문</a></li>
-					<li><a href="#">거래·상담</a></li>
-					<li class="on"><a href="#">고객의 소리</a></li>
-				</ul></li>
-		</ul>
-		<!-- //하이어라키 -->
-		<!-- 서브 컨텐츠 -->
-		<div class="sub_contents">
-			<!-- 타이틀 , 디스크립션 -->
-			<div class="title_description">
-				<h2 class="title_sub">고객의 소리</h2>
 
-				<p class="sub_description">고객의 작은 목소리에도 귀 기울이겠습니다.</p>
-			</div>
-			<div class="board-body">
-				<!-- 리스트 -->
-				<div class="list-div">
 
-					<form method="post" action="" id="listFrm">
-						<ul class="boardList">
-							<li>번호</li>
-							<li>분류</li>
-							<li>제목</li>
-							<li>글쓴이</li>
-							<li>조회수</li>
-							<li>등록일</li>
-							<c:choose>
-								<c:when test="${qnaListSize<=0}">
-							        <span">등록된 게시글이 없습니다.</span>
-							    </c:when>
-								<c:otherwise>
-								<c:forEach var="qnaVO" items="${qnaList}">
-									<li>${qnaVO.QNA_id}</li>
-									<li><c:if test="${qnaVO.QNA_type == 0}">
-											<c:out value="칭찬" />
-										</c:if> <c:if test="${qnaVO.QNA_type == 1}">
-											<c:out value="불만" />
-										</c:if> <c:if test="${qnaVO.QNA_type == 2}">
-											<c:out value="제안" />
-										</c:if> <c:if test="${qnaVO.QNA_type == 3}">
-											<c:out value="기타" />
-										</c:if></li>
-									<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
-									<li>${qnaVO.user_id}</li>
-									<li>10</li>
-									<li>${qnaVO.wrdate}</li>
-								</c:forEach>
-							</c:otherwise>
-						</c:choose>
-						</ul>
-					</form>
-				</div>
 
-				<div class="flex-container">
-					<!-- 선택 삭제 -->
-					<div class="item">
-						<button class="btn btn-default" id="multiDel">선택 삭제</button>
+<!-- Once the images are loaded, initalize the Wookmark plug-in. -->
 
-					</div>
-					<div class="item">
-						<!-- 검색 -->
-						<form method="get" action="/myapp/board/boardList" id="searchFrm">
-							<select name="searchKey">
-								<option value="subject">제목</option>
-								<option value="content">글내용</option>
-								<option value="userid">글쓴이</option>
-							</select> <input type="text" name="key" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
-						</form>
-					</div>
-
-					<div class="item">
-						<!-- 글쓰기 버튼 -->
-						<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'">글쓰기</button>
-					</div>
-				</div>
-				<div class="paging">${paging}</div>
-				
-			</div>
-			<!-- contents : end -->
-
-		</div>
-		<!-- //container -->
-		<%@ include file="/Inc/Footer.jspf"%>
+<div class="sub_layout sub_visual_6">
+    <!-- 하이어라키 -->
+    <ul class="hierarchy_list">
+        <li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
+        <li class="depth_2"><a href="#" class="m_hierarchy">홍보센터 </a>
+            <ul class="hierarchy_depth" style="display: none;">
+                <li><a href="#">홍보센터</a></li>
+            </ul></li>
+        <li class="depth_3"><a href="#" class="t_block_hierarchy">공지소식 </a>
+            <ul class="hierarchy_depth">
+                <li class="on"><a href="#">공지소식</a></li>
+                <li><a href="#">활동소식</a></li>
+                <li><a href="#">사보</a></li>
+            </ul></li>
+    </ul>
+    <!-- //하이어라키 -->
+    <!-- 서브 컨텐츠 -->
+    <div class="sub_contents">
+        <!-- 타이틀 , 디스크립션 -->
+        <div class="title_description">
+            <h2 class="title_sub">공지소식</h2>
+            <p class="sub_description">
+                현대그린푸드의 새로운 공지소식과 보도자료를 <span class="t_block_w_inline">가장 먼저 알려드립니다.</span>
+            </p>
+        </div>
+        <!-- //타이틀 , 디스크립션 -->
+        <!-- 검색영역 -->
+        <div class="list_search_area">
+            <label for="notice_search" class="blind">공지사항 검색</label> <input type="text" id="notice_search" class="text_input_search" /><input
+                type="button" value="검색" class="btn_search" />
+        </div>
+        <!-- //검색영역 -->
+    	
+    	<div class="notice_block" role="notice">
+        <!-- 공지사항 -->
+        <div class="row">
+        <ul class="block_list" id="tiles">
+        
+        	<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+				<thead>
+					<tr>
+						<th style="background-color: #eeeeee; text-align: center;">번호</th>
+						<th style="background-color: #eeeeee; text-align: center;">제목</th>
+						<th style="background-color: #eeeeee; text-align: center;">작성자</th>
+						<th style="background-color: #eeeeee; text-align: center;">작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%
+						AnnouncementDAO annDAO = AnnouncementDAO.getInstance(); // 인스턴스 생성
+						ArrayList<AnnouncementVO> list = annDAO.getList();
+						for(int i = 0; i < list.size(); i++){
+					%>
+					<tr>
+						<td><%= list.get(i).getId() %></td>
+						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
+						<td><a href="/First_Project_HyunDai_GreenFood/PR_Center/view.jsp?annID=<%= list.get(i).getId() %>">
+							<%= list.get(i).getTitle() %></a></td>
+						<td><%= list.get(i).getU_id() %></td>
+						<td><%= list.get(i).getWrdate() %></td>
+					</tr>
+					<%
+						}
+					%>
+				</tbody>
+			</table>
+			
+			<a href="/First_Project_HyunDai_GreenFood/PR_Center/write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+                
+        </ul>
+        </div>
+          
+        <!-- //공지사항 -->
+        <p class="btn_more_notice" id="btnJsonList">
+            <a href="#"><img src="/First_Project_HyunDai_GreenFood/img/PR_Center/icon_more_plus.jpg" alt="더보기" /> 더보기</a>
+        </p>
+        <br />
+     </div>
+        
+     </div>
+   </div>
+</div>
+<%@ include file ="/Inc/Footer.jspf" %>

@@ -1,34 +1,33 @@
 package com.hdgf.controller.action;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import com.hdgf.dao.AnnouncementDAO;
-import com.hdgf.dao.QnaDAO;
-import com.hdgf.dto.AnnouncementVO;
-import com.hdgf.dto.QnaVO;
-import com.hdgf.dto.UsersVO;
+import com.hdgf.dao.IR_Center_DAO;
+import com.hdgf.dto.IR_Center_VO;
 
 public class IRUpdateAction implements Action {
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "HdgfServlet?command=qnaView";
+	public void execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, SQLException {
+		String url = "HdgfServlet?command=IRView";
 
-		int qnaId = Integer.parseInt(request.getParameter("QNA_id"));
+		int IRId = Integer.parseInt(request.getParameter("IRId"));
 
-		QnaDAO qnaDAO = QnaDAO.getInstance();
-		QnaVO qnaVO = qnaDAO.getQna(qnaId);
-		qnaVO.setTitle(request.getParameter("subject"));
-		qnaVO.setMain_text(request.getParameter("content"));
+		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
+		IR_Center_VO IRVO = IRDAO.getIR(IRId);
+		IRVO.setTitle(request.getParameter("subject"));
+		IRVO.setMain_text(request.getParameter("content"));
 
-		qnaDAO.update(qnaVO);
-		request.setAttribute("qnaVO", qnaVO);
+		IRDAO.update(IRVO);
+		request.setAttribute("IRVO", IRVO);
 
 		request.getRequestDispatcher(url).forward(request, response);
 	}
+
 }

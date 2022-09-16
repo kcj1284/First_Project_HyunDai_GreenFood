@@ -25,7 +25,7 @@ public class IR_Center_DAO {
 
 	Connection conn = null;
 
-	public void insert_IR_Center(IR_Center_VO IR_Center_VO) {
+	public void write(IR_Center_VO IR_Center_VO) {
 
 		String runSP = "{ call sp_insert_IR_Center(?, ?, ?, ?, ?) }";
 
@@ -47,7 +47,7 @@ public class IR_Center_DAO {
 		}
 	}
 
-	public void update_IR_Center(IR_Center_VO IR_Center_VO) {
+	public void update(IR_Center_VO IR_Center_VO) {
 
 		String runSP = "{ call sp_update_IR_Center(?, ?, ?) }";
 
@@ -68,22 +68,20 @@ public class IR_Center_DAO {
 		}
 	}
 
-	public void delete_IR_Center(IR_Center_VO IR_Center_VO) {// 삭제는 dto 전부 받을 필요없음.
-
-		String runSP = "{ call sp_delete_IR_Center(?) }";
-
+	public int delete(int IR_ID) {
+		String sql = " { call sp_delete_ir_center(?) }";
+		
+		Connection conn = null;
+		
 		try {
 			conn = DBConnection.getConnection();
-			CallableStatement callableStatement = conn.prepareCall(runSP);
-			callableStatement.setInt(1, IR_Center_VO.getIR_id());
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement.setInt(1, IR_ID);
 			callableStatement.executeUpdate();
-			System.out.println("success");
-		} catch (SQLException e) {
-			System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return -1; // 데이터베이스 오류
 	}
 
 	// selectAll : dto가 담길 리스트가 필요하다.

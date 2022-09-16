@@ -1,26 +1,27 @@
 package com.hdgf.controller.action;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import com.hdgf.dao.QnaDAO;
-import com.hdgf.dto.QnaVO;
-import com.hdgf.dto.UsersVO;
+import com.hdgf.dao.IR_Center_DAO;
 
-public class IRDeleteAction implements Action{
-	 @Override
-	  public void execute(HttpServletRequest request, HttpServletResponse response)
-	      throws ServletException, IOException {
-	    String url = "HdgfServlet?command=qnaList";
-	    
-	    int qnaId = Integer.parseInt(request.getParameter("QNA_id"));
-	    QnaDAO qnaDAO = QnaDAO.getInstance();
-	    qnaDAO.delete(qnaId);
-	    
-	    request.getRequestDispatcher(url).forward(request, response);
-	  }
+
+public class IRDeleteAction implements Action {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException, SQLException {
+		String url = "HdgfServlet?command=notice";
+		
+		int IR_Id = Integer.parseInt(request.getParameter("id"));
+		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
+		IRDAO.delete(IR_Id);
+		
+		request.getRequestDispatcher(url).forward(request, response);
+	}
+
 }

@@ -44,7 +44,9 @@ public class ActionFactory {
 		} else if (command.equals("annWriteForm")) {
 			action = new annWriteFormAction();
 		} else if (command.equals("annWrite")) {
-			action = new annWriteAction();
+			action = new annWriteAction(); }
+		else if (command.equals("IR_Center_List")) {
+				action = new IRListAction();
 		} else if (command.equals("IR_Center_View")) {
 			action = new IRViewAction();
 		} else if (command.equals("IR_Center_Update")) {
