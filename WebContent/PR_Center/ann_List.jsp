@@ -152,8 +152,10 @@
 					</div>
 
 					<div class="item">
+						<c:if test="${sessionScope.loginUser.administrator == 1}">
 						<!-- 글쓰기 버튼 -->
-						<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWriteForm'">글쓰기</button>
+							<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWriteForm'">글쓰기</button>
+						</c:if>
 					</div>
 				</div>
 			</div>
