@@ -130,7 +130,6 @@
 									<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList">고객의 소리</a></li>
 									<li><a href="/First_Project_HyunDai_GreenFood/QnA/Business_Consulting.jsp">거래·상담</a></li>
 									<li><a href="/First_Project_HyunDai_GreenFood/QnA/chart.jsp">통계 자료</a></li>
-									<li><a href="/First_Project_HyunDai_GreenFood/QnA/chart_test.jsp">통계 자료(test)</a></li>
 								</ul>
 							</div></li>
 					</ul>

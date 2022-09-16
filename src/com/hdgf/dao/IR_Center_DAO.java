@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.util.DBConnection;
 
@@ -241,5 +242,40 @@ public class IR_Center_DAO {
 			System.out.println(e.toString());
 		}
 		return lists;
+	}
+
+	// 하나의 게시글을 보는 메소드
+	public IR_Center_VO getIR(int IR_id) {
+		String sql = "{ call sp_select_one_ir_center(?, ?) }";
+		Connection conn = null;
+		ResultSet rs = null;
+		IR_Center_VO vo = new IR_Center_VO();
+		try {
+			conn = DBConnection.getConnection();
+			CallableStatement callableStatement = conn.prepareCall(sql);
+			callableStatement = conn.prepareCall(sql);
+			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
+			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
+			callableStatement.setInt(2, IR_id);
+			// 프로시저 실행
+			callableStatement.executeUpdate();
+			// out파라미터의 값을 돌려받는다
+			rs = (ResultSet) callableStatement.getObject(1); // cstmt실행결과를 object로 받아 downcast
+			if (rs.next()) {
+				// 레코드에 있는 내용을 vo에 입력
+				vo.setIR_id(rs.getInt("ir_id"));
+				vo.setTitle(rs.getString("title"));
+				vo.setUser_id(rs.getString("user_id"));
+				vo.setWrdate(rs.getDate("wrdate"));
+				vo.setMain_text(rs.getString("main_text"));
+				vo.setfile_id(rs.getInt("file_id"));
+				vo.setVisiter(rs.getInt("visiter"));
+			}
+			rs.close();
+			callableStatement.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return vo;
 	}
 }
