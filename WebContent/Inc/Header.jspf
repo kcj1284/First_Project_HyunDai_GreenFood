@@ -43,8 +43,8 @@
 
 							<c:otherwise>
                            ${sessionScope.loginUser.user_id}(${sessionScope.loginUser.user_name})님 환영합니다!
-                        <button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=mypage';"> 마이페이지</button>
-                        <button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=logout';">로그아웃</button>
+                        <button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=mypage';">마이페이지</button>
+								<button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=logout';">로그아웃</button>
 							</c:otherwise>
 						</c:choose>
 
@@ -129,9 +129,10 @@
 								<ul class="cont_center gnb_sub gnb_sub8">
 									<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList">고객의 소리</a></li>
 									<li><a href="/First_Project_HyunDai_GreenFood/QnA/Business_Consulting.jsp">거래·상담</a></li>
-										<c:if test="${sessionScope.loginUser.administrator ==1}">
-											<li><a href="/First_Project_HyunDai_GreenFood/QnA/chart.jsp">통계 자료</a></li>
-										</c:if>
+									<c:if test="${sessionScope.loginUser.administrator ==1}">
+										<!-- <li><a href="/First_Project_HyunDai_GreenFood/QnA/chart.jsp">통계 자료</a></li> -->
+										<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=chart">통계 자료</a>
+									</c:if>
 								</ul>
 							</div></li>
 					</ul>

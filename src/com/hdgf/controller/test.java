@@ -103,7 +103,6 @@ public static void cnt확인() {
 		
 		for (int i = 0; i < List.size(); i++) {
 			ChartVO chart = List.get(i);
-			System.out.print(chart.getQNA_type());
 			System.out.println(chart.getCnt());
 		}
 	}
