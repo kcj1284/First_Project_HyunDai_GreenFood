@@ -283,24 +283,130 @@ public class AnnouncementDAO {
 			return vo;
 		}
 		
-		// 조회수 증가 메소드
-//		public int increaseView(int annId) {
-//			String sql = "{ call sp_visit_Announcement(?) }";
-//			
-//			Connection conn = null;
-//			
-//			try {
-//				conn = DBConnection.getConnection();
-//				CallableStatement callableStatement = conn.prepareCall(sql);
-//				callableStatement.setInt(1, annVO.getId());
-//				callableStatement.setString(2, annVO.getTitle());
-//				callableStatement.setString(3, annVO.getMain_text());
-//				callableStatement.setInt(4, annVO.getfile_id());
-//				callableStatement.setInt(5, annVO.getAnnoun_type());
-//				callableStatement.executeUpdate();
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//			return -1; // 데이터베이스 오류
-//		}
+		public int totalRecord(String ann_name) {
+			int totalRecord = 0;
+			String sql = "select count(*) from announcement where title like '%'||?||'%'";
+			
+		    Connection con = null;
+		    PreparedStatement pstmt = null;
+		    ResultSet pageset = null;
+		    
+		    try {
+		    	con = DBConnection.getConnection();
+		    	pstmt = con.prepareStatement(sql);
+		    	
+		    	if (ann_name.equals("")) {
+		    		pstmt.setString(1, "%");
+		    	} else {
+		    		pstmt.setString(1, ann_name);
+		    	}
+		    	pageset = pstmt.executeQuery();
+		    	
+		    	if (pageset.next()) {
+		    		totalRecord = pageset.getInt(1);
+		    		pageset.close();
+		    	}
+		    } catch (Exception e) {
+		    	e.printStackTrace();
+		    }
+		    return totalRecord;
+		}
+		
+		static int view_rows = 5; // 페이지의 개수
+		static int counts = 5; // 한 페이지에 나타낼 상품의 개수
+		
+		// 페이지 이동을 위한 메소드
+		public String pageNumber(int tpage, String title) {
+			
+			String str = "";
+			
+			int totalRecord = totalRecord(title);
+			
+			int page_count = totalRecord / counts + 1;
+			
+			if (totalRecord % counts == 0) {
+				page_count--;
+			}
+			
+			
+			if (tpage < 1) {
+				tpage = 1;
+			}
+			
+			int start_page = tpage - (tpage % view_rows) + 1;
+			int end_page = start_page + (counts -1);
+			
+			if (end_page > page_count) {
+				end_page = page_count;
+			}
+			if (start_page > view_rows) {
+				str += "<a href='HdgfServlet?command=notice&tpage=1'>&lt;&lt</a>&nbsp;&nbsp;";
+				str += "<a href='HdgfServlet?command=notice&tpage=" + (start_page - 1);
+				str += "'>&lt;</a>&nbsp;";
+			}
+			for (int i = start_page; i <= end_page; i++) {
+				if (i == tpage) {
+					str += "<font color=#0a9882>[" + i + "]&nbsp;&nbsp;</font>";
+				} else {
+					str += "<a href='HdgfServlet?command=notice&tpage=" + i + "'>[" + i + "]</a>&nbsp;&nbsp;";
+				}
+			}
+			if (page_count > end_page) {
+				str += "<a href='HdgfServlet?command=notice&tpage=" + (end_page + 1) + "'> &gt; </a>&nbsp;nbsp;";
+				str += "<a href='HdgfServlet?command=notice&tpage=" + page_count + "'> &gt; &gt; </a>&nbsp;&nbsp;";
+			}
+			return str;
+		}
+		
+		public ArrayList<AnnouncementVO> getListByPaging(int tpage, String ann_name) {
+			ArrayList<AnnouncementVO> annList = new ArrayList<AnnouncementVO>();
+			
+			String str = "select board_id, title, user_id, wrdate, visiter, announ_type " +
+					"from announcement where title like '%'||?||'%' order by board_id desc";
+			
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			int absolutepage = 1;
+			
+			try {
+				conn = DBConnection.getConnection();
+				absolutepage = (tpage - 1) * counts + 1;
+				pstmt = conn.prepareStatement(str, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				
+				if (ann_name.equals("")) {
+					pstmt.setString(1, "%");
+				} else {
+					pstmt.setString(1, ann_name);
+				}
+				
+				rs = pstmt.executeQuery();
+				
+				if (rs.next()) {
+					rs.absolute(absolutepage);
+					int count = 0;
+					
+					while (count < counts) {
+						AnnouncementVO annVO = new AnnouncementVO();
+						annVO.setId(rs.getInt("board_id"));
+						annVO.setTitle(rs.getString("title"));
+						annVO.setU_id(rs.getString("user_id"));
+						annVO.setWrdate(rs.getDate("wrdate"));
+						annVO.setVisiter(rs.getInt("visiter"));
+						annVO.setAnnoun_type(rs.getInt("announ_type"));
+						annList.add(annVO);
+						
+						if (rs.isLast()) {
+							break;
+						}
+						rs.next();
+						count++;
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return annList;
+		}
 }

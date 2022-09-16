@@ -15,15 +15,15 @@ import oracle.jdbc.OracleTypes;
 
 public class QnaDAO {
 
-	private QnaDAO() { 
-		
+	private QnaDAO() {
+
 	}
+
 	private static QnaDAO instance = new QnaDAO();
-	
+
 	public static QnaDAO getInstance() {
 		return instance;
 	}
-	
 
 	// 전체 list 검색
 	public ArrayList<QnaVO> listQna() {
@@ -60,7 +60,7 @@ public class QnaDAO {
 		}
 		return lists;
 	}
-	
+
 	// 하나의 게시글을 보는 메소드
 	public QnaVO getQna(int qnaId) {
 		QnaVO qnaVO = null;
@@ -91,7 +91,6 @@ public class QnaDAO {
 		}
 		return qnaVO;
 	}
-	
 
 	public void insertQna(QnaVO qnaVO, String session_id) {
 		String sql = "call sp_insert_QnA(?, ?, ?, ?, ?)";
@@ -103,7 +102,7 @@ public class QnaDAO {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, qnaVO.getTitle());
 			pstmt.setString(2, session_id);
-			pstmt.setInt(3, 0); //비밀글 여부
+			pstmt.setInt(3, 0); // 비밀글 여부
 			pstmt.setString(4, qnaVO.getMain_text());
 			pstmt.setInt(5, qnaVO.getQNA_type());
 			pstmt.executeUpdate();
@@ -111,13 +110,13 @@ public class QnaDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// 게시글 수정 메소드
 	public void update(QnaVO qnaVO) {
 		String sql = " { call sp_update_QnA(?, ?, ?, ?, ?) }";
-		
+
 		Connection conn = null;
-		
+
 		try {
 			conn = DBConnection.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
@@ -131,13 +130,13 @@ public class QnaDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// 게시글 삭제 메소드
 	public int delete(int annID) {
 		String sql = " { call sp_delete_QnA(?) }";
-		
+
 		Connection conn = null;
-		
+
 		try {
 			conn = DBConnection.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
@@ -148,148 +147,135 @@ public class QnaDAO {
 		}
 		return -1; // 데이터베이스 오류
 	}
-	
-	
-	
-	  public int totalRecord(String qna_name) {
-		    int total_pages = 0;    
-		    String sql = "select count(*) from qna where title like '%'||?||'%'";
-		
-		    Connection con = null;
-		    PreparedStatement pstmt = null;
-		    ResultSet pageset = null;
-		    
-		    try {
-		      con = DBConnection.getConnection();
-		      pstmt = con.prepareStatement(sql);
-		
-		      if (qna_name.equals("")){
-		        pstmt.setString(1, "%");
-		      }
-		      else{
-		        pstmt.setString(1, qna_name);
-		      }
-		      pageset = pstmt.executeQuery();
-		
-		      if (pageset.next()) {
-		        total_pages = pageset.getInt(1); // 레코드의 개수
-		        pageset.close();
-		      }
-		    } catch (Exception e) {
-		      e.printStackTrace();
-		    } 
-		    return total_pages;
-		  }
-		
-	
-	
-	
-	
-	  static int view_rows = 5; // 페이지의 개수
-	  static int counts = 5; // 한 페이지에 나타낼 상품의 개수
 
-	  // 페이지 이동을 위한 메소드
-	  public String pageNumber(int tpage, String title) {
-	
-	    String str = "";
-	    
-	    int total_pages = totalRecord(title);     
-	    int page_count = total_pages / counts + 1;
+	public int totalRecord(String qna_name) {
+		int total_pages = 0;
+		String sql = "select count(*) from qna where title like '%'||?||'%'";
 
-	    if (total_pages % counts == 0) {
-	      page_count--;
-	    }
-	    if (tpage < 1) {
-	      tpage = 1;
-	    }
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet pageset = null;
 
-	    int start_page = tpage - (tpage % view_rows) + 1;  
-	    int end_page = start_page + (counts-1); 
+		try {
+			con = DBConnection.getConnection();
+			pstmt = con.prepareStatement(sql);
 
-	    if (end_page > page_count) {
-	      end_page = page_count; 
-	    }
-	    if (start_page > view_rows) {
-	      str += "<a href='HdgfServlet?command=qnaList&tpage=1'>&lt;&lt;</a>&nbsp;&nbsp;";
-	      str+="<a href='HdgfServlet?command=qnaList&tpage=" 
-	         + (start_page - 1);
-	      str += "'>&lt;</a>&nbsp;&nbsp;";
-	    }
-	    
-	    for (int i = start_page; i <= end_page; i++) {
-	      if (i == tpage) {
-	        str += "<font color=#0a9882>[" + i + "]&nbsp;&nbsp;</font>";
-	      } else {
-	        str += "<a href='HdgfServlet?command=qnaList&tpage=" 
-	           + i + "'>[" + i + "]</a>&nbsp;&nbsp;";
-	      }
-	    }
+			if (qna_name.equals("")) {
+				pstmt.setString(1, "%");
+			} else {
+				pstmt.setString(1, qna_name);
+			}
+			pageset = pstmt.executeQuery();
 
-	    if (page_count > end_page) {
-	      str += "<a href='HdgfServlet?command=qnaList&tpage="
-	          + (end_page + 1) + "'> &gt; </a>&nbsp;&nbsp;";
-	      str += "<a href='HdgfServlet?command=qnaList&tpage="
-	          + page_count + "'> &gt; &gt; </a>&nbsp;&nbsp;";
-	    }
-	    return str;
-	  }
+			if (pageset.next()) {
+				total_pages = pageset.getInt(1); // 레코드의 개수
+				pageset.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return total_pages;
+	}
 
-	  
+	static int view_rows = 5; // 페이지의 개수
+	static int counts = 5; // 한 페이지에 나타낼 상품의 개수
+
+	// 페이지 이동을 위한 메소드
+	public String pageNumber(int tpage, String title) {
+
+		String str = "";
+
+		int total_pages = totalRecord(title);
+		int page_count = total_pages / counts + 1;
+
+		if (total_pages % counts == 0) {
+			page_count--;
+		}
+		if (tpage < 1) {
+			tpage = 1;
+		}
+
+		int start_page = tpage - (tpage % view_rows) + 1;
+		int end_page = start_page + (counts - 1);
+
+		if (end_page > page_count) {
+			end_page = page_count;
+		}
+		if (start_page > view_rows) {
+			str += "<a href='HdgfServlet?command=qnaList&tpage=1'>&lt;&lt;</a>&nbsp;&nbsp;";
+			str += "<a href='HdgfServlet?command=qnaList&tpage=" + (start_page - 1);
+			str += "'>&lt;</a>&nbsp;&nbsp;";
+		}
+
+		for (int i = start_page; i <= end_page; i++) {
+			if (i == tpage) {
+				str += "<font color=#0a9882>[" + i + "]&nbsp;&nbsp;</font>";
+			} else {
+				str += "<a href='HdgfServlet?command=qnaList&tpage=" + i + "'>[" + i + "]</a>&nbsp;&nbsp;";
+			}
+		}
+
+		if (page_count > end_page) {
+			str += "<a href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "'> &gt; </a>&nbsp;&nbsp;";
+			str += "<a href='HdgfServlet?command=qnaList&tpage=" + page_count + "'> &gt; &gt; </a>&nbsp;&nbsp;";
+		}
+		return str;
+	}
+
 	public ArrayList<QnaVO> listQna(int tpage, String qna_name) {
-	ArrayList<QnaVO> lists = new ArrayList<QnaVO>();
+		ArrayList<QnaVO> lists = new ArrayList<QnaVO>();
 
-	String str = "select qna_id, title, user_id, wrdate, qna_type " +
-	    " from qna where title like '%'||?||'%' order by qna_id desc ";
+		String str = "select qna_id, title, user_id, wrdate, qna_type "
+				+ " from qna where title like '%'||?||'%' order by qna_id desc ";
 
-	Connection con = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 
-	int absolutepage = 1;
+		int absolutepage = 1;
 
-	try {
-	  con = DBConnection.getConnection();
-	  absolutepage = (tpage - 1) * counts + 1; 
-	  pstmt = con.prepareStatement(str, ResultSet.TYPE_SCROLL_SENSITIVE,
-	      ResultSet.CONCUR_UPDATABLE);
-	 
-	  if (qna_name.equals("")){
-	    pstmt.setString(1, "%");
-	  } else{
-	    pstmt.setString(1, qna_name);
-	  }
-	  
-	  rs = pstmt.executeQuery();
-	  
-	  if (rs.next()) {
-	    rs.absolute(absolutepage);
-	    int count = 0;
+		try {
+			con = DBConnection.getConnection();
+			absolutepage = (tpage - 1) * counts + 1;
+			pstmt = con.prepareStatement(str, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
-	    while (count < counts) {
-	    	QnaVO vo = new QnaVO();
-			vo.setQNA_id(rs.getInt("QNA_id"));
-			vo.setTitle(rs.getString("title"));
-			vo.setUser_id(rs.getString("user_id"));
-			vo.setWrdate(rs.getDate("wrdate"));
-			vo.setQNA_type(rs.getInt("QNA_type"));
-			// vo를 리스트에 추가
-			lists.add(vo);
-	      if (rs.isLast()){
-	        break;
-	      }         
-	      rs.next();
-	      count++; 
-	    }
-	  }
-	} catch (Exception e) {
-	  e.printStackTrace();
-	} 
-	return lists;
+			if (qna_name.equals("")) {
+				pstmt.setString(1, "%");
+			} else {
+				pstmt.setString(1, qna_name);
+			}
+
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				rs.absolute(absolutepage);
+				int count = 0;
+
+				while (count < counts) {
+					QnaVO vo = new QnaVO();
+					vo.setQNA_id(rs.getInt("QNA_id"));
+					vo.setTitle(rs.getString("title"));
+					vo.setUser_id(rs.getString("user_id"));
+					vo.setWrdate(rs.getDate("wrdate"));
+					vo.setQNA_type(rs.getInt("QNA_type"));
+					// vo를 리스트에 추가
+					lists.add(vo);
+					if (rs.isLast()) {
+						break;
+					}
+					rs.next();
+					count++;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return lists;
 	}
 
 	public int updateAnswer(QnaVO qnaVO) {
 		String sql = "{ call sp_update_answer(?,?)}";
- 
+
 		Connection conn = null;
 		try {
 			conn = DBConnection.getConnection();
@@ -303,4 +289,3 @@ public class QnaDAO {
 		return -1; // 데이터베이스 오류
 	}
 }
-

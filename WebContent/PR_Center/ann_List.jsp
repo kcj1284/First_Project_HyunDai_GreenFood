@@ -34,12 +34,20 @@
 					현대그린푸드의 새로운 공지소식과 보도자료를 <span class="t_block_w_inline">가장 먼저 알려드립니다.</span>
 				</p>
 			</div>
-			
+
 			<!-- //타이틀 , 디스크립션 -->
 			<div class="board-body">
 				<!-- 리스트 -->
 				<div id="record-no">게시글 수 :</div>
-
+				<div class="item">
+					<!-- 검색 -->
+					<form method="get" action="HdgfServlet?command=annSort" id="searchFrm">
+						<select name="searchKey">
+							<option value="subject">최신순</option>
+							<option value="content">조회순</option>
+						</select> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
+					</form>
+				</div>
 				<div class="list-div">
 
 					<form method="post" action="" id="listFrm">
@@ -50,18 +58,25 @@
 							<li>글쓴이</li>
 							<li>조회수</li>
 							<li>등록일</li>
-							<c:forEach var="annVO" items="${annList}">
-								<li>${annVO.id}</li>
-								<li><c:if test="${annVO.announ_type == 0}">
-										<c:out value="보도자료" />
-									</c:if> <c:if test="${annVO.announ_type == 1}">
-										<c:out value="공지소식" />
-									</c:if></li>
-								<li><a href="HdgfServlet?command=annView&id=${annVO.id}">${annVO.title}</a></li>
-								<li>${annVO.u_id}</li>
-								<li>${annVO.visiter}</li>
-								<li>${annVO.wrdate}</li>
-							</c:forEach>
+							<c:choose>
+								<c:when test="${annListSize<=0}">
+									<span>등록된 게시글이 없습니다.</span>
+								</c:when>
+								<c:otherwise>
+									<c:forEach var="annVO" items="${annList}">
+										<li>${annVO.id}</li>
+										<li><c:if test="${annVO.announ_type == 0}">
+												<c:out value="보도자료" />
+											</c:if> <c:if test="${annVO.announ_type == 1}">
+												<c:out value="공지소식" />
+											</c:if></li>
+										<li><a href="HdgfServlet?command=annView&id=${annVO.id}">${annVO.title}</a></li>
+										<li>${annVO.u_id}</li>
+										<li>${annVO.visiter}</li>
+										<li>${annVO.wrdate}</li>
+									</c:forEach>
+								</c:otherwise>
+							</c:choose>
 						</ul>
 					</form>
 				</div>
@@ -88,6 +103,7 @@
 						<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWriteForm'">글쓰기</button>
 					</div>
 				</div>
+				<div class="paging">${paging}</div>
 			</div>
 			<!-- contents : end -->
 
