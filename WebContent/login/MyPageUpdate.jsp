@@ -108,7 +108,7 @@
 
 			<div class="myPage-btn">
 				<input class="myclick" type="submit" value="수정"> 
-				<input class="myclick" type="text" value="되돌아가기"
+				<input class="myclick" type="text" value="뒤로"
 					   onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=mypage';">
 			</div>
 	</div>
