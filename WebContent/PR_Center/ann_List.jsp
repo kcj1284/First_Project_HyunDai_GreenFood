@@ -13,8 +13,7 @@
 			data : "latest",
 			success : function(data) {
 				$('.container_area').html(data);
-				$("#latest").css("color","#000000");
-				$("#latest").css("font-weight","bold");
+				$("#latest").css("color","#0a9882");
 			}
 		})
 	}
@@ -26,8 +25,7 @@
 			data : "oldest",
 			success : function(data) {
 				$('.container_area').html(data);
-				$("#oldest").css("color","#000000");
-				$("#oldest").css("font-weight","bold");
+				$("#oldest").css("color","#0a9882");
 			}
 		})
 	}
@@ -39,8 +37,7 @@
 			data : "views",
 			success : function(data) {
 				$('.container_area').html(data);
-				$("#views").css("color","#000000");
-				$("#views").css("font-weight","bold");
+				$("#views").css("color","#0a9882");
 			}
 		})
 	}
