@@ -30,7 +30,7 @@ public class IRViewAction implements Action {
 		} else if (edit_IRVO != null) {
 			request.setAttribute("IRVO", edit_IRVO);
 		} else {
-			int IRId = Integer.parseInt(request.getParameter("id"));
+			int IRId = Integer.parseInt(request.getParameter("IR_ID"));
 			IR_Center_VO IRVO = IRDAO.getIR(IRId);
 			request.setAttribute("IRVO", IRVO);
 		}

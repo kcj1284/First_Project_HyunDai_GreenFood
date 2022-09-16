@@ -19,7 +19,7 @@
 				<ul class="hierarchy_list">
 					<li class="icon_home"><img src="../img/icon/icon_home.png" alt="Home" /></li>
 					<li class="depth_2">
-						<a href="#" class="m_hierarchy">ESG 경영 </a>
+						<a href="#" class="m_hierarchy">ESG 경영</a>
 						<ul class="hierarchy_depth" style="display: none;">
 							<li><a href="#">사회공헌(S)</a></li>
 						</ul>

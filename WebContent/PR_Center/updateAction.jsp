@@ -1,3 +1,4 @@
+<!-- 작성자 장주연 -->
 <%@page import="java.io.PrintWriter"%>
 <%@page import="bbs.BbsDAO"%>
 <%@page import="bbs.Bbs"%>

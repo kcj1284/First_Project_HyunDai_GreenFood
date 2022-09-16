@@ -49,42 +49,35 @@
 
 		<!-- 하이어라키 -->
 		<ul class="hierarchy_list">
-			<li class="icon_home"><img
-				src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png"
-				alt="Home" /></li>
-			<li class="depth_2"><a href="#" class="m_hierarchy">고객센터 </a>
-
+			<li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/ESG_infrasystem/icon_home.jpg" alt="Home" /></li>
+			<li class="depth_2"><a href="#" class="m_hierarchy">투자정보</a>
 				<ul class="hierarchy_depth" style="display: none;">
-					<li><a href="#">고객센터</a></li>
+					<li><a href="#">투자정보</a></li>
 				</ul></li>
-			<li class="depth_3"><a href="#" class="t_block_hierarchy">고객의
-					소리 </a>
-
+			<li class="depth_3"><a href="#" class="t_block_hierarchy">IR자료실</a>
 				<ul class="hierarchy_depth">
-					<li><a href="#">자주 묻는 질문</a></li>
-					<li><a href="#">거래·상담</a></li>
-					<li class="on"><a href="#">고객의 소리</a></li>
-				</ul></li>
+					<li class="on"><a href="#">IR자료실</a></li>
+					<li><a href="#">활동소식</a></li>
+				</ul>
+				</li>
 		</ul>
 		<!-- //하이어라키 -->
 		<!-- 서브 컨텐츠 -->
 		<div class="sub_contents">
 			<!-- 타이틀 , 디스크립션 -->
 			<div class="title_description">
-				<h2 class="title_sub">고객의 소리</h2>
-				<p class="sub_description">고객의 작은 목소리에도 귀 기울이겠습니다.</p>
+				<h2 class="title_sub">IR 자료실</h2>
+				<p class="sub_description">
+					현대그린푸드의 IR자료실입니다.
+				</p>
 			</div>
+			<ul class="tab_list tab_list_2">
+			<li class="on"><a href="#;">IR 자료실</a></li>
+			<li><a href="IR_Contact.jsp">IR Contact</a></li>
+		</ul>
+		
 			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWrite" id="boardFrm">
 				<ul>
-					<li>
-	                    분류:  &nbsp  &nbsp
-	                    <select id="category" name="QNA_type">
-	                        <option value="0">칭찬</option>
-	                        <option value="1">불만</option>
-	                        <option value="2">제안</option>
-	                        <option value="3">기타</option>
-	                    </select>
-	                </li>
 					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
 					<li><textarea name="main_text" id="content"></textarea></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>

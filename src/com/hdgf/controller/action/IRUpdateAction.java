@@ -17,10 +17,10 @@ public class IRUpdateAction implements Action {
 			throws ServletException, IOException, SQLException {
 		String url = "HdgfServlet?command=IRView";
 
-		int IRId = Integer.parseInt(request.getParameter("IRId"));
+		int IR_Id = Integer.parseInt(request.getParameter("IR_Id"));
 
 		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
-		IR_Center_VO IRVO = IRDAO.getIR(IRId);
+		IR_Center_VO IRVO = IRDAO.getIR(IR_Id);
 		IRVO.setTitle(request.getParameter("subject"));
 		IRVO.setMain_text(request.getParameter("content"));
 

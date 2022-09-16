@@ -1,4 +1,3 @@
-<!-- 작성자 장주연 -->
 <%@page import="java.io.PrintWriter"%>
 <%@page import="com.hdgf.dao.AnnouncementDAO"%>
 <%@page import="com.hdgf.dto.UsersVO"%>

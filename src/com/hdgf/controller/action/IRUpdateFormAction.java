@@ -25,7 +25,7 @@ public class IRUpdateFormAction implements Action {
 		if (loginUser == null) {
 			url = "HdgfServlet?command=loginForm";
 		} else {
-			int IRId = Integer.parseInt(request.getParameter("id"));
+			int IRId = Integer.parseInt(request.getParameter("IR_ID"));
 			IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
 			IR_Center_VO IRVO = IRDAO.getIR(IRId);
 			request.setAttribute("IRVO", IRVO);

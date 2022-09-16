@@ -17,24 +17,24 @@ public class IRWriteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "HdgfServlet?command=notice";
-		
+		String url = "HdgfServlet?command=IR_Center_List";
+
 		HttpSession session = request.getSession();
-	    UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");    
-	    
-	    IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
-	    
-	    if (loginUser == null) {
-	      url = "HdgfServlet?command=loginForm";
-	    } else{      
-	    	IR_Center_VO IRVO = new IR_Center_VO();
-		      IRVO.setTitle(request.getParameter("title"));
-		      IRVO.setUser_id(loginUser.getUser_id());
-		      IRVO.setMain_text(request.getParameter("main_text"));      
-		      IRVO.setfile_id(0);
-		      IRDAO.write(IRVO);      
-		}    
-	    
-	    response.sendRedirect(url);
+		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
+
+		IR_Center_DAO annDAO = IR_Center_DAO.getInstance();
+
+		if (loginUser == null) {
+			url = "HdgfServlet?command=loginForm";
+		} else {
+			IR_Center_VO annVO = new IR_Center_VO();
+			annVO.setTitle(request.getParameter("title"));
+			annVO.setUser_id(loginUser.getUser_id());
+			annVO.setMain_text(request.getParameter("main_text"));
+			annVO.setfile_id(0);
+			annDAO.write(annVO);
+		}
+
+		response.sendRedirect(url);
 	}
 }
