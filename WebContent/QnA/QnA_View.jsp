@@ -120,8 +120,8 @@
 		replyContent.innerHTML = "<span>답변을 기다리고 있습니다.</span>";
 	} else{
 		replyBottom.innerHTML = "<c:if test='${sessionScope.loginUser.administrator == 1}'>";
-		replyBottom.innerHTML += "<a href='#'>수정</a>";
-		replyBottom.innerHTML += "<a href='#'>삭제</a>";
+		replyBottom.innerHTML += "<a href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerUpdateForm&QNA_id=${qnaVO.QNA_id}'>수정</a>";
+		replyBottom.innerHTML += "<a href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerDelete&QNA_id=${qnaVO.QNA_id}'>삭제</a>";
 		replyBottom.innerHTML += "</c:if>";
 		replyContent.innerHTML = "<span>"+answer+"</span>";
 		

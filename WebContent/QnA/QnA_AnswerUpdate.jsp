@@ -65,22 +65,42 @@
 			</div>
 
 			<div class="reply-box">
+				<input type="hidden" id="answerContent" name="answerContent" value="${qnaVO.answer}"/>
+	
 				<h5>전체 답변</h5>
 				<!-- 댓글목록이 나올 자리 -->
-				<div id="replyList">${qnaVO.answer}</div>
+				<div id="replyList">
+					<div class="replyMain">
+						<div id="replyUser">
+							답변
+						</div>
+	
+						<div id="replyContent">
+						</div>
+						
+					</div>
+					<div id="replyBottom">
+					
+					</div>
 
-				<!-- 댓글쓰기 -->
-				<div id="replyWrite">
-					<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswer" id="replyFrm">
-						<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
-						<div id="replyWrite-userid">답변 작성</div>
-						<textarea class="form-control" name="answer" id="comment"></textarea>
-						<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
-					</form>
 				</div>
+
+
+				<!-- 답변 -->
+				<!-- 로그인 아이디가 관리자일때 답변 작성 활성화 -->
+				<c:if test="${sessionScope.loginUser.administrator == 1}">
+					<div id="replyWrite">
+						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerUpdate&QNA_id=${qnaVO.QNA_id}" id="replyFrm">
+							<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
+							<div id="replyWrite-userid">답변 수정</div>
+							<textarea class="form-control" name="answer" id="comment">${qnaVO.answer}</textarea>
+							<input type="submit" class="btn btn-default" id="comment-submit" value="수정">
+						</form>
+					</div>
+				</c:if>
 			</div>
 			<div id="edit-box">
-				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
+				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
 				<c:if test="${qnaVO.user_id == sessionScope.loginUser.user_id }">
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaUpdateForm&QNA_id=${qnaVO.QNA_id}">수정</a>
 					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaDelete&QNA_id=${qnaVO.QNA_id}">삭제</a>
@@ -90,4 +110,26 @@
 			<!-- contents : end -->
 		</div>
 		<!-- //container -->
+<script>
+
+	var answer = $('#answerContent').val();
+	var replyContent = document.getElementById("replyContent");
+	var replyBottom = document.getElementById("replyBottom");
+	
+	if(answer == 'waiting for answer' || answer == ""){
+		replyContent.innerHTML = "<span>답변을 기다리고 있습니다.</span>";
+		
+	} else{
+		replyBottom.innerHTML = "<c:if test='${sessionScope.loginUser.administrator == 1}'>";
+		replyBottom.innerHTML += "<a href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerDelete&QNA_id=${qnaVO.QNA_id}'>삭제</a>";
+		replyBottom.innerHTML += "</c:if>";
+		replyContent.innerHTML = "<span>"+answer+"</span>";
+	}
+	
+	
+	
+	
+	
+	
+</script>
 		<%@ include file="/Inc/Footer.jspf"%>
