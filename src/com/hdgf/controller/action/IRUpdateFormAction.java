@@ -17,7 +17,7 @@ public class IRUpdateFormAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "ESG_Management/IR_Center_Update.jsp";
+		String url = "Invest_Info/IR_Center_Update.jsp";
 
 		HttpSession session = request.getSession();
 		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
@@ -25,10 +25,10 @@ public class IRUpdateFormAction implements Action {
 		if (loginUser == null) {
 			url = "HdgfServlet?command=loginForm";
 		} else {
-			int IRId = Integer.parseInt(request.getParameter("IR_ID"));
-			IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
-			IR_Center_VO IRVO = IRDAO.getIR(IRId);
-			request.setAttribute("IRVO", IRVO);
+			int IR_Id = Integer.parseInt(request.getParameter("IR_Id"));
+			IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
+			IR_Center_VO IR_VO = IR_DAO.getIR(IR_Id);
+			request.setAttribute("IR_VO", IR_VO);
 		}
 
 		request.getRequestDispatcher(url).forward(request, response);

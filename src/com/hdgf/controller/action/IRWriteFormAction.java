@@ -15,7 +15,7 @@ public class IRWriteFormAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "ESG_Management/IR_Center_Write.jsp";
+		String url = "Invest_Info/IR_Center_Write.jsp";
 
 		HttpSession session = request.getSession();
 		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");

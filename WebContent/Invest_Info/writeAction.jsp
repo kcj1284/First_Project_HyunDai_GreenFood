@@ -1,12 +1,13 @@
+<!-- 작성자 김찬중 -->
 <%@page import="java.io.PrintWriter"%>
-<%@page import="com.hdgf.dao.AnnouncementDAO"%>
+<%@page import="com.hdgf.dao.IR_Center_DAO"%>
 <%@page import="com.hdgf.dto.UsersVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
-<jsp:useBean id="ann" class="com.hdgf.dto.AnnouncementVO" scope="page" />
-<jsp:setProperty name="ann" property="title" />
-<jsp:setProperty name="ann" property="main_text" />
+<jsp:useBean id="IR" class="com.hdgf.dto.IR_Center_VO" scope="page" />
+<jsp:setProperty name="IR" property="title" />
+<jsp:setProperty name="IR" property="main_text" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +30,7 @@
 			script.println("</script>");
 		}else{ */
 			// 입력이 안 된 부분이 있는지 체크한다
-			if(ann.getTitle() == null || ann.getMain_text() == null){
+			if(IR.getTitle() == null || IR.getMain_text() == null){
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
 				script.println("alert('입력이 안 된 사항이 있습니다')");
@@ -37,9 +38,8 @@
 				script.println("</script>");
 			}else{
 				// 정상적으로 입력이 되었다면 글쓰기 로직을 수행한다
-				AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-				
-				int result = annDAO.write(ann);
+				IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
+				int result = IR_DAO.write(IR);
 				// 데이터베이스 오류인 경우
 				if(result == -1){
 					PrintWriter script = response.getWriter();
@@ -52,7 +52,7 @@
 					PrintWriter script = response.getWriter();
 					script.println("<script>");
 					script.println("alert('글쓰기 성공')");
-					script.println("location.href='/First_Project_HyunDai_GreenFood/PR_Center/notice.jsp'");
+					script.println("location.href='/First_Project_HyunDai_GreenFood/Invest_Info/IR_Center_List.jsp'");
 					script.println("</script>");
 				}
 			}

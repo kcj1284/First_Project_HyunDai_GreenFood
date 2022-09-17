@@ -1,7 +1,7 @@
 package com.hdgf.dto;
 
 public class IR_Center_VO {
-	private int IR_id;
+	private int IR_Id;
 	private String Title;
 	private String user_id;
 	private java.sql.Date wrdate;
@@ -9,20 +9,20 @@ public class IR_Center_VO {
 	private int file_id;
 	private int visiter;
 
-	public int getIR_id() {
-		return IR_id;
+	public int getIR_Id() {
+		return IR_Id;
 	}
 
-	public void setIR_id(int iR_id) {
-		IR_id = iR_id;
+	public void setIR_Id(int IR_Id) {
+		this.IR_Id = IR_Id;
 	}
 
 	public String getTitle() {
 		return Title;
 	}
 
-	public void setTitle(String title) {
-		Title = title;
+	public void setTitle(String Title) {
+		this.Title = Title;
 	}
 
 	public String getUser_id() {

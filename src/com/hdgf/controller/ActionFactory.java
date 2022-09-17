@@ -49,7 +49,7 @@ public class ActionFactory {
             action = new IRListAction();
       } else if (command.equals("IR_Center_View")) {
          action = new IRViewAction();
-      } else if (command.equals("IR_Center_Update")) {
+      } else if (command.equals("IR_Center_UpdateForm")) {
          action = new IRUpdateFormAction();
       } else if (command.equals("IR_Center_Delete")) {
          action = new IRDeleteAction();

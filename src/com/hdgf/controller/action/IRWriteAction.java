@@ -22,17 +22,17 @@ public class IRWriteAction implements Action {
 		HttpSession session = request.getSession();
 		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
 
-		IR_Center_DAO annDAO = IR_Center_DAO.getInstance();
+		IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
 
 		if (loginUser == null) {
 			url = "HdgfServlet?command=loginForm";
 		} else {
-			IR_Center_VO annVO = new IR_Center_VO();
-			annVO.setTitle(request.getParameter("title"));
-			annVO.setUser_id(loginUser.getUser_id());
-			annVO.setMain_text(request.getParameter("main_text"));
-			annVO.setfile_id(0);
-			annDAO.write(annVO);
+			IR_Center_VO IR_VO = new IR_Center_VO();
+			IR_VO.setTitle(request.getParameter("title"));
+			IR_VO.setUser_id(loginUser.getUser_id());
+			IR_VO.setMain_text(request.getParameter("main_text"));
+			IR_VO.setfile_id(0);
+			IR_DAO.write(IR_VO);
 		}
 
 		response.sendRedirect(url);

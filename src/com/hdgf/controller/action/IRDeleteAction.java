@@ -15,11 +15,11 @@ public class IRDeleteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "HdgfServlet?command=notice";
+		String url = "HdgfServlet?command=IR_Center_List";
 		
-		int IR_Id = Integer.parseInt(request.getParameter("IR_ID"));
+		int IR_ID = Integer.parseInt(request.getParameter("IR_ID"));
 		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
-		IRDAO.delete(IR_Id);
+		IRDAO.delete(IR_ID);
 		
 		request.getRequestDispatcher(url).forward(request, response);
 	}

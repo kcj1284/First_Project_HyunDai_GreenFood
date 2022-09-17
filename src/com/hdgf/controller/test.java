@@ -1,12 +1,13 @@
 package com.hdgf.controller;
 
-import java.sql.Date;
 import java.util.ArrayList;
 
 import com.hdgf.dao.AnnouncementDAO;
-import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dao.ChartDAO;
+import com.hdgf.dao.IR_Center_DAO;
+import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.ChartVO;
+import com.hdgf.dto.IR_Center_VO;
 
 public class test {
 
@@ -118,6 +119,19 @@ public class test {
 		}
 	}
 
+	public static void 공지사항_전체검색() {
+		IR_Center_DAO DAO = IR_Center_DAO.getInstance();
+		ArrayList<IR_Center_VO> List = DAO.getList();
+		for (int i = 0; i < List.size(); i++) {
+			IR_Center_VO IR = List.get(i);
+			System.out.println(IR.getIR_Id());
+			System.out.println(IR.getTitle());
+			System.out.println(IR.getUser_id());
+			System.out.println(IR.getVisiter());
+			System.out.println(IR.getWrdate());
+		}
+	}
+
 	/*
 	 * public static void 공지사항_하나_게시글_조회() {
 	 * 
@@ -138,8 +152,8 @@ public class test {
 		// 공지사항_수정();
 		// 공지사항_삭제();
 		// 공지사항_본문검색();
-		// 공지사항_전체검색();
-		공지사항_제목검색();
+		 공지사항_전체검색();
+		//공지사항_제목검색();
 		// 공지사항_전체_list_검색();
 		// 공지사항_하나_게시글_조회();
 		// cnt확인();

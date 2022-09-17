@@ -15,17 +15,17 @@ public class IRUpdateAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "HdgfServlet?command=IRView";
+		String url = "HdgfServlet?command=IR_Center_View";
 
 		int IR_Id = Integer.parseInt(request.getParameter("IR_Id"));
 
-		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
-		IR_Center_VO IRVO = IRDAO.getIR(IR_Id);
-		IRVO.setTitle(request.getParameter("subject"));
-		IRVO.setMain_text(request.getParameter("content"));
+		IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
+		IR_Center_VO IR_VO = IR_DAO.getIR(IR_Id);
+		IR_VO.setTitle(request.getParameter("subject"));
+		IR_VO.setMain_text(request.getParameter("content"));
 
-		IRDAO.update(IRVO);
-		request.setAttribute("IRVO", IRVO);
+		IR_DAO.update(IR_VO);
+		request.setAttribute("IR_VO", IR_VO);
 
 		request.getRequestDispatcher(url).forward(request, response);
 	}
