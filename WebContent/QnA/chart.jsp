@@ -6,6 +6,10 @@
 <%@ include file="/Inc/Header.jspf"%>
 <!-- chart.js 라이브러리 로드 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<style>
+	
+</style>
+
 <!-- container -->
 <div class="container_area" id="contents">
    <!-- Body
@@ -36,35 +40,55 @@
             <h2 class="title_sub">통계 자료</h2>
             <p class="sub_description">고객 통계 자료</p>
          </div>
-
+		
+		<!-- 차트 영역 -->
+		<h2 class="chart-title">QnA 카테고리 통계</h2>
+		<div class="container-chart">
+			<!-- QnA 차트 -->
+			<div class="chart-wrap">
+				<div class="chart">
+				    <!--차트가 그려질 부분-->
+				    <canvas id="qna_chart">
+			         <c:forEach var="chartVO" items="${chartList}">
+			            <c:if test="${chartVO.qna_type == 0}">
+			               <input type="hidden" name="good" id="good" value="${chartVO.cnt}" />
+			            </c:if>
+			            <c:if test="${chartVO.qna_type == 1}">
+			               <input name="bad" id="bad" value="${chartVO.cnt}" />
+			            </c:if>
+			            <c:if test="${chartVO.qna_type == 2}">
+			               <input type="hidden" name="proposal" id="proposal" value="${chartVO.cnt}" />
+			            </c:if>
+			            <c:if test="${chartVO.qna_type == 3}">
+			               <input type="hidden" name="etc" id="etc" value="${chartVO.cnt}" />
+			            </c:if>
+			         </c:forEach>
+			         </canvas>
+			    </div>
+			    
+			</div>
+		</div>
+		
+		<!-- 차트 영역 -->
+		<h2 class="chart-title">회원 통계</h2>
+		<div class="container-chart">
+			<!-- QnA 차트 -->
+			<div class="chart-wrap">
+				<div class="chart">
+		      	  <!--차트가 그려질 부분-->
+		     	   <canvas id="company_chart"></canvas>
+		    	</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
          <!-- contents : end -->
       </div>
       <!-- //container -->
-      <div style="width: 900px; height: 900px;">
-         <!--차트가 그려질 부분-->
-         <canvas id="qna_chart">
-
-         <c:forEach var="chartVO" items="${chartList}">
-            <c:if test="${chartVO.qna_type == 0}">
-               <input type="hidden" name="good" id="good" value="${chartVO.cnt}" />
-            </c:if>
-            <c:if test="${chartVO.qna_type == 1}">
-               <input name="bad" id="bad" value="${chartVO.cnt}" />
-            </c:if>
-            <c:if test="${chartVO.qna_type == 2}">
-               <input type="hidden" name="proposal" id="proposal" value="${chartVO.cnt}" />
-            </c:if>
-            <c:if test="${chartVO.qna_type == 3}">
-               <input type="hidden" name="etc" id="etc" value="${chartVO.cnt}" />
-            </c:if>
-         </c:forEach>
-         </canvas>
-      </div>
-
-      <div style="width: 900px; height: 900px;">
-         <!--차트가 그려질 부분-->
-         <canvas id="company_chart"></canvas>
-      </div>
+     
 
       <script type="text/javascript">
          var good = $('#good').val();
