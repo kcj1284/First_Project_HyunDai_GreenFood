@@ -35,6 +35,10 @@
 				<p class="sub_description">고객의 작은 목소리에도 귀 기울이겠습니다.</p>
 			</div>
 			<div class="board-body">
+				<!-- 검색 -->
+				<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList" id="searchFrm">
+					<input type="text" name="key" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
+				</form>
 				<!-- 리스트 -->
 				<div class="list-div">
 
@@ -72,18 +76,14 @@
 						</ul>
 					</form>
 				</div>
-
+				
 				<div class="flex-container">
-					<!-- 선택 삭제 -->
+					
 					<div class="item">
-						<button class="btn btn-default" id="multiDel">선택 삭제</button>
-
+						
 					</div>
 					<div class="item">
-						<!-- 검색 -->
-						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList" id="searchFrm">
-							<input type="text" name="key" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
-						</form>
+						<div class="paging">${paging}</div>
 					</div>
 
 					<div class="item">
@@ -91,7 +91,7 @@
 						<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaWriteForm'">글쓰기</button>
 					</div>
 				</div>
-				<div class="paging">${paging}</div>
+				
 				
 			</div>
 			<!-- contents : end -->

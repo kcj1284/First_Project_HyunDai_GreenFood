@@ -39,8 +39,7 @@
 			<div class="content-body">
 				<div class="view_top_area">
 					<h3 class="view_title">
-					<!-- 카테고리 출력 -->
-					<span class="catagory"> [ <c:if
+						<span class="catagory"> [ <c:if
 								test="${qnaVO.QNA_type == 0}">
 								<c:out value="칭찬" />
 							</c:if> <c:if test="${qnaVO.QNA_type == 1}">
@@ -50,27 +49,21 @@
 							</c:if> <c:if test="${qnaVO.QNA_type == 3}">
 								<c:out value="기타" />
 							</c:if> ]
-						</span> 
-						<!-- 제목 -->
-						${qnaVO.title}
+						</span> ${qnaVO.title}
 					</h3>
 
 					<ul class="date_hits_list">
-						<!-- 작성일-->
 						<li>${qnaVO.wrdate}</li>
-						<!-- 조회수 부분 -->
-						<li></li> 
+						<li>44</li>
 					</ul>
 				</div>
-				<!-- 글 내용 -->
+
 				<div class="view_text_area">
 					${qnaVO.main_text}
 				</div>
 
 			</div>
 
-
-			<!-- 답변 영역 -->
 			<div class="reply-box">
 				<input type="hidden" id="answerContent" name="answerContent" value="${qnaVO.answer}"/>
 	
@@ -94,21 +87,21 @@
 				</div>
 
 
-				<!-- 답변 작성 -->
+
+				<!-- 답변 -->
 				<!-- 로그인 아이디가 관리자일때 답변 작성 활성화 -->
 				<c:if test="${sessionScope.loginUser.administrator == 1}">
 					<div id="replyWrite">
-						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswer" id="replyFrm">
+						<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerUpdate&QNA_id=${qnaVO.QNA_id}" id="replyFrm">
 							<input type="hidden" name="QNA_id" value="${qnaVO.QNA_id}" />
-							<div id="replyWrite-userid">답변 작성</div>
-							<textarea class="form-control" name="answer" id="comment" placeholder="내용을 입력해 주세요." ></textarea>
-							<input type="submit" class="btn btn-default" id="comment-submit" value="답변등록">
+							<div id="replyWrite-userid">답변 수정</div>
+							<textarea class="form-control" name="answer" id="comment">${qnaVO.answer}</textarea>
+							<input type="submit" class="btn btn-default" id="comment-submit" value="수정">
 						</form>
 					</div>
 				</c:if>
 			</div>
 			<div id="edit-box">
-				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
 				<div class="tool">
 					<c:if test="${qnaVO.user_id == sessionScope.loginUser.user_id }">
 						<input type='button' class='btn-view btn-edit' id='updateBtn' onclick='updatePost()' value='수정'/>
@@ -128,19 +121,15 @@
 	
 	if(answer == 'waiting for answer' || answer == ""){
 		replyContent.innerHTML = "<span>답변을 기다리고 있습니다.</span>";
+		
 	} else{
 		replyBottom.innerHTML = "<c:if test='${sessionScope.loginUser.administrator == 1}'>";
-		replyBottom.innerHTML += "<input type='button' class='btn-view btn-edit' id='updateAnswer' onclick='updateAnswer()' value='수정'/>";
 		replyBottom.innerHTML += "<input type='button' class='btn-view btn-delete' id='deleteAnswer' onclick='deleteAnswer()' value='삭제'/>";
-		
 		replyBottom.innerHTML += "</c:if>";
 		replyContent.innerHTML = "<span>"+answer+"</span>";
-		
-		
-		
 	}
 	
-	
+
 	function updateAnswer(){
 		location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaAnswerUpdateForm&QNA_id=${qnaVO.QNA_id}"
 	}
