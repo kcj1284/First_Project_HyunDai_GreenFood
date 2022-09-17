@@ -8,8 +8,6 @@ import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dao.ChartDAO;
 import com.hdgf.dto.ChartVO;
 
-
-
 public class test {
 
 	/*
@@ -76,37 +74,50 @@ public class test {
 	 * for (int i = 0; i < annList.size(); i++) { AnnouncementVO ann =
 	 * annList.get(i); System.out.println(ann.getId()); } }
 	 * 
-	 * public static void 공지사항_제목검색() {
-	 * 
-	 * AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-	 * ArrayList<AnnouncementVO> annList = annDAO.get_title_List("3개");
-	 * 
-	 * for (int i = 0; i < annList.size(); i++) { AnnouncementVO ann =
-	 * annList.get(i); System.out.println(ann.getId()); } }
-	 * 
-	 * public static void 공지사항_전체_list_검색() {
-	 * 
-	 * AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-	 * ArrayList<AnnouncementVO> annList = annDAO.getList();
-	 * 
-	 * for (int i = 0; i < annList.size(); i++) { AnnouncementVO ann =
-	 * annList.get(i); System.out.println(ann.getId());
-	 * System.out.println(ann.getU_id()); System.out.println(ann.getTitle());
-	 * System.out.println(ann.getVisiter()); System.out.println(ann.getWrdate());
-	 * System.out.println(ann.getAnnoun_type()); } }
 	 */
-	
-public static void cnt확인() {
-		
+	public static void 공지사항_제목검색() {
+
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		ArrayList<AnnouncementVO> annList = annDAO.get_title_List("개인정보");
+
+		for (int i = 0; i < annList.size(); i++) {
+			AnnouncementVO ann = annList.get(i);
+			System.out.println(ann.getId());
+			System.out.println(ann.getU_id());
+			System.out.println(ann.getTitle());
+			System.out.println(ann.getVisiter());
+			System.out.println(ann.getWrdate());
+			System.out.println(ann.getAnnoun_type());
+		}
+	}
+
+	public static void 공지사항_전체_list_검색() {
+
+		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+		ArrayList<AnnouncementVO> annList = annDAO.getList();
+
+		for (int i = 0; i < annList.size(); i++) {
+			AnnouncementVO ann = annList.get(i);
+			System.out.println(ann.getId());
+			System.out.println(ann.getU_id());
+			System.out.println(ann.getTitle());
+			System.out.println(ann.getVisiter());
+			System.out.println(ann.getWrdate());
+			System.out.println(ann.getAnnoun_type());
+		}
+	}
+
+	public static void cnt확인() {
+
 		ChartDAO DAO = ChartDAO.getInstance();
 		ArrayList<ChartVO> List = DAO.countQnaType();
-		
+
 		for (int i = 0; i < List.size(); i++) {
 			ChartVO chart = List.get(i);
 			System.out.println(chart.getCnt());
 		}
 	}
-	
+
 	/*
 	 * public static void 공지사항_하나_게시글_조회() {
 	 * 
@@ -119,18 +130,18 @@ public static void cnt확인() {
 	 * System.out.println(ann.getfile_id()); System.out.println(ann.getVisiter());
 	 * System.out.println(ann.getAnnoun_type()); }
 	 */
-	
+
 	public static void main(String[] args) {
-		//공지사항_글쓰기();
-		//공지사항_리스트();
-		//공지사항_게시글확인();
-		//공지사항_수정();
-		//공지사항_삭제();
-		//공지사항_본문검색();
-		//공지사항_전체검색();
-		//공지사항_제목검색();
-		//공지사항_전체_list_검색();
-		//공지사항_하나_게시글_조회();
-		cnt확인();
+		// 공지사항_글쓰기();
+		// 공지사항_리스트();
+		// 공지사항_게시글확인();
+		// 공지사항_수정();
+		// 공지사항_삭제();
+		// 공지사항_본문검색();
+		// 공지사항_전체검색();
+		공지사항_제목검색();
+		// 공지사항_전체_list_검색();
+		// 공지사항_하나_게시글_조회();
+		// cnt확인();
 	}
 }

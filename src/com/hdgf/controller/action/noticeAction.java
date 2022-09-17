@@ -25,6 +25,9 @@ public class noticeAction implements Action {
 //		String latest = request.getParameter("latest");
 		String oldest = request.getParameter("oldest");
 		String views = request.getParameter("views");
+		
+		String searchKey = request.getParameter("searchKey");
+		String searchWord = request.getParameter("searchWord");
 
 		if (oldest != null) {
 			ArrayList<AnnouncementVO> annList = annDAO.getListByWrdate();
@@ -32,6 +35,16 @@ public class noticeAction implements Action {
 		} else if (views != null) {
 			ArrayList<AnnouncementVO> annList = annDAO.getListByViews();
 			request.setAttribute("annList", annList);
+		} else if (searchWord != null && searchKey.equals("subject")) {
+			ArrayList<AnnouncementVO> annList = annDAO.get_title_List(searchWord);
+			request.setAttribute("annList", annList);
+			request.setAttribute("keyword", searchWord);
+			System.out.println(searchKey);
+		} else if (searchWord != null && searchKey.equals("content")) {
+			ArrayList<AnnouncementVO> annList = annDAO.get_Main_text_List(searchWord);
+			request.setAttribute("annList", annList);
+			request.setAttribute("keyword", searchWord);
+			System.out.println(searchKey);
 		} else {
 			ArrayList<AnnouncementVO> annList = annDAO.getList();
 			request.setAttribute("annList", annList);
