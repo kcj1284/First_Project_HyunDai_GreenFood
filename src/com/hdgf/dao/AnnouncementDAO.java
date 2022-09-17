@@ -130,7 +130,7 @@ public class AnnouncementDAO {
 	public ArrayList<AnnouncementVO> get_Main_text_List(String search_Main_text) {
 		String runSP = "{ call sp_search_Main_text_Announcement(?,?) }";
 		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
-		ArrayList<AnnouncementVO> lists = new ArrayList<>();
+		ArrayList<AnnouncementVO> annList = new ArrayList<>();
 		Connection conn = null;
 		try {
 			conn = DBConnection.getConnection();
@@ -147,30 +147,31 @@ public class AnnouncementDAO {
 			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
-				AnnouncementVO vo = new AnnouncementVO();
-				vo.setId(rs.getInt("board_id"));
-				/*
-				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
-				 * vo.setWrdate(rs.getDate("Wrdate"));
-				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setfile_id(rs.getString("file_id")); vo.setVisiter(rs.getInt("Visiter"));
-				 */
+				AnnouncementVO annVO = new AnnouncementVO();
+				annVO.setId(rs.getInt("board_id"));
+				annVO.setTitle(rs.getString("title"));
+				annVO.setU_id(rs.getString("user_id"));
+				annVO.setVisiter(rs.getInt("visiter"));
+				annVO.setWrdate(rs.getDate("wrdate"));
+				//annVO.setMain_text(rs.getString("main_text"));
+				//annVO.setfile_id(rs.getString("file_id"));
+				annVO.setAnnoun_type(rs.getInt("announ_type"));
 				// vo를 리스트에 추가
-				lists.add(vo);
+				annList.add(annVO);
 			}
 			rs.close();
 			callableStatement.close();
 		} catch (Exception e) {
-			System.out.println(e.toString());
+			e.printStackTrace();
 		}
-		return lists;
+		return annList;
 	}
 
 	// 게시글 제목 검색 메소드
 	public ArrayList<AnnouncementVO> get_title_List(String search_title) {
 		String runSP = "{ call sp_search_title_Announcement(?,?) }";
 		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
-		ArrayList<AnnouncementVO> lists = new ArrayList<>();
+		ArrayList<AnnouncementVO> annList = new ArrayList<>();
 		Connection conn = null;
 		try {
 			conn = DBConnection.getConnection();
@@ -187,23 +188,25 @@ public class AnnouncementDAO {
 			rs = (ResultSet) callableStatement.getObject(1); // callableStatement실행결과를 object로 받아 downcast
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
-				AnnouncementVO vo = new AnnouncementVO();
-				vo.setId(rs.getInt("board_id"));
-				/*
-				 * vo.setTitle(rs.getString("Title")); vo.setUser_id(rs.getString("User_id"));
-				 * vo.setWrdate(rs.getDate("Wrdate"));
-				 * vo.setMain_text(rs.getString("Main_text"));
-				 * vo.setfile_id(rs.getString("file_id")); vo.setVisiter(rs.getInt("Visiter"));
-				 */
+				AnnouncementVO annVO = new AnnouncementVO();
+				annVO.setId(rs.getInt("board_id"));
+				annVO.setTitle(rs.getString("title"));
+				annVO.setU_id(rs.getString("user_id"));
+				annVO.setVisiter(rs.getInt("visiter"));
+				annVO.setWrdate(rs.getDate("wrdate"));
+				// vo.setMain_text(rs.getString("Main_text"));
+				// vo.setfile_id(rs.getString("file_id"));
+				annVO.setAnnoun_type(rs.getInt("announ_type"));
+
 				// vo를 리스트에 추가
-				lists.add(vo);
+				annList.add(annVO);
 			}
 			rs.close();
 			callableStatement.close();
 		} catch (Exception e) {
-			System.out.println(e.toString());
+			e.printStackTrace();
 		}
-		return lists;
+		return annList;
 	}
 
 	// 전체 list 검색

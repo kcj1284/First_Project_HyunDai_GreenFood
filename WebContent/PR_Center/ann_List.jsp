@@ -142,12 +142,11 @@
 					</div>
 					<div class="item">
 						<!-- 검색 -->
-						<form method="get" action="/myapp/board/boardList" id="searchFrm">
+						<form method="post" action="HdgfServlet?command=notice" id="searchFrm">
 							<select name="searchKey">
 								<option value="subject">제목</option>
-								<option value="content">글내용</option>
-								<option value="userid">글쓴이</option>
-							</select> <input type="text" name="searchWord" id="searchWord"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
+								<option value="content">본문</option>
+							</select> <input type="text" name="searchWord" id="searchWord" value="${keyword}"><input class="btn btn-default" type="submit" id="search-btn" value="검색">
 						</form>
 					</div>
 
