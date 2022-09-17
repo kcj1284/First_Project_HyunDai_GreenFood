@@ -32,7 +32,7 @@ public class IRListAction implements Action {
 				ArrayList<IR_Center_VO> IR_List = IR_DAO.getListByViews();
 				request.setAttribute("IR_List", IR_List);
 			} else if (searchWord != null && searchKey.equals("subject")) {
-				ArrayList<IR_Center_VO> IR_List = IR_DAO.get_Title_List(searchWord);
+				ArrayList<IR_Center_VO> IR_List = IR_DAO.get_title_List(searchWord);
 				request.setAttribute("IR_List", IR_List);
 				request.setAttribute("keyword", searchWord);
 				System.out.println(searchKey);

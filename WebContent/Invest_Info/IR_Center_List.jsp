@@ -84,14 +84,12 @@ a:link {
 
 			<!-- //타이틀 , 디스크립션 -->
 			<div class="board-body">
-			
-			<div id="sort_list">
+
+				<div id="sort_list">
 					<p>
-						<a href="javascript:recentlist();" id="latest" color="#4b4b4b">최신순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp 
-						<a href="javascript:oldlist();" id="oldest" color="#4b4b4b">오래된 순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp 
-						<a href="javascript:viewlist();" id="views" color="#4b4b4b">조회순</a>
+						<a href="javascript:recentlist();" id="latest" color="#4b4b4b">최신순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp <a href="javascript:oldlist();" id="oldest" color="#4b4b4b">오래된 순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp <a href="javascript:viewlist();" id="views" color="#4b4b4b">조회순</a>
 					</p>
-					
+
 				</div>
 
 				<div class="list-div">
@@ -99,19 +97,21 @@ a:link {
 					<form method="post" action="" id="listFrm">
 						<ul class="boardList">
 							<li>번호</li>
+							<li>&nbsp</li>
 							<li>제목</li>
 							<li>글쓴이</li>
 							<li>조회수</li>
 							<li>등록일</li>
-					
-									<c:forEach var="IR_VO" items="${IR_List}">
-										<li>${IR_VO.IR_Id}</li>
-										<li><a href="HdgfServlet?command=IR_Center_View&IR_Id=${IR_VO.IR_Id}">${IR_VO.Title}</a></li>
-										<li>${IR_VO.user_id}</li>
-										<li>${IR_VO.visiter}</li>
-										<li>${IR_VO.wrdate}</li>
-									</c:forEach>
-							</ul>
+
+							<c:forEach var="IR_VO" items="${IR_List}">
+								<li>${IR_VO.id}</li>
+								<li>&nbsp</li>
+								<li><a href="HdgfServlet?command=IR_Center_View&IR_Id=${IR_VO.id}">${IR_VO.title}</a></li>
+								<li>${IR_VO.user_id}</li>
+								<li>${IR_VO.visiter}</li>
+								<li>${IR_VO.wrdate}</li>
+							</c:forEach>
+						</ul>
 					</form>
 				</div>
 
@@ -126,15 +126,13 @@ a:link {
 							<select name="searchKey">
 								<option value="subject">제목</option>
 								<option value="content">본문</option>
-							</select> 
-							<input type="text" name="searchWord" id="searchWord" value="${keyword}">
-							<input class="btn btn-default" type="submit" id="search-btn" value="검색">
+							</select> <input type="text" name="searchWord" id="searchWord" value="${keyword}"> <input class="btn btn-default" type="submit" id="search-btn" value="검색">
 						</form>
 					</div>
 
 					<div class="item">
 						<c:if test="${sessionScope.loginUser.administrator == 1}">
-						<!-- 글쓰기 버튼 -->
+							<!-- 글쓰기 버튼 -->
 							<button class="btn btn-default" id="btn-boardwrite" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Center_WriteForm'">글쓰기</button>
 						</c:if>
 					</div>

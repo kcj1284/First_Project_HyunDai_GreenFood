@@ -30,8 +30,8 @@ public class IRViewAction implements Action {
 		} else if (edit_IR_VO != null) {
 			request.setAttribute("IR_VO", edit_IR_VO);
 		} else {
-			int IR_Id = Integer.parseInt(request.getParameter("IR_Id"));
-			IR_Center_VO IR_VO = IR_DAO.getIR(IR_Id);
+			int id = Integer.parseInt(request.getParameter("id"));
+			IR_Center_VO IR_VO = IR_DAO.getIR(id);
 			request.setAttribute("IR_VO", IR_VO);
 		}
 		request.getRequestDispatcher(url).forward(request, response);

@@ -119,7 +119,7 @@
 									<li><a href="/First_Project_HyunDai_GreenFood/Invest_Info/Business_Performance.jsp">재무정보</a></li>
 									<li><a href="/First_Project_HyunDai_GreenFood/Invest_Info/Dividend_Info.jsp">배당정보</a></li>
 									<li><a href="/First_Project_HyunDai_GreenFood/Invest_Info/Disclosure_Info.jsp">공시정보</a></li>
-									<li><a href="/First_Project_HyunDai_GreenFood/Invest_Info/IR_Contact.jsp">IR자료실</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Center_List">IR자료실</a></li>
 
 								</ul>
 							</div></li>

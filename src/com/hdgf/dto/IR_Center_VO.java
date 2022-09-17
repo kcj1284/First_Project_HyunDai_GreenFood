@@ -1,28 +1,28 @@
 package com.hdgf.dto;
 
 public class IR_Center_VO {
-	private int IR_Id;
-	private String Title;
+	private int id;
+	private String title;
 	private String user_id;
 	private java.sql.Date wrdate;
 	private String main_text;
 	private int file_id;
 	private int visiter;
 
-	public int getIR_Id() {
-		return IR_Id;
+	public int getId() {
+		return id;
 	}
 
-	public void setIR_Id(int IR_Id) {
-		this.IR_Id = IR_Id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 
-	public void setTitle(String Title) {
-		this.Title = Title;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getUser_id() {

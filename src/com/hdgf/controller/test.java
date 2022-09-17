@@ -76,55 +76,55 @@ public class test {
 	 * annList.get(i); System.out.println(ann.getId()); } }
 	 * 
 	 */
-	public static void 공지사항_제목검색() {
-
-		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-		ArrayList<AnnouncementVO> annList = annDAO.get_title_List("개인정보");
-
-		for (int i = 0; i < annList.size(); i++) {
-			AnnouncementVO ann = annList.get(i);
-			System.out.println(ann.getId());
-			System.out.println(ann.getU_id());
-			System.out.println(ann.getTitle());
-			System.out.println(ann.getVisiter());
-			System.out.println(ann.getWrdate());
-			System.out.println(ann.getAnnoun_type());
-		}
-	}
-
-	public static void 공지사항_전체_list_검색() {
-
-		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-		ArrayList<AnnouncementVO> annList = annDAO.getList();
-
-		for (int i = 0; i < annList.size(); i++) {
-			AnnouncementVO ann = annList.get(i);
-			System.out.println(ann.getId());
-			System.out.println(ann.getU_id());
-			System.out.println(ann.getTitle());
-			System.out.println(ann.getVisiter());
-			System.out.println(ann.getWrdate());
-			System.out.println(ann.getAnnoun_type());
-		}
-	}
-
-	public static void cnt확인() {
-
-		ChartDAO DAO = ChartDAO.getInstance();
-		ArrayList<ChartVO> List = DAO.countQnaType();
-
-		for (int i = 0; i < List.size(); i++) {
-			ChartVO chart = List.get(i);
-			System.out.println(chart.getCnt());
-		}
-	}
+//	public static void 공지사항_제목검색() {
+//
+//		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+//		ArrayList<AnnouncementVO> annList = annDAO.get_title_List("개인정보");
+//
+//		for (int i = 0; i < annList.size(); i++) {
+//			AnnouncementVO ann = annList.get(i);
+//			System.out.println(ann.getId());
+//			System.out.println(ann.getU_id());
+//			System.out.println(ann.getTitle());
+//			System.out.println(ann.getVisiter());
+//			System.out.println(ann.getWrdate());
+//			System.out.println(ann.getAnnoun_type());
+//		}
+//	}
+//
+//	public static void 공지사항_전체_list_검색() {
+//
+//		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
+//		ArrayList<AnnouncementVO> annList = annDAO.getList();
+//
+//		for (int i = 0; i < annList.size(); i++) {
+//			AnnouncementVO ann = annList.get(i);
+//			System.out.println(ann.getId());
+//			System.out.println(ann.getU_id());
+//			System.out.println(ann.getTitle());
+//			System.out.println(ann.getVisiter());
+//			System.out.println(ann.getWrdate());
+//			System.out.println(ann.getAnnoun_type());
+//		}
+//	}
+//
+//	public static void cnt확인() {
+//
+//		ChartDAO DAO = ChartDAO.getInstance();
+//		ArrayList<ChartVO> List = DAO.countQnaType();
+//
+//		for (int i = 0; i < List.size(); i++) {
+//			ChartVO chart = List.get(i);
+//			System.out.println(chart.getCnt());
+//		}
+//	}
 
 	public static void 공지사항_전체검색() {
 		IR_Center_DAO DAO = IR_Center_DAO.getInstance();
 		ArrayList<IR_Center_VO> List = DAO.getList();
 		for (int i = 0; i < List.size(); i++) {
 			IR_Center_VO IR = List.get(i);
-			System.out.println(IR.getIR_Id());
+			System.out.println(IR.getId());
 			System.out.println(IR.getTitle());
 			System.out.println(IR.getUser_id());
 			System.out.println(IR.getVisiter());

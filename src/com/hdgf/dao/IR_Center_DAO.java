@@ -49,7 +49,7 @@ public class IR_Center_DAO {
 		try {
 			conn = DBConnection.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
-			callableStatement.setInt(1, IR_Center_VO.getIR_Id());
+			callableStatement.setInt(1, IR_Center_VO.getId());
 			callableStatement.setString(2, IR_Center_VO.getTitle());
 			callableStatement.setString(3, IR_Center_VO.getMain_text());
 			callableStatement.setInt(4, IR_Center_VO.getfile_id());
@@ -60,7 +60,7 @@ public class IR_Center_DAO {
 		return -1; // 데이터베이스 오류
 	}
 
-	public int delete(int IR_Id) {
+	public int delete(int id) {
 		String sql = " { call sp_delete_IR_center(?) }";
 
 		Connection conn = null;
@@ -68,7 +68,7 @@ public class IR_Center_DAO {
 		try {
 			conn = DBConnection.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
-			callableStatement.setInt(1, IR_Id);
+			callableStatement.setInt(1, id);
 			callableStatement.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -99,7 +99,7 @@ public class IR_Center_DAO {
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
 				IR_Center_VO IR_VO = new IR_Center_VO();
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
+				IR_VO.setId(rs.getInt("ir_id"));
 				// vo를 리스트에 추가
 				IR_List.add(IR_VO);
 			}
@@ -111,8 +111,8 @@ public class IR_Center_DAO {
 		return IR_List;
 	}
 
-	// searchTitle
-	public ArrayList<IR_Center_VO> get_Title_List(String search_Title) {
+	// searchtitle
+	public ArrayList<IR_Center_VO> get_title_List(String search_title) {
 		Connection conn = null;
 		String runSP = "{ call sp_search_title_IR_Center(?,?) }";
 		// 물음표 변수의 순서는 out, in. 이 순서를 바꾸려면 프로시저의 변수 순서를 바꿔주면 된다
@@ -127,7 +127,7 @@ public class IR_Center_DAO {
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			// 오라클과 호환성제 때문에 demo > build path > configure build path > library에 ojdbc8.jar
 			// 파일 재추가 진행
-			callableStatement.setString(2, search_Title);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
+			callableStatement.setString(2, search_title);// '홍길' 검색시 '홍길%' 모든 사람 나오게끔 % 붙임
 			// 프로시져 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
@@ -135,8 +135,8 @@ public class IR_Center_DAO {
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
 				IR_Center_VO IR_VO = new IR_Center_VO();
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
-				IR_VO.setTitle(rs.getString("Title")); 
+				IR_VO.setId(rs.getInt("ir_id"));
+				IR_VO.setTitle(rs.getString("title")); 
 				IR_VO.setUser_id(rs.getString("User_id"));
 				IR_VO.setVisiter(rs.getInt("Visiter"));
 				IR_VO.setWrdate(rs.getDate("Wrdate"));
@@ -175,8 +175,8 @@ public class IR_Center_DAO {
 			while (rs.next()) {
 				// 레코드에 있는 내용을 dto에 입력
 				IR_Center_VO IR_VO = new IR_Center_VO();
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
-				IR_VO.setTitle(rs.getString("Title")); 
+				IR_VO.setId(rs.getInt("ir_id"));
+				IR_VO.setTitle(rs.getString("title")); 
 				IR_VO.setUser_id(rs.getString("User_id"));
 				IR_VO.setVisiter(rs.getInt("Visiter"));
 				IR_VO.setWrdate(rs.getDate("Wrdate"));
@@ -212,7 +212,7 @@ public class IR_Center_DAO {
 			while (rs.next()) {
 				// 레코드에 있는 내용을 vo에 입력
 				IR_Center_VO IR_VO = new IR_Center_VO();
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
+				IR_VO.setId(rs.getInt("ir_id"));
 				IR_VO.setTitle(rs.getString("title"));
 				IR_VO.setUser_id(rs.getString("user_id"));
 				IR_VO.setVisiter(rs.getInt("visiter"));
@@ -223,13 +223,13 @@ public class IR_Center_DAO {
 			rs.close();
 			callableStatement.close();
 		} catch (Exception e) {
-			System.out.println(e.toString());
+			e.printStackTrace();
 		}
 		return IR_List;
 	}
 
 	// 하나의 게시글을 보는 메소드
-	public IR_Center_VO getIR(int IR_Id) {
+	public IR_Center_VO getIR(int id) {
 		String sql = "{ call sp_select_one_ir_center(?, ?) }";
 		Connection conn = null;
 		ResultSet rs = null;
@@ -240,14 +240,14 @@ public class IR_Center_DAO {
 			callableStatement = conn.prepareCall(sql);
 			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
-			callableStatement.setInt(2, IR_Id);
+			callableStatement.setInt(2, id);
 			// 프로시저 실행
 			callableStatement.executeUpdate();
 			// out파라미터의 값을 돌려받는다
 			rs = (ResultSet) callableStatement.getObject(1); // cstmt실행결과를 object로 받아 downcast
 			if (rs.next()) {
 				// 레코드에 있는 내용을 vo에 입력
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
+				IR_VO.setId(rs.getInt("ir_id"));
 				IR_VO.setTitle(rs.getString("title"));
 				IR_VO.setUser_id(rs.getString("user_id"));
 				IR_VO.setWrdate(rs.getDate("wrdate"));
@@ -282,7 +282,7 @@ public class IR_Center_DAO {
 			rs = (ResultSet) callableStatement.getObject(1);
 			while (rs.next()) {
 				IR_Center_VO IR_VO = new IR_Center_VO();
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
+				IR_VO.setId(rs.getInt("ir_id"));
 				IR_VO.setTitle(rs.getString("title"));
 				IR_VO.setUser_id(rs.getString("user_id"));
 				IR_VO.setVisiter(rs.getInt("visiter"));
@@ -313,7 +313,7 @@ public class IR_Center_DAO {
 			rs = (ResultSet) callableStatement.getObject(1);
 			while (rs.next()) {
 				IR_Center_VO IR_VO = new IR_Center_VO();
-				IR_VO.setIR_Id(rs.getInt("IR_Id"));
+				IR_VO.setId(rs.getInt("ir_id"));
 				IR_VO.setTitle(rs.getString("title"));
 				IR_VO.setUser_id(rs.getString("user_id"));
 				IR_VO.setVisiter(rs.getInt("visiter"));

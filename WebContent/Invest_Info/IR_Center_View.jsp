@@ -58,7 +58,7 @@
 			<!-- 댓글쓰기 -->
 			<div id="replyWrite">
 				<form method="post" id="replyFrm">
-					<input type="hidden" name="IR_Id" value="${IR_VO.IR_Id}" />
+					<input type="hidden" name="IR_Id" value="${IR_VO.id}" />
 					<div id="replyWrite-userid">댓글 작성</div>
 					<textarea class="form-control" name="comment" id="comment"></textarea>
 					<input type="submit" class="btn btn-default" id="comment-submit" value="댓글등록">
@@ -68,8 +68,8 @@
 		<div id="edit-box">
 			<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
 			<c:if test="${IR_VO.user_id == sessionScope.loginUser.user_id }">
-				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_UpdateForm&IR_Id=${IR_VO.IR_Id}">수정</a>
-				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Delete&IR_Id=${IR_VO.IR_Id}">삭제</a>
+				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_UpdateForm&IR_Id=${IR_VO.id}">수정</a>
+				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Delete&IR_Id=${IR_VO.id}">삭제</a>
 			</c:if>
 			<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Center_List">목록</a>
 			<%-- <c:out value="${loginUser.user_id }" />
