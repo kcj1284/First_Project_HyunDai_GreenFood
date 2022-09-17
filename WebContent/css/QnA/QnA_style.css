@@ -608,7 +608,7 @@
 
 #search-btn {
 	color: #ffffff;
-	height: 25px;
+	height: 25.5px;
 	line-height: 0px;
 }
 
@@ -619,11 +619,11 @@
 
 .list-div {
     position: relative;
-    min-height: 250px;
+    min-height: 150px;
     border-color: #46675c;
     border-style: solid;
     border-width: 4px 0 4px 0;
-    margin: 10px 0 10px 0;
+    margin: 30px 0 30px 0;
 }
 
 /*paging*/
@@ -930,3 +930,5 @@
     background: #ffffff;
     padding: 40px;
 }
+
+

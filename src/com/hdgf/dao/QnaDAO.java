@@ -202,8 +202,8 @@ public class QnaDAO {
 			end_page = page_count;
 		}
 		if (start_page > view_rows) {
-			str += "<a href='HdgfServlet?command=qnaList&tpage=1&key="+title+"'>&lt;&lt;</a>&nbsp;&nbsp;";
-			str += "<a href='HdgfServlet?command=qnaList&tpage=" + (start_page - 1)+"&key="+title;
+			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=1&key="+title+"'>&lt;&lt;</a>&nbsp;&nbsp;";
+			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + (start_page - 1)+"&key="+title;
 			str += "'>&lt;</a>&nbsp;&nbsp;";
 		}
 
@@ -211,13 +211,13 @@ public class QnaDAO {
 			if (i == tpage) {
 				str += "<font color=#0a9882>[" + i + "]&nbsp;&nbsp;</font>";
 			} else {
-				str += "<a href='HdgfServlet?command=qnaList&tpage=" + i + "&key="+title+"'>[" + i + "]</a>&nbsp;&nbsp;";
+				str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + i + "&key="+title+"'>[" + i + "]</a>&nbsp;&nbsp;";
 			}
 		}
 
 		if (page_count > end_page) {
-			str += "<a href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "&key="+title+"'> &gt; </a>&nbsp;&nbsp;";
-			str += "<a href='HdgfServlet?command=qnaList&tpage=" + page_count + "&key="+title+"'> &gt; &gt; </a>&nbsp;&nbsp;";
+			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "&key="+title+"'> &gt; </a>&nbsp;&nbsp;";
+			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + page_count + "&key="+title+"'> &gt; &gt; </a>&nbsp;&nbsp;";
 		}
 		return str;
 	}
