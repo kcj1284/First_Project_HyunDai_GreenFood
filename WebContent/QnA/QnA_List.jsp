@@ -48,7 +48,7 @@
 							<li>분류</li>
 							<li>제목</li>
 							<li>글쓴이</li>
-							<li>조회수</li>
+							<li></li>
 							<li>등록일</li>
 							<c:choose>
 								<c:when test="${qnaListSize<=0}">
@@ -68,7 +68,7 @@
 										</c:if></li>
 									<li><a href="HdgfServlet?command=qnaView&QNA_id=${qnaVO.QNA_id}">${qnaVO.title}</a></li>
 									<li>${qnaVO.user_id}</li>
-									<li>10</li>
+									<li></li>
 									<li>${qnaVO.wrdate}</li>
 								</c:forEach>
 							</c:otherwise>

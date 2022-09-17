@@ -26,7 +26,9 @@
 <link href="${url}/css/boardwrite.css" rel="stylesheet" type="text/css">
 <script>
 	$(function() {
-		CKEDITOR.replace("content");
+		CKEDITOR.replace("content",{
+			  height: 400
+		});
 
 		$("#boardFrm").submit(function() {
 			if ($("#subject").val() == '') {
@@ -93,5 +95,5 @@
 			<!-- contents : end -->
 
 		</div>
-		<!-- //container -->
+		<!-- //container -->		
 		<%@ include file="/Inc/Footer.jspf"%>
