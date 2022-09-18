@@ -1,9 +1,7 @@
 <!-- 작성자 장주연 -->
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
-<link rel="stylesheet" type="text/css"
-	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 <style>
 #subject {
 	width: 99.6%;
@@ -63,13 +61,13 @@
 					현대그린푸드의 새로운 공지소식과 보도자료를 <span class="t_block_w_inline">가장 먼저 알려드립니다.</span>
 				</p>
 			</div>
-			
+
 			<!-- //타이틀 , 디스크립션 -->
-			
+
 			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annUpdate&id=${annVO.id}" id="boardFrm">
 				<input type="hidden" name="annId" value="${annVO.id}" />
 				<ul>
-					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요." value="${annVO.title}"/></li>
+					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요." value="${annVO.title}" /></li>
 					<li><textarea name="content" id="content">${annVO.main_text}</textarea></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
 				</ul>
@@ -77,5 +75,7 @@
 			<!-- contents : end -->
 
 		</div>
-		<!-- //container -->
-		<%@ include file="/Inc/Footer.jspf"%>
+	</div>
+</div>
+<!-- //container -->
+<%@ include file="/Inc/Footer.jspf"%>

@@ -17,7 +17,7 @@ public class IRDeleteAction implements Action {
 			throws ServletException, IOException, SQLException {
 		String url = "HdgfServlet?command=IR_Center_List";
 		
-		int id = Integer.parseInt(request.getParameter("Id"));
+		int id = Integer.parseInt(request.getParameter("id"));
 		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
 		IRDAO.delete(id);
 		

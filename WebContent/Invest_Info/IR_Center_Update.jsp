@@ -65,12 +65,12 @@
 
 			<!-- //타이틀 , 디스크립션 -->
 
-			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IRUpdate&IR_id=${IR_VO.IR_Id}" id="boardFrm">
-				<input type="hidden" name="IR_Id" value="${IRVO.IR_Id}" />
+			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IRUpdate&id=${IR_VO.id}" id="boardFrm">
+				<input type="hidden" name="IR_Id" value="${IR_VO.id}" />
 				<ul>
 					<li><input type="text" class="form-control" name="subject" id="subject" placeholder="제목을 입력해 주세요." value="${IR_VO.title}" /></li>
 					<li><textarea name="content" id="content">${IR_VO.main_text}</textarea></li>
-					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록"/></li>
+					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
 				</ul>
 			</form>
 			<!-- contents : end -->

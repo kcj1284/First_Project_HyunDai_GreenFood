@@ -106,7 +106,7 @@ a:link {
 							<c:forEach var="IR_VO" items="${IR_List}">
 								<li>${IR_VO.id}</li>
 								<li>&nbsp</li>
-								<li><a href="HdgfServlet?command=IR_Center_View&IR_Id=${IR_VO.id}">${IR_VO.title}</a></li>
+								<li><a href="HdgfServlet?command=IR_Center_View&id=${IR_VO.id}">${IR_VO.title}</a></li>
 								<li>${IR_VO.user_id}</li>
 								<li>${IR_VO.visiter}</li>
 								<li>${IR_VO.wrdate}</li>
