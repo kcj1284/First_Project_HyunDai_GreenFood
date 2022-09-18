@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 import com.hdgf.dao.AnnouncementDAO;
 import com.hdgf.dao.ChartDAO;
+import com.hdgf.dao.FileDAO;
 import com.hdgf.dao.IR_Center_DAO;
 import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.ChartVO;
+import com.hdgf.dto.FileVO;
 import com.hdgf.dto.IR_Center_VO;
 
 public class test {
@@ -145,6 +147,14 @@ public class test {
 	 * System.out.println(ann.getAnnoun_type()); }
 	 */
 
+	public static void 파일아이디() {
+		
+		FileDAO fileDAO = FileDAO.getInstance();
+		int id = fileDAO.getFileId("aaa");
+		
+		System.out.println(id);
+	}
+	
 	public static void main(String[] args) {
 		// 공지사항_글쓰기();
 		// 공지사항_리스트();
@@ -152,10 +162,11 @@ public class test {
 		// 공지사항_수정();
 		// 공지사항_삭제();
 		// 공지사항_본문검색();
-		 공지사항_전체검색();
+		//공지사항_전체검색();
 		//공지사항_제목검색();
 		// 공지사항_전체_list_검색();
 		// 공지사항_하나_게시글_조회();
 		// cnt확인();
+		파일아이디();
 	}
 }

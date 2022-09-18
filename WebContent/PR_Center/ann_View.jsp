@@ -56,8 +56,9 @@
 						</c:if>
 						 | 작성자: ${annVO.u_id}
 					</li>
-					<li>조회 ${annVO.visiter}| ${annVO.wrdate}</li>
+					<li>조회 ${annVO.visiter} | ${annVO.wrdate}</li>
 				</ul>
+				첨부파일  <a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=download&file=${fileVO.id}">${fileVO.fileRealName}</a>
 				<hr>
 				<div class="board-content">
 					<span>${annVO.main_text}</span>

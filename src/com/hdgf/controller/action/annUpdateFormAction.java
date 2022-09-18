@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.hdgf.dao.AnnouncementDAO;
+import com.hdgf.dao.FileDAO;
 import com.hdgf.dto.AnnouncementVO;
+import com.hdgf.dto.FileVO;
 import com.hdgf.dto.UsersVO;
 
 public class annUpdateFormAction implements Action {
@@ -29,6 +31,10 @@ public class annUpdateFormAction implements Action {
 			AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 			AnnouncementVO annVO = annDAO.getAnn(annId);
 			request.setAttribute("annVO", annVO);
+			
+			FileDAO fileDAO = FileDAO.getInstance();
+			FileVO fileVO = fileDAO.getFile(annVO.getfile_id());
+			request.setAttribute("fileVO", fileVO);
 		}
 
 		request.getRequestDispatcher(url).forward(request, response);

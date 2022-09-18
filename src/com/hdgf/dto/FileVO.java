@@ -2,9 +2,16 @@ package com.hdgf.dto;
 
 public class FileVO {
 
+	private int id;
 	private String fileName;
 	private String fileRealName;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getFileName() {
 		return fileName;
 	}
@@ -15,12 +22,6 @@ public class FileVO {
 		return fileRealName;
 	}
 	public void setFileRealName(String fileRealName) {
-		this.fileRealName = fileRealName;
-	}
-	
-	public FileVO(String fileName, String fileRealName) {
-		super();
-		this.fileName = fileName;
 		this.fileRealName = fileRealName;
 	}
 }

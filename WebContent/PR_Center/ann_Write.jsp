@@ -74,7 +74,7 @@
 			</div>
 			
 			<!-- //타이틀 , 디스크립션 -->
-			
+			<!-- 기존 작동 코드
 			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWrite" id="boardFrm">
 				<ul>
 					<li>
@@ -86,9 +86,28 @@
 	                </li>
 					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
 					<li><textarea name="main_text" id="content"></textarea></li>
+					<li> file:  &nbsp  &nbsp<input type="file" name="file"><br></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
 				</ul>
 			</form>
+			 -->
+			
+			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWrite" id="boardFrm" enctype="multipart/form-data">
+				<ul>
+					<li>
+	                    분류:  &nbsp  &nbsp
+	                    <select id="category" name="ann_type">
+	                        <option value="0">보도자료</option>
+	                        <option value="1">공지소식</option>
+	                    </select>
+	                </li>
+					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
+					<li><textarea name="main_text" id="content"></textarea></li>
+					<li> file:  &nbsp  &nbsp<input type="file" name="file"><br></li>
+					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
+				</ul>
+			</form>
+			 
 			<!-- contents : end -->
 
 		</div>

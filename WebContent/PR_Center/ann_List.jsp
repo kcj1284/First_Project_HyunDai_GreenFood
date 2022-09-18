@@ -137,7 +137,7 @@
 				<div class="flex-container">
 					<!-- 선택 삭제 -->
 					<div class="item">
-						<button class="btn btn-default" id="multiDel">선택 삭제</button>
+						<button class="btn btn-default" id="multiDel" style="display:none">선택 삭제</button>
 
 					</div>
 					<div class="item">
