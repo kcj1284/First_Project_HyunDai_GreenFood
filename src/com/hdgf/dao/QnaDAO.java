@@ -202,26 +202,33 @@ public class QnaDAO {
 			end_page = page_count;
 		}
 		if (start_page > view_rows) {
-			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=1&key="+title+"'>&lt;&lt;</a>&nbsp;&nbsp;";
-			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + (start_page - 1)+"&key="+title;
-			str += "'>&lt;</a>&nbsp;&nbsp;";
+			//제일 처음으로 이동
+			str += "<a class='arrow pprev' href='HdgfServlet?command=qnaList&tpage=1&key="+title+"'></a>&nbsp;&nbsp;"; 
+			//이전으로 이동
+			str += "<a class='arrow pprev' href='HdgfServlet?command=qnaList&tpage=" + (start_page - 1)+"&key="+title;
+			str += "'></a>";
 		}
 
 		for (int i = start_page; i <= end_page; i++) {
 			if (i == tpage) {
-				str += "<font color=#0a9882>[" + i + "]&nbsp;&nbsp;</font>";
+				str += "<a class='active'>" + i + "</a>"; //현재페이지
 			} else {
-				str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + i + "&key="+title+"'>[" + i + "]</a>&nbsp;&nbsp;";
+				str += "<a href='HdgfServlet?command=qnaList&tpage=" + i + "&key="+title+"'>" + i + "</a>&nbsp;&nbsp;"; //다른페이지
 			}
 		}
 
 		if (page_count > end_page) {
-			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "&key="+title+"'> &gt; </a>&nbsp;&nbsp;";
-			str += "<a class='paging-link' href='HdgfServlet?command=qnaList&tpage=" + page_count + "&key="+title+"'> &gt; &gt; </a>&nbsp;&nbsp;";
+			//뒤로 이동
+			str += "<a class='arrow next' href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "&key="+title+"'> &gt; </a>&nbsp;&nbsp;";
+			//맨뒤로 이동
+			str += "<a class='arrow nnext' href='HdgfServlet?command=qnaList&tpage=" + page_count + "&key="+title+"'> &gt; &gt; </a>&nbsp;&nbsp;";
 		}
 		return str;
 	}
 
+	
+	
+	
 	public ArrayList<QnaVO> listQna(int tpage, String qna_name) {
 		ArrayList<QnaVO> lists = new ArrayList<QnaVO>();
 

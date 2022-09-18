@@ -82,8 +82,16 @@
 					<div class="item">
 						
 					</div>
+					
+					
+					
+					
 					<div class="item">
-						<div class="paging">${paging}</div>
+						<div class="page_wrap">
+					   		<div class="page_nation">
+						      ${paging}
+						   </div>
+						</div>
 					</div>
 
 					<div class="item">
