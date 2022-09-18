@@ -31,7 +31,7 @@ public class IRWriteAction implements Action {
 			IR_VO.setTitle(request.getParameter("title"));
 			IR_VO.setUser_id(loginUser.getUser_id());
 			IR_VO.setMain_text(request.getParameter("main_text"));
-			IR_VO.setfile_id(0);
+			IR_VO.setFile_id(0);
 			IR_DAO.write(IR_VO);
 		}
 

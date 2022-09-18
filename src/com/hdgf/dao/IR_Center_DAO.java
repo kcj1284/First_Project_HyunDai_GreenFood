@@ -33,7 +33,7 @@ public class IR_Center_DAO {
 			callableStatement.setString(1, IR_Center_VO.getTitle());
 			callableStatement.setString(2, IR_Center_VO.getUser_id());
 			callableStatement.setString(3, IR_Center_VO.getMain_text());
-			callableStatement.setInt(4, IR_Center_VO.getfile_id());
+			callableStatement.setInt(4, IR_Center_VO.getFile_id());
 			callableStatement.executeUpdate();
 
 		} catch (Exception e) {
@@ -52,7 +52,7 @@ public class IR_Center_DAO {
 			callableStatement.setInt(1, IR_Center_VO.getId());
 			callableStatement.setString(2, IR_Center_VO.getTitle());
 			callableStatement.setString(3, IR_Center_VO.getMain_text());
-			callableStatement.setInt(4, IR_Center_VO.getfile_id());
+			callableStatement.setInt(4, IR_Center_VO.getFile_id());
 			callableStatement.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -252,7 +252,7 @@ public class IR_Center_DAO {
 				IR_VO.setUser_id(rs.getString("user_id"));
 				IR_VO.setWrdate(rs.getDate("wrdate"));
 				IR_VO.setMain_text(rs.getString("main_text"));
-				IR_VO.setfile_id(rs.getInt("file_id"));
+				IR_VO.setFile_id(rs.getInt("file_id"));
 				IR_VO.setVisiter(rs.getInt("visiter"));
 			}
 			rs.close();
@@ -306,7 +306,6 @@ public class IR_Center_DAO {
 			conn = DBConnection.getConnection();
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(sql);
-
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);
 			callableStatement.executeUpdate();
 
