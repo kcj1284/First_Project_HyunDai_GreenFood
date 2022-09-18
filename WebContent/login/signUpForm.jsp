@@ -126,7 +126,8 @@ $(function(){
               <div class="input_F">
                   <input type="text" class="user_id" id="user_id" name="user_id" placeholder="아이디" autocomplete="off">
               </div>
-              <input type="button" id="idcheck" value="중복확인"><span id="msg"></span>
+              <input type="button" id="idcheck" value="중복확인">
+              <span id="msg"><h4 style="color:gray"> 소문자로 시작, 소문자와 숫자만, 3자리에서 13자리 </h4></span>
             
               <div class="input_F">
                   <input type="password" class="user_pw" name="user_pw" placeholder="비밀번호">
