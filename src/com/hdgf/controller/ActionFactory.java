@@ -23,6 +23,8 @@ public class ActionFactory {
          System.out.println("index 확인");
       } else if (command.equals("signUp")) {
          action = new signUpAction();
+      } else if (command.equals("signUpForm")) {
+         action = new signUpFormAction();
       } else if (command.equals("loginForm")) {
          action = new LoginFormAction();
       } else if (command.equals("login")) {

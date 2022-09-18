@@ -9,9 +9,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <link href="../css/login.css" type="text/css" rel="stylesheet" />
+    <link href="/First_Project_HyunDai_GreenFood/css/login.css" type="text/css" rel="stylesheet" />
   <title>회원가입 폼</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <script>
       let idCheck=false
       let pwCheck=false

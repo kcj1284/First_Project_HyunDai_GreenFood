@@ -37,8 +37,8 @@
 
 						<c:choose>
 							<c:when test="${empty sessionScope.loginUser}">
-								<button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/login/signUpForm.jsp';">회원가입</button>
-								<button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/login/login.jsp';">로그인</button>
+								<button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUpForm';">회원가입</button>
+								<button class="custom-btn btn-1" type="button" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=loginForm';">로그인</button>
 							</c:when>
 
 							<c:otherwise>
