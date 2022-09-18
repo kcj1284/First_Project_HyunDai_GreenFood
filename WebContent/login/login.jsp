@@ -5,7 +5,7 @@
 <%@ include file ="/Inc/Header.jspf" %>
 
 <%
-   //쿠키 확인여부
+   //쿠키 확인
    String loginId = CookieManager.readCookie(request, "loginId");
 
    String cookieCheck = "";
@@ -40,6 +40,7 @@
 
                            <div class="join">
                                <ul>
+                               <!-- 쿠키체크여부 -->
                                    <li> <input type="checkbox" name="save_check" value="Y" <%= cookieCheck%>> <font style="color:#666666">아이디 저장하기</font></li>
                                </ul>
                            </div>

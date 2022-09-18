@@ -1,7 +1,6 @@
 // 작성자 : 김민찬
 package com.hdgf.util;
 
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +20,7 @@ public class CookieManager {
        Cookie[] cookies = request.getCookies();
        if(cookies != null){
            for(Cookie c : cookies){ // 쿠키 목록에서 하나씩
-               String cookieName = c.getName();
+               String cookieName = c.getName(); 
                if(cookieName.equals(cName)){
                    cookieValue=c.getValue();   // 반환값 갱신
                }

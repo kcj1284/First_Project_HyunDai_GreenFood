@@ -89,6 +89,7 @@
         <div class="myclick" onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=myPageUpdateForm';">수정</div>
         <input class="myclick" type="submit" value="탈퇴">
      </div>
+     <!-- input type hidden과 같은 역할 -->
         <div style="display: none">
            <input type="text" name="user_id" value="${sessionScope.loginUser.user_id}">
         </div>
