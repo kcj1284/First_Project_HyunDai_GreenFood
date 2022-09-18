@@ -48,6 +48,7 @@ public class annWriteAction2 implements Action {
 		
 		FileDAO fileDAO = FileDAO.getInstance();
 		fileDAO.upload(fileName, fileRealName);
+		
 		int fileId = fileDAO.getFileId(fileRealName);
 
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
@@ -59,7 +60,11 @@ public class annWriteAction2 implements Action {
 			annVO.setTitle(multipartRequest.getParameter("title"));
 			annVO.setU_id(loginUser.getUser_id());
 			annVO.setMain_text(multipartRequest.getParameter("main_text"));
-			annVO.setfile_id(fileId);
+			if (fileRealName == null) {
+				annVO.setfile_id(0);
+			} else {
+				annVO.setfile_id(fileId);
+			}
 			annVO.setAnnoun_type(Integer.parseInt(multipartRequest.getParameter("ann_type")));
 			annDAO.write(annVO);
 		}
