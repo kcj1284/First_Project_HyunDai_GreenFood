@@ -24,7 +24,7 @@ public class ChartDAO {
 
    // Qna type 개수 찾기
    public ArrayList<ChartVO> countQnaType() {
-      String runSP = "{ call sp_qna_type(?) }";
+      String runSP = "{ call chart_PKG.sp_qna_type(?) }";
       // 전체데이터를 select한 결과 presult가 들어가므로 ?가 1개. presult는 오라클에서 커서에 해당.
       ArrayList<ChartVO> lists = new ArrayList<>();
       Connection conn = null;
@@ -57,7 +57,7 @@ public class ChartDAO {
    
    // COM type 개수 찾기
    public ArrayList<ChartVO> countComType() {
-      String runSP = "{ call sp_com_type(?) }";
+      String runSP = "{ call chart_PKG.sp_com_type(?) }";
       // 전체데이터를 select한 결과 presult가 들어가므로 ?가 1개. presult는 오라클에서 커서에 해당.
       ArrayList<ChartVO> lists = new ArrayList<>();
       Connection conn = null;
