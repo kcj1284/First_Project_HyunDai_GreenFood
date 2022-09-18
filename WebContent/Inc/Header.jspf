@@ -53,14 +53,14 @@
 
 				<nav class="gnb_area">
 					<ul class="gnb">
-						<li><a class="main_menu" href="">회사소개</a>
+						<li><a class="main_menu" href="First_Project_HyunDai_GreenFood/Company_PR/Green_Food.jsp">회사소개</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub1">
 									<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/Green_Food.jsp">현대그린푸드</a></li>
 								</ul>
 							</div></li>
 
-						<li><a class="main_menu" href="">사업영역</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/Business/foodService.jsp">사업영역</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub2">
 									<li><a href="/First_Project_HyunDai_GreenFood/Business/foodService.jsp">푸드서비스사업</a></li>
@@ -72,7 +72,7 @@
 								</ul>
 							</div></li>
 
-						<li><a class="main_menu" href="">ESG 경영</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/ESG_Management/Managerial_Objective.jsp">ESG 경영</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub3">
 									<li><a href="/First_Project_HyunDai_GreenFood/ESG_Management/Managerial_Objective.jsp">경영목표</a></li>
@@ -85,7 +85,7 @@
 								</ul>
 							</div></li>
 
-						<li><a class="main_menu" href="">인프라시스템</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">인프라시스템</a>
 
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub4">
@@ -98,21 +98,21 @@
 								</ul>
 							</div></li>
 
-						<li><a class="main_menu" href="">브랜드이야기</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/brand_story/brandstory.jsp">브랜드이야기</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub5">
 									<li><a href="/First_Project_HyunDai_GreenFood/brand_story/brandstory.jsp">브랜드이야기</a></li>
 								</ul>
 							</div></li>
 
-						<li><a class="main_menu" href="">홍보센터</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">홍보센터</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub6">
 									<!-- W <li><a href="/First_Project_HyunDai_GreenFood/PR_Center/notice.jsp">공지소식</a></li> -->
 									<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">공지소식</a></li>
 								</ul>
 							</div></li>
-						<li><a class="main_menu" href="">투자정보</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/Invest_Info/Business_Performance.jsp">투자정보</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub7">
 									<li><a href="https://finance.naver.com/item/main.nhn?code=005440">주가정보</a></li>
@@ -124,7 +124,7 @@
 								</ul>
 							</div></li>
 
-						<li><a class="main_menu" href="">고객센터</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList">고객센터</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub8">
 									<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList">고객의 소리</a></li>
