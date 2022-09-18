@@ -85,12 +85,14 @@ a:link {
 			<!-- //타이틀 , 디스크립션 -->
 			<div class="board-body">
 
+				<!-- 
 				<div id="sort_list">
 					<p>
 						<a href="javascript:recentlist();" id="latest" color="#4b4b4b">최신순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp <a href="javascript:oldlist();" id="oldest" color="#4b4b4b">오래된 순</a>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp <a href="javascript:viewlist();" id="views" color="#4b4b4b">조회순</a>
 					</p>
 
 				</div>
+				-->
 
 				<div class="list-div">
 
@@ -118,7 +120,7 @@ a:link {
 				<div class="flex-container">
 					<!-- 선택 삭제 -->
 					<div class="item">
-						<button class="btn btn-default" id="multiDel">선택 삭제</button>
+						<button class="btn btn-default" id="multiDel" style="display:none">선택 삭제</button>
 					</div>
 					<div class="item">
 						<!-- 검색 -->
