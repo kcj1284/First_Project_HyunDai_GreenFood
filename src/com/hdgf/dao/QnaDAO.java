@@ -219,9 +219,9 @@ public class QnaDAO {
 
 		if (page_count > end_page) {
 			//뒤로 이동
-			str += "<a class='arrow next' href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "&key="+title+"'> &gt; </a>&nbsp;&nbsp;";
+			str += "<a class='arrow next' href='HdgfServlet?command=qnaList&tpage=" + (end_page + 1) + "&key="+title+"'></a>&nbsp;&nbsp;";
 			//맨뒤로 이동
-			str += "<a class='arrow nnext' href='HdgfServlet?command=qnaList&tpage=" + page_count + "&key="+title+"'> &gt; &gt; </a>&nbsp;&nbsp;";
+			str += "<a class='arrow nnext' href='HdgfServlet?command=qnaList&tpage=" + page_count + "&key="+title+"'></a>&nbsp;&nbsp;";
 		}
 		return str;
 	}
