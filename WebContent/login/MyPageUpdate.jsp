@@ -111,7 +111,7 @@
 				<input class="myclick" type="text" value="뒤로"
 					   onclick="location.href='/First_Project_HyunDai_GreenFood/HdgfServlet?command=mypage';">
 			</div>
-	</div>
+
 	</form>
 	</div>
 
