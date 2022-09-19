@@ -1,3 +1,4 @@
+// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import java.io.IOException;
@@ -6,11 +7,8 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import com.hdgf.dao.UsersDAO;
-import com.hdgf.dto.UsersVO;
-
+// 마이페이지 업데이트 폼으로 가게함
 public class myPageUpdateFormAction implements Action {
 	
 	@Override

@@ -1,3 +1,4 @@
+// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import javax.servlet.RequestDispatcher;
@@ -7,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
+// 회원가입 폼으로 이동
 public class  signUpFormAction implements Action {
 
     @Override
