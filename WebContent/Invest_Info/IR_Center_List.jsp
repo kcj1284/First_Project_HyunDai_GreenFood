@@ -77,8 +77,8 @@ a:link {
 				<p class="sub_description">현대그린푸드의 IR자료실입니다.</p>
 			</div>
 			<ul class="tab_list tab_list_2">
-				<li class="on"><a href="#;">IR 자료실</a></li>
-				<li><a href="IR_Contact.jsp">IR Contact</a></li>
+				<li class="on"><a href="#">IR 자료실</a></li>
+				<li><a href="/First_Project_HyunDai_GreenFood/Invest_Info/IR_Contact.jsp">IR Contact</a></li>
 			</ul>
 
 
