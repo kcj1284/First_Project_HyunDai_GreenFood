@@ -31,6 +31,11 @@ public class annViewAction implements Action {
 			url = "HdgfServlet?command=loginForm";
 		} else if (edit_annVO != null) {
 			request.setAttribute("annVO", edit_annVO);
+			
+			FileDAO fileDAO = FileDAO.getInstance();
+			FileVO fileVO = fileDAO.getFile(edit_annVO.getfile_id());
+			request.setAttribute("fileVO", fileVO);
+			
 		} else {
 			int annId = Integer.parseInt(request.getParameter("id"));
 			AnnouncementVO annVO = annDAO.getAnn(annId);

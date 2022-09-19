@@ -19,7 +19,7 @@ public class annUpdateFormAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
-		String url = "PR_Center/ann_Update.jsp";
+		String url = "PR_Center/ann_Update2.jsp";
 
 		HttpSession session = request.getSession();
 		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");

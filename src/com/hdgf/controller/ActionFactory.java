@@ -42,7 +42,7 @@ public class ActionFactory {
       } else if (command.equals("annDelete")) {
          action = new annDeleteAction();
       } else if (command.equals("annUpdate")) {
-         action = new annUpdateAction();
+         action = new annUpdateAction2();
       } else if (command.equals("annWriteForm")) {
          action = new annWriteFormAction();
       } else if (command.equals("annWrite")) {

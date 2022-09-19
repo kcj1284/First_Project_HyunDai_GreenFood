@@ -64,7 +64,7 @@
 				</div>
 				<div class="file-area">
 					<c:if test="${fileVO.fileRealName != '' && not empty fileVO.fileRealName}">
-							<span>첨부파일</span>  <a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=download&file=${fileVO.id}">${fileVO.fileRealName}</a>
+							<span>첨부파일</span>  <c:if test="${fileVO.id != 0}"><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=download&file=${fileVO.id}">${fileVO.fileRealName}</a></c:if>
 					</c:if> 
 				</div>
 				
