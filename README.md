@@ -1,5 +1,1 @@
-# First_Project_HyunDai_GreenFood
-
-[#커밋번호] 커밋내용
-...
-...
+현대 IT&E 5기 1차 프로젝트 현대 그린푸드 사이트 만들기
