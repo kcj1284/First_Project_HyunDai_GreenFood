@@ -112,7 +112,7 @@
 									<li><a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">공지소식</a></li>
 								</ul>
 							</div></li>
-						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/Invest_Info/Business_Performance.jsp">투자정보</a>
+						<li><a class="main_menu" href="/First_Project_HyunDai_GreenFood/Invest_Info/Disclosure_Info.jsp">투자정보</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub7">
 									<li><a href="https://finance.naver.com/item/main.nhn?code=005440">주가정보</a></li>
