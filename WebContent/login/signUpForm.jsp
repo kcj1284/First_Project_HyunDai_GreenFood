@@ -104,9 +104,19 @@ $(function(){
 
   <script>
       function Check(){
-          if(!(pwCheck&&idCheck)){alert("다시 확인 부탁드립니다");}
+          var nullCheck = true;
+          if( !$("#user_name").val()) {
+              nullCheck=false;
+          }
+          if(!$("#tel").val() ) {
+              nullCheck=false;
+          }
+          if( !$("#email").val() ) {
+              nullCheck=false;
+          }
+          if(!(pwCheck&&idCheck&&nullCheck)){alert("다시 확인 부탁드립니다");}
           else{alert("가입성공")}
-          return pwCheck&&idCheck;
+          return pwCheck&&idCheck&&nullCheck;
       }
   </script>
 
@@ -139,13 +149,13 @@ $(function(){
               <div class="pwcheck">
               </div>
               <div class="input_F">
-                  <input type="text" name="user_name" placeholder="이름" autocomplete="off">
+                  <input type="text" name="user_name" id="user_name" placeholder="이름" autocomplete="off">
               </div>
               <div class="input_F">
-                  <input type="text" name="tel" placeholder="전화번호" autocomplete="off">
+                  <input type="text" name="tel" id="tel" placeholder="전화번호" autocomplete="off">
               </div>
               <div class="input_F">
-                  <input type="text" name="email" placeholder="email" autocomplete="off">
+                  <input type="text" name="email" id="email" placeholder="email" autocomplete="off">
               </div>
             
             
