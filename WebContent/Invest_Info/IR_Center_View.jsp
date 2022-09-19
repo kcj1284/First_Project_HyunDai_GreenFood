@@ -26,55 +26,54 @@
 		<!-- //하이어라키 -->
 		<!-- 서브 컨텐츠 -->
 		<div class="sub_contents">
-			<!-- 타이틀 , 디스크립션 -->
-			<div class="title_description">
-				<h2 class="title_sub">IR 자료실</h2>
-				<p class="sub_description">현대그린푸드의 IR자료실입니다.</p>
-			</div>
+		<!-- //타이틀 , 디스크립션 -->
+			<div class="content-body" style="margin-top: 40px;">
+				<div class="view_top_area">
+					<h3 class="view_title">
+						<!-- 제목 -->
+						${IR_VO.title}
+					</h3>
 
-			<!-- //타이틀 , 디스크립션 -->
-			<div class="content-body">
-				<h4>${IR_VO.title}</h4>
-				<p></p>
-				<ul>
-					<li>작성자: ${IR_VO.user_id}</li>
-					<li>조회 ${IR_VO.visiter}| ${IR_VO.wrdate}</li>
-				</ul>
-				<hr>
-				<div class="board-content">
-					<span>${IR_VO.main_text}</span>
+					<ul class="date_hits_list">
+						<li>작성자: ${IR_VO.user_id}</li>
+						<!-- 작성일-->
+						<li> ${IR_VO.wrdate} </li>
+						<!-- 조회수 부분 -->
+						<li> ${IR_VO.visiter} </li> 
+					</ul>		
 				</div>
-			</div>
-
-			<div class="reply-box">
-				<h5>전체 댓글</h5>
-				<!-- 댓글목록이 나올 자리 -->
-				<div id="replyList"></div>
-
-				<!-- 댓글쓰기 -->
-				<div id="replyWrite">
-					<form method="post" id="replyFrm">
-						<input type="hidden" name="IR_Id" value="${IR_VO.id}" />
-						<div id="replyWrite-userid">댓글 작성</div>
-						<textarea class="form-control" name="comment" id="comment"></textarea>
-						<input type="submit" class="btn btn-default" id="comment-submit" value="댓글등록">
-					</form>
+				<!-- 글 내용 -->
+				<div class="view_text_area">
+					${IR_VO.main_text}
 				</div>
+
 			</div>
+			
 			<div id="edit-box">
-				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
-				<c:if test="${IR_VO.user_id == sessionScope.loginUser.user_id }">
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_UpdateForm&id=${IR_VO.id}">수정</a>
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Delete&id=${IR_VO.id}">삭제</a>
-				</c:if>
-				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Center_List">목록</a>
-				<%-- <c:out value="${loginUser.user_id }" />
-				<c:out value="${sessionScope.loginUser.user_id }" /> --%>
-			</div>
+				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
+				<div class="tool">
+					<c:if test="${IR_VO.user_id == sessionScope.loginUser.user_id }">
+						<input type='button' class='btn-view btn-edit' id='updateBtn' onclick='updatePost()' value='수정'/>
+						<input type='button' class='btn-view btn-delete' id='deleteBtn' onclick='deletePost()' value='삭제'/>
+					</c:if>
+				</div>
+				<input type='button' class='btn-view btn-menu' id='menuBtn' onclick='menu()' value='목록'/>
+			</div>       
 			<!-- contents : end -->
 		</div>
 		<!-- //container -->
 	</div>
-</div>
-
+	<script>
+		function updatePost(){
+			location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_UpdateForm&id=${IR_VO.id}"
+		}
+		
+		function deletePost(){
+			location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Delete&id=${IR_VO.id}"
+		}
+		
+		function menu(){
+			location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=IR_Center_List"
+		}
+	</script>
 <%@ include file="/Inc/Footer.jspf"%>

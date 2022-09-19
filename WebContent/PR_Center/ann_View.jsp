@@ -39,58 +39,75 @@
 			</div>
 			
 			<!-- //타이틀 , 디스크립션 -->
-			
 			<div class="content-body">
-				<h4>${annVO.title}</h4>
-				<p>
-					
-				</p>
-				<ul>
-					<li>
-						분류 : 
-						<c:if test="${annVO.announ_type == 0}">
+				<div class="view_top_area">
+					<h3 class="view_title">
+					<!-- 카테고리 출력 -->
+					<span class="catagory"> [ <c:if test="${annVO.announ_type == 0}">
 							<c:out value="보도자료" />
 						</c:if>
 						<c:if test="${annVO.announ_type == 1}">
 							<c:out value="공지사항" />
-						</c:if>
-						 | 작성자: ${annVO.u_id}
-					</li>
-					<li>조회 ${annVO.visiter} | ${annVO.wrdate}</li>
-				</ul>
-				첨부파일  <a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=download&file=${fileVO.id}">${fileVO.fileRealName}</a>
-				<hr>
-				<div class="board-content">
-					<span>${annVO.main_text}</span>
-				</div>
-			</div>
+						</c:if> ]
+						</span> 
+						<!-- 제목 -->
+						${annVO.title}
+					</h3>
 
-			<div class="reply-box">
-				<h5>전체 댓글</h5>
-				<!-- 댓글목록이 나올 자리 -->
-				<div id="replyList"></div>
-
-				<!-- 댓글쓰기 -->
-				<div id="replyWrite">
-						<form method="post" id="replyFrm">
-							<input type="hidden" name="annId" value="${annVO.id}" />
-							<div id="replyWrite-userid">댓글 작성</div>
-							<textarea class="form-control" name="comment" id="comment"></textarea>
-							<input type="submit" class="btn btn-default" id="comment-submit" value="댓글등록">
-						</form>
+					<ul class="date_hits_list">
+						<li>작성자: ${annVO.u_id}</li>
+						<!-- 작성일-->
+						<li> ${annVO.wrdate} </li>
+						<!-- 조회수 부분 -->
+						<li> ${annVO.visiter} </li> 
+					</ul>		
 				</div>
+				<div class="file-area">
+					<c:if test="${fileVO.fileRealName != '' && not empty fileVO.fileRealName}">
+							<span>첨부파일</span>  <a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=download&file=${fileVO.id}">${fileVO.fileRealName}</a>
+					</c:if> 
+				</div>
+				
+				<!-- 글 내용 -->
+				<div class="view_text_area">
+					${annVO.main_text}
+				</div>
+
 			</div>
+			
 			<div id="edit-box">
-				<!-- 로그인 아이디와 글쓴이가 같을 경우 수정 -->
-				<c:if test="${annVO.u_id == sessionScope.loginUser.user_id }">
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annUpdateForm&id=${annVO.id}">수정</a>
-					<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annDelete&id=${annVO.id}">삭제</a>
-				</c:if>
-				<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">목록</a>
-<%-- 				<c:out value="${loginUser.user_id }" />
-				<c:out value="${sessionScope.loginUser.user_id }" /> --%>
-			</div>
+				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
+				<div class="tool">
+					<c:if test="${annVO.u_id == sessionScope.loginUser.user_id }">
+						<input type='button' class='btn-view btn-edit' id='updateBtn' onclick='updatePost()' value='수정'/>
+						<input type='button' class='btn-view btn-delete' id='deleteBtn' onclick='deletePost()' value='삭제'/>
+					</c:if>
+				</div>
+				<input type='button' class='btn-view btn-menu' id='menuBtn' onclick='menu()' value='목록'/>
+			</div>       
 			<!-- contents : end -->
 		</div>
 		<!-- //container -->
+		
+		<script>
+			function updateAnswer(){
+				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annAnswerUpdateForm&id=${annVO.id}"
+			}
+			
+			function deleteAnswer(){
+				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annAnswerDelete&id=${annVO.id}"
+			}
+			
+			function updatePost(){
+				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annUpdateForm&id=${annVO.id}"
+			}
+			
+			function deletePost(){
+				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annDelete&id=${annVO.id}"
+			}
+			
+			function menu(){
+				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice"
+			}
+		</script>
 		<%@ include file="/Inc/Footer.jspf"%>

@@ -767,7 +767,16 @@
 	min-height: 400px;
 }
 .view_text_area{
-	border-bottom : 0px
+	border-bottom : 1px solid;
+	margin-bottom: 10px;
+}
+
+.file-area{
+	width: 600px;
+    float: left;
+    /* display: block; */
+    position: absolute;
+    margin: 10px 30px;
 }
 /* QnA 답변 css */
 
@@ -809,7 +818,7 @@
 
 .reply-box{
 	font-family: "nanum_gothic";
-	padding-top: 30px;
+	padding-top: 10px;
 }
 
 .reply-box h5 {
