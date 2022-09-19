@@ -11,14 +11,14 @@
 						<ul class="tool_menu_list">
 							<!-- 거래 상담 -->
 							<li>
-								<a href="#" id="aBiz" class="no-touch-color"><img src="../../img/footer/icon_advice_off.png" alt=""> 거래 · 상담 </a>
+								<a href="/First_Project_HyunDai_GreenFood/QnA/Business_Consulting.jsp" id="aBiz" class="no-touch-color"><img src="../../img/footer/icon_advice_off.png" alt=""> 거래 · 상담 </a>
 
 							</li>
 							<!-- //거래 상담 -->
 
 							<!-- 고객의 소리 -->
 							<li>
-								<a href="#" id="aVoc" class="no-touch-color"><img src="../../img/footer/icon_customer_off.png" alt=""> 고객의 소리</a>
+								<a href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=qnaList" id="aVoc" class="no-touch-color"><img src="../../img/footer/icon_customer_off.png" alt=""> 고객의 소리</a>
 							</li>
 							<!-- //고객의 소리 -->
 						</ul>
