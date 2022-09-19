@@ -22,7 +22,7 @@
 
 		<ul class="tab_list tab_list_2">
 			<li><a href="IR_Center_List.jsp">IR 자료실</a></li>
-			<li class="on"><a href="#;">IR Contact</a></li>
+			<li class="on"><a href="#">IR Contact</a></li>
 		</ul>
 
 		<div class="director_area">
