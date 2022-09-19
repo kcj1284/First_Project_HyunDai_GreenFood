@@ -23,17 +23,22 @@
 					<li><a href="#">활동소식</a></li>
 				</ul></li>
 		</ul>
+		
 		<!-- //하이어라키 -->
 		<!-- 서브 컨텐츠 -->
 		<div class="sub_contents">
-		<!-- //타이틀 , 디스크립션 -->
-			<div class="content-body" style="margin-top: 40px;">
+			<!-- //타이틀 , 디스크립션 -->
+			<div class="title_description">
+					<h2 class="title_sub">IR 자료실</h2>
+					<p class="sub_description">현대그린푸드의 IR자료실입니다.</p>
+			</div>
+			<div class="content-body">
 				<div class="view_top_area">
 					<h3 class="view_title">
 						<!-- 제목 -->
 						${IR_VO.title}
 					</h3>
-
+	
 					<ul class="date_hits_list">
 						<li>작성자: ${IR_VO.user_id}</li>
 						<!-- 작성일-->
@@ -46,9 +51,9 @@
 				<div class="view_text_area">
 					${IR_VO.main_text}
 				</div>
-
+	
 			</div>
-			
+				
 			<div id="edit-box">
 				<!-- 로그인 아이디가 관리자일때 수정, 삭제 활성화 -->
 				<div class="tool">
@@ -58,7 +63,7 @@
 					</c:if>
 				</div>
 				<input type='button' class='btn-view btn-menu' id='menuBtn' onclick='menu()' value='목록'/>
-			</div>       
+			</div>       			
 			<!-- contents : end -->
 		</div>
 		<!-- //container -->
