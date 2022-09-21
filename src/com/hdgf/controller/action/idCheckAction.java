@@ -31,10 +31,10 @@ public class idCheckAction implements Action  {
 		// 성공여부 확인 : 개발자용
 		if(idCheck==0)
 		{
-			System.out.println("이미 존재하는 아이디입니다.");
+			System.out.println("사용 가능한 아이디입니다.");
 		}else if(idCheck==1)
 		{
-			System.out.println("사용 가능한 아이디입니다.");
+			System.out.println("이미 존재하는 아이디입니다.");
 		}
 		//ajax에 결과값으로 보냄 
 		out.write(idCheck+"");
