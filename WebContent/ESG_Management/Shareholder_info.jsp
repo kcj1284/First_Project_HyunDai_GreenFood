@@ -1,5 +1,6 @@
 <!--작성자 김찬중-->
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,26 +20,29 @@
 		</div>
 		<div class="tree_text">
 			<h1>ESG 경영</h1>
-			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.<br>
+			<br> 현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해<br> 다양한 분야에서 사회적 가치를
+			창출하는 것을 목표로 합니다.<br>
 		</div>
 	</div>
 
 	<div class="category">
 		<ul>
-		<li class = "on">
-		<a href="Managerial_Objective.jsp">경영목표</a> </li>
-		<li class = "on"><a href="NetZero_2030.jsp">환경경영(E)</a></li> 
-		<li class = "on"><a href="CRS.jsp">사회공헌(S)</a> </li>
-		<li class = "on"><a href="Board_Policy.jsp">지배구조(G)</a> </li>
-		<li class = "on"><a href="Safety_Health.jsp">안전보건</a> </li>
-		<li class = "on"><a href="Win_Management.jsp">상생경영</a> </li>
-		<li class = "on"><a href="Group_Ethical_Management.jsp">윤리경영</a> </li>
+			<li class="on"><a href="Managerial_Objective.jsp">경영목표</a></li>
+			<li class="on"><a href="NetZero_2030.jsp">환경경영(E)</a></li>
+			<li class="on"><a href="CRS.jsp">사회공헌(S)</a></li>
+			<li class="on"><a href="Board_Policy.jsp">지배구조(G)</a></li>
+			<li class="on"><a href="Safety_Health.jsp">안전보건</a></li>
+			<li class="on"><a href="Win_Management.jsp">상생경영</a></li>
+			<li class="on"><a href="Group_Ethical_Management.jsp">윤리경영</a></li>
 		</ul>
 	</div>
 	<div>
 		<div class="sub_contents">
 			<div class="sub_text">
-				현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에, <br class="pc">공정한 경쟁과 지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다. <br>앞으로도 주주 등 모든 이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써 <br class="pc">신뢰를 확보하고 성실한 경영활동을 수행하고자 최선을 다하겠습니다.
+				현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에, <br class="pc">공정한 경쟁과
+				지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다. <br>앞으로도 주주 등 모든
+				이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써 <br class="pc">신뢰를 확보하고
+				성실한 경영활동을 수행하고자 최선을 다하겠습니다.
 			</div>
 
 			<div class="tab_list">
@@ -47,8 +51,7 @@
 				<li><a href="General_Meeting.jsp">주주총회</a></li>
 				<li class="on"><a href="Shareholder_info.jsp">주주정보</a></li>
 				<li><a href="Corp_Governance_Chart.jsp">기업지배구조헌장</a></li>
-				<li><a href="Corp_Governance_Report.jsp">기업지배구조보고서</a></li>
-				<br>
+				<li><a href="Corp_Governance_Report.jsp">기업지배구조보고서</a></li> <br>
 			</div>
 			<h3 class="esg_title">주주정보</h3>
 			<h4 class="title_director">주주제안 처리 절차</h4>
@@ -83,16 +86,23 @@
 				</li>
 			</ul>
 
-			<a target="frm" href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/SHAREHOLDER_PROPOSAL.pdf&LOGIC_FILE_NM=proposal.pdf" class="esg_btn_down">주주제안 관련 법령</a>
+			<a target="frm"
+				href="/cm/download.hg?PHYSC_FILE_NM=/static/pdf/SHAREHOLDER_PROPOSAL.pdf&LOGIC_FILE_NM=proposal.pdf"
+				class="esg_btn_down">주주제안 관련 법령</a>
 
 			<ul class="guide_txt">
-				<li>※ 당사는 상법 제363조의 2 (주주제안권) 에서 규정하는 주주제안권의 특례규정인 상법 제542조의 6 (소수주주권)의 적용을 받아, <br class="pc">지분율 1% 이상 주주는 단독 또는 타 주주와 합산하여 주주제안권을 행사할 수 있습니다.
+				<li>※ 당사는 상법 제363조의 2 (주주제안권) 에서 규정하는 주주제안권의 특례규정인 상법 제542조의 6
+					(소수주주권)의 적용을 받아, <br class="pc">지분율 1% 이상 주주는 단독 또는 타 주주와 합산하여
+					주주제안권을 행사할 수 있습니다.
 				</li>
-				<li>※ 주주제안 내용은 관련법령인 상법 시행령 제12조 (주주제안의 거부) 및 당사 정관을 근거로 주주총회 상정 여부를 이사회에서 판단하며, <br class="pc">법령 및 정관 위배시 사유를 들어 주주제안이 거부될 수 있습니다.
+				<li>※ 주주제안 내용은 관련법령인 상법 시행령 제12조 (주주제안의 거부) 및 당사 정관을 근거로 주주총회
+					상정 여부를 이사회에서 판단하며, <br class="pc">법령 및 정관 위배시 사유를 들어 주주제안이 거부될
+					수 있습니다.
 				</li>
 			</ul>
 			<h4 class="title_director">
-				주주제안 처리 절차 <br> <span class="boss_director">· 총 발행주식 수 97,704,482 / 자기주식 수 10,397,555</span>
+				주주제안 처리 절차 <br> <span class="boss_director">· 총 발행주식 수
+					97,704,482 / 자기주식 수 10,397,555</span>
 			</h4>
 
 			<table class="list_tb">

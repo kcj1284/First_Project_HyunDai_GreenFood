@@ -1,14 +1,15 @@
 <!--작성자 김찬중-->
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mangerial_Objective</title>
-	<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mangerial_Objective</title>
+<link href="../css/EM_style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -18,13 +19,12 @@
 		<div class="sub_layout esg_area">
 			<div class="sub_visual">
 				<ul class="hierarchy_list">
-					<li class="icon_home"><img src="../img/icon/icon_home.png" alt="Home" /></li>
-					<li class="depth_2">
-						<a href="#" class="m_hierarchy">ESG 경영</a>
+					<li class="icon_home"><img src="../img/icon/icon_home.png"
+						alt="Home" /></li>
+					<li class="depth_2"><a href="#" class="m_hierarchy">ESG 경영</a>
 						<ul class="hierarchy_depth" style="display: none;">
 							<li><a href="#">지배구조(G)</a></li>
-						</ul>
-					</li>
+						</ul></li>
 					<li class="depth_3"><a href="#" class="t_block_hierarchy">지배구조(G)</a>
 						<ul class="hierarchy_depth">
 							<li><a href="#">경영목표</a></li>
@@ -34,14 +34,13 @@
 							<li><a href="#">안전보건</a></li>
 							<li><a href="#">상생경영</a></li>
 							<li><a href="#">윤리경영</a></li>
-						</ul>
-					</li>
+						</ul></li>
 				</ul>
 				<div class="title_description">
 					<h2 class="title_sub">ESG 경영</h2>
 					<p class="sub_description">
-						현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해
-						<br>다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.
+						현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해 <br>다양한 분야에서 사회적 가치를 창출하는 것을
+						목표로 합니다.
 					</p>
 				</div>
 			</div>
@@ -58,10 +57,10 @@
 			</div>
 			<div class="sub_contents">
 				<div class="sub_text">
-					현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에,
-					<br class="pc">공정한 경쟁과 지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다.
-					<br>앞으로도 주주 등 모든 이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써
-					<br class="pc">신뢰를 확보하고 성실한 경영활동을 수행하고자 최선을 다하겠습니다.
+					현대그린푸드는 고객에게 가장 신뢰받는 종합식품기업으로 거듭남과 동시에, <br class="pc">공정한 경쟁과
+					지속성장을 위해 안정적이고 투명한 지배구조를 갖추고자 노력하고 있습니다. <br>앞으로도 주주 등 모든
+					이해관계자에게 당사의 지배구조에 관한 구체적인 정보를 제공함으로써 <br class="pc">신뢰를 확보하고
+					성실한 경영활동을 수행하고자 최선을 다하겠습니다.
 				</div>
 
 				<ul class="tab_list">
@@ -94,7 +93,8 @@
 									<th scope="col">성명</th>
 									<th scope="col">선임일</th>
 									<th scope="col">임기</th>
-									<th scope="col">책임보험 <br>가입여부</th>
+									<th scope="col">책임보험 <br>가입여부
+									</th>
 									<th scope="col">비고</th>
 								</tr>
 							</thead>
@@ -154,7 +154,8 @@
 									<td>2021년 03월 29일</td>
 									<td>2023년 03월 29일</td>
 									<td>가입</td>
-									<td>감사위원회 위원장,<br />ESG 경영위원회 위원장</td>
+									<td>감사위원회 위원장,<br />ESG 경영위원회 위원장
+									</td>
 								</tr>
 								<tr>
 									<td class="first">사외이사</td>
@@ -162,7 +163,8 @@
 									<td>2022년 03월 30일</td>
 									<td>2024년 03월 30일</td>
 									<td>가입</td>
-									<td>내부거래위원회, 사외이사<br>후보추천위원회 위원장</td>
+									<td>내부거래위원회, 사외이사<br>후보추천위원회 위원장
+									</td>
 								</tr>
 								<tr>
 									<td class="first">사외이사</td>
@@ -182,8 +184,8 @@
 						<div class="search_area">
 							<h4 class="title_director">이사회 주요활동</h4>
 
-							<label for="year" class="blind">년도 선택</label> <select id="year" class="select_box"
-								onchange="">
+							<label for="year" class="blind">년도 선택</label> <select id="year"
+								class="select_box" onchange="">
 								<option selected="true">2021년</option>
 								<option>2020년</option>
 								<option>2019년</option>
@@ -193,7 +195,8 @@
 								<option>2015년</option>
 								<option>2014년</option>
 								<option>2013년</option>
-							</select> <button class="btn_search_ok" onclick="ChangeYear()">확인</button>
+							</select>
+							<button class="btn_search_ok" onclick="ChangeYear()">확인</button>
 						</div>
 						<div style="display:">
 							<table class="list_tb">
@@ -318,7 +321,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div style="display:none;">
+						<div style="display: none;">
 							<table class="list_tb">
 								<caption class="blind">이사회 주요활동</caption>
 								<colgroup>
@@ -446,7 +449,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div style="display:none;">
+						<div style="display: none;">
 							<table class="list_tb">
 								<caption class="blind">이사회 주요활동</caption>
 								<colgroup>
@@ -500,7 +503,7 @@
 										<td>2019.08.09</td>
 										<td>
 											<ol class="director_division_list">
-												<li>1. 기업지배구조헌장 제정의 건 </li>
+												<li>1. 기업지배구조헌장 제정의 건</li>
 												<li>2. 이사회 규정 개정의 건</li>
 												<li>3. 2019년 제2분기 실적 보고의 건</li>
 
@@ -563,8 +566,7 @@
 									</tr>
 									<tr>
 										<td class="first">1</td>
-										<td>2019.02.08
-										</td>
+										<td>2019.02.08</td>
 										<td>
 											<ol class="director_division_list">
 												<li>1. 제 51기 재무재표 및 영업보고서 승인의 건</li>
@@ -579,7 +581,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div style="display:none">
+						<div style="display: none">
 							<table class="list_tb">
 								<caption class="blind">이사회 주요활동</caption>
 								<colgroup>
@@ -686,8 +688,7 @@
 									</tr>
 									<tr>
 										<td class="first">6</td>
-										<td>2018.05.11
-										</td>
+										<td>2018.05.11</td>
 										<td>
 											<ol class="director_division_list">
 												<li>1. 2018년 제1분기 실적 보고의 건</li>
@@ -1395,7 +1396,8 @@
 								<thead>
 									<tr>
 										<th scope="col" class="first">구분</th>
-										<th scope="col">사외이사 후보<br>추천위원회</th>
+										<th scope="col">사외이사 후보<br>추천위원회
+										</th>
 										<th scope="col">보상위원회</th>
 										<th scope="col">내부거래위원회</th>
 										<th scope="col">감사위원회</th>
@@ -1405,19 +1407,28 @@
 								<tbody>
 									<tr>
 										<td class="first">역 할</td>
-										<td>사외이사 후보의<br>적정성 검증</td>
-										<td>등기임원 보상정책 및<br>보수한도의 평가</td>
-										<td>내부거래의 <br>적정성 심사</td>
-										<td>회사 전반<br>회계/업무의 감사</td>
-										<td>ESG 경영 관련 업무<br>검토 및 결과 보고</td>
+										<td>사외이사 후보의<br>적정성 검증
+										</td>
+										<td>등기임원 보상정책 및<br>보수한도의 평가
+										</td>
+										<td>내부거래의 <br>적정성 심사
+										</td>
+										<td>회사 전반<br>회계/업무의 감사
+										</td>
+										<td>ESG 경영 관련 업무<br>검토 및 결과 보고
+										</td>
 									</tr>
 									<tr>
 										<td class="first">구 성</td>
-										<td>사외이사 3명, <br>사내이사 1명</td>
-										<td>사외이사 2명, <br>사내이사 1명</td>
-										<td>사외이사 3명, <br>사내이사 1명</td>
+										<td>사외이사 3명, <br>사내이사 1명
+										</td>
+										<td>사외이사 2명, <br>사내이사 1명
+										</td>
+										<td>사외이사 3명, <br>사내이사 1명
+										</td>
 										<td>사외이사 3명</td>
-										<td>사외이사 3명, <br>사내이사 1명</td>
+										<td>사외이사 3명, <br>사내이사 1명
+										</td>
 									</tr>
 									<tr>
 										<td class="first">위원장</td>
@@ -1429,15 +1440,21 @@
 									</tr>
 									<tr>
 										<td class="first">위 원</td>
-										<td>신수원(사외이사)<br>유원곤(사외이사)<br>박홍진(대표이사)</td>
-										<td>신수원(사외이사)<br>정지영(사내이사)</td>
-										<td>신수원(사외이사)<br>유원곤(사외이사)<br>이진원(사내이사)</td>
-										<td>정병두, 유원곤<br>(전원 사외이사)</td>
-										<td>정병두(사외이사)<br>유원곤(사외이사)<br>이진원 (사내이사)</td>
+										<td>신수원(사외이사)<br>유원곤(사외이사)<br>박홍진(대표이사)
+										</td>
+										<td>신수원(사외이사)<br>정지영(사내이사)
+										</td>
+										<td>신수원(사외이사)<br>유원곤(사외이사)<br>이진원(사내이사)
+										</td>
+										<td>정병두, 유원곤<br>(전원 사외이사)
+										</td>
+										<td>정병두(사외이사)<br>유원곤(사외이사)<br>이진원 (사내이사)
+										</td>
 									</tr>
 								</tbody>
 							</table>
-							<p class="korean_financial" style="text-align:left">※ESG 경영위원회는 2021년 이사회 결의로 설치되었습니다.</p>
+							<p class="korean_financial" style="text-align: left">※ESG
+								경영위원회는 2021년 이사회 결의로 설치되었습니다.</p>
 						</div>
 					</div>
 				</section>
@@ -1445,9 +1462,7 @@
 				<section class="esg_section cont4_1_4">
 					<div class="director_area">
 						<div class="committee_area">
-							<h3 class="title_director">
-								사외이사 현황
-							</h3>
+							<h3 class="title_director">사외이사 현황</h3>
 							<table class="list_tb">
 								<caption class="blind">사외이사 현황</caption>
 								<colgroup>
@@ -1463,7 +1478,8 @@
 										<th scope="col">성명</th>
 										<th scope="col">최초 선임일</th>
 										<th scope="col">현재 임기</th>
-										<th scope="col">재직 기간<br />(현재 임기 포함)</th>
+										<th scope="col">재직 기간<br />(현재 임기 포함)
+										</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -1488,7 +1504,8 @@
 									</tr>
 								</tbody>
 							</table>
-							<p class="korean_financial" style="text-align:left">※당사 이사의 임기는 2년 입니다. (정관 제27조)</p>
+							<p class="korean_financial" style="text-align: left">※당사 이사의
+								임기는 2년 입니다. (정관 제27조)</p>
 						</div>
 					</div>
 				</section>
@@ -1504,7 +1521,8 @@
 				$(".activity_area > div").eq(6).hide();
 				$(".activity_area > div").eq(7).hide();
 				$(".activity_area > div").eq(8).hide();
-				$(".activity_area > div").eq($("#year")[0].selectedIndex + 1).show();
+				$(".activity_area > div").eq($("#year")[0].selectedIndex + 1)
+						.show();
 			}
 		</script>
 	</div>

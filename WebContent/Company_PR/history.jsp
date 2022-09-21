@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 
 <%@ include file="/Inc/Header.jspf"%>
-<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Company_PR/Company_PR_style.css">
+<link rel="stylesheet" type="text/css"
+	href="/First_Project_HyunDai_GreenFood/css/Company_PR/Company_PR_style.css">
 <!-- container -->
 <div class="container_area" id="contents">
 	<!-- Body
@@ -12,7 +13,9 @@
 		<div class="company">
 			<!-- 하이어라키 -->
 			<ul class="hierarchy_list">
-				<li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png" alt="Home" /></li>
+				<li class="icon_home"><img
+					src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png"
+					alt="Home" /></li>
 				<li class="depth_2"><a href="#" class="m_hierarchy">현대그린푸드
 				</a>
 
@@ -44,9 +47,12 @@
 		<div class="sub_contents">
 			<!-- 탭 -->
 			<ul class="tab_list">
-				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/Green_Food.jsp">회사소개</a></li>
+				<li><a
+					href="/First_Project_HyunDai_GreenFood/Company_PR/Green_Food.jsp">회사소개</a></li>
 				<li class="on"><a href="#">연혁</a></li>
-				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/map.jsp">오시는 길</a></li>
+				<li><a
+					href="/First_Project_HyunDai_GreenFood/Company_PR/map.jsp">오시는
+						길</a></li>
 			</ul>
 			<!-- //탭 -->
 
@@ -58,10 +64,11 @@
 				<h3 class="title_company">주요연혁</h3>
 
 				<div class="history_area">
-					<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/history_img_2022.jpg" alt=""
-						class="pc" /> <img
-						src="/First_Project_HyunDai_GreenFood/img/Company_PR/history_img_2022_m.jpg" alt=""
-						class="mo" />
+					<img
+						src="/First_Project_HyunDai_GreenFood/img/Company_PR/history_img_2022.jpg"
+						alt="" class="pc" /> <img
+						src="/First_Project_HyunDai_GreenFood/img/Company_PR/history_img_2022_m.jpg"
+						alt="" class="mo" />
 
 					<div class="blind">
 
