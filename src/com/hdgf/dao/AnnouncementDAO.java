@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hdgf.dto.AnnouncementVO;
-import com.hdgf.util.DBConnection;
+import com.hdgf.util.DBManager;
 
 import oracle.jdbc.OracleTypes;
 
@@ -49,7 +49,7 @@ public class AnnouncementDAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setString(1, annVO.getTitle());
 			callableStatement.setString(2, annVO.getU_id());
@@ -70,7 +70,7 @@ public class AnnouncementDAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, annVO.getId());
 			callableStatement.setString(2, annVO.getTitle());
@@ -90,7 +90,7 @@ public class AnnouncementDAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, annID);
 			callableStatement.executeUpdate();
@@ -106,7 +106,7 @@ public class AnnouncementDAO {
 		ArrayList<AnnouncementVO> lists = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -147,7 +147,7 @@ public class AnnouncementDAO {
 		ArrayList<AnnouncementVO> annList = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -188,7 +188,7 @@ public class AnnouncementDAO {
 		ArrayList<AnnouncementVO> annList = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -230,7 +230,7 @@ public class AnnouncementDAO {
 		ArrayList<AnnouncementVO> lists = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -269,7 +269,7 @@ public class AnnouncementDAO {
 		AnnouncementVO vo = new AnnouncementVO();
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement = conn.prepareCall(sql);
 			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
@@ -308,7 +308,7 @@ public class AnnouncementDAO {
 		ResultSet pageset = null;
 
 		try {
-			con = DBConnection.getConnection();
+			con = DBManager.getConnection();
 			pstmt = con.prepareStatement(sql);
 
 			if (ann_name.equals("")) {
@@ -386,7 +386,7 @@ public class AnnouncementDAO {
 		int absolutepage = 1;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			absolutepage = (tpage - 1) * counts + 1;
 			pstmt = conn.prepareStatement(str, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
@@ -434,7 +434,7 @@ public class AnnouncementDAO {
 		CallableStatement callableStatement = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(sql);
 
@@ -466,7 +466,7 @@ public class AnnouncementDAO {
 		CallableStatement callableStatement = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(sql);
 

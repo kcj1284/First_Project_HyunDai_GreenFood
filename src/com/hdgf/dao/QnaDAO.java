@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 
 import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.QnaVO;
-import com.hdgf.util.DBConnection;
+import com.hdgf.util.DBManager;
 
 import oracle.jdbc.OracleTypes;
 
@@ -47,7 +47,7 @@ public class QnaDAO {
 		ArrayList<QnaVO> lists = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -85,7 +85,7 @@ public class QnaDAO {
 		ResultSet rs = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, qnaId);
 			rs = pstmt.executeQuery();
@@ -114,7 +114,7 @@ public class QnaDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, qnaVO.getTitle());
 			pstmt.setString(2, session_id);
@@ -134,7 +134,7 @@ public class QnaDAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, qnaVO.getQNA_id());
 			callableStatement.setString(2, qnaVO.getTitle());
@@ -154,7 +154,7 @@ public class QnaDAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, annID);
 			callableStatement.executeUpdate();
@@ -174,7 +174,7 @@ public class QnaDAO {
 		ResultSet pageset = null;
 
 		try {
-			con = DBConnection.getConnection();
+			con = DBManager.getConnection();
 			pstmt = con.prepareStatement(sql);
 
 			if (qna_name.equals("")) {
@@ -259,7 +259,7 @@ public class QnaDAO {
 		int absolutepage = 1;
 
 		try {
-			con = DBConnection.getConnection();
+			con = DBManager.getConnection();
 			absolutepage = (tpage - 1) * counts + 1;
 			pstmt = con.prepareStatement(str, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
@@ -302,7 +302,7 @@ public class QnaDAO {
 
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, qnaVO.getQNA_id());
 			callableStatement.setString(2, qnaVO.getAnswer());
@@ -320,7 +320,7 @@ public class QnaDAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, qnaID);
 			callableStatement.executeUpdate();

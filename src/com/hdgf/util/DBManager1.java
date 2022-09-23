@@ -10,18 +10,18 @@ import java.sql.SQLException;
  * @since 2022.09.02
  * 
  * <pre>
- * 수정일              수정자                   수정내용
+ * 수정일          수정자              수정내용
  * ----------  --------    ---------------------------
  * 2022.09.02     공통              최초 생성
  * </pre>
  */
 
-public class DBConnection {
+public class DBManager1 {
 
 	private static Connection conn;
 
 	// 이 클래스 밖에서 new로 객체를 못 만들게 하는 것
-	private DBConnection() {
+	private DBManager1() {
 	}
 
 	static {

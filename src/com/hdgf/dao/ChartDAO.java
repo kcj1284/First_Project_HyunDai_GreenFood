@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import com.hdgf.dto.ChartVO;
-import com.hdgf.util.DBConnection;
+import com.hdgf.util.DBManager;
 
 import oracle.jdbc.OracleTypes;
 
@@ -43,7 +43,7 @@ public class ChartDAO {
       ArrayList<ChartVO> lists = new ArrayList<>();
       Connection conn = null;
       try {
-         conn = DBConnection.getConnection();
+         conn = DBManager.getConnection();
          CallableStatement callableStatement = conn.prepareCall(runSP);
          ResultSet rs = null;
          callableStatement = conn.prepareCall(runSP);
@@ -76,7 +76,7 @@ public class ChartDAO {
       ArrayList<ChartVO> lists = new ArrayList<>();
       Connection conn = null;
       try {
-         conn = DBConnection.getConnection();
+         conn = DBManager.getConnection();
          CallableStatement callableStatement = conn.prepareCall(runSP);
          ResultSet rs = null;
          callableStatement = conn.prepareCall(runSP);

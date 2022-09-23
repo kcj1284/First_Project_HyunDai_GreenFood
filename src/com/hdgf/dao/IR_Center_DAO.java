@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import com.hdgf.dto.IR_Center_VO;
-import com.hdgf.util.DBConnection;
+import com.hdgf.util.DBManager;
 
 import oracle.jdbc.OracleTypes;
 
@@ -43,7 +43,7 @@ public class IR_Center_DAO {
 		String runSP = "{ call sp_insert_IR_Center(?, ?, ?, ?) }";
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			callableStatement.setString(1, IR_Center_VO.getTitle());
 			callableStatement.setString(2, IR_Center_VO.getUser_id());
@@ -62,7 +62,7 @@ public class IR_Center_DAO {
 		String runSP = "{ call sp_update_IR_Center(?, ?, ?, ?) }";
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			callableStatement.setInt(1, IR_Center_VO.getId());
 			callableStatement.setString(2, IR_Center_VO.getTitle());
@@ -81,7 +81,7 @@ public class IR_Center_DAO {
 		Connection conn = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement.setInt(1, id);
 			callableStatement.executeUpdate();
@@ -98,7 +98,7 @@ public class IR_Center_DAO {
 		ArrayList<IR_Center_VO> IR_List = new ArrayList<>();
 		Connection conn = null;
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -134,7 +134,7 @@ public class IR_Center_DAO {
 		ArrayList<IR_Center_VO> IR_List = new ArrayList<>();
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -175,7 +175,7 @@ public class IR_Center_DAO {
 		ArrayList<IR_Center_VO> IR_List = new ArrayList<>();
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -214,7 +214,7 @@ public class IR_Center_DAO {
 		ArrayList<IR_Center_VO> IR_List = new ArrayList<>();
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(runSP);
@@ -250,7 +250,7 @@ public class IR_Center_DAO {
 		ResultSet rs = null;
 		IR_Center_VO IR_VO = new IR_Center_VO();
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(sql);
 			callableStatement = conn.prepareCall(sql);
 			// out파라미터의 자료형 설정(커서를 받아낼 데이터 타입을 생성)
@@ -287,7 +287,7 @@ public class IR_Center_DAO {
 		CallableStatement callableStatement = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(sql);
 
@@ -318,7 +318,7 @@ public class IR_Center_DAO {
 		CallableStatement callableStatement = null;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			ResultSet rs = null;
 			callableStatement = conn.prepareCall(sql);
 			callableStatement.registerOutParameter(1, OracleTypes.CURSOR);

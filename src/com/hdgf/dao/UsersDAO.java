@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Types;
 
 import com.hdgf.dto.UsersVO;
-import com.hdgf.util.DBConnection;
+import com.hdgf.util.DBManager;
 
 /**
  * UsersDAO
@@ -46,7 +46,7 @@ public class UsersDAO {
 		CallableStatement cstmt = null;		// callable로 진행
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			cstmt = conn.prepareCall(sql);
 			cstmt.setString(1, user_id);
 			rs = cstmt.executeQuery();
@@ -79,7 +79,7 @@ public class UsersDAO {
 		Connection conn = null;
 		
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			callableStatement.setString(1, usersVO.getUser_id());
 			callableStatement.setString(2, usersVO.getUser_pw());
@@ -105,7 +105,7 @@ public class UsersDAO {
 		String runSP = "{ call sp_insert_users(?, ?, ?, ?, ?, ?, ?) }";
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			callableStatement.setString(1, usersVO.getUser_id());
 			callableStatement.setString(2, usersVO.getUser_pw());
@@ -132,7 +132,7 @@ public class UsersDAO {
 		String runSP = "{ call sp_delete_users(?) }";
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			CallableStatement callableStatement = conn.prepareCall(runSP);
 			callableStatement.setString(1, user_id);
 			callableStatement.executeUpdate();
@@ -157,7 +157,7 @@ public class UsersDAO {
 		int idCheck = 0;
 
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 
 			cstmt = conn.prepareCall(runFP);
 			cstmt.registerOutParameter(1, Types.NUMERIC); // function 반환값 OutParameter에 받기 resultset으로 안받음

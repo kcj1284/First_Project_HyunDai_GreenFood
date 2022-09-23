@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.hdgf.dto.FileVO;
-import com.hdgf.util.DBConnection;
+import com.hdgf.util.DBManager;
 
 /**
  * FileDAO
@@ -39,7 +39,7 @@ public class FileDAO {
 		ResultSet rs = null;
 		
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, fileRealName);
 			rs = pstmt.executeQuery();
@@ -63,7 +63,7 @@ public class FileDAO {
 		FileVO fileVO = new FileVO();
 		
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, fileId);
 			rs = pstmt.executeQuery();
@@ -85,7 +85,7 @@ public class FileDAO {
 		PreparedStatement pstmt = null;
 		
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBManager.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, fileName);
 			pstmt.setString(2, fileRealName);
