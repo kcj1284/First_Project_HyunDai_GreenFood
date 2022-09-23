@@ -125,10 +125,10 @@
 										href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">물류시스템</a></li>
 									<li><a
 										href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/food_safety_system.jsp">식품안전시스템</a></li>
-									<li><a href="sub?command=">구매시스템</a></li>
-									<li><a href="sub?command=">가공&전처리시스템</a></li>
-									<li><a href="sub?command=">R&D시스템</a></li>
-									<li><a href="sub?command=">고객서비스</a></li>
+									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">구매시스템</a></li>
+									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">가공&전처리시스템</a></li>
+									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">R&D시스템</a></li>
+									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">고객서비스</a></li>
 								</ul>
 							</div></li>
 
@@ -145,7 +145,6 @@
 							href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">홍보센터</a>
 							<div class="gnb_sub_area">
 								<ul class="cont_center gnb_sub gnb_sub6">
-									<!-- W <li><a href="/First_Project_HyunDai_GreenFood/PR_Center/notice.jsp">공지소식</a></li> -->
 									<li><a
 										href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice">공지소식</a></li>
 								</ul>
