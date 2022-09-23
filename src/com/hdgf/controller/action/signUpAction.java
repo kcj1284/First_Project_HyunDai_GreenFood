@@ -1,4 +1,3 @@
-// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import java.io.IOException;
@@ -13,10 +12,21 @@ import javax.servlet.http.HttpSession;
 import com.hdgf.dao.UsersDAO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * signUpAction
+ * @author 김민찬
+ * @since 2022.09.07
+ * 
+ * <pre>
+ * 수정일          수정자                 수정내용
+ * ----------  ---------    ---------------------------
+ * 2022.09.07     김민찬              최초 생성
+ * </pre>
+ */
 
-// 회원가입
 public class signUpAction implements Action {
-
+	
+	// 회원가입 폼 페이지에서 받은 정보를 DB에 저장하는 메소드에 넘김
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {

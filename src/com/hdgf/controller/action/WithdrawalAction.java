@@ -1,4 +1,3 @@
-// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import java.io.IOException;
@@ -12,7 +11,18 @@ import javax.servlet.http.HttpSession;
 
 import com.hdgf.dao.UsersDAO;
 
-// 탈퇴
+/**
+ * WithdrawalAction
+ * @author 김민찬
+ * @since 2014.09.23
+ * 
+ * <pre>
+ * 수정일              수정자                   수정내용
+ * ----------  --------    ---------------------------
+ * 2014.09.23     공통              최초 생성
+ * </pre>
+ */
+
 public class WithdrawalAction implements Action {
 
 	@Override
@@ -21,7 +31,7 @@ public class WithdrawalAction implements Action {
 		// TODO Auto-generated method stub
 		String url = "HdgfServlet?command=Index";
 		
-		//프론트에서 유저아이디 받아오기
+		//jsp에서 유저아이디 받아오기
 		String userid = request.getParameter("user_id");
 		System.out.println(userid + "이 아이디입니다");
 		UsersDAO userDAO = UsersDAO.getInstance();

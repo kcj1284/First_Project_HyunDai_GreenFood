@@ -1,6 +1,17 @@
-// 작성자 : 김민찬
-package com.hdgf.dto;
+ package com.hdgf.dto;
 
+ /**
+  * UsersVO
+  * @author 김민찬
+  * @since 2022.09.07
+  * 
+  * <pre>
+  * 수정일          수정자                 수정내용
+  * ----------  ---------    ---------------------------
+  * 2022.09.07     김민찬              최초 생성
+  * </pre>
+  */
+ 
 public class UsersVO {
 	
 	private String user_id;

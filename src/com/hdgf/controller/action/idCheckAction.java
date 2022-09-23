@@ -1,4 +1,3 @@
-// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import java.io.IOException;
@@ -11,8 +10,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hdgf.dao.UsersDAO;
 
+/**
+ * idCheckAction
+ * @author 김민찬
+ * @since 2022.09.12
+ * 
+ * <pre>
+ * 수정일          수정자                 수정내용
+ * ----------  ---------    ---------------------------
+ * 2022.09.12     김민찬              최초 생성
+
+ * </pre>
+ */
+
 public class idCheckAction implements Action  {
 	
+	// 아이디 중복체크후 결과 반환
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {

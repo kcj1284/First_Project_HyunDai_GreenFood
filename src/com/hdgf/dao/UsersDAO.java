@@ -1,4 +1,3 @@
-// 작성자 : 김민찬
 package com.hdgf.dao;
 
 import java.sql.CallableStatement;
@@ -7,11 +6,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
-import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.dto.UsersVO;
 import com.hdgf.util.DBConnection;
 
-// preparedStatement -> CallableStatement
+/**
+ * UsersDAO
+ * @author 김민찬
+ * @since 2022.09.8
+ * 
+ * <pre>
+ * 수정일            수정자                        수정내용
+ * ----------  ------------    -------------------------------------------
+ * 2022.09.8        김민찬               최초 생성( insertUsers, getUsers )
+ * 2022.09.8        김민찬               insertUsers의 PreparedStatement -> CallableStatement로 변경
+ * 2022.09.12       김민찬               checkId 중복검사 메소드 최초생성
+ * 2022.09.13       김민찬               getUsers를 pipelined table function으로 변경, checkId CallableStatement로 변경
+ * 2022.09.14       김민찬               탈퇴기능인 deleteUsers 메소드 추가
+ * 2022.09.15       김민찬               수정기능인 updateUsers 메소드 추가
+ * </pre>
+ */
+
 public class UsersDAO {
 
 	public UsersDAO() {
@@ -37,7 +51,7 @@ public class UsersDAO {
 			cstmt.setString(1, user_id);
 			rs = cstmt.executeQuery();
 			// rs를 전부 순환
-			// 받아온값을 setter로 설정
+			// 받아온값을 setter로 VO에 넣기
 			if (rs.next()) {
 				usersVO = new UsersVO();
 				usersVO.setUser_id(user_id);
@@ -57,40 +71,6 @@ public class UsersDAO {
 		return usersVO;
 	}
 
-	// Preparedstatement
-//	public UsersVO getUsers(String user_id){
-//		UsersVO usersVO = null;
-//		String sql = "select * from users where user_id=?";
-//
-//		Connection conn = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//
-//		try {
-//			conn = DBConnection.getConnection();
-//			pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, user_id);
-//			rs = pstmt.executeQuery();
-//			if (rs.next()) {
-//				usersVO = new UsersVO();
-//				usersVO.setUser_id(rs.getString("user_id"));
-//				usersVO.setUser_pw(rs.getString("user_pw"));
-//				usersVO.setUser_name(rs.getString("user_name"));
-//				usersVO.setTel(rs.getString("tel"));
-//				usersVO.setEmail(rs.getString("email"));
-//				usersVO.setGender(Integer.parseInt(rs.getString("gender")));
-//				usersVO.setAdministrator(Integer.parseInt(rs.getString("administrator")));
-//				usersVO.setCom_type(Integer.parseInt(rs.getString("com_type")));
-//
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} 
-//
-//		return usersVO;
-//	}
-
-	// 수정
 	// 프로시져를 호출
 	public void updateUsers(UsersVO usersVO) {
 
@@ -163,7 +143,6 @@ public class UsersDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	// ajax 실시간 아이디 중복검사를 위한 메소드

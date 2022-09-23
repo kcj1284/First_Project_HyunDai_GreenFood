@@ -1,4 +1,3 @@
-// 작성자 : 김민찬, 김찬중, 장주연, 정구현
 package com.hdgf.controller;
 
 import java.io.IOException;
@@ -12,6 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.hdgf.controller.action.Action;
 
+/**
+ * test
+ * @author 공통
+ * @since 2022.09.07
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ------------    ---------------------------
+ * 2022.09.07     공통                    최초 생성
+
+ * </pre>
+ */
 
 @WebServlet("/HdgfServlet")
 public class HdgfServlet extends HttpServlet {

@@ -4,6 +4,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * DBConnection
+ * @author 공통
+ * @since 2022.09.02
+ * 
+ * <pre>
+ * 수정일              수정자                   수정내용
+ * ----------  --------    ---------------------------
+ * 2022.09.02     공통              최초 생성
+ * </pre>
+ */
+
 public class DBConnection {
 
 	private static Connection conn;

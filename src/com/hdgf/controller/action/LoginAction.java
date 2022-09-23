@@ -1,4 +1,3 @@
-// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import java.io.IOException;
@@ -12,6 +11,20 @@ import javax.servlet.http.HttpSession;
 import com.hdgf.dao.UsersDAO;
 import com.hdgf.dto.UsersVO;
 import com.hdgf.util.CookieManager;
+
+/**
+ * LoginAction
+ * @author 김민찬
+ * @since 2022.09.08
+ * 
+ * <pre>
+ * 수정일          수정자                 수정내용
+ * ----------  ---------    ---------------------------
+ * 2022.09.08     김민찬              최초 생성
+ * 2022.09.13     김민찬              로그인 실패 화면 연결
+ * 2022.09.13     김민찬              쿠키기능 추가
+ * </pre>
+ */
 
 public class LoginAction implements Action {
 

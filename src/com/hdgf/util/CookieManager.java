@@ -1,9 +1,20 @@
-// 작성자 : 김민찬
 package com.hdgf.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+/**
+ * CookieManager
+ * @author 김민찬
+ * @since 2022.09.16
+ * 
+ * <pre>
+ * 수정일              수정자                   수정내용
+ * ----------  --------    ---------------------------
+ * 2022.09.16     공통              최초 생성
+ * </pre>
+ */
 
 public class CookieManager {
 
