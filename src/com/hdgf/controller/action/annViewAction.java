@@ -14,6 +14,19 @@ import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.FileVO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * annViewAction
+ * @author 장주연
+ * @since 2022.09.15
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.15   장주연               최초 생성
+ * 2022.09.18	장주연			   첨부 파일 불러오기 기능 추가
+ * </pre>
+ */
+
 public class annViewAction implements Action {
 
 	@Override

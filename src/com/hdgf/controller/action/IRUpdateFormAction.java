@@ -12,6 +12,19 @@ import com.hdgf.dao.IR_Center_DAO;
 import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * IRDeleteAction
+ * @author 김찬중
+ * @since 2022.09.16
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.16     김찬중              최초 생성
+ * 2022.09.18	  김찬중			    IR 자료실 오류 수정
+ * </pre>
+ */
+
 public class IRUpdateFormAction implements Action {
 
 	@Override

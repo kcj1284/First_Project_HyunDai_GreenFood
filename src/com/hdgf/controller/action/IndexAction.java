@@ -1,4 +1,3 @@
-// 작성자 : 김민찬
 package com.hdgf.controller.action;
 
 import java.io.IOException;
@@ -9,6 +8,17 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * IndexAction
+ * @author 공통
+ * @since 2022.09.07
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  -------------    ---------------------------
+ * 2022.09.07     공통                    최초 생성
+ * </pre>
+ */
 
 public class  IndexAction implements Action {
 

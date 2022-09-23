@@ -12,6 +12,20 @@ import com.hdgf.dao.ChartDAO;
 import com.hdgf.dto.ChartVO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * ChartAction
+ * @author 김찬중, 장주연
+ * @since 2022.09.16
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.16   김찬중              최초 생성
+ * 2022.09.16	김찬중, 장주연	 	  차트 연동 문제점 수정
+
+ * </pre>
+ */
+
 public class ChartAction implements Action {
 
    @Override

@@ -13,6 +13,20 @@ import com.hdgf.dao.AnnouncementDAO;
 import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * noticeAction
+ * @author 장주연
+ * @since 2022.09.13
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ----------------------------------
+ * 2022.09.13     장주연              최초 생성
+ * 2022.09.16	  장주연	    		정렬 기능 추가 (최신순, 오래된 순, 조회순)
+ * 2022.09.17	  장주연				카테고리별 검색 기능 추가
+ * </pre>
+ */
+
 public class noticeAction implements Action {
 
 	@Override

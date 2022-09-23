@@ -1,4 +1,15 @@
-<!-- 작성자 장주연 -->
+<!-- 
+ann_Update2
+@author 장주연
+@since 2022.09.19
+
+<pre>
+수정일          수정자                 수정내용
+----------  ---------    ---------------------------
+2022.09.19     장주연      최초 생성
+2022.09.19	   장주연		 파일 변경 기능 추가
+</pre> 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">

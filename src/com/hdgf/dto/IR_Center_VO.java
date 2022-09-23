@@ -1,5 +1,17 @@
 package com.hdgf.dto;
 
+/**
+ * IR_Center_VO
+ * @author 김찬중
+ * @since 2022.09.10
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.10     김찬중              최초 생성
+ * </pre>
+ */
+
 public class IR_Center_VO {
 	private int id;
 	private String title;

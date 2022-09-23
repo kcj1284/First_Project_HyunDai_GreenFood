@@ -3,7 +3,7 @@ package com.hdgf.controller;
 import com.hdgf.controller.action.*;
 
 /**
- * test
+ * ActionFactory
  * @author 공통
  * @since 2022.09.07
  * 
@@ -11,7 +11,6 @@ import com.hdgf.controller.action.*;
  * 수정일          수정자                    수정내용
  * ----------  -------------    ---------------------------
  * 2022.09.07     공통                    최초 생성
-
  * </pre>
  */
 

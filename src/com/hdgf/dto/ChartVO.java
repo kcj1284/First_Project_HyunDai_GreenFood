@@ -1,5 +1,18 @@
 package com.hdgf.dto;
 
+/**
+ * ChartVO
+ * @author 김찬중, 장주연
+ * @since 2022.09.16
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.16    김찬중               최초 생성
+ * 2022.09.16	 김찬중, 장주연			차트 연동 문제점 해결
+ * </pre>
+ */
+
 public class ChartVO {
 	private int qna_type;
 	private int com_type;

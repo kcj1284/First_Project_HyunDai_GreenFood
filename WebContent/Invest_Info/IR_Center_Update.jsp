@@ -1,4 +1,16 @@
-<!-- 작성자 김찬중 -->
+<!-- 
+IR_Center_Update
+@author 김찬중
+@since 2022.09.16
+
+<pre>
+수정일          수정자                 수정내용
+----------  -------------- 		--------------------------
+2022.09.13     김찬중     		 최초 생성
+2022.09.18	   김찬중				 IR 자료실 오류 수정
+2022.09.19	   김찬중			 	 등록, 수정시 나오는 상단 버튼 삭제
+</pre> 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
 <link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">

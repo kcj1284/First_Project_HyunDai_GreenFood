@@ -1,4 +1,15 @@
-<!-- 작성자 김찬중 -->
+<!-- 
+IR_Center_View
+@author 김찬중
+@since 2022.09.13
+
+<pre>
+수정일          수정자                 수정내용
+----------  -------------    ---------------------------
+2022.09.13     김찬중      	  최초 생성
+2022.09.19	   김찬중, 정구현	  css 수정
+</pre> 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

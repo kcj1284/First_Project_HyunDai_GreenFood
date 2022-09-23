@@ -1,4 +1,18 @@
-<!-- 작성자 장주연 -->
+<!-- 
+ann_View
+@author 장주연
+@since 2022.09.15
+
+<pre>
+수정일          수정자                 수정내용
+----------  ---------    ---------------------------
+2022.09.15     장주연      최초 생성
+2022.09.15	   장주연		 글쓰기, 목록으로 돌아가기 기능 추가
+2022.09.15	   장주연		 조회수 기능 추가
+2022.09.18	   장주연		 첨부 파일 다운로드 링크 추가
+
+</pre> 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

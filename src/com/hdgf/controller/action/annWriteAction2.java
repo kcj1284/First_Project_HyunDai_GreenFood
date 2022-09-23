@@ -19,6 +19,20 @@ import com.hdgf.dto.AnnouncementVO;
 import com.hdgf.dto.QnaVO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * annWriteAction2
+ * @author 장주연
+ * @since 2022.09.18
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.18    장주연              최초 생성
+ * 2022.09.18	 장주연			   파일 첨부 기능 추가
+ * 2022.09.18	 장주연			   파일 없을 때 문제점 수정
+ * </pre>
+ */
+
 public class annWriteAction2 implements Action {
 
 	@Override

@@ -10,6 +10,20 @@ import com.hdgf.util.DBConnection;
 
 import oracle.jdbc.OracleTypes;
 
+/**
+ * ChartDAO
+ * @author 김찬중
+ * @since 2022.09.16
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.16     김찬중              최초 생성
+ * 2022.09.16	  김찬중			    차트 오류 수정
+ * 2022.09.18	  김찬중				차트 DB 패키지 생성
+ * </pre>
+ */
+
 public class ChartDAO {
 
    private ChartDAO() {

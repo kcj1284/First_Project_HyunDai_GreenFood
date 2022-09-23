@@ -12,6 +12,18 @@ import com.hdgf.dao.IR_Center_DAO;
 import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.dto.UsersVO;
 
+/**
+ * IRViewAction
+ * @author 김찬중
+ * @since 2022.09.16
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.16     김찬중              최초 생성
+ * </pre>
+ */
+
 public class IRViewAction implements Action {
 
 	@Override

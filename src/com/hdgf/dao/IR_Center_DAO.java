@@ -11,6 +11,21 @@ import com.hdgf.util.DBConnection;
 
 import oracle.jdbc.OracleTypes;
 
+/**
+ * IR_Center_DAO
+ * @author 김찬중
+ * @since 2022.09.10
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.10     김찬중              최초 생성
+ * 2022.09.13	  김찬중	    		조회 및 제목, 본문 검색 메소드 추가
+ * 2022.09.14	  김찬중				DB 에러 수정
+ * 2022.09.18	  김찬중				css 수정
+ * </pre>
+ */
+
 public class IR_Center_DAO {
 
 	private IR_Center_DAO() {

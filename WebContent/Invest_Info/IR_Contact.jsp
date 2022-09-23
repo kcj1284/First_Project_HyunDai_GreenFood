@@ -1,4 +1,14 @@
-<!--작성자 김찬중-->
+<!-- 
+IR_Center_List
+@author 김찬중
+@since 2022.09.07
+
+<pre>
+수정일          수정자                 수정내용
+----------  ---------    ---------------------------
+2022.09.07     김찬중      최초 생성
+</pre> 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">

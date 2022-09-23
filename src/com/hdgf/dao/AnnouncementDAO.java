@@ -13,6 +13,23 @@ import com.hdgf.util.DBConnection;
 
 import oracle.jdbc.OracleTypes;
 
+/**
+ * AnnouncementDAO
+ * @author 장주연, 김찬중
+ * @since 2022.09.08
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.08     장주연              최초 생성
+ * 2022.09.12	  장주연	    		글쓰기, 리스트 조회 메소드 추가
+ * 2022.09.13	  장주연				command 패턴으로 변경, 수정 및 삭제 메소드 추가
+ * 2022.09.13 	  장주연, 김찬중		제목, 본문 검색 메소드 추가
+ * 2022.09.16	  장주연				정렬 기능 메소드 추가 (최신순, 오래된 순, 조회순)
+ * 2022.09.17	  장주연				카테고리별 검색 기능 추가
+ * </pre>
+ */
+
 public class AnnouncementDAO {
 
 	private AnnouncementDAO() {
@@ -25,7 +42,7 @@ public class AnnouncementDAO {
 	}
 
 	// 글쓰기 메소드
-	public int write(AnnouncementVO annVO) {
+	public void write(AnnouncementVO annVO) {
 
 		String sql = "{ call sp_insert_Announcement(?, ?, ?, ?, ?) }";
 
@@ -44,11 +61,10 @@ public class AnnouncementDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // 에러 발생 시
 	}
 
 	// 게시글 수정 메소드
-	public int update(AnnouncementVO annVO) {
+	public void update(AnnouncementVO annVO) {
 		String sql = " { call sp_update_Announcement(?, ?, ?, ?, ?) }";
 
 		Connection conn = null;
@@ -65,11 +81,10 @@ public class AnnouncementDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // 데이터베이스 오류
 	}
 
 	// 게시글 삭제 메소드
-	public int delete(int annID) {
+	public void delete(int annID) {
 		String sql = " { call sp_delete_Announcement(?) }";
 
 		Connection conn = null;
@@ -82,7 +97,6 @@ public class AnnouncementDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // 데이터베이스 오류
 	}
 
 	// 게시글 전체 검색 메소드

@@ -1,5 +1,18 @@
 package com.hdgf.dto;
 
+/**
+ * AnnouncementVO
+ * @author 장주연
+ * @since 2022.09.07
+ * 
+ * <pre>
+ * 수정일          수정자                    수정내용
+ * ----------  ---------------    ---------------------------
+ * 2022.09.07     장주연              최초 생성
+ * 2022.09.12	  장주연				글쓰기, 리스트 조회 메소드 추가
+ * </pre>
+ */
+
 public class AnnouncementVO {
 	private int id;
 	private String title;
