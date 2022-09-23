@@ -1,5 +1,18 @@
 package com.hdgf.dto;
 
+/**
+ * QnaVO
+ * @author 정구현
+ * @since 2022.09.14
+ * 
+ * <pre>
+ * 수정일          수정자                 수정내용
+ * ----------  ---------    ---------------------------
+ * 2022.09.14     정구현      최초 생성
+
+ * </pre>
+ */
+
 public class QnaVO {
 	private int QNA_id;
 	private String title;

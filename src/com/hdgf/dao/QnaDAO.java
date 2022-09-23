@@ -13,6 +13,21 @@ import com.hdgf.util.DBConnection;
 
 import oracle.jdbc.OracleTypes;
 
+/**
+ * QnaDAO
+ * @author 정구현
+ * @since 2022.09.14
+ * 
+ * <pre>
+ * 수정일          수정자                 수정내용
+ * ----------  ---------    ---------------------------
+ * 2022.09.14     정구현      최초 생성
+ * 2022.09.14     정구현      Qna 목록(listQna), 읽기(getQna), 쓰기(insertQna) 메소드 생성
+ * 2022.09.15     정구현      Qna 수정(update), 삭제(delete), 페이징(listQna) 메소드 생성    
+ * 2022.09.08     정구현      Qna 답변 작성(updateAnswer), 삭제(deleteAnswer) 메소드 생성
+ * </pre>
+ */
+
 public class QnaDAO {
 
 	private QnaDAO() {
@@ -92,6 +107,7 @@ public class QnaDAO {
 		return qnaVO;
 	}
 
+	//게시글 작성 메소드
 	public void insertQna(QnaVO qnaVO, String session_id) {
 		String sql = "call sp_insert_QnA(?, ?, ?, ?, ?)";
 
@@ -148,6 +164,7 @@ public class QnaDAO {
 		return -1; // 데이터베이스 오류
 	}
 
+	//전체 게시글 갯수 확인 메소드
 	public int totalRecord(String qna_name) {
 		int total_pages = 0;
 		String sql = "select count(*) from qna where title like '%'||?||'%'";
@@ -228,7 +245,7 @@ public class QnaDAO {
 
 	
 	
-	
+	//페이징, 검색 적용된 게시글 목록 메소드
 	public ArrayList<QnaVO> listQna(int tpage, String qna_name) {
 		ArrayList<QnaVO> lists = new ArrayList<QnaVO>();
 
@@ -265,7 +282,6 @@ public class QnaDAO {
 					vo.setUser_id(rs.getString("user_id"));
 					vo.setWrdate(rs.getDate("wrdate"));
 					vo.setQNA_type(rs.getInt("QNA_type"));
-					// vo를 리스트에 추가
 					lists.add(vo);
 					if (rs.isLast()) {
 						break;
@@ -280,6 +296,7 @@ public class QnaDAO {
 		return lists;
 	}
 
+	//답변 작성 메소드
 	public int updateAnswer(QnaVO qnaVO) {
 		String sql = "{ call sp_update_answer(?,?)}";
 
@@ -293,10 +310,10 @@ public class QnaDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // 데이터베이스 오류
+		return -1;
 	}
 	
-	// 게시글 삭제 메소드
+	// 답변 삭제 메소드
 	public int deleteAnswer(int qnaID) {
 		String sql = " { call sp_delete_answer(?) }";
 
@@ -310,7 +327,7 @@ public class QnaDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // 데이터베이스 오류
+		return -1;
 	}
 	
 }

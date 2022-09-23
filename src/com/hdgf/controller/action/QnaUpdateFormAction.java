@@ -10,7 +10,18 @@ import javax.servlet.http.HttpSession;
 import com.hdgf.dao.QnaDAO;
 import com.hdgf.dto.QnaVO;
 import com.hdgf.dto.UsersVO;
-
+/**
+ * QnaUpdateFormAction
+ * @author 정구현
+ * @since 2022.09.15
+ * 
+ * <pre>
+ * 수정일          수정자                 수정내용
+ * ----------  ---------    ---------------------------
+ * 2022.09.15     정구현      최초 생성
+ * 2022.09.15     정구현      Qna 게시글 수정 화면과 연결
+ * </pre>
+ */
 public class QnaUpdateFormAction implements Action {
 	@Override
 	  public void execute(HttpServletRequest request, HttpServletResponse response)
@@ -20,7 +31,8 @@ public class QnaUpdateFormAction implements Action {
 	    HttpSession session = request.getSession();
 	    UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");    
 
-	    if (loginUser == null) {
+	    //비 로그인 시 로그인폼으로 이동
+	    if (loginUser == null) { 
 	      url = "HdgfServlet?command=loginForm";
 	    } else {
 	    	int qnaId = Integer.parseInt(request.getParameter("QNA_id"));

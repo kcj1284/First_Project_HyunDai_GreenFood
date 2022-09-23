@@ -1,3 +1,14 @@
+<!-- 
+history
+@author 정구현
+@since 2022.09.7
+
+<pre>
+수정일          수정자                 수정내용
+----------  ---------    ---------------------------
+2022.09.07     정구현      최초 생성
+</pre> 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -6,9 +17,7 @@
 	href="/First_Project_HyunDai_GreenFood/css/Company_PR/Company_PR_style.css">
 <!-- container -->
 <div class="container_area" id="contents">
-	<!-- Body
-    ################# -->
-	<!-- contents : str -->
+	<!-- contents -->
 	<div class="sub_layout sub_visual_6">
 		<div class="company">
 			<!-- 하이어라키 -->
