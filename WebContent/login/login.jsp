@@ -1,4 +1,18 @@
-<!-- 작성자 : 김민찬 -->
+<!-- 
+
+  login.jsp
+  @author 김민찬
+  @since 2022.09.05
+  
+  <pre>
+  수정일           수정자                    수정내용
+  ----------  --------------    ------------------------------
+  2022.09.05     김민찬                    최초 생성
+  2022.09.16     김민찬                    쿠키 설정
+
+   </pre>
+ 
+-->
 <%@ page import="com.hdgf.util.CookieManager" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>

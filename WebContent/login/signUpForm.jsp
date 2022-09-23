@@ -1,4 +1,23 @@
-<!-- 작성자 : 김민찬, 장주연 -->
+
+<!-- 
+
+  signUpForm.jsp
+  @author 김민찬, 장주연
+  @since 2022.09.06
+  
+  <pre>
+  수정일           수정자                    수정내용
+  ----------  --------------    ------------------------------
+  2022.09.06     김민찬                    최초 생성
+  2022.09.06     김민찬                  header, footer 연결
+  2022.09.12   김민찬, 장주연           ajax를 활용해 실시간 아이디중복체크
+  2022.09.13     김민찬                 비밀번호 일치 여부 출력
+  2022.09.15     김민찬               유효성검사 실패시 가입불가 적용
+  2022.09.16     김민찬                 아이디 유효성 조건 추가
+  2022.09.19     김민찬                 회원가입 폼에 null일시 가입불가
+   </pre>
+ 
+-->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
@@ -20,22 +39,20 @@
  <script>
  $(function(){
   
+	 //jquery를 이용 keyup할때마다 이벤트 발생
     $("#user_id").on("keyup", function(){
        var $checkID = $("#user_id").val();
        var $msg = $("#msg");
-
-       // 소문자로 시작, 소문자와 숫자만, 3자리에서 13자리
-       var regExp = /^[a-z][a-z\d]{2,12}$/;
-
-
-
-
+       var regExp = /^[a-z][a-z\d]{2,12}$/; // 소문자로 시작, 소문자와 숫자만, 3자리에서 13자리 - js정규식
+	
+       // 비동기 방식으로 URL을 타고들어간다
        $.ajax({
           type : "POST",
           url: "/First_Project_HyunDai_GreenFood/HdgfServlet?command=idCheck",
           data : { "user_id" : $checkID },
           dataType : "html",
           async : true,     //비동기 유무
+          //data로 결과 값을 받아온다
           success : function(data){
              console.log($checkID);
              console.log("data : "+data)
@@ -125,12 +142,11 @@ $(function(){
 </head>
 
 <body>
-<!-- js 경로 가져오기 -->
-
 
   <div class="signUpForm">
       <h1>회원가입</h1>
       <hr>
+      <!-- onsubmit으로 submit 할때 check함수를 호출해서 조건들을 달성해야지 넘어갈수있게끔 작성 -->
       <form action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=signUp" method="post" onsubmit="return Check()">
      
           <fieldset>
@@ -157,8 +173,6 @@ $(function(){
               <div class="input_F">
                   <input type="text" name="email" id="email" placeholder="email" autocomplete="off">
               </div>
-            
-            
 
               <div class="radio">
                   <input type="radio" name="gender" value="1" checked> 남성
@@ -175,8 +189,7 @@ $(function(){
                       <option value="4">바이어</option>
                       <option value="5">기타</option>
                   </select>
-              </div>
-            
+              </div>      
 
               <div class="signUpForm-btn">
 
@@ -185,13 +198,9 @@ $(function(){
               </div>
           </fieldset>
       </form>
-
   </div>
-
 <%@ include file ="/Inc/Footer.jspf" %>
-
 </body>
-
 </html>
 
 

@@ -1,4 +1,19 @@
-<!--  작성자 : 김민찬  -->
+<!-- 
+
+  MyPage.jsp
+  @author 김민찬
+  @since 2022.09.14
+  
+  <pre>
+  수정일           수정자                    수정내용
+  ----------  --------------    ------------------------------
+  2022.09.14     김민찬                    최초 생성
+  2022.09.14     김민찬                    탈퇴 기능 구현
+  2022.09.15     김민찬                 탈퇴 조건 기능 구현 
+
+   </pre>
+ 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
