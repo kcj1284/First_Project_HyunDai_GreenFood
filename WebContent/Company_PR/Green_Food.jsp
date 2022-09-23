@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
 
-<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/Company_PR/Company_PR_style.css">
+<link rel="stylesheet" type="text/css"
+	href="/First_Project_HyunDai_GreenFood/css/Company_PR/Company_PR_style.css">
 <!-- container -->
 <div class="container_area" id="contents">
 
@@ -15,7 +16,8 @@
 		<div class="company">
 			<!-- 하이어라키 -->
 			<ul class="hierarchy_list">
-				<li class="icon_home"><img src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png"
+				<li class="icon_home"><img
+					src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png"
 					alt="Home" /></li>
 				<li class="depth_2"><a href="#" class="m_hierarchy">현대그린푸드
 				</a>
@@ -49,8 +51,11 @@
 			<!-- 탭 -->
 			<ul class="tab_list">
 				<li class="on"><a href="#">회사소개</a></li>
-				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/history.jsp">연혁</a></li>
-				<li><a href="/First_Project_HyunDai_GreenFood/Company_PR/map.jsp">오시는 길</a></li>
+				<li><a
+					href="/First_Project_HyunDai_GreenFood/Company_PR/history.jsp">연혁</a></li>
+				<li><a
+					href="/First_Project_HyunDai_GreenFood/Company_PR/map.jsp">오시는
+						길</a></li>
 			</ul>
 			<!-- //탭 -->
 
@@ -82,22 +87,27 @@
 					<div class="list_company">
 						<div class="img">
 							<div class="img_slide">
-								<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide1.jpg">
+								<img
+									src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide1.jpg">
 							</div>
 							<div class="img_slide">
-								<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide2.jpg">
+								<img
+									src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide2.jpg">
 							</div>
 							<div class="img_slide">
-								<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide3.jpg">
+								<img
+									src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide3.jpg">
 							</div>
 							<div class="img_slide">
-								<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide4.jpg">
+								<img
+									src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_slide4.jpg">
 							</div>
 						</div>
 
 						<div class="txt">
 							<h4>
-								<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_txt1.jpg"
+								<img
+									src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_txt1.jpg"
 									alt="Vision">
 							</h4>
 
@@ -117,7 +127,9 @@
 
 				<div class="cont cont1_3">
 					<p>
-						<img src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_txt2.jpg" alt="Vision">
+						<img
+							src="/First_Project_HyunDai_GreenFood/img/Company_PR/img_company_txt2.jpg"
+							alt="Vision">
 					</p>
 					<h3 class="title_company">
 						자연을 지키는 기업 No.1 <span class="pc">｜</span> <br class="mo">건강을

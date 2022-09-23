@@ -14,7 +14,7 @@
 					src="/First_Project_HyunDai_GreenFood/img/icon/icon_home.png"
 					alt="Home" /></li>
 				<li class="depth_2"><a href="#" class="m_hierarchy">현대그린푸드
-				</a>
+				</a> 
 					<ul class="hierarchy_depth" style="display: none;">
 						<li><a href="#">현대그린푸드</a></li>
 					</ul></li>

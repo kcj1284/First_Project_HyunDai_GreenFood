@@ -41,7 +41,7 @@
              console.log("data : "+data)
               if( regExp.test($checkID) ){
                  if(data == 1){
-                    $msg.html("<h4 style=\"color:red\">!아이디가 이미 존재합니다</h4>");
+                    $msg.html("<h4 style=\"color:red\"> ※ 아이디가 이미 존재합니다 ※</h4>");
                           idCheck=false;
                  }else{
                     $msg.html("<h4 style=\"color:green\">사용가능한 아이디입니다</h4>");
@@ -51,7 +51,7 @@
                   $msg.html("<h4 style=\"color:gray\"> 소문자로 시작, 소문자와 숫자만, 3자리에서 13자리 </h4>");
                   idCheck = false;
               }  else {
-                  $msg.html("<h4 style=\"color:red\">!조건이 맞지않습니다</h4>");
+                  $msg.html("<h4 style=\"color:red\"> ※ 조건이 맞지않습니다 ※</h4>");
                   idCheck = false;
               }
           }

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.hdgf.dao.UsersDAO;
 
-
+// 탈퇴
 public class WithdrawalAction implements Action {
 
 	@Override
@@ -22,7 +22,6 @@ public class WithdrawalAction implements Action {
 		String url = "HdgfServlet?command=Index";
 		
 		//프론트에서 유저아이디 받아오기
-		//getPararmeter("user_id")
 		String userid = request.getParameter("user_id");
 		System.out.println(userid + "이 아이디입니다");
 		UsersDAO userDAO = UsersDAO.getInstance();
@@ -33,9 +32,7 @@ public class WithdrawalAction implements Action {
 		    if(session!=null){
 		      session.invalidate();
 		    }    
-		
-		
-	    
+
 	    RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 	    dispatcher.forward(request, response);
 	}

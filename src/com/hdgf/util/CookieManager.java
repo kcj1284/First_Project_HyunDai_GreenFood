@@ -24,7 +24,6 @@ public class CookieManager {
                if(cookieName.equals(cName)){
                    cookieValue=c.getValue();   // 반환값 갱신
                }
-
            }
        }
        return cookieValue;

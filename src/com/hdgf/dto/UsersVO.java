@@ -1,3 +1,4 @@
+// 작성자 : 김민찬
 package com.hdgf.dto;
 
 public class UsersVO {
@@ -59,8 +60,5 @@ public class UsersVO {
 	public void setCom_type(int com_type) {
 		this.com_type = com_type;
 	}
-	
 
-
-	
 }

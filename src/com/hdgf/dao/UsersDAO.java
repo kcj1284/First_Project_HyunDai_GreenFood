@@ -11,31 +11,33 @@ import com.hdgf.dto.IR_Center_VO;
 import com.hdgf.dto.UsersVO;
 import com.hdgf.util.DBConnection;
 
+// preparedStatement -> CallableStatement
 public class UsersDAO {
 
 	public UsersDAO() {
 	}
 
 	private static UsersDAO instance = new UsersDAO();
-
 	public static UsersDAO getInstance() {
 		return instance;
 	}
 
-	// CallableStatement
+// piped line function을 활용해서 반환값을 여러개 받음
 	public UsersVO getUsers(String user_id) {
 		UsersVO usersVO = null;
-		String sql = "select * from getuser_pipe_table_func(?)";
+		String sql = "select * from getuser_pipe_table_func(?)";  // call을 사용하지는 않지만
 
 		Connection conn = null;
 		ResultSet rs = null;
-		CallableStatement cstmt = null;
+		CallableStatement cstmt = null;		// callable로 진행
 
 		try {
 			conn = DBConnection.getConnection();
 			cstmt = conn.prepareCall(sql);
 			cstmt.setString(1, user_id);
 			rs = cstmt.executeQuery();
+			// rs를 전부 순환
+			// 받아온값을 setter로 설정
 			if (rs.next()) {
 				usersVO = new UsersVO();
 				usersVO.setUser_id(user_id);
@@ -56,7 +58,6 @@ public class UsersDAO {
 	}
 
 	// Preparedstatement
-
 //	public UsersVO getUsers(String user_id){
 //		UsersVO usersVO = null;
 //		String sql = "select * from users where user_id=?";
@@ -88,7 +89,9 @@ public class UsersDAO {
 //
 //		return usersVO;
 //	}
-	
+
+	// 수정
+	// 프로시져를 호출
 	public void updateUsers(UsersVO usersVO) {
 
 		String runSP = "{ call sp_update_users(?, ?, ?, ?, ?, ?, ?) }";

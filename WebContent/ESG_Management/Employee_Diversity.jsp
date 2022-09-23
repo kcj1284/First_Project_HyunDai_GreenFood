@@ -1,5 +1,6 @@
 <!--작성자 김찬중-->
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +18,10 @@
 		<div class="sub_layout esg_area">
 			<div class="sub_visual">
 				<ul class="hierarchy_list">
-					<li class="icon_home"><img src="../img/icon/icon_home.png" alt="Home" /></li>
-					<li class="depth_2"><a href="#" class="m_hierarchy">ESG 경영 </a>
+					<li class="icon_home"><img src="../img/icon/icon_home.png"
+						alt="Home" /></li>
+					<li class="depth_2"><a href="#" class="m_hierarchy">ESG 경영
+					</a>
 						<ul class="hierarchy_depth" style="display: none;">
 							<li><a href="#">사회공헌(S)</a></li>
 						</ul></li>
@@ -36,7 +39,8 @@
 				<div class="title_description">
 					<h2 class="title_sub">ESG 경영</h2>
 					<p class="sub_description">
-						현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해 <br>다양한 분야에서 사회적 가치를 창출하는 것을 목표로 합니다.
+						현대그린푸드는 ‘건강’과 ‘지속가능성’ 이라는 비전을 위해 <br>다양한 분야에서 사회적 가치를 창출하는 것을
+						목표로 합니다.
 					</p>
 				</div>
 			</div>
@@ -61,7 +65,8 @@
 				<section class="esg_section cont3_2_1">
 					<h3 class="esg_title">임직원 다양성</h3>
 					<div class="esg_text">
-						현대그린푸드는 포괄적인 인재채용을 통해 <br class="pc">임직원의 다양성을 존중하는 문화 구축에 앞장섭니다.
+						현대그린푸드는 포괄적인 인재채용을 통해 <br class="pc">임직원의 다양성을 존중하는 문화 구축에
+						앞장섭니다.
 					</div>
 
 					<div class="director_area">
@@ -94,7 +99,9 @@
 										<td rowspan="32">
 											<ol class="director_division_list">
 												<li>※ <strong>관리자</strong></li>
-												<li>기업의 공식 조직도 상 <br>직급과는 무관하며 <br>각급 부서/영업점 단위 <br>책임자를 말함. <br>(업무지휘 감독권, <br>인사고과권, 결재권 보유자)
+												<li>기업의 공식 조직도 상 <br>직급과는 무관하며 <br>각급 부서/영업점
+													단위 <br>책임자를 말함. <br>(업무지휘 감독권, <br>인사고과권,
+													결재권 보유자)
 												</li>
 											</ol>
 										</td>
@@ -296,8 +303,10 @@
 									</tr>
 								</tbody>
 							</table>
-							<p class="korean_financial" style="text-align: left">※ 여성 임직원 비율 60% 이상 목표</p>
-							<p class="korean_financial" style="text-align: left">※ 장애인 고용 비율 3.1% 이상 목표</p>
+							<p class="korean_financial" style="text-align: left">※ 여성 임직원
+								비율 60% 이상 목표</p>
+							<p class="korean_financial" style="text-align: left">※ 장애인 고용
+								비율 3.1% 이상 목표</p>
 						</div>
 					</div>
 				</section>
@@ -305,7 +314,8 @@
 				<section class="esg_section cont3_2_2">
 					<h3 class="esg_title">임직원 교육</h3>
 					<div class="esg_text">
-						현대그린푸드는 식품산업의 미래를 주도적으로 이끌어 나갈 인재를 양성하기 위해 <br class="pc">다양한 성장지원 프로그램을 운영하고 있습니다.
+						현대그린푸드는 식품산업의 미래를 주도적으로 이끌어 나갈 인재를 양성하기 위해 <br class="pc">다양한
+						성장지원 프로그램을 운영하고 있습니다.
 					</div>
 
 					<div class="director_area">
@@ -325,15 +335,18 @@
 									<tr>
 										<td class="first">신입/경력사원 <br>온보딩 프로그램
 										</td>
-										<td>· 회사소개, 회사생활 가이드, 직무기초, 커뮤니케이션 등 조직이해 및 관계형성 중심의 온보딩 교육</td>
+										<td>· 회사소개, 회사생활 가이드, 직무기초, 커뮤니케이션 등 조직이해 및 관계형성 중심의 온보딩
+											교육</td>
 									</tr>
 									<tr>
 										<td class="first">직급코스패스제</td>
-										<td>· 해당 직급이 갖춰야할 필요역량을 바탕으로 4개 과정 구성, 순차적으로 수료하도록 코스화하여 운영하는 프로그램</td>
+										<td>· 해당 직급이 갖춰야할 필요역량을 바탕으로 4개 과정 구성, 순차적으로 수료하도록 코스화하여
+											운영하는 프로그램</td>
 									</tr>
 									<tr>
 										<td class="first">사내 아카데미</td>
-										<td>· 회사소개, 회사생활 가이드, 직무기초, 커뮤니케이션 등 조직이해 및 관계형성 중심의 온보딩 교육</td>
+										<td>· 회사소개, 회사생활 가이드, 직무기초, 커뮤니케이션 등 조직이해 및 관계형성 중심의 온보딩
+											교육</td>
 									</tr>
 									<tr>
 										<td class="first">직무기초교육</td>
@@ -342,12 +355,14 @@
 									<tr>
 										<td class="first">B2B영업 실무자 <br>양성과정
 										</td>
-										<td>· 신규고객 발굴 역량 강화를 위한 차별화된 마케팅 전략수립 및 제안 프레젠테이션 스킬 향상 과정</td>
+										<td>· 신규고객 발굴 역량 강화를 위한 차별화된 마케팅 전략수립 및 제안 프레젠테이션 스킬 향상
+											과정</td>
 									</tr>
 									<tr>
 										<td class="first">e커머스 실무자 <br>양성과정
 										</td>
-										<td>· 자사몰 운영확대에 따른 e커머스 직무 전문성 강화 과정, GA(Google Analytics) 특강</td>
+										<td>· 자사몰 운영확대에 따른 e커머스 직무 전문성 강화 과정, GA(Google
+											Analytics) 특강</td>
 									</tr>
 									<tr>
 										<td class="first">DA(Data Analytics) <br>기초/심화 과정
@@ -356,20 +371,24 @@
 									</tr>
 									<tr>
 										<td class="first">사내 자격증반</td>
-										<td>· 사내 전문가를 활용한 직무관련 자격증 취득반 운영 (바리스타, 와인 소믈리에, 건강 상담사 등)</td>
+										<td>· 사내 전문가를 활용한 직무관련 자격증 취득반 운영 (바리스타, 와인 소믈리에, 건강 상담사
+											등)</td>
 									</tr>
 									<tr>
 										<td class="first">사이버 대학 지원</td>
-										<td>·임직원 대상 입학료/전형료 면제, 수업료 40~50% 감면 혜택 <br>&nbsp;&nbsp;(고려대, 한양대, 경희대, 세종대, 숭실대, 한국외대, 서울사이버대)
+										<td>·임직원 대상 입학료/전형료 면제, 수업료 40~50% 감면 혜택 <br>&nbsp;&nbsp;(고려대,
+											한양대, 경희대, 세종대, 숭실대, 한국외대, 서울사이버대)
 										</td>
 									</tr>
 									<tr>
 										<td class="first">마음챙김 프로그램</td>
-										<td>· 임직원 스트레스 관리를 위한 팀단위 교육 프로그램 (MBTI, DISC, 컬러테라피, 아트테라피 등)</td>
+										<td>· 임직원 스트레스 관리를 위한 팀단위 교육 프로그램 (MBTI, DISC, 컬러테라피,
+											아트테라피 등)</td>
 									</tr>
 									<tr>
 										<td class="first">임직원 제휴혜택</td>
-										<td>· 자기계발을 위한 외부업체 강의 20~30% 제휴혜택 제공 (밀리의 서재, 클래스101, 에듀윌, 해커스, 파고다 등)</td>
+										<td>· 자기계발을 위한 외부업체 강의 20~30% 제휴혜택 제공 (밀리의 서재, 클래스101,
+											에듀윌, 해커스, 파고다 등)</td>
 									</tr>
 									<tr>
 										<td class="first">온라인 교육 플랫폼</td>
@@ -378,7 +397,8 @@
 									<tr>
 										<td class="first">탄소중립 실현을 위한 <br>기후환경교육
 										</td>
-										<td>· 전 사업부 대상 매년 기후환경교육을 실시하여 회사의 탄소중립 비전을 공유 (‘21.08) <br>· 교육 내용을 바탕으로 임직원이 회사의 정책에 참여할 수 있는 제도 마련
+										<td>· 전 사업부 대상 매년 기후환경교육을 실시하여 회사의 탄소중립 비전을 공유 (‘21.08) <br>·
+											교육 내용을 바탕으로 임직원이 회사의 정책에 참여할 수 있는 제도 마련
 										</td>
 									</tr>
 								</tbody>
