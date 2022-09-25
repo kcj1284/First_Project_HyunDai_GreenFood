@@ -31,6 +31,7 @@ public class FileDAO {
 		return instance;
 	}
 	
+	//fileRealName으로 파일 file_id 찾는 메소드
 	public int getFileId(String fileRealName) {
 		String sql = "select file_id from file_storage where filerealname=?";
 		
@@ -53,6 +54,7 @@ public class FileDAO {
 		return -1; 
 	}
 	
+	//하나의 fileVO 가져오는 메소드
 	public FileVO getFile(int fileId) {
 		String sql = "select * from file_storage where file_id=?";
 		
@@ -78,6 +80,7 @@ public class FileDAO {
 		return fileVO; 
 	}
  
+	//파일 저장 메소드
 	public int upload(String fileName, String fileRealName) {	
 		String sql = "insert into file_storage values (?, ?, file_storage_seq.nextval)";
 		
@@ -93,6 +96,6 @@ public class FileDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // 데이터베이스 오류
+		return -1;
 	}
 }

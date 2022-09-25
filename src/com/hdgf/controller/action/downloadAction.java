@@ -29,6 +29,7 @@ import com.hdgf.dto.FileVO;
 
 public class downloadAction implements Action {
 
+	//파일 다운로드 기능
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {

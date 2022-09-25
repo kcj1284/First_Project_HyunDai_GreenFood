@@ -41,11 +41,11 @@ public class IRWriteAction implements Action {
 			url = "HdgfServlet?command=loginForm";
 		} else {
 			IR_Center_VO IR_VO = new IR_Center_VO();
-			IR_VO.setTitle(request.getParameter("title"));
-			IR_VO.setUser_id(loginUser.getUser_id());
-			IR_VO.setMain_text(request.getParameter("main_text"));
+			IR_VO.setTitle(request.getParameter("title")); // 게시글 제목
+			IR_VO.setUser_id(loginUser.getUser_id()); // 게시글 작성자
+			IR_VO.setMain_text(request.getParameter("main_text")); // 게시글 내용
 			IR_VO.setFile_id(0);
-			IR_DAO.write(IR_VO);
+			IR_DAO.write(IR_VO); // 게시글 작성 메소드 호출
 		}
 
 		response.sendRedirect(url);

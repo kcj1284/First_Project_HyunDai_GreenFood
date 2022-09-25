@@ -32,29 +32,27 @@ public class IRListAction implements Action {
 		
 		IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
 
-		String oldest = request.getParameter("oldest");
-		String views = request.getParameter("views");
-		String searchKey = request.getParameter("searchKey");
-		String searchWord = request.getParameter("searchWord");
+		String oldest = request.getParameter("oldest"); //오래된 순 정렬이 선택된 값
+		String views = request.getParameter("views"); //조회순 정렬이 선택된 값
+		String searchKey = request.getParameter("searchKey"); //제목이나 본문이 선택된 값
+		String searchWord = request.getParameter("searchWord"); //검색창 키워드 값
 
 		if (oldest != null) {
-				ArrayList<IR_Center_VO> IR_List = IR_DAO.getListByWrdate();
+				ArrayList<IR_Center_VO> IR_List = IR_DAO.getListByWrdate(); //오래된 순 정렬
 				request.setAttribute("IR_List", IR_List);
 			} else if (views != null) {
-				ArrayList<IR_Center_VO> IR_List = IR_DAO.getListByViews();
+				ArrayList<IR_Center_VO> IR_List = IR_DAO.getListByViews(); // 조회순 정렬
 				request.setAttribute("IR_List", IR_List);
 			} else if (searchWord != null && searchKey.equals("subject")) {
-				ArrayList<IR_Center_VO> IR_List = IR_DAO.get_title_List(searchWord);
+				ArrayList<IR_Center_VO> IR_List = IR_DAO.get_title_List(searchWord); //키워드로 제목 검색
 				request.setAttribute("IR_List", IR_List);
-				request.setAttribute("keyword", searchWord);
-				System.out.println(searchKey);
+				request.setAttribute("keyword", searchWord); //키워드로 내용 검색 
 			} else if (searchWord != null && searchKey.equals("content")) {
 				ArrayList<IR_Center_VO> IR_List = IR_DAO.get_Main_text_List(searchWord);
 				request.setAttribute("IR_List", IR_List);
 				request.setAttribute("keyword", searchWord);
-				System.out.println(searchKey);
 			} else {
-				ArrayList<IR_Center_VO> IR_List = IR_DAO.getList();
+				ArrayList<IR_Center_VO> IR_List = IR_DAO.getList(); //리스트 가져오기
 				request.setAttribute("IR_List", IR_List);
 			}
 		request.getRequestDispatcher(url).forward(request, response);

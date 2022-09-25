@@ -18,14 +18,15 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 /**
  * annUpdateAction2
+ * 
  * @author 장주연
  * @since 2022.09.07
  * 
- * <pre>
+ *        <pre>
  * 수정일          수정자                    수정내용
  * ----------  ---------------    ---------------------------
  * 2022.09.07    장주연              최초 생성
- * </pre>
+ *        </pre>
  */
 
 public class annUpdateAction2 implements Action {
@@ -34,9 +35,6 @@ public class annUpdateAction2 implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
 		String url = "HdgfServlet?command=annView";
-
-		HttpSession session = request.getSession();
-		UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");
 
 		// 파일 첨부 기능 코드
 		String directory = request.getSession().getServletContext().getRealPath("/upload/");
@@ -59,25 +57,19 @@ public class annUpdateAction2 implements Action {
 		fileDAO.upload(fileName, fileRealName);
 
 		int fileId = fileDAO.getFileId(fileRealName);
-		
+
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 		int annId = Integer.parseInt(multipartRequest.getParameter("annId"));
-		
-		if (loginUser == null) {
-			url = "HdgfServlet?command=loginForm";
-		} else {
-			AnnouncementVO annVO = annDAO.getAnn(annId);
-			annVO.setTitle(multipartRequest.getParameter("subject"));
-			annVO.setMain_text(multipartRequest.getParameter("content"));
-			if (fileRealName == null) {
-				annVO.setfile_id(0);
-			} else {
-				annVO.setfile_id(fileId);
-			}
-			annDAO.update(annVO);
-			request.setAttribute("annVO", annVO);
-			request.setAttribute("id", annId);
+
+		AnnouncementVO annVO = annDAO.getAnn(annId); // annId에 해당하는 VO값 가져오기
+		annVO.setTitle(multipartRequest.getParameter("subject")); // annVO의 title을 수정된 값으로 변경
+		annVO.setMain_text(multipartRequest.getParameter("content")); // annVO의 content를 수정된 값으로 변경
+		if (fileRealName != null) { // 파일 변경이 발생했을 경우 annVO의 fileId를 수정된 값으로 변경
+			annVO.setfile_id(fileId);
 		}
+		annDAO.update(annVO); // 수정 메소드 호출
+		request.setAttribute("annVO", annVO);
+		request.setAttribute("id", annId);
 
 		request.getRequestDispatcher(url).forward(request, response);
 	}

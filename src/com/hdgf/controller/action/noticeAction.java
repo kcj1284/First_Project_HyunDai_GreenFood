@@ -36,31 +36,28 @@ public class noticeAction implements Action {
 
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 
-//		String latest = request.getParameter("latest");
-		String oldest = request.getParameter("oldest");
-		String views = request.getParameter("views");
+		String oldest = request.getParameter("oldest"); //오래된 순 정렬이 선택된 값
+		String views = request.getParameter("views"); //조회순 정렬이 선택된 값
 		
-		String searchKey = request.getParameter("searchKey");
-		String searchWord = request.getParameter("searchWord");
+		String searchKey = request.getParameter("searchKey"); //제목이나 본문이 선택된 값
+		String searchWord = request.getParameter("searchWord"); //검색창 키워드 값
 
 		if (oldest != null) {
-			ArrayList<AnnouncementVO> annList = annDAO.getListByWrdate();
+			ArrayList<AnnouncementVO> annList = annDAO.getListByWrdate(); //오래된 순 정렬 
 			request.setAttribute("annList", annList);
 		} else if (views != null) {
-			ArrayList<AnnouncementVO> annList = annDAO.getListByViews();
+			ArrayList<AnnouncementVO> annList = annDAO.getListByViews(); // 조회순 정렬
 			request.setAttribute("annList", annList);
 		} else if (searchWord != null && searchKey.equals("subject")) {
-			ArrayList<AnnouncementVO> annList = annDAO.get_title_List(searchWord);
+			ArrayList<AnnouncementVO> annList = annDAO.get_title_List(searchWord); //키워드로 제목 검색
 			request.setAttribute("annList", annList);
 			request.setAttribute("keyword", searchWord);
-			System.out.println(searchKey);
 		} else if (searchWord != null && searchKey.equals("content")) {
-			ArrayList<AnnouncementVO> annList = annDAO.get_Main_text_List(searchWord);
+			ArrayList<AnnouncementVO> annList = annDAO.get_Main_text_List(searchWord); //키워드로 내용 검색 
 			request.setAttribute("annList", annList);
 			request.setAttribute("keyword", searchWord);
-			System.out.println(searchKey);
 		} else {
-			ArrayList<AnnouncementVO> annList = annDAO.getList();
+			ArrayList<AnnouncementVO> annList = annDAO.getList(); //공지소식 리스트 가져오기
 			request.setAttribute("annList", annList);
 		}
 		request.getRequestDispatcher(url).forward(request, response);

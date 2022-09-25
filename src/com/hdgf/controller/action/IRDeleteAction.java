@@ -31,7 +31,7 @@ public class IRDeleteAction implements Action {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		IR_Center_DAO IRDAO = IR_Center_DAO.getInstance();
-		IRDAO.delete(id);
+		IRDAO.delete(id); //해당 id에 해당하는 글 삭제
 		
 		request.getRequestDispatcher(url).forward(request, response);
 	}

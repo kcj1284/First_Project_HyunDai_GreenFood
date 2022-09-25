@@ -32,6 +32,7 @@ public class annWriteFormAction implements Action {
 		HttpSession session = request.getSession();
 	    UsersVO loginUser = (UsersVO) session.getAttribute("loginUser");    
 	    
+	    //비 로그인시 로그인폼으로 이동
 	    if (loginUser == null) {
 	      url = "HdgfServlet?command=loginForm";
 	    } 

@@ -41,7 +41,7 @@ public class IRUpdateFormAction implements Action {
 			int IR_Id = Integer.parseInt(request.getParameter("id"));
 			IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
 			IR_Center_VO IR_VO = IR_DAO.getIR(IR_Id);
-			request.setAttribute("IR_VO", IR_VO);
+			request.setAttribute("IR_VO", IR_VO); // 해당 글의 정보를 담은 VO 연결
 		}
 
 		request.getRequestDispatcher(url).forward(request, response);

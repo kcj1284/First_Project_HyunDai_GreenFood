@@ -33,11 +33,11 @@ public class IRUpdateAction implements Action {
 		int IR_Id = Integer.parseInt(request.getParameter("id"));
 
 		IR_Center_DAO IR_DAO = IR_Center_DAO.getInstance();
-		IR_Center_VO IR_VO = IR_DAO.getIR(IR_Id);
-		IR_VO.setTitle(request.getParameter("subject"));
-		IR_VO.setMain_text(request.getParameter("content"));
+		IR_Center_VO IR_VO = IR_DAO.getIR(IR_Id); // IR_Id에 해당하는 VO값 가져오기
+		IR_VO.setTitle(request.getParameter("subject")); // IR_VO의 title을 수정된 값으로 변경
+		IR_VO.setMain_text(request.getParameter("content")); // IR_VO의 content를 수정된 값으로 변경
 
-		IR_DAO.update(IR_VO);
+		IR_DAO.update(IR_VO); // 수정 메소드 호출
 		request.setAttribute("IR_VO", IR_VO);
 
 		request.getRequestDispatcher(url).forward(request, response);

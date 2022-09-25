@@ -30,7 +30,7 @@ public class annDeleteAction implements Action {
 		
 		int annId = Integer.parseInt(request.getParameter("id"));
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
-		annDAO.delete(annId);
+		annDAO.delete(annId); // 해당 annId에 해당하는 게시글 삭제
 		
 		request.getRequestDispatcher(url).forward(request, response);
 	}

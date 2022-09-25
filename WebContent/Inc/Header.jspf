@@ -136,10 +136,10 @@ Header
 										href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">물류시스템</a></li>
 									<li><a
 										href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/food_safety_system.jsp">식품안전시스템</a></li>
-									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">구매시스템</a></li>
-									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">가공&전처리시스템</a></li>
-									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">R&D시스템</a></li>
-									<li><a href="First_Project_HyunDai_GreenFood/ESG_Infrasystem/distribution_system.jsp">고객서비스</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/food_safety_system.jsp">구매시스템</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/food_safety_system.jsp">가공&전처리시스템</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/food_safety_system.jsp">R&D시스템</a></li>
+									<li><a href="/First_Project_HyunDai_GreenFood/ESG_Infrasystem/food_safety_system.jsp">고객서비스</a></li>
 								</ul>
 							</div></li>
 

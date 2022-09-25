@@ -104,14 +104,6 @@ ann_View
 		<!-- //container -->
 		
 		<script>
-			function updateAnswer(){
-				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annAnswerUpdateForm&id=${annVO.id}"
-			}
-			
-			function deleteAnswer(){
-				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annAnswerDelete&id=${annVO.id}"
-			}
-			
 			function updatePost(){
 				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annUpdateForm&id=${annVO.id}"
 			}
@@ -120,7 +112,7 @@ ann_View
 				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annDelete&id=${annVO.id}"
 			}
 			
-			function menu(){
+			function menu(){ //목록
 				location.href="/First_Project_HyunDai_GreenFood/HdgfServlet?command=notice"
 			}
 		</script>

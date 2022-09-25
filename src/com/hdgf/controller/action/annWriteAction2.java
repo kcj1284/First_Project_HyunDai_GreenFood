@@ -21,16 +21,17 @@ import com.hdgf.dto.UsersVO;
 
 /**
  * annWriteAction2
+ * 
  * @author 장주연
  * @since 2022.09.18
  * 
- * <pre>
+ *        <pre>
  * 수정일          수정자                    수정내용
  * ----------  ---------------    ---------------------------
  * 2022.09.18    장주연              최초 생성
  * 2022.09.18	 장주연			   파일 첨부 기능 추가
  * 2022.09.18	 장주연			   파일 없을 때 문제점 수정
- * </pre>
+ *        </pre>
  */
 
 public class annWriteAction2 implements Action {
@@ -53,35 +54,31 @@ public class annWriteAction2 implements Action {
 
 		int maxSize = 1024 * 1024 * 500;
 		String encoding = "UTF-8";
-		
+
 		MultipartRequest multipartRequest = new MultipartRequest(request, directory, maxSize, encoding,
 				new DefaultFileRenamePolicy());
-		
+
 		String fileName = multipartRequest.getOriginalFileName("file");
 		String fileRealName = multipartRequest.getFilesystemName("file");
-		
+
 		FileDAO fileDAO = FileDAO.getInstance();
 		fileDAO.upload(fileName, fileRealName);
-		
+
 		int fileId = fileDAO.getFileId(fileRealName);
 
 		AnnouncementDAO annDAO = AnnouncementDAO.getInstance();
 
-		if (loginUser == null) {
-			url = "HdgfServlet?command=loginForm";
-		} else {
-			AnnouncementVO annVO = new AnnouncementVO();
-			annVO.setTitle(multipartRequest.getParameter("title"));
-			annVO.setU_id(loginUser.getUser_id());
-			annVO.setMain_text(multipartRequest.getParameter("main_text"));
-			if (fileRealName == null) {
-				annVO.setfile_id(0);
-			} else {
-				annVO.setfile_id(fileId);
-			}
-			annVO.setAnnoun_type(Integer.parseInt(multipartRequest.getParameter("ann_type")));
-			annDAO.write(annVO);
+		AnnouncementVO annVO = new AnnouncementVO();
+		annVO.setTitle(multipartRequest.getParameter("title")); // 게시글 제목
+		annVO.setU_id(loginUser.getUser_id()); // 게시글 작성자
+		annVO.setMain_text(multipartRequest.getParameter("main_text")); // 게시글 내용
+		if (fileRealName == null) { // 첨부 파일이 없을 경우
+			annVO.setfile_id(0);
+		} else { // 첨부 파일이 있을 경우
+			annVO.setfile_id(fileId);
 		}
+		annVO.setAnnoun_type(Integer.parseInt(multipartRequest.getParameter("ann_type")));
+		annDAO.write(annVO); // 게시글 작성 메소드 호출
 
 		response.sendRedirect(url);
 	}

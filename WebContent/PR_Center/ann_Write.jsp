@@ -11,11 +11,9 @@ ann_Write
 
 </pre> 
 -->
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/Inc/Header.jspf"%>
-<link rel="stylesheet" type="text/css"
-	href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
+<link rel="stylesheet" type="text/css" href="/First_Project_HyunDai_GreenFood/css/QnA/QnA_style.css">
 <style>
 #subject {
 	width: 99%;
@@ -29,10 +27,10 @@ ann_Write
 	padding: 8px 5px;
 }
 
-#category{
+#category {
 	width: 90px;
-    text-align: center;
-    border: 1px solid #bcbcbc;
+	text-align: center;
+	border: 1px solid #bcbcbc;
 }
 </style>
 <script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>
@@ -84,44 +82,25 @@ ann_Write
 					현대그린푸드의 새로운 공지소식과 보도자료를 <span class="t_block_w_inline">가장 먼저 알려드립니다.</span>
 				</p>
 			</div>
-			
-			<!-- //타이틀 , 디스크립션 -->
-			<!-- 기존 작동 코드
-			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWrite" id="boardFrm">
-				<ul>
-					<li>
-	                    분류:  &nbsp  &nbsp
-	                    <select id="category" name="ann_type">
-	                        <option value="0">보도자료</option>
-	                        <option value="1">공지소식</option>
-	                    </select>
-	                </li>
-					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
-					<li><textarea name="main_text" id="content"></textarea></li>
-					<li> file:  &nbsp  &nbsp<input type="file" name="file"><br></li>
-					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
-				</ul>
-			</form>
-			 -->
-			
+
 			<form method="post" action="/First_Project_HyunDai_GreenFood/HdgfServlet?command=annWrite" id="boardFrm" enctype="multipart/form-data">
 				<ul>
-					<li>
-	                    분류:  &nbsp  &nbsp
-	                    <select id="category" name="ann_type">
-	                        <option value="0">보도자료</option>
-	                        <option value="1">공지소식</option>
-	                    </select>
-	                </li>
-					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요."/></li>
+					<li>분류: &nbsp &nbsp <select id="category" name="ann_type">
+							<option value="0">보도자료</option>
+							<option value="1">공지소식</option>
+					</select>
+					</li>
+					<li><input type="text" class="form-control" name="title" id="subject" placeholder="제목을 입력해 주세요." /></li>
 					<li><textarea name="main_text" id="content"></textarea></li>
-					<li> file:  &nbsp  &nbsp<input type="file" name="file"><br></li>
+					<li>file: &nbsp &nbsp<input type="file" name="file">
+					<br></li>
 					<li><input type="submit" class="btn btn-default" id="boardwrite-submit" value="등록" /></li>
 				</ul>
 			</form>
-			 
-			<!-- contents : end -->
-
 		</div>
-		<!-- //container -->
-		<%@ include file="/Inc/Footer.jspf"%>
+	</div>
+	<!-- contents : end -->
+
+</div>
+<!-- //container -->
+<%@ include file="/Inc/Footer.jspf"%>
